@@ -4,14 +4,15 @@ using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 using MegaCrit.Sts2.Core.Models.Powers;
 using STS2_Mulundus.STS2_MulundusCode.Character;
 
-namespace STS2_Mulundus.STS2_MulundusCode.Cards;
+namespace STS2_Mulundus.STS2_MulundusCode.Cards.Common;
 
 [Pool(typeof(HeartwoodRangerCardPool))]
 public class SpikeGrowth : HeartWoodRangerCard
 {
-    public SpikeGrowth() : base(1, CardType.Power, CardRarity.Rare, MegaCrit.Sts2.Core.Entities.Cards.TargetType.Self)
+    public SpikeGrowth() : base(1, CardType.Power, CardRarity.Common, MegaCrit.Sts2.Core.Entities.Cards.TargetType.Self)
     {
         WithPower<ThornsPower>(3);
+        
     }
 
     private int _thornsAmount = 3;

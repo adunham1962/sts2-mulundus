@@ -60,10 +60,6 @@
     </ItemGroup>
 
     <ItemGroup>
-        <Folder Include="STS2_MulundusCode\Cards\Basic\" />
-        <Folder Include="STS2_MulundusCode\Cards\Common\" />
-        <Folder Include="STS2_MulundusCode\Cards\Rare\" />
-        <Folder Include="STS2_MulundusCode\Cards\Uncommon\" />
         <Folder Include="STS2_Mulundus\images\card_portraits\big\"/>
         <Folder Include="STS2_Mulundus\images\powers\big\"/>
         <Folder Include="STS2_Mulundus\images\relics\big\"/>
