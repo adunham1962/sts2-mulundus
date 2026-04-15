@@ -1,0 +1,16 @@
+{
+  "STS2_MULUNDUS-HEARTWOOD_RANGER.aromaPrinciple": "Lore",
+  "STS2_MULUNDUS-HEARTWOOD_RANGER.banter.alive.endTurnPing": "Co-op hurry up end turn ping message",
+  "STS2_MULUNDUS-HEARTWOOD_RANGER.banter.dead.endTurnPing": "...",
+  "STS2_MULUNDUS-HEARTWOOD_RANGER.cardsModifierDescription": "__ cards will now appear in rewards and shops.",
+  "STS2_MULUNDUS-HEARTWOOD_RANGER.cardsModifierTitle": "__ Cards",
+  "STS2_MULUNDUS-HEARTWOOD_RANGER.description": "Character Selection\nScreen Description",
+  "STS2_MULUNDUS-HEARTWOOD_RANGER.eventDeathPrevention": "Co-op survival line",
+  "STS2_MULUNDUS-HEARTWOOD_RANGER.goldMonologue": "Line spoken when obtaining a large amount of gold",
+  "STS2_MULUNDUS-HEARTWOOD_RANGER.possessiveAdjective": "his/her/its",
+  "STS2_MULUNDUS-HEARTWOOD_RANGER.pronounObject": "him/her/it",
+  "STS2_MULUNDUS-HEARTWOOD_RANGER.pronounPossessive": "his/hers/its",
+  "STS2_MULUNDUS-HEARTWOOD_RANGER.pronounSubject": "he/she/it",
+  "STS2_MULUNDUS-HEARTWOOD_RANGER.title": "The HeartwoodRanger",
+  "STS2_MULUNDUS-HEARTWOOD_RANGER.titleObject": "The HeartwoodRanger"
+}
