@@ -6,6 +6,7 @@ using MegaCrit.Sts2.Core.Entities.Characters;
 using MegaCrit.Sts2.Core.Models;
 using MegaCrit.Sts2.Core.Models.Cards;
 using MegaCrit.Sts2.Core.Models.Relics;
+using STS2_Mulundus.STS2_MulundusCode.Cards.Basic;
 
 namespace STS2_Mulundus.STS2_MulundusCode.Character;
 
@@ -30,7 +31,8 @@ public class HeartwoodRanger: CustomCharacterModel
         ModelDb.Card<DefendIronclad>(),
         ModelDb.Card<DefendIronclad>(),
         ModelDb.Card<DefendIronclad>(),
-        ModelDb.Card<DefendIronclad>()
+        ModelDb.Card<DefendIronclad>(),
+        ModelDb.Card<GrimCleave>()
     ];
 
     public override IReadOnlyList<RelicModel> StartingRelics =>

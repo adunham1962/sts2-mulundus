@@ -1,3 +1,4 @@
+using System.Diagnostics;
 using BaseLib.Utils;
 using MegaCrit.Sts2.Core.Commands;
 using MegaCrit.Sts2.Core.Entities.Cards;
@@ -27,7 +28,8 @@ public class GrimCleave() : HeartWoodRangerCard(1, CardType.Attack, CardRarity.B
         PlayerChoiceContext choiceContext,
         CardPlay play)
     {
-        await DamageCmd.Attack(this.DynamicVars.CalculatedDamage).FromCard(this).WithHitFx("vfx/vfx_attack_slash", tmpSfx: "blunt_attack.mp3").Execute(choiceContext);
+        Debug.Assert(CombatState != null, nameof(CombatState) + " != null");
+        await DamageCmd.Attack(this.DynamicVars.CalculatedDamage).FromCard(this).TargetingAllOpponents(CombatState).WithHitFx("vfx/vfx_attack_slash", tmpSfx: "blunt_attack.mp3").Execute(choiceContext);
     }
 
     protected override void OnUpgrade()
