@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://c1rvmie3n051g"]
+
+[ext_resource type="Texture2D" uid="uid://5uyi2hg4t8kc" path="res://STS2_Mulundus/images/character/Cilef.png" id="1_aupxv"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Cilef" type="Sprite2D" parent="."]
+position = Vector2(514, 455)
+texture = ExtResource("1_aupxv")

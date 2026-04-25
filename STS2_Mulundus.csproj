@@ -59,12 +59,6 @@
         <None Include="STS2_Mulundus/**"/>
     </ItemGroup>
 
-    <ItemGroup>
-        <Folder Include="STS2_Mulundus\images\card_portraits\big\"/>
-        <Folder Include="STS2_Mulundus\images\powers\big\"/>
-        <Folder Include="STS2_Mulundus\images\relics\big\"/>
-    </ItemGroup>
-
     <Target Name="CheckDependencyPaths">
         <Error
                 Text=" Slay the Spire 2 data not found at path '$(Sts2DataDir)'"

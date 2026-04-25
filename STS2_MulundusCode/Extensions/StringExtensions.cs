@@ -1,4 +1,6 @@
-﻿namespace STS2_Mulundus.STS2_MulundusCode.Extensions;
+﻿using System.IO;
+
+namespace STS2_Mulundus.STS2_MulundusCode.Extensions;
 
 //Mostly utilities to get asset paths.
 public static class StringExtensions

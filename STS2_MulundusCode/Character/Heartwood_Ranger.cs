@@ -1,4 +1,6 @@
-﻿using BaseLib.Abstracts;
+﻿using System;
+using System.Collections.Generic;
+using BaseLib.Abstracts;
 using BaseLib.Utils.NodeFactories;
 using STS2_Mulundus.STS2_MulundusCode.Extensions;
 using Godot;
@@ -6,18 +8,25 @@ using MegaCrit.Sts2.Core.Entities.Characters;
 using MegaCrit.Sts2.Core.Models;
 using MegaCrit.Sts2.Core.Models.Cards;
 using MegaCrit.Sts2.Core.Models.Relics;
+using MegaCrit.Sts2.Core.Nodes.Vfx;
 using STS2_Mulundus.STS2_MulundusCode.Cards.Basic;
 
 namespace STS2_Mulundus.STS2_MulundusCode.Character;
 
-public class HeartwoodRanger: CustomCharacterModel
+public class HeartwoodRanger: PlaceholderCharacterModel
 {
     public const string CharacterId = "STS2_Mulundus_Heartwood_Ranger";
 
+    public override string PlaceholderID => "necrobinder";
+    
     public static readonly Color Color = new("124212");
 
     public override Color NameColor => Color;
-    public override CharacterGender Gender => CharacterGender.Neutral;
+    public override CharacterGender Gender => CharacterGender.Feminine;
+    
+    protected override CharacterModel? UnlocksAfterRunAs => null;
+    
+    public override int StartingGold => 99;
     public override int StartingHp => 80;
     
     public override IEnumerable<CardModel> StartingDeck =>
@@ -62,9 +71,23 @@ public class HeartwoodRanger: CustomCharacterModel
             return icon;
         }
     }
+    
+    public override string CustomVisualPath => "res://STS2_Mulundus/scenes/char_select/char_select_bg_sts2_mulundus-heartwood_ranger.tscn";
 
     public override string CustomIconTexturePath => "character_icon_char_name.png".CharacterUiPath();
     public override string CustomCharacterSelectIconPath => "char_select_char_name.png".CharacterUiPath();
     public override string CustomCharacterSelectLockedIconPath => "char_select_char_name_locked.png".CharacterUiPath();
     public override string CustomMapMarkerPath => "map_marker_char_name.png".CharacterUiPath();
+    
+    public override Color EnergyLabelOutlineColor => new Color("801212FF");
+
+    public override Color DialogueColor => new Color("590700");
+
+    public override VfxColor SpeechBubbleColor => VfxColor.Green;
+
+    public override Color MapDrawingColor => new Color("CB282B");
+
+    public override Color RemoteTargetingLineColor => new Color("E15847FF");
+
+    public override Color RemoteTargetingLineOutline => new Color("801212FF");
 }

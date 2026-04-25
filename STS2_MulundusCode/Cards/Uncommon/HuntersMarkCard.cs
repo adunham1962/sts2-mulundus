@@ -1,3 +1,5 @@
+using System;
+using System.Threading.Tasks;
 using BaseLib.Abstracts;
 using BaseLib.Utils;
 using HarmonyLib;
