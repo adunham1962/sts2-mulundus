@@ -5,11 +5,14 @@ using BaseLib.Utils.NodeFactories;
 using STS2_Mulundus.STS2_MulundusCode.Extensions;
 using Godot;
 using MegaCrit.Sts2.Core.Entities.Characters;
+using MegaCrit.Sts2.Core.Helpers;
 using MegaCrit.Sts2.Core.Models;
 using MegaCrit.Sts2.Core.Models.Cards;
 using MegaCrit.Sts2.Core.Models.Relics;
 using MegaCrit.Sts2.Core.Nodes.Vfx;
+using STS2_Mulundus.STS2_MulundusCode.Cards;
 using STS2_Mulundus.STS2_MulundusCode.Cards.Basic;
+using STS2_Mulundus.STS2_MulundusCode.Cards.Common;
 
 namespace STS2_Mulundus.STS2_MulundusCode.Character;
 
@@ -19,7 +22,7 @@ public class HeartwoodRanger: PlaceholderCharacterModel
 
     public override string PlaceholderID => "necrobinder";
     
-    public static readonly Color Color = new("124212");
+    public static readonly Color Color = StsColors.green;
 
     public override Color NameColor => Color;
     public override CharacterGender Gender => CharacterGender.Feminine;
@@ -31,17 +34,18 @@ public class HeartwoodRanger: PlaceholderCharacterModel
     
     public override IEnumerable<CardModel> StartingDeck =>
     [
-        ModelDb.Card<StrikeIronclad>(),
-        ModelDb.Card<StrikeIronclad>(),
-        ModelDb.Card<StrikeIronclad>(),
-        ModelDb.Card<StrikeIronclad>(),
-        ModelDb.Card<StrikeIronclad>(),
-        ModelDb.Card<DefendIronclad>(),
-        ModelDb.Card<DefendIronclad>(),
-        ModelDb.Card<DefendIronclad>(),
-        ModelDb.Card<DefendIronclad>(),
-        ModelDb.Card<DefendIronclad>(),
-        ModelDb.Card<GrimCleave>()
+        ModelDb.Card<HeartwoodRangerStrike>(),
+        ModelDb.Card<HeartwoodRangerStrike>(),
+        ModelDb.Card<HeartwoodRangerStrike>(),
+        ModelDb.Card<HeartwoodRangerStrike>(),
+        ModelDb.Card<HeartwoodRangerDefend>(),
+        ModelDb.Card<HeartwoodRangerDefend>(),
+        ModelDb.Card<HeartwoodRangerDefend>(),
+        ModelDb.Card<HeartwoodRangerDefend>(),
+        ModelDb.Card<DreadSlash>(),
+        ModelDb.Card<SpikeGrowth>(),
+        ModelDb.Card<Barkskin>(),
+        ModelDb.Card<DreadStrike>()
     ];
 
     public override IReadOnlyList<RelicModel> StartingRelics =>
@@ -71,9 +75,9 @@ public class HeartwoodRanger: PlaceholderCharacterModel
             return icon;
         }
     }
-    
-    public override string CustomVisualPath => "res://STS2_Mulundus/scenes/char_select/char_select_bg_sts2_mulundus-heartwood_ranger.tscn";
 
+    public override string CustomCharacterSelectBg =>
+        "res://STS2_Mulundus/scenes/screens/char_select/char_select_bg_sts2_mulundus-heartwood_ranger.tscn";
     public override string CustomIconTexturePath => "character_icon_char_name.png".CharacterUiPath();
     public override string CustomCharacterSelectIconPath => "char_select_char_name.png".CharacterUiPath();
     public override string CustomCharacterSelectLockedIconPath => "char_select_char_name_locked.png".CharacterUiPath();

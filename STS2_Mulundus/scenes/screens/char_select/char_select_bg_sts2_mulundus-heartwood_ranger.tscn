@@ -2,8 +2,18 @@
 
 [ext_resource type="Texture2D" uid="uid://5uyi2hg4t8kc" path="res://STS2_Mulundus/images/character/Cilef.png" id="1_aupxv"]
 
-[node name="Node2D" type="Node2D"]
-
-[node name="Cilef" type="Sprite2D" parent="."]
-position = Vector2(514, 455)
+[node name="TextureRect" type="TextureRect"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -957.0
+offset_top = -824.0
+offset_right = 67.0
+offset_bottom = 200.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.8754904, 1.8754904)
 texture = ExtResource("1_aupxv")
+stretch_mode = 3
