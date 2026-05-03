@@ -1,15 +1,28 @@
 ﻿using BaseLib.Abstracts;
 using BaseLib.Extensions;
 using BaseLib.Utils;
+using MegaCrit.Sts2.Core.Commands;
 using STS2_Mulundus.STS2_MulundusCode.Character;
 using STS2_Mulundus.STS2_MulundusCode.Extensions;
 using MegaCrit.Sts2.Core.Entities.Cards;
+using MegaCrit.Sts2.Core.GameActions.Multiplayer;
+using MegaCrit.Sts2.Core.Models;
 
 namespace STS2_Mulundus.STS2_MulundusCode.Cards;
 
 public abstract class HeartWoodRangerCard(int cost, CardType type, CardRarity rarity, TargetType target) :
     ConstructedCardModel(cost, type, rarity, target)
 {
+    
+    public override async Task AfterCardExhausted(PlayerChoiceContext choiceContext, CardModel card, bool causedByEthereal)
+    {
+        var rangerCard = card as HeartWoodRangerCard;
+        if (rangerCard == this && card.IsGrim())
+        {
+            await CardCmd.AutoPlay(choiceContext, this, null);
+        }
+    }
+    
     //Image size:
     //Normal art: 1000x760 (Using 500x380 should also work, it will simply be scaled.)
     //Full art: 606x852

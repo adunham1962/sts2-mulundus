@@ -4,6 +4,7 @@ using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 using MegaCrit.Sts2.Core.Localization.DynamicVars;
 using STS2_Mulundus.STS2_MulundusCode.Character;
+using static MegaCrit.Sts2.Core.Entities.Cards.PileType;
 
 namespace STS2_Mulundus.STS2_MulundusCode.Cards.Common;
 [Pool(typeof(HeartwoodRangerCardPool))]
@@ -23,9 +24,19 @@ public class DreadStrike : HeartWoodRangerCard
 
 
         ArgumentNullException.ThrowIfNull(play.Target, "cardPlay.Target");
-        await DamageCmd.Attack(this.DynamicVars.Damage.BaseValue +
-                             (play.Card.Owner.PlayerCombatState.ExhaustPile.Cards.Count)).FromCard(this).Targeting(play.Target).Execute(choiceContext);
-        await CardCmd.Exhaust(choiceContext, PileType.Draw.GetPile(this.Owner).Cards.First());
+        var damage = DynamicVars.Damage.BaseValue;
+        if (play.Card.Owner.PlayerCombatState != null)
+        {
+            damage = DynamicVars.Damage.BaseValue + (play.Card.Owner.PlayerCombatState.ExhaustPile.Cards.Count);
+        }
+
+        await DamageCmd.Attack(damage).FromCard(this)
+                             .Targeting(play.Target).Execute(choiceContext);
+        if (CardPile.Get(Draw, Owner) is not { IsEmpty: true })
+        {
+            await CardCmd.Exhaust(choiceContext, Draw.GetPile(this.Owner).Cards[0]);
+        }
+        
 
     }
 

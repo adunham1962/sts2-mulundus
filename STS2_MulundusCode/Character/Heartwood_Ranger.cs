@@ -30,7 +30,7 @@ public class HeartwoodRanger: PlaceholderCharacterModel
     protected override CharacterModel? UnlocksAfterRunAs => null;
     
     public override int StartingGold => 99;
-    public override int StartingHp => 80;
+    public override int StartingHp => 70;
     
     public override IEnumerable<CardModel> StartingDeck =>
     [
@@ -43,9 +43,7 @@ public class HeartwoodRanger: PlaceholderCharacterModel
         ModelDb.Card<HeartwoodRangerDefend>(),
         ModelDb.Card<HeartwoodRangerDefend>(),
         ModelDb.Card<DreadSlash>(),
-        ModelDb.Card<SpikeGrowth>(),
-        ModelDb.Card<Barkskin>(),
-        ModelDb.Card<DreadStrike>()
+        ModelDb.Card<InvokeYourOath>()
     ];
 
     public override IReadOnlyList<RelicModel> StartingRelics =>

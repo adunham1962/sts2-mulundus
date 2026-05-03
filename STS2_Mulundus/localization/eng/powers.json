@@ -1,5 +1,11 @@
 {
-  "STS2_MULUNDUS-HEARTWOOD_RANGER-ABYSSAL_JOURNEY.title": "Abyssal Torment",
-  "STS2_MULUNDUS-HEARTWOOD_RANGER-ABYSSAL_JOURNEY.description": "You lose 1 max HP each turn unless you are poisoned.",
-  "STS2_MULUNDUS-HEARTWOOD_RANGER-ABYSSAL_JOURNEY.smartDescription": "You lose 1 max HP each turn unless you are poisoned."
+  "STS2_MULUNDUS-ABYSSAL_JOURNEY_POWER.description": "You lose 1 max HP each turn unless you are poisoned.",
+  "STS2_MULUNDUS-ABYSSAL_JOURNEY_POWER.smartDescription": "You lose 1 max HP each turn unless you are poisoned.",
+  "STS2_MULUNDUS-ABYSSAL_JOURNEY_POWER.title": "Abyssal Torment",
+  "STS2_MULUNDUS-INVOKE_YOUR_OATH_POWER.description": "Each attack you play this turn is played an additional time.",
+  "STS2_MULUNDUS-INVOKE_YOUR_OATH_POWER.smartDescription": "Each attack you play this turn is played an additional time.",
+  "STS2_MULUNDUS-INVOKE_YOUR_OATH_POWER.title": "Heartwood Oath",
+  "STS2_MULUNDUS-SUGAR_RUSH_POWER.description": "At the start of your turn, each card in your hand gains [gold]Ethereal.[/gold]\nWhenever you play a [gold]Goodberry[/gold], draw a card.",
+  "STS2_MULUNDUS-SUGAR_RUSH_POWER.smartDescription": "At the start of your turn, each card in your hand gains [gold]Ethereal.[/gold]\nWhenever you play a [gold]Goodberry[/gold], draw a card.",
+  "STS2_MULUNDUS-SUGAR_RUSH_POWER.title": "Sugar Rush"
 }

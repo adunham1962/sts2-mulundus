@@ -1,21 +1,20 @@
 using BaseLib.Abstracts;
-using BaseLib.Extensions;
-using STS2_Mulundus.STS2_MulundusCode.Extensions;
 using Godot;
 using MegaCrit.Sts2.Core.Combat;
 using MegaCrit.Sts2.Core.Commands;
+using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.Entities.Players;
 using MegaCrit.Sts2.Core.Entities.Powers;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
-using MegaCrit.Sts2.Core.Localization.DynamicVars;
 using MegaCrit.Sts2.Core.Models;
 using MegaCrit.Sts2.Core.Models.Powers;
+using STS2_Mulundus.STS2_MulundusCode.Cards.Token;
+using STS2_Mulundus.STS2_MulundusCode.Extensions;
 
 namespace STS2_Mulundus.STS2_MulundusCode.Powers;
 
-public class AbyssalJourneyPower() : CustomPowerModel()
+public class SugarRushPower() : CustomPowerModel()
 {
-    
     //Loads from STS2_Mulundus/images/powers/your_power.png
     public override string CustomPackedIconPath
     {
@@ -35,10 +34,33 @@ public class AbyssalJourneyPower() : CustomPowerModel()
         }
     }
 
-    public override async Task AfterPlayerTurnStart(PlayerChoiceContext choiceContext, Player player)
+    public override Task AfterPlayerTurnStart(PlayerChoiceContext choiceContext, Player player)
     {
-        if (!this.Owner.HasPower<PoisonPower>()) 
-          await CreatureCmd.LoseMaxHp(choiceContext, this.Owner, 1, false);
+        try
+        {
+            var cardsInHand = CardPile.GetCards(player, PileType.Hand);
+            foreach (var card in cardsInHand)
+            {
+                if (!card.Keywords.Contains(CardKeyword.Ethereal))
+                {
+                    card.AddKeyword(CardKeyword.Ethereal);
+                }
+            }
+
+            return Task.CompletedTask;
+        }
+        catch (Exception exception)
+        {
+            return Task.FromException(exception);
+        }
+    }
+
+    public override async Task AfterCardPlayed(PlayerChoiceContext choiceContext, CardPlay cardPlay)
+    {
+        if (cardPlay.Card is Goodberry)
+        {
+            await CardPileCmd.Draw(choiceContext, 1, cardPlay.Card.Owner);
+        }
     }
 
     public override PowerType Type => PowerType.Debuff;
