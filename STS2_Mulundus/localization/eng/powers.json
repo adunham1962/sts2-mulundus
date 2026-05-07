@@ -7,5 +7,8 @@
   "STS2_MULUNDUS-INVOKE_YOUR_OATH_POWER.title": "Heartwood Oath",
   "STS2_MULUNDUS-SUGAR_RUSH_POWER.description": "At the start of your turn, each card in your hand gains [gold]Ethereal.[/gold]\nWhenever you play a [gold]Goodberry[/gold], draw a card.",
   "STS2_MULUNDUS-SUGAR_RUSH_POWER.smartDescription": "At the start of your turn, each card in your hand gains [gold]Ethereal.[/gold]\nWhenever you play a [gold]Goodberry[/gold], draw a card.",
-  "STS2_MULUNDUS-SUGAR_RUSH_POWER.title": "Sugar Rush"
+  "STS2_MULUNDUS-SUGAR_RUSH_POWER.title": "Sugar Rush",
+  "STS2_MULUNDUS-BLOOMING_FORM_POWER.description": "Whenever you [gold]Exhaust[/gold] a card, ALL enemies gain 2 [gold]Poison[/gold].",
+  "STS2_MULUNDUS-BLOOMING_FORM_POWER.smartDescription": "Whenever you [gold]Exhaust[/gold] a card, ALL enemies gain 2 [gold]Poison[/gold].",
+  "STS2_MULUNDUS-BLOOMING_FORM_POWER.title": "Blooming Form"
 }

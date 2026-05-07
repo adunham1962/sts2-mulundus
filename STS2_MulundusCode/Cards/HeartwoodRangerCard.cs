@@ -7,6 +7,7 @@ using STS2_Mulundus.STS2_MulundusCode.Extensions;
 using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 using MegaCrit.Sts2.Core.Models;
+using static MegaCrit.Sts2.Core.Entities.Cards.TargetType;
 
 namespace STS2_Mulundus.STS2_MulundusCode.Cards;
 
@@ -17,9 +18,10 @@ public abstract class HeartWoodRangerCard(int cost, CardType type, CardRarity ra
     public override async Task AfterCardExhausted(PlayerChoiceContext choiceContext, CardModel card, bool causedByEthereal)
     {
         var rangerCard = card as HeartWoodRangerCard;
+        var targetSelf = card.TargetType == Self;
         if (rangerCard == this && card.IsGrim())
         {
-            await CardCmd.AutoPlay(choiceContext, this, null);
+            await CardCmd.AutoPlay(choiceContext, this, targetSelf ? card.Owner.Creature : null);
         }
     }
     
