@@ -1,6 +1,7 @@
 using BaseLib.Utils;
 using MegaCrit.Sts2.Core.Commands;
 using MegaCrit.Sts2.Core.Entities.Cards;
+using MegaCrit.Sts2.Core.Entities.Players;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 using MegaCrit.Sts2.Core.Localization.DynamicVars;
 using MegaCrit.Sts2.Core.Models;
@@ -26,8 +27,16 @@ public class DanceInTheDark : HeartWoodRangerCard
         await CommonActions.Draw(this, choiceContext);
     }
 
+    public override async Task AfterPlayerTurnStart(PlayerChoiceContext choiceContext, Player player)
+    {
+        if (Pile is { Type: PileType.Exhaust } && player == Owner)
+        {
+            await CardCmd.AutoPlay(choiceContext, this, Owner.Creature);
+        }
+    }
+
     protected override void OnUpgrade()
     {
-        this.DynamicVars.Block.UpgradeValueBy(4);
+        DynamicVars.Block.UpgradeValueBy(4);
     }
 }

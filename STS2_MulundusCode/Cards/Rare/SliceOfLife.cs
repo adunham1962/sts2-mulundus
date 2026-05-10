@@ -27,7 +27,7 @@ public class SliceOfLife : HeartWoodRangerCard
         PlayerChoiceContext choiceContext,
         CardPlay play)
     {
-        CommonActions.CardAttack(this, play, _exhaustCount + 1);
+        await CommonActions.CardAttack(this, play, _exhaustCount).Execute(choiceContext);
         await CreatureCmd.Heal(Owner.Creature, DynamicVars.Heal.BaseValue +  _exhaustCount);
     }
 

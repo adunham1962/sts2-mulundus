@@ -3,18 +3,16 @@ using MegaCrit.Sts2.Core.Commands;
 using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 using MegaCrit.Sts2.Core.Localization.DynamicVars;
+using MegaCrit.Sts2.Core.Models;
 using STS2_Mulundus.STS2_MulundusCode.Character;
-using static MegaCrit.Sts2.Core.Entities.Cards.PileType;
 
 namespace STS2_Mulundus.STS2_MulundusCode.Cards.Common;
 [Pool(typeof(HeartwoodRangerCardPool))]
-public class DreadStrike : HeartWoodRangerCard
+public class WeirdingWood : HeartWoodRangerCard
 {
-
-    public DreadStrike() : base(1, CardType.Attack, CardRarity.Common, TargetType.AnyEnemy)
+    public WeirdingWood() : base(0, CardType.Attack, CardRarity.Common, TargetType.AnyEnemy)
     {
-        WithDamage(8);
-        WithTags(CardTag.Strike);
+        WithDamage(4);
     }
 
     protected override async Task OnPlay(
@@ -22,14 +20,18 @@ public class DreadStrike : HeartWoodRangerCard
         CardPlay play)
     {
         await CommonActions.CardAttack(this, play).Execute(choiceContext);
-        if (CardPile.Get(Draw, Owner) is not { IsEmpty: true })
+    }
+
+    public override async Task AfterCardExhausted(PlayerChoiceContext choiceContext, CardModel card, bool causedByEthereal)
+    {
+        if (card.Id != Id && Owner == card.Owner && Pile is { Type: PileType.Discard or PileType.Exhaust })
         {
-            await CardCmd.Exhaust(choiceContext, Draw.GetPile(this.Owner).Cards[0]);
+            await CardPileCmd.Add(this, PileType.Hand);
         }
     }
 
     protected override void OnUpgrade()
     {
-        this.DynamicVars.Damage.UpgradeValueBy(3m);
+        DynamicVars.Damage.UpgradeValueBy(2);
     }
 }

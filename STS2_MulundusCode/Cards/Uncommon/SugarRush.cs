@@ -19,7 +19,6 @@ public class SugarRush() : HeartWoodRangerCard(1, CardType.Power, CardRarity.Unc
 
     protected override void OnUpgrade()
     {
-        AddKeyword(CardKeyword.Retain);
-        EnergyCost.UpgradeBy(-1);
+        AddKeyword(CardKeyword.Innate);
     }
 }

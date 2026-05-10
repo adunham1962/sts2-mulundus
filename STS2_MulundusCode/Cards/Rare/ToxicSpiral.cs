@@ -5,20 +5,23 @@ using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 using MegaCrit.Sts2.Core.Localization.DynamicVars;
 using MegaCrit.Sts2.Core.Models;
+using MegaCrit.Sts2.Core.Models.Powers;
 using STS2_Mulundus.STS2_MulundusCode.Character;
 
-namespace STS2_Mulundus.STS2_MulundusCode.Cards.Common;
+namespace STS2_Mulundus.STS2_MulundusCode.Cards.Rare;
 
 [Pool(typeof(HeartwoodRangerCardPool))]
-public class DreadCleave : HeartWoodRangerCard
+public class ToxicSpiral : HeartWoodRangerCard
 {
+
     private int _exhaustedThisTurn = 0;
     
-    public DreadCleave() : base(1, CardType.Attack, CardRarity.Common, TargetType.AllEnemies)
+    public ToxicSpiral() : base(0, CardType.Skill, CardRarity.Rare, TargetType.Self)
     {
-        WithDamage(6);
+        WithPower<PoisonPower>(1);
+        WithPower<StrengthPower>(1);
+        WithKeyword(CardKeyword.Exhaust);
     }
-
 
     public override Task AfterCardExhausted(PlayerChoiceContext choiceContext, CardModel card, bool causedByEthereal)
     {
@@ -32,15 +35,19 @@ public class DreadCleave : HeartWoodRangerCard
         return Task.CompletedTask;
     }
     
-    protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay play)
+    protected override async Task OnPlay(
+        PlayerChoiceContext choiceContext,
+        CardPlay play)
     {
         if (CombatState != null)
-            await DamageCmd.Attack(DynamicVars.Damage.BaseValue + (3 * _exhaustedThisTurn)).FromCard(this)
-                .TargetingAllOpponents(CombatState).Execute(choiceContext);
+        {
+            await PowerCmd.Apply<StrengthPower>(Owner.Creature, DynamicVars["StrengthPower"].BaseValue * _exhaustedThisTurn, Owner.Creature, this);
+            await PowerCmd.Apply<PoisonPower>(Owner.Creature, DynamicVars["PoisonPower"].BaseValue * _exhaustedThisTurn, Owner.Creature, this);
+        }
     }
 
     protected override void OnUpgrade()
     {
-        DynamicVars.Damage.UpgradeValueBy(2);
+        RemoveKeyword(CardKeyword.Exhaust);
     }
 }

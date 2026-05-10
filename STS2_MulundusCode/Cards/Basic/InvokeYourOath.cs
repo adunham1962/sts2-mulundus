@@ -13,7 +13,7 @@ namespace STS2_Mulundus.STS2_MulundusCode.Cards.Basic;
 public class InvokeYourOath : HeartWoodRangerCard
 {
 
-    public InvokeYourOath() : base(0, CardType.Skill, CardRarity.Basic, TargetType.None)
+    public InvokeYourOath() : base(1, CardType.Skill, CardRarity.Basic, TargetType.None)
     {
         WithKeyword(CardKeyword.Exhaust);
     }
@@ -32,6 +32,6 @@ public class InvokeYourOath : HeartWoodRangerCard
     
     protected override void OnUpgrade()
     {
-        WithKeyword(CardKeyword.Retain);
+        EnergyCost.UpgradeBy(-1);
     }
 }

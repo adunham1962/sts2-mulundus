@@ -6,13 +6,13 @@ using STS2_Mulundus.STS2_MulundusCode.Character;
 
 namespace STS2_Mulundus.STS2_MulundusCode.Cards.Common;
 [Pool(typeof(HeartwoodRangerCardPool))]
-public class ToxicStrike : HeartWoodRangerCard 
+public class RecklessAssault : HeartWoodRangerCard
 {
-    public ToxicStrike() : base(1, CardType.Attack, CardRarity.Common, TargetType.AnyEnemy)
+    public RecklessAssault() : base(1, CardType.Attack, CardRarity.Common, TargetType.AnyEnemy)
     {
-        WithDamage(14);
-        WithPower<PoisonPower>(2);
-        WithTags(CardTag.Strike);
+        WithDamage(16);
+        WithPower<VulnerablePower>(1);
+        WithPower<FrailPower>(2);
     }
 
     protected override async Task OnPlay(
@@ -20,11 +20,13 @@ public class ToxicStrike : HeartWoodRangerCard
         CardPlay play)
     {
         await CommonActions.CardAttack(this, play).Execute(choiceContext);
-        await CommonActions.ApplySelf<PoisonPower>(this);
+        await CommonActions.ApplySelf<VulnerablePower>(this);
+        await CommonActions.ApplySelf<FrailPower>(this);
     }
 
     protected override void OnUpgrade()
     {
         DynamicVars.Damage.UpgradeValueBy(2);
+        DynamicVars["FrailPower"].UpgradeValueBy(-1);
     }
 }

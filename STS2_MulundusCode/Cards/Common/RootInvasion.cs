@@ -21,7 +21,7 @@ public class RootInvasion : HeartWoodRangerCard
         CardPlay play)
     {
         await CommonActions.CardAttack(this, play).Execute(choiceContext);
-        await CommonActions.Apply<StrengthPower>(play.Target, this);
+        if (play.Target != null) await CommonActions.Apply<StrengthPower>(play.Target, this);
     }
 
     protected override void OnUpgrade()

@@ -13,6 +13,7 @@ using MegaCrit.Sts2.Core.Nodes.Vfx;
 using STS2_Mulundus.STS2_MulundusCode.Cards;
 using STS2_Mulundus.STS2_MulundusCode.Cards.Basic;
 using STS2_Mulundus.STS2_MulundusCode.Cards.Common;
+using STS2_Mulundus.STS2_MulundusCode.Relics;
 
 namespace STS2_Mulundus.STS2_MulundusCode.Character;
 
@@ -48,7 +49,7 @@ public class HeartwoodRanger: PlaceholderCharacterModel
 
     public override IReadOnlyList<RelicModel> StartingRelics =>
     [
-        ModelDb.Relic<BurningBlood>()
+        ModelDb.Relic<HeartwoodStaff>()
     ];
 
     public override List<string> GetArchitectAttackVfx()
@@ -81,15 +82,15 @@ public class HeartwoodRanger: PlaceholderCharacterModel
     public override string CustomCharacterSelectLockedIconPath => "char_select_char_name_locked.png".CharacterUiPath();
     public override string CustomMapMarkerPath => "map_marker_char_name.png".CharacterUiPath();
     
-    public override Color EnergyLabelOutlineColor => new Color("801212FF");
+    public override Color EnergyLabelOutlineColor => new("801212FF");
 
-    public override Color DialogueColor => new Color("590700");
+    public override Color DialogueColor => new("590700");
 
     public override VfxColor SpeechBubbleColor => VfxColor.Green;
 
-    public override Color MapDrawingColor => new Color("CB282B");
+    public override Color MapDrawingColor => new("CB282B");
 
-    public override Color RemoteTargetingLineColor => new Color("E15847FF");
+    public override Color RemoteTargetingLineColor => new("E15847FF");
 
-    public override Color RemoteTargetingLineOutline => new Color("801212FF");
+    public override Color RemoteTargetingLineOutline => new("801212FF");
 }

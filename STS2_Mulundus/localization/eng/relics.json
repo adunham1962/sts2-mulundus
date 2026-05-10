@@ -1,3 +1,8 @@
 {
-  
+  "STS2_MULUNDUS-HEARTWOOD_STAFF.description": "Whenever you play 3 Attacks during your turn, gain 1 [gold]Strength[/gold].",
+  "STS2_MULUNDUS-HEARTWOOD_STAFF.flavor": "The Heartwood Ranger's staff. It was gifted to her by an ancient tree of the Silvan Woods when she swore her oath to defend the denizens of the forest.",
+  "STS2_MULUNDUS-HEARTWOOD_STAFF.title": "Heartwood Staff",
+  "STS2_MULUNDUS-DARK_CONTRACT.description": "On pickup, lose 10 max HP.\nCard rewards now may include [gold]Necrobinder[/gold] cards.",
+  "STS2_MULUNDUS-DARK_CONTRACT.flavor": "A dark deal was made with the goddess of Death and Revenge. A deal the Heartwood Ranger believes will help her save the world.",
+  "STS2_MULUNDUS-DARK_CONTRACT.title": "Dark Contract"
 }

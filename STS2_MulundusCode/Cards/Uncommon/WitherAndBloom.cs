@@ -1,31 +1,32 @@
-using BaseLib.Patches.Content;
 using BaseLib.Utils;
 using MegaCrit.Sts2.Core.Commands;
 using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
-using MegaCrit.Sts2.Core.Localization.DynamicVars;
 using STS2_Mulundus.STS2_MulundusCode.Character;
 
 namespace STS2_Mulundus.STS2_MulundusCode.Cards.Uncommon;
+
 [Pool(typeof(HeartwoodRangerCardPool))]
-public class InsectPlague : HeartWoodRangerCard
+public class WitherAndBloom : HeartWoodRangerCard
 {
-    public InsectPlague() : base(3, CardType.Attack, CardRarity.Uncommon, TargetType.AllEnemies)
+    public WitherAndBloom() : base(1, CardType.Attack, CardRarity.Uncommon, TargetType.AllEnemies)
     {
-        WithDamage(4);
-        WithKeyword(HeartwoodRangerKeywords.Grim);
+        WithDamage(10);
+        WithHeal(1);
     }
-    
+
     protected override async Task OnPlay(
         PlayerChoiceContext choiceContext,
         CardPlay play)
     {
-        var numOfExhaust = CardPile.GetCards(Owner, PileType.Exhaust).Count();
-        await CommonActions.CardAttack(this, play, numOfExhaust).Execute(choiceContext);
+        await CommonActions.CardAttack(this, play).Execute(choiceContext);
+        if (CombatState != null)
+            await CreatureCmd.Heal(Owner.Creature, DynamicVars.Heal.BaseValue * CombatState.Enemies.Count);
     }
 
     protected override void OnUpgrade()
     {
         DynamicVars.Damage.UpgradeValueBy(2);
+        DynamicVars.Heal.UpgradeValueBy(1);
     }
 }

@@ -1,20 +1,18 @@
 using BaseLib.Utils;
-using MegaCrit.Sts2.Core.Commands;
 using MegaCrit.Sts2.Core.Entities.Cards;
+using MegaCrit.Sts2.Core.Entities.Powers;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 using MegaCrit.Sts2.Core.Localization.DynamicVars;
 using STS2_Mulundus.STS2_MulundusCode.Character;
-using static MegaCrit.Sts2.Core.Entities.Cards.PileType;
 
 namespace STS2_Mulundus.STS2_MulundusCode.Cards.Common;
 [Pool(typeof(HeartwoodRangerCardPool))]
-public class DreadStrike : HeartWoodRangerCard
+public class RelentlessPursuit : HeartWoodRangerCard
 {
-
-    public DreadStrike() : base(1, CardType.Attack, CardRarity.Common, TargetType.AnyEnemy)
+    public RelentlessPursuit() : base(0, CardType.Attack, CardRarity.Common, TargetType.AnyEnemy)
     {
-        WithDamage(8);
-        WithTags(CardTag.Strike);
+        WithDamage(6);
+        WithCards(1);
     }
 
     protected override async Task OnPlay(
@@ -22,14 +20,18 @@ public class DreadStrike : HeartWoodRangerCard
         CardPlay play)
     {
         await CommonActions.CardAttack(this, play).Execute(choiceContext);
-        if (CardPile.Get(Draw, Owner) is not { IsEmpty: true })
+        if (play.Target != null)
         {
-            await CardCmd.Exhaust(choiceContext, Draw.GetPile(this.Owner).Cards[0]);
+            var debuffs = play.Target.Powers.ToList().FindAll(p => p.Type == PowerType.Debuff);
+            if (debuffs.Count > 0)
+            {
+                await CommonActions.Draw(this, choiceContext);
+            }
         }
     }
 
     protected override void OnUpgrade()
     {
-        this.DynamicVars.Damage.UpgradeValueBy(3m);
+        DynamicVars.Damage.UpgradeValueBy(2);
     }
 }

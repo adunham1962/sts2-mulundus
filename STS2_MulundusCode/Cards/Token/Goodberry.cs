@@ -26,7 +26,7 @@ public class Goodberry : HeartWoodRangerCard
         await CreatureCmd.Heal(Owner.Creature, DynamicVars.Heal.BaseValue);
     }
 
-    public static IEnumerable<Goodberry> Create(Player owner, int amount, CombatState combatState)
+    public static IEnumerable<Goodberry> Create(Player owner, decimal amount, CombatState combatState)
     {
         var goodBerryList = new List<Goodberry>();
         for (var index = 0; index < amount; ++index)
