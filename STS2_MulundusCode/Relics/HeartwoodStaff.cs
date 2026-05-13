@@ -1,4 +1,3 @@
-using BaseLib.Abstracts;
 using BaseLib.Utils;
 using MegaCrit.Sts2.Core.Commands;
 using MegaCrit.Sts2.Core.Entities.Cards;
@@ -21,7 +20,7 @@ public class HeartwoodStaff() : STS2_MulundusRelic()
     
     public override bool ShowCounter => true;
 
-    public override int DisplayAmount => _attacksPlayed % 2;
+    public override int DisplayAmount => _attacksPlayed % 4;
 
     private int _attacksPlayed = 0;
 
@@ -34,7 +33,7 @@ public class HeartwoodStaff() : STS2_MulundusRelic()
         private set
         {
             AssertMutable();
-            _attacksPlayed = value % 3;
+            _attacksPlayed = value % 4;
             UpdateDisplay();
         }
     }
@@ -87,7 +86,7 @@ public class HeartwoodStaff() : STS2_MulundusRelic()
     {
         if (DoesCardCountForRelic(cardPlay.Card))
         { 
-            if (AttacksPlayed % 3 == 0)
+            if (AttacksPlayed % 4 == 0)
             {
                 await CommonActions.ApplySelf<StrengthPower>(cardPlay.Card, 1);
             } 

@@ -1,3 +1,5 @@
+using System;
+using System.Threading.Tasks;
 using BaseLib.Abstracts;
 using Godot;
 using MegaCrit.Sts2.Core.Combat;

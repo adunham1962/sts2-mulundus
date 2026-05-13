@@ -1,7 +1,6 @@
 using BaseLib.Utils;
 using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
-using MegaCrit.Sts2.Core.Localization.DynamicVars;
 using MegaCrit.Sts2.Core.Models.Powers;
 using STS2_Mulundus.STS2_MulundusCode.Character;
 
@@ -10,9 +9,10 @@ namespace STS2_Mulundus.STS2_MulundusCode.Cards.Basic;
 public class DreadSlash : HeartWoodRangerCard
 {
 
+    public override string PortraitPath => "res://STS2_Mulundus/images/card_portraits/dread_slash.png";
     public DreadSlash() : base(1, CardType.Attack, CardRarity.Basic, TargetType.AnyEnemy)
     {
-        WithDamage(9);
+        WithDamage(8);
         WithPower<VulnerablePower>(1);
         WithPower<WeakPower>(1);
     }

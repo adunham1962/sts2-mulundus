@@ -5,12 +5,14 @@ using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 using MegaCrit.Sts2.Core.Localization.DynamicVars;
 using MegaCrit.Sts2.Core.Models.Powers;
 using STS2_Mulundus.STS2_MulundusCode.Character;
+using STS2_Mulundus.STS2_MulundusCode.Extensions;
 
 namespace STS2_Mulundus.STS2_MulundusCode.Cards.Uncommon;
 
 [Pool(typeof(HeartwoodRangerCardPool))]
 public class SpikeGrowth : HeartWoodRangerCard
 {
+    public override string PortraitPath => "Cilef Base.png".CardImagePath();
     public SpikeGrowth() : base(1, CardType.Power, CardRarity.Uncommon, MegaCrit.Sts2.Core.Entities.Cards.TargetType.Self)
     {
         WithPower<ThornsPower>(3);

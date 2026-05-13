@@ -1,8 +1,17 @@
 {
-  "STS2_MULUNDUS-HEARTWOOD_STAFF.description": "Whenever you play 3 Attacks during your turn, gain 1 [gold]Strength[/gold].",
+  "STS2_MULUNDUS-HEARTWOOD_STAFF.description": "Whenever you play 4 Attacks during your turn, gain 1 [gold]Strength[/gold].",
   "STS2_MULUNDUS-HEARTWOOD_STAFF.flavor": "The Heartwood Ranger's staff. It was gifted to her by an ancient tree of the Silvan Woods when she swore her oath to defend the denizens of the forest.",
   "STS2_MULUNDUS-HEARTWOOD_STAFF.title": "Heartwood Staff",
   "STS2_MULUNDUS-DARK_CONTRACT.description": "On pickup, lose 10 max HP.\nCard rewards now may include [gold]Necrobinder[/gold] cards.",
   "STS2_MULUNDUS-DARK_CONTRACT.flavor": "A dark deal was made with the goddess of Death and Revenge. A deal the Heartwood Ranger believes will help her save the world.",
-  "STS2_MULUNDUS-DARK_CONTRACT.title": "Dark Contract"
+  "STS2_MULUNDUS-DARK_CONTRACT.title": "Dark Contract",
+  "STS2_MULUNDUS-POISONOUS_FLOWER.description": "At the start of each combat, apply 3 [gold]Poison[/gold] to ALL enemies.\nIncrease this amount by 1 in Act 2, and again in Act 3.",
+  "STS2_MULUNDUS-POISONOUS_FLOWER.flavor": "A beautiful flower that The Raspberry King greatly enjoys, although he doesn't recommend anyone get close enough to smell it...",
+  "STS2_MULUNDUS-POISONOUS_FLOWER.title": "Poisonous Flower",
+  "STS2_MULUNDUS-THE_GOLDEN_RASPBERRY.description": "Upon pickup, add [gold]The Golden Raspberry[/gold] to your deck.",
+  "STS2_MULUNDUS-THE_GOLDEN_RASPBERRY.flavor": "A most blessed raspberry! One of The Raspberry King's most treasured possesions. It's certain to taste delicious!",
+  "STS2_MULUNDUS-THE_GOLDEN_RASPBERRY.title": "The Golden Raspberry",
+  "STS2_MULUNDUS-WHIMSICAL_GIFT.description": "Upon pickup, gain 5 max HP and add an [gold]Acorn Buddy[/gold] to your deck.",
+  "STS2_MULUNDUS-WHIMSICAL_GIFT.flavor": "",
+  "STS2_MULUNDUS-WHIMSICAL_GIFT.title": "Whimsical Gift"
 }

@@ -6,13 +6,14 @@ using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 using MegaCrit.Sts2.Core.Localization.DynamicVars;
 using MegaCrit.Sts2.Core.Models;
 using STS2_Mulundus.STS2_MulundusCode.Character;
+using STS2_Mulundus.STS2_MulundusCode.Extensions;
 
 namespace STS2_Mulundus.STS2_MulundusCode.Cards.Rare;
 
 [Pool(typeof(HeartwoodRangerCardPool))]
 public class SliceOfLife : HeartWoodRangerCard
 {
-
+    public override string PortraitPath => "Cilef Base.png".CardImagePath();
     private int _exhaustCount;
     
     public SliceOfLife() : base(2, CardType.Attack, CardRarity.Rare, TargetType.AllEnemies)

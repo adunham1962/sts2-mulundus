@@ -7,5 +7,5 @@ namespace STS2_Mulundus.STS2_MulundusCode.Powers;
 
 public class SolemnityPower: TemporaryStrengthPower, ICustomModel
 { 
-    public override AbstractModel OriginModel => (AbstractModel) ModelDb.Card<Solemnity>();
+    public override AbstractModel OriginModel => ModelDb.Card<Solemnity>();
 }

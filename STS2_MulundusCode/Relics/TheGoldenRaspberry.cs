@@ -1,0 +1,24 @@
+using BaseLib.Utils;
+using MegaCrit.Sts2.Core.Commands;
+using MegaCrit.Sts2.Core.Entities.Cards;
+using MegaCrit.Sts2.Core.Entities.Relics;
+using MegaCrit.Sts2.Core.Models;
+using MegaCrit.Sts2.Core.Models.RelicPools;
+
+namespace STS2_Mulundus.STS2_MulundusCode.Relics;
+
+[Pool(typeof(EventRelicPool))]
+public class TheGoldenRaspberry() : STS2_MulundusRelic()
+{
+    public override RelicRarity Rarity =>
+        RelicRarity.Ancient;
+
+    public override async Task AfterObtained()
+    {
+        var cardPileAddResultList = new List<CardPileAddResult>(1);
+        var card = ModelDb.Card<Cards.Ancient.TheGoldenRaspberry>();
+        var cardPileAddResult = await CardPileCmd.Add(Owner.RunState.CreateCard(card, Owner), PileType.Deck);
+        cardPileAddResultList.Add(cardPileAddResult);
+        CardCmd.PreviewCardPileAdd(cardPileAddResultList, 2f);
+    }
+}

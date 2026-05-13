@@ -6,11 +6,13 @@ using MegaCrit.Sts2.Core.Entities.Creatures;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 using MegaCrit.Sts2.Core.Localization.DynamicVars;
 using STS2_Mulundus.STS2_MulundusCode.Character;
+using STS2_Mulundus.STS2_MulundusCode.Extensions;
 
 namespace STS2_Mulundus.STS2_MulundusCode.Cards.Uncommon;
 [Pool(typeof(HeartwoodRangerCardPool))]
 public class Revivify : HeartWoodRangerCard
 {
+    public override string PortraitPath => "Cilef Base.png".CardImagePath();
     public Revivify() : base(3, CardType.Skill, CardRarity.Uncommon, TargetType.Self)
     {
         WithKeyword(CardKeyword.Exhaust);

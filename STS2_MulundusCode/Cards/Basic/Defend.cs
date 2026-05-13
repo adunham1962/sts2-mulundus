@@ -1,13 +1,15 @@
 using BaseLib.Utils;
 using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
-using MegaCrit.Sts2.Core.Localization.DynamicVars;
 using STS2_Mulundus.STS2_MulundusCode.Character;
+using STS2_Mulundus.STS2_MulundusCode.Extensions;
 
 namespace STS2_Mulundus.STS2_MulundusCode.Cards.Basic;
 [Pool(typeof(HeartwoodRangerCardPool))]
 public class HeartwoodRangerDefend : HeartWoodRangerCard
 {
+    
+    public override string PortraitPath => "Cilef Base.png".CardImagePath();
     public HeartwoodRangerDefend() : base(1, CardType.Skill, CardRarity.Basic, TargetType.None)
     {
         WithBlock(5);

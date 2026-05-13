@@ -8,11 +8,13 @@ using MegaCrit.Sts2.Core.Localization.DynamicVars;
 using MegaCrit.Sts2.Core.Models.CardPools;
 using MegaCrit.Sts2.Core.Models.Cards;
 using STS2_Mulundus.STS2_MulundusCode.Character;
+using STS2_Mulundus.STS2_MulundusCode.Extensions;
 
 namespace STS2_Mulundus.STS2_MulundusCode.Cards.Token;
 [Pool(typeof(TokenCardPool))]
 public class Goodberry : HeartWoodRangerCard
 {
+    public override string PortraitPath => "Cilef Base.png".CardImagePath();
     public Goodberry() : base(0, CardType.Skill, CardRarity.Token, TargetType.Self)
     {
         WithHeal(1);

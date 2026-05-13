@@ -3,12 +3,14 @@ using MegaCrit.Sts2.Core.Commands;
 using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 using STS2_Mulundus.STS2_MulundusCode.Character;
+using STS2_Mulundus.STS2_MulundusCode.Extensions;
 
 namespace STS2_Mulundus.STS2_MulundusCode.Cards.Uncommon;
 
 [Pool(typeof(HeartwoodRangerCardPool))]
 public class WitherAndBloom : HeartWoodRangerCard
 {
+    public override string PortraitPath => "Cilef Base.png".CardImagePath();
     public WitherAndBloom() : base(1, CardType.Attack, CardRarity.Uncommon, TargetType.AllEnemies)
     {
         WithDamage(10);

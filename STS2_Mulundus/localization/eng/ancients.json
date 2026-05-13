@@ -2,5 +2,11 @@
   "THE_ARCHITECT.talk.STS2_MULUNDUS-HEARTWOOD_RANGER.0-0r.char": "I am angry at the architect",
   "THE_ARCHITECT.talk.STS2_MULUNDUS-HEARTWOOD_RANGER.0-0r.next": "Continue",
   "THE_ARCHITECT.talk.STS2_MULUNDUS-HEARTWOOD_RANGER.0-1r.ancient": "You die",
-  "THE_ARCHITECT.talk.STS2_MULUNDUS-HEARTWOOD_RANGER.0-attack": "Both"
+  "THE_ARCHITECT.talk.STS2_MULUNDUS-HEARTWOOD_RANGER.0-attack": "Both",
+  "STS2_MULUNDUS-THE_RASPBERRY_KING.epithet": "",
+  "STS2_MULUNDUS-THE_RASPBERRY_KING.talk.ANY.0-0r.ancient": "Did you know that sometimes trees dream of having teeth?",
+  "STS2_MULUNDUS-THE_RASPBERRY_KING.talk.ANY.0-0r.next": "Uhh.. that's concerning..",
+  "STS2_MULUNDUS-THE_RASPBERRY_KING.talk.ANY.0-1r.ancient": "No! They just wish they could smile when the sun is out.",
+  "STS2_MULUNDUS-THE_RASPBERRY_KING.talk.firstVisitEver.0-0.ancient": "Here, have a raspberry! They are sooo juicy and sweet.",
+  "STS2_MULUNDUS-THE_RASPBERRY_KING.title": "The Raspberry King"
 }

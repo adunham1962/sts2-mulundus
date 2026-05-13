@@ -7,13 +7,14 @@ using MegaCrit.Sts2.Core.Localization.DynamicVars;
 using MegaCrit.Sts2.Core.Models;
 using MegaCrit.Sts2.Core.Models.Powers;
 using STS2_Mulundus.STS2_MulundusCode.Character;
+using STS2_Mulundus.STS2_MulundusCode.Extensions;
 
 namespace STS2_Mulundus.STS2_MulundusCode.Cards.Rare;
 
 [Pool(typeof(HeartwoodRangerCardPool))]
 public class ToxicSpiral : HeartWoodRangerCard
 {
-
+    public override string PortraitPath => "Cilef Base.png".CardImagePath();
     private int _exhaustedThisTurn = 0;
     
     public ToxicSpiral() : base(0, CardType.Skill, CardRarity.Rare, TargetType.Self)

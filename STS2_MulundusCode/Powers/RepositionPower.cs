@@ -7,5 +7,5 @@ namespace STS2_Mulundus.STS2_MulundusCode.Powers;
 
 public class RepositionPower : TemporaryDexterityPower, ICustomModel
 {
-    public override AbstractModel OriginModel => (AbstractModel) ModelDb.Card<Reposition>();
+    public override AbstractModel OriginModel => ModelDb.Card<Reposition>();
 }
