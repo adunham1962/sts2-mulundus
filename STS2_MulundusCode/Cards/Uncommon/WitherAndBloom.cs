@@ -13,7 +13,7 @@ public class WitherAndBloom : HeartWoodRangerCard
     public override string PortraitPath => "Cilef Base.png".CardImagePath();
     public WitherAndBloom() : base(1, CardType.Attack, CardRarity.Uncommon, TargetType.AllEnemies)
     {
-        WithDamage(10);
+        WithDamage(7);
         WithHeal(1);
     }
 

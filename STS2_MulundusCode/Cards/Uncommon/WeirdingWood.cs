@@ -14,6 +14,7 @@ public class WeirdingWood : HeartWoodRangerCard
     public WeirdingWood() : base(0, CardType.Attack, CardRarity.Uncommon, TargetType.AnyEnemy)
     {
         WithDamage(4);
+        WithEnergy(1);
     }
 
     protected override async Task OnPlay(
@@ -25,7 +26,7 @@ public class WeirdingWood : HeartWoodRangerCard
 
     public override async Task AfterCardExhausted(PlayerChoiceContext choiceContext, CardModel card, bool causedByEthereal)
     {
-        if (card.Id != Id && Owner == card.Owner && Pile is { Type: PileType.Discard or PileType.Exhaust })
+        if (card.Id != Id && Owner == card.Owner && Pile is { Type: PileType.Discard or PileType.Exhaust } && card.EnergyCost.Canonical > 0);
         {
             await CardPileCmd.Add(this, PileType.Hand);
         }

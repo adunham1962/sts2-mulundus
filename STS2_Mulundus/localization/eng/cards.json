@@ -58,7 +58,7 @@
   "STS2_MULUNDUS-SOLEMNITY.title": "Solemnity",
   "STS2_MULUNDUS-RELENTLESS_PURSUIT.description": "Deal {Damage:diff()} damage.\nIf the enemy is debuffed, draw a card.",
   "STS2_MULUNDUS-RELENTLESS_PURSUIT.title": "Relentless Pursuit",
-  "STS2_MULUNDUS-WEIRDING_WOOD.description": "Deal {Damage:diff()} damage.\nWhenever you [gold]Exhaust[/gold] another card, put this card into your [gold]Hand[/gold] from your [gold]Discard Pile[/gold] or your [gold]Exhaust Pile[/gold].",
+  "STS2_MULUNDUS-WEIRDING_WOOD.description": "Deal {Damage:diff()} damage.\nWhenever you [gold]Exhaust[/gold] another card, if it cost at least {Energy:energyIcons()}, put this card into your [gold]Hand[/gold] from your [gold]Discard Pile[/gold] or your [gold]Exhaust Pile[/gold].",
   "STS2_MULUNDUS-WEIRDING_WOOD.title": "Weirding Wood",
   "STS2_MULUNDUS-INFLICT_WOUNDS.description": "Deal {Damage:diff()} damage.\nDeals 1 additional damage for each card in your [gold]Exhaust Pile[/gold].",
   "STS2_MULUNDUS-INFLICT_WOUNDS.title": "Inflict Wounds",
@@ -82,12 +82,12 @@
   "STS2_MULUNDUS-WITHERING_CLEAVE.title": "Withering Cleave",
   "STS2_MULUNDUS-LEAP_OF_FAITH.description": "Gain {Block:diff()} [gold]Block[/gold].\n[gold]Exhaust[/gold] the top card of your [gold]Draw Pile[/gold].",
   "STS2_MULUNDUS-LEAP_OF_FAITH.title": "Leap of Faith",
-  "STS2_MULUNDUS-CLOAK_OF_WILTING.description": "You and ALL enemies lose {StrengthPower:inverseDiff()} [gold]Strength[/gold].\nGain {Energy:energyIcons()} at the start of each turn.",
+  "STS2_MULUNDUS-CLOAK_OF_WILTING.description": "You and ALL enemies lose {StrengthPower:diff()} [gold]Strength[/gold].\nGain {Energy:energyIcons()} at the start of each turn.",
   "STS2_MULUNDUS-CLOAK_OF_WILTING.title": "Cloak of Wilting",
   "STS2_MULUNDUS-THE_GOLDEN_RASPBERRY.description": "Heal {Heal:diff()} HP.\nDraw {Cards:diff()} cards.",
   "STS2_MULUNDUS-THE_GOLDEN_RASPBERRY.title": "The Golden Raspberry",
   "STS2_MULUNDUS-ACORN_BUDDY.description": "Gain {MaxHp:diff()} max HP.",
   "STS2_MULUNDUS-ACORN_BUDDY.title": "Acorn Buddy",
-  "STS2_MULUNDUS-COMMUNE_WITH_NATURE.description": "Draw {Cards:diff()} cards.\nIf you haven't attacked this turn. gain {Energy:energyIcons()}.",
+  "STS2_MULUNDUS-COMMUNE_WITH_NATURE.description": "Draw {Cards:diff()} cards.\nIf you haven't played a card this turn, gain {Energy:energyIcons()}.",
   "STS2_MULUNDUS-COMMUNE_WITH_NATURE.title": "Commune with Nature"
 }

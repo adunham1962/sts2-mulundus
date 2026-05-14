@@ -11,7 +11,8 @@ namespace STS2_Mulundus.STS2_MulundusCode.Cards.Common;
 [Pool(typeof(HeartwoodRangerCardPool))]
 public class Decompose : HeartWoodRangerCard
 {
-    public override string PortraitPath => "Cilef Base.png".CardImagePath();
+    public override string PortraitPath => "res://STS2_Mulundus/images/card_portraits/decompose.png";
+
     public Decompose() : base(1, CardType.Skill, CardRarity.Common, TargetType.Self)
     {
         WithVar("BerryAdd", 1);
