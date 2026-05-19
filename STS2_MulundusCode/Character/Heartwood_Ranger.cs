@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Runtime.InteropServices;
 using BaseLib.Abstracts;
 using BaseLib.Utils.NodeFactories;
 using STS2_Mulundus.STS2_MulundusCode.Extensions;
@@ -13,6 +14,7 @@ using MegaCrit.Sts2.Core.Nodes.Vfx;
 using STS2_Mulundus.STS2_MulundusCode.Cards;
 using STS2_Mulundus.STS2_MulundusCode.Cards.Basic;
 using STS2_Mulundus.STS2_MulundusCode.Cards.Common;
+using STS2_Mulundus.STS2_MulundusCode.Cards.Rare;
 using STS2_Mulundus.STS2_MulundusCode.Relics;
 
 namespace STS2_Mulundus.STS2_MulundusCode.Character;
@@ -54,7 +56,21 @@ public class HeartwoodRanger: PlaceholderCharacterModel
 
     public override List<string> GetArchitectAttackVfx()
     {
-        throw new NotImplementedException();
+        const int num = 5;
+        var list = new List<string>(num);
+        CollectionsMarshal.SetCount(list, num);
+        var span = CollectionsMarshal.AsSpan(list);
+        const int index1 = 0;
+        span[index1] = "vfx/vfx_attack_blunt";
+        const int index2 = index1 + 1;
+        span[index2] = "vfx/vfx_heavy_blunt";
+        const int index3 = index2 + 1;
+        span[index3] = "vfx/vfx_attack_slash";
+        const int index4 = index3 + 1;
+        span[index4] = "vfx/vfx_bloody_impact";
+        const int index5 = index4 + 1;
+        span[index5] = "vfx/vfx_rock_shatter";
+        return list;
     }
 
     public override CardPoolModel CardPool => ModelDb.CardPool<HeartwoodRangerCardPool>();
@@ -78,7 +94,7 @@ public class HeartwoodRanger: PlaceholderCharacterModel
     public override string CustomCharacterSelectBg =>
         "res://STS2_Mulundus/scenes/screens/char_select/cilef_select.tscn";
     public override string CustomIconTexturePath => "character_icon_char_name.png".CharacterUiPath();
-    public override string CustomCharacterSelectIconPath => "char_select_char_name.png".CharacterUiPath();
+    public override string CustomCharacterSelectIconPath => "res://STS2_Mulundus/images/charui/Cilef_char_select_button.png";
     public override string CustomCharacterSelectLockedIconPath => "char_select_char_name_locked.png".CharacterUiPath();
     public override string CustomMapMarkerPath => "map_marker_char_name.png".CharacterUiPath();
     

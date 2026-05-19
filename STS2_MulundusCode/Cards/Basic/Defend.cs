@@ -9,7 +9,7 @@ namespace STS2_Mulundus.STS2_MulundusCode.Cards.Basic;
 public class HeartwoodRangerDefend : HeartWoodRangerCard
 {
     
-    public override string PortraitPath => "Cilef Base.png".CardImagePath();
+    public override string PortraitPath => "res://STS2_Mulundus/images/card_portraits/heartwood_ranger_defend.png";
     public HeartwoodRangerDefend() : base(1, CardType.Skill, CardRarity.Basic, TargetType.None)
     {
         WithBlock(5);

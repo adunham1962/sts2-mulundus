@@ -12,7 +12,7 @@ public class InvokeYourOath : HeartWoodRangerCard
 {
 
     public override string PortraitPath => "res://STS2_Mulundus/images/card_portraits/invoke_your_oath.png";
-    public InvokeYourOath() : base(1, CardType.Skill, CardRarity.Basic, TargetType.None)
+    public InvokeYourOath() : base(1, CardType.Skill, CardRarity.Basic, TargetType.Self)
     {
         WithKeyword(CardKeyword.Exhaust);
     }

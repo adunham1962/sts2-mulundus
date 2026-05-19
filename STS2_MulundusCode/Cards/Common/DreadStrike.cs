@@ -10,7 +10,7 @@ namespace STS2_Mulundus.STS2_MulundusCode.Cards.Common;
 [Pool(typeof(HeartwoodRangerCardPool))]
 public class DreadStrike : HeartWoodRangerCard
 {
-    public override string PortraitPath => "Cilef Base.png".CardImagePath();
+    public override string PortraitPath => "res://STS2_Mulundus/images/card_portraits/dread_strike.png";
     public DreadStrike() : base(1, CardType.Attack, CardRarity.Common, TargetType.AnyEnemy)
     {
         WithDamage(9);

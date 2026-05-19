@@ -33,6 +33,6 @@ public class CommuneWithNature : HeartWoodRangerCard
 
     protected override void OnUpgrade()
     {
-        DynamicVars.Energy.UpgradeValueBy(1);
+        AddKeyword(CardKeyword.Retain);
     }
 }

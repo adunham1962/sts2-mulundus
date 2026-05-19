@@ -13,22 +13,20 @@ namespace STS2_Mulundus.STS2_MulundusCode.Cards.Uncommon;
 public class SpikeGrowth : HeartWoodRangerCard
 {
     public override string PortraitPath => "Cilef Base.png".CardImagePath();
-    public SpikeGrowth() : base(1, CardType.Power, CardRarity.Uncommon, MegaCrit.Sts2.Core.Entities.Cards.TargetType.Self)
+    public SpikeGrowth() : base(1, CardType.Power, CardRarity.Uncommon, TargetType.Self)
     {
         WithPower<ThornsPower>(3);
     }
-
-    protected new IEnumerable<DynamicVar> CanonicalVars => [new PowerVar<ThornsPower>(3)];
 
     protected override async Task OnPlay(
         PlayerChoiceContext choiceContext,
         CardPlay play)
     {
-        await PowerCmd.Apply<ThornsPower>(this.Owner.Creature, 3m, this.Owner.Creature, this);
+        await PowerCmd.Apply<ThornsPower>(Owner.Creature, 3, Owner.Creature, this);
     }
 
     protected override void OnUpgrade()
     {
-        this.DynamicVars["ThornsPower"].UpgradeValueBy(1m);
+        DynamicVars["ThornsPower"].UpgradeValueBy(1);
     }
 }

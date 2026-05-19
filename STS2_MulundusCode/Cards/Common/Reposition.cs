@@ -13,26 +13,26 @@ namespace STS2_Mulundus.STS2_MulundusCode.Cards.Common;
 public class Reposition : HeartWoodRangerCard
 {
     public override string PortraitPath => "Cilef Base.png".CardImagePath();
-    public Reposition() : base(1, CardType.Skill, CardRarity.Common, TargetType.AnyEnemy)
+    public Reposition() : base(0, CardType.Skill, CardRarity.Common, TargetType.AnyEnemy)
     {
-        WithBlock(4);
         WithPower<DexterityPower>(2);
         WithPower<VulnerablePower>(1);
+        WithPower<WeakPower>(1);
     }
 
     protected override async Task OnPlay(
         PlayerChoiceContext choiceContext,
         CardPlay play)
     {
-        await CommonActions.CardBlock(this, play);
         await PowerCmd.Apply<RepositionPower>(Owner.Creature, DynamicVars.Dexterity.BaseValue, Owner.Creature, this);
         if (play.Target != null) await CommonActions.Apply<VulnerablePower>(play.Target, this);
+        if (play.Target != null) await CommonActions.Apply<WeakPower>(play.Target, this);
     }
 
     protected override void OnUpgrade()
     {
         DynamicVars["VulnerablePower"].UpgradeValueBy(1);
+        DynamicVars["WeakPower"].UpgradeValueBy(1);
         DynamicVars.Dexterity.UpgradeValueBy(1);
-        DynamicVars.Block.UpgradeValueBy(2);
     }
 }

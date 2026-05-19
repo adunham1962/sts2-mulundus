@@ -13,5 +13,14 @@
   "STS2_MULUNDUS-BLOOMING_FORM_POWER.title": "Blooming Form",
   "STS2_MULUNDUS-CLOAK_OF_WILTING_POWER.description": "Gain [blue]1[/blue] [gold]Energy[/gold] at the start of each turn.",
   "STS2_MULUNDUS-CLOAK_OF_WILTING_POWER.smartDescription": "Gain {Amount:energyIcons()} at the start of each turn.",
-  "STS2_MULUNDUS-CLOAK_OF_WILTING_POWER.title": "Wilting Aura"
+  "STS2_MULUNDUS-CLOAK_OF_WILTING_POWER.title": "Wilting Aura",
+  "STS2_MULUNDUS-LIVING_BASTION_POWER.description": "At the start of your turn, gain 2 [gold]Plating[/gold] and [gold]Heal[/gold] 1 HP.",
+  "STS2_MULUNDUS-LIVING_BASTION_POWER.smartDescription": "At the start of your turn, gain 2 [gold]Plating[/gold] and [gold]Heal[/gold] 1 HP.",
+  "STS2_MULUNDUS-LIVING_BASTION_POWER.title": "Living Bastion",
+  "STS2_MULUNDUS-LIFE_ON_THE_EDGE_POWER.description": "At the start of your turn, draw 2 additional cards if you're [gold]poisoned[/gold].",
+  "STS2_MULUNDUS-LIFE_ON_THE_EDGE_POWER.smartDescription": "At the start of your turn, draw 2 additional cards if you're [gold]poisoned[/gold].",
+  "STS2_MULUNDUS-LIFE_ON_THE_EDGE_POWER.title": "Life on the Edge",
+  "STS2_MULUNDUS-BRAMBLE_MANTLE_POWER.description": "Whenever you gain [gold]Thorns[/gold], gain 3 [gold]Block[/gold].",
+  "STS2_MULUNDUS-BRAMBLE_MANTLE_POWER.smartDescription": "Whenever you gain [gold]Thorns[/gold], gain 3 [gold]Block[/gold].",
+  "STS2_MULUNDUS-BRAMBLE_MANTLE_POWER.title": "Bramble Mantle"
 }

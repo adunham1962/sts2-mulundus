@@ -12,7 +12,7 @@ namespace STS2_Mulundus.STS2_MulundusCode.Cards.Common;
 public class RootInvasion : HeartWoodRangerCard
 {
     public override string PortraitPath => "res://STS2_Mulundus/images/card_portraits/root_invasion.png";
-    public RootInvasion() : base(1, CardType.Attack, CardRarity.Common, TargetType.AnyEnemy)
+    public RootInvasion() : base(0, CardType.Attack, CardRarity.Common, TargetType.AnyEnemy)
     {
         WithDamage(4);
         WithPower<StrengthPower>(-1);

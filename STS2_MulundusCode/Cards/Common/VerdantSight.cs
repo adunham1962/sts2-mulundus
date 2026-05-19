@@ -11,7 +11,8 @@ public class VerdantSight : HeartWoodRangerCard
     public override string PortraitPath => "Cilef Base.png".CardImagePath();
     public VerdantSight() : base(1, CardType.Skill, CardRarity.Common, TargetType.Self)
     {
-        WithCards(1);
+        WithCards(2);
+        WithKeyword(HeartwoodRangerKeywords.Grim);
     }
 
     protected override async Task OnPlay(
@@ -19,15 +20,10 @@ public class VerdantSight : HeartWoodRangerCard
         CardPlay play)
     {
         await CommonActions.Draw(this, choiceContext);
-        await CommonActions.Draw(this, choiceContext);
-        if (play.Card.Owner.PlayerCombatState is { ExhaustPile.IsEmpty: false })
-        {
-            await CommonActions.Draw(this, choiceContext);
-        }
     }
 
     protected override void OnUpgrade()
     {
-        this.AddKeyword(CardKeyword.Retain);
+        DynamicVars.Cards.UpgradeValueBy(1);
     }
 }

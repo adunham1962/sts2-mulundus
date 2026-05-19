@@ -43,6 +43,6 @@ public class DeathBloom : HeartWoodRangerCard
 
     protected override void OnUpgrade()
     {
-
+        RemoveKeyword(CardKeyword.Exhaust);
     }
 }

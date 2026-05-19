@@ -13,14 +13,14 @@ public class AcornBuddy : ConstructedCardModel
     
     public AcornBuddy() : base(1, CardType.Power, CardRarity.Ancient, TargetType.Self)
     {
-        WithVar("MaxHp", 1);
+        WithVar("GainHp", 1);
     }
 
     protected override async Task OnPlay(
         PlayerChoiceContext choiceContext,
         CardPlay play)
     {
-        await CreatureCmd.GainMaxHp(Owner.Creature, DynamicVars.MaxHp.BaseValue);
+        await CreatureCmd.GainMaxHp(Owner.Creature, DynamicVars["GainHp"].BaseValue);
     }
 
     protected override void OnUpgrade()

@@ -8,7 +8,7 @@ namespace STS2_Mulundus.STS2_MulundusCode.Cards.Basic;
 [Pool(typeof(HeartwoodRangerCardPool))]
 public class HeartwoodRangerStrike : HeartWoodRangerCard
 {
-    public override string PortraitPath => "Cilef Base.png".CardImagePath();
+    public override string PortraitPath => "res://STS2_Mulundus/images/card_portraits/heartwood_ranger_strike.png";
     public HeartwoodRangerStrike() : base(1, CardType.Attack, CardRarity.Basic, TargetType.AnyEnemy)
     {
         WithDamage(6);

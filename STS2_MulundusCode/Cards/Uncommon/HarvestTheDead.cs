@@ -1,6 +1,7 @@
 using BaseLib.Utils;
 using MegaCrit.Sts2.Core.Commands;
 using MegaCrit.Sts2.Core.Entities.Cards;
+using MegaCrit.Sts2.Core.Entities.Creatures;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 using MegaCrit.Sts2.Core.Rooms;
 using STS2_Mulundus.STS2_MulundusCode.Character;
@@ -25,9 +26,13 @@ public class HarvestTheDead : HeartWoodRangerCard
         await CommonActions.CardAttack(this, play).Execute(choiceContext);
     }
 
-    public override async Task AfterCombatVictoryEarly(CombatRoom room)
+    public override async Task AfterDeath(PlayerChoiceContext choiceContext,
+        Creature creature,
+        bool wasRemovalPrevented,
+        float deathAnimLength)
     {
-        if (Pile is { Type: PileType.Exhaust })
+        var shouldGain = CardPile.Get(PileType.Exhaust, Owner)?.Cards.ToList().Find(c => c == this);
+        if (creature.IsMonster && shouldGain is not null)
         {
             await CreatureCmd.GainMaxHp(Owner.Creature, DynamicVars["GainHp"].BaseValue);
         }
@@ -36,6 +41,5 @@ public class HarvestTheDead : HeartWoodRangerCard
     protected override void OnUpgrade()
     {
         DynamicVars.Damage.UpgradeValueBy(2);
-        DynamicVars["GainHp"].UpgradeValueBy(1);
     }
 }

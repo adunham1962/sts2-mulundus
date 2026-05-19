@@ -19,17 +19,22 @@ public abstract class HeartWoodRangerCard(int cost, CardType type, CardRarity ra
         var rangerCard = card as HeartWoodRangerCard;
         if (rangerCard == this && card.IsGrim())
         {
-            var target = card.TargetType switch
-            {
-                AnyEnemy => GetRandomTarget(card),
-                Self => Owner.Creature,
-                _ => null
-            };
-            await CardCmd.AutoPlay(choiceContext, this, target);
+            await PlayAgainstRandom(card, choiceContext);
             await CardPileCmd.Add(rangerCard, PileType.Exhaust);
         }
     }
 
+    protected async Task PlayAgainstRandom(CardModel card, PlayerChoiceContext choiceContext)
+    {
+        var target = card.TargetType switch
+        {
+            AnyEnemy => GetRandomTarget(card),
+            Self => Owner.Creature,
+            _ => null
+        };
+        await CardCmd.AutoPlay(choiceContext, card, target);
+    }
+    
     protected Creature GetRandomTarget(CardModel card)
     {
         var target = Owner.Creature;

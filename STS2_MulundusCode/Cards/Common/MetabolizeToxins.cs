@@ -44,7 +44,7 @@ public class MetabolizeToxins : HeartWoodRangerCard
             delta = xValue;
         }
         
-        await CreatureCmd.Heal(Owner.Creature, delta);
+        await CreatureCmd.Heal(Owner.Creature, DynamicVars.Heal.BaseValue * delta);
         await CommonActions.ApplySelf<StrengthPower>(this, DynamicVars["StrengthPower"].BaseValue * delta);
         await CommonActions.ApplySelf<PoisonPower>(this, delta * -1);
     }

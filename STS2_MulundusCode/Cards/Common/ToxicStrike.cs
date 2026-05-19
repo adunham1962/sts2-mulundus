@@ -12,7 +12,7 @@ public class ToxicStrike : HeartWoodRangerCard
     public override string PortraitPath => "Cilef Base.png".CardImagePath();
     public ToxicStrike() : base(1, CardType.Attack, CardRarity.Common, TargetType.AnyEnemy)
     {
-        WithDamage(14);
+        WithDamage(12);
         WithPower<PoisonPower>(2);
         WithTags(CardTag.Strike);
     }

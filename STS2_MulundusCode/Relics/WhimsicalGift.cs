@@ -2,10 +2,9 @@ using BaseLib.Utils;
 using MegaCrit.Sts2.Core.Commands;
 using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.Entities.Relics;
+using MegaCrit.Sts2.Core.HoverTips;
 using MegaCrit.Sts2.Core.Models;
-using MegaCrit.Sts2.Core.Models.Characters;
 using MegaCrit.Sts2.Core.Models.RelicPools;
-using MegaCrit.Sts2.Core.TestSupport;
 using STS2_Mulundus.STS2_MulundusCode.Cards.Ancient;
 
 namespace STS2_Mulundus.STS2_MulundusCode.Relics;
@@ -16,6 +15,10 @@ public class WhimsicalGift : STS2_MulundusRelic
     public override RelicRarity Rarity =>
         RelicRarity.Ancient;
 
+    protected override IEnumerable<IHoverTip> ExtraHoverTips => [
+        HoverTipFactory.FromCard<AcornBuddy>()
+    ];
+    
     public override async Task AfterObtained()
     {
         await CreatureCmd.GainMaxHp(Owner.Creature, 5);

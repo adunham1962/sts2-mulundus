@@ -3,6 +3,7 @@ using MegaCrit.Sts2.Core.CardSelection;
 using MegaCrit.Sts2.Core.Commands;
 using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
+using MegaCrit.Sts2.Core.HoverTips;
 using STS2_Mulundus.STS2_MulundusCode.Cards.Token;
 using STS2_Mulundus.STS2_MulundusCode.Character;
 using STS2_Mulundus.STS2_MulundusCode.Extensions;
@@ -17,6 +18,7 @@ public class Decompose : HeartWoodRangerCard
     {
         WithVar("BerryAdd", 1);
         WithKeyword(CardKeyword.Exhaust);
+        WithTips(_ => [HoverTipFactory.FromCard<Goodberry>()]);
     }
 
     protected override async Task OnPlay(
@@ -33,6 +35,7 @@ public class Decompose : HeartWoodRangerCard
             return;
         if (Owner == card.Owner && CombatState is not null)
         {
+            await CardCmd.Exhaust(choiceContext, card);
             var berries = Goodberry.Create(Owner, DynamicVars["BerryAdd"].BaseValue, CombatState).ToList();
             foreach (var goodberry in berries)
             {

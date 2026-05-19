@@ -1,4 +1,5 @@
 using BaseLib.Utils;
+using MegaCrit.Sts2.Core.Commands;
 using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 using MegaCrit.Sts2.Core.Models.Powers;
@@ -13,7 +14,8 @@ public class CloakOfWilting : HeartWoodRangerCard
     public override string PortraitPath => "Cilef Base.png".CardImagePath();
     public CloakOfWilting() : base(2, CardType.Power, CardRarity.Uncommon, TargetType.Self)
     {
-        WithPower<StrengthPower>(-2);
+        WithPower<StrengthPower>(1);
+        WithPower<CloakOfWiltingPower>(1);
         WithEnergy(1);
     }
 
@@ -22,18 +24,18 @@ public class CloakOfWilting : HeartWoodRangerCard
         CardPlay play)
     {
         await CommonActions.ApplySelf<CloakOfWiltingPower>(this);
-        await CommonActions.ApplySelf<StrengthPower>(this);
+        await PowerCmd.Apply<StrengthPower>(Owner.Creature, DynamicVars["StrengthPower"].BaseValue * -1, Owner.Creature, this);
         if (CombatState is not null)
         {
             foreach (var combatStateEnemy in CombatState.Enemies)
             {
-                await CommonActions.Apply<StrengthPower>(combatStateEnemy, this);
+                await PowerCmd.Apply<StrengthPower>(combatStateEnemy, DynamicVars["StrengthPower"].BaseValue * -1, Owner.Creature, this);
             }
         }
     }
 
     protected override void OnUpgrade()
     {
-        DynamicVars.Energy.UpgradeValueBy(1);
+        DynamicVars["StrengthPower"].UpgradeValueBy(1);
     }
 }

@@ -17,23 +17,9 @@ public class InvokeYourOathPower : CustomPowerModel
 {
     
     //Loads from STS2_Mulundus/images/powers/your_power.png
-    public override string CustomPackedIconPath
-    {
-        get
-        {
-            var path = "power.png".PowerImagePath();
-            return ResourceLoader.Exists(path) ? path : "power.png".PowerImagePath();
-        }
-    }
+    public override string CustomPackedIconPath => "res://STS2_Mulundus/images/powers/invoke_your_oath_power.png";
 
-    public override string CustomBigIconPath
-    {
-        get
-        {
-            var path = "power.png".BigPowerImagePath();
-            return ResourceLoader.Exists(path) ? path : "power.png".BigPowerImagePath();
-        }
-    }
+    public override string CustomBigIconPath => "res://STS2_Mulundus/images/powers/big/invoke_your_oath_power.png";
     
     public override int ModifyCardPlayCount(CardModel card, Creature? target, int playCount)
     {
