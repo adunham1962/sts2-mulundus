@@ -9,13 +9,9 @@ jobs:
       with:
         # discord webhook url without /github
         webhook: ${{ secrets.DISCORD_WEBHOOK }}
-        # A general message that is displayed for all commits. Defaults to the repo name.
-        message: # optional
-        # JSON string that accepts double braces for templates. Defaults to template's embed template
-        embed: # optional
-        # Boolean - Include extra embeds provided from templates.
-        include-extras: # optional
-        # The name of of a premade template.
-        template: # optional
-        # Boolean - only show the last commit.
-        last-commit-only: true
+        template: "avatar-with-link"
+        include-extras: true
+        include-footer: false
+        note-keywords: |
+          Signed-off-by
+          Co-authored-by
