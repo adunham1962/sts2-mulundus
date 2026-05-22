@@ -9,6 +9,8 @@ namespace STS2_Mulundus.STS2_MulundusCode.Cards.Common;
 [Pool(typeof(HeartwoodRangerCardPool))]
 public class Wither : HeartWoodRangerCard
 {
+    public override string PortraitPath => "res://STS2_Mulundus/images/card_portraits/wither.png";
+    
     public Wither() : base(1, CardType.Skill, CardRarity.Common, TargetType.AnyEnemy)
     {
         WithPower<WeakPower>(3);
@@ -25,6 +27,6 @@ public class Wither : HeartWoodRangerCard
 
     protected override void OnUpgrade()
     {
-        DynamicVars["WeakPower"].UpgradeValueBy(4);
+        DynamicVars["WeakPower"].UpgradeValueBy(1);
     }
 }

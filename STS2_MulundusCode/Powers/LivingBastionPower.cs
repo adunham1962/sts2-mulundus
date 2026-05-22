@@ -16,9 +16,8 @@ public class LivingBastionPower() : CustomPowerModel()
         {
             return;
         }
-
-        await PowerCmd.Apply<PlatingPower>(Owner, 2 * Amount, Owner, null);
-        await CreatureCmd.Heal(Owner, 1 * Amount);
+        
+        await CreatureCmd.Heal(Owner, 2 * Amount);
     }
 
     public override PowerType Type => PowerType.Buff;

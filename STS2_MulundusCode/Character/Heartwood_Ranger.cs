@@ -15,6 +15,7 @@ using STS2_Mulundus.STS2_MulundusCode.Cards;
 using STS2_Mulundus.STS2_MulundusCode.Cards.Basic;
 using STS2_Mulundus.STS2_MulundusCode.Cards.Common;
 using STS2_Mulundus.STS2_MulundusCode.Cards.Rare;
+using STS2_Mulundus.STS2_MulundusCode.Cards.Uncommon;
 using STS2_Mulundus.STS2_MulundusCode.Relics;
 
 namespace STS2_Mulundus.STS2_MulundusCode.Character;

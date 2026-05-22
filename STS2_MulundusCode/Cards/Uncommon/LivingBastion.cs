@@ -11,6 +11,7 @@ public class LivingBastion : HeartWoodRangerCard
     public LivingBastion() : base(2, CardType.Power, CardRarity.Uncommon, TargetType.Self)
     {
         WithPower<LivingBastionPower>(1);
+        WithKeyword(HeartwoodRangerKeywords.Grim);
     }
 
     protected override async Task OnPlay(

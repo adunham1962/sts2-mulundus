@@ -2,6 +2,7 @@ using BaseLib.Utils;
 using MegaCrit.Sts2.Core.Commands;
 using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
+using MegaCrit.Sts2.Core.HoverTips;
 using STS2_Mulundus.STS2_MulundusCode.Cards.Status;
 using STS2_Mulundus.STS2_MulundusCode.Character;
 
@@ -12,6 +13,7 @@ public class Despair : HeartWoodRangerCard
 {
     public Despair() : base(2, CardType.Skill, CardRarity.Uncommon, TargetType.Self)
     {
+        WithTips(_ => [HoverTipFactory.FromCard<LostInDespair>()]);
         WithKeyword(CardKeyword.Exhaust);
     }
 

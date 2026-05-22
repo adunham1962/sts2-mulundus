@@ -25,5 +25,8 @@
   "STS2_MULUNDUS-RASPBERRY_WINE.title": "Raspberry Wine",
   "STS2_MULUNDUS-REFORGED_SOUL.description": "On pickup, lose 10 Max HP.\nAdd a [gold]Reforged Soul[/gold] to your deck.",
   "STS2_MULUNDUS-REFORGED_SOUL.flavor": "",
-  "STS2_MULUNDUS-REFORGED_SOUL.title": "Reforged Soul"
+  "STS2_MULUNDUS-REFORGED_SOUL.title": "Reforged Soul",
+  "STS2_MULUNDUS-CLOAK_OF_BLOOD_WARPING.description": "On pickup, add a [gold]Blood Warp[/gold] into your [gold]Deck[/gold].\nStart each combat with 1 [gold]Dexterity[/gold].",
+  "STS2_MULUNDUS-CLOAK_OF_BLOOD_WARPING.flavor": "",
+  "STS2_MULUNDUS-CLOAK_OF_BLOOD_WARPING.title": "Cloak of Blood Warping"
 }

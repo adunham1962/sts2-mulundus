@@ -11,6 +11,8 @@ namespace STS2_Mulundus.STS2_MulundusCode.Cards.Common;
 [Pool(typeof(HeartwoodRangerCardPool))]
 public class Bloom : HeartWoodRangerCard
 {
+    public override string PortraitPath => "res://STS2_Mulundus/images/card_portraits/bloom.png";
+    
     public Bloom() : base(0, CardType.Skill, CardRarity.Common, TargetType.Self)
     {
         WithPower<StrengthPower>(2);

@@ -9,29 +9,28 @@ using MegaCrit.Sts2.Core.Models.CardPools;
 using MegaCrit.Sts2.Core.Models.Powers;
 
 namespace STS2_Mulundus.STS2_MulundusCode.Cards.Status;
-
 [Pool(typeof(StatusCardPool))]
-public class BlindedByHatred : ConstructedCardModel
+public class Necrosis : ConstructedCardModel
 {
-    public BlindedByHatred() : base(1, CardType.Status, CardRarity.Status, TargetType.None)
+    public Necrosis() : base(1, CardType.Status, CardRarity.Status, TargetType.Self)
     {
-        WithPower<VulnerablePower>(1);
         WithKeyword(CardKeyword.Exhaust);
+        WithPower<FrailPower>(1);
     }
 
     public override async Task AfterCardDrawn(PlayerChoiceContext choiceContext, CardModel card, bool fromHandDraw)
     {
         if (card == this)
         {
-            await CommonActions.ApplySelf<VulnerablePower>(this);
+            await CommonActions.ApplySelf<FrailPower>(this);
         }
     }
-
-    public static IEnumerable<BlindedByHatred> Create(Player owner, decimal amount, CombatState combatState)
+    
+    public static IEnumerable<Necrosis> Create(Player owner, decimal amount, CombatState combatState)
     {
-        var list = new List<BlindedByHatred>();
+        var list = new List<Necrosis>();
         for (var index = 0; index < amount; ++index)
-            list.Add(combatState.CreateCard<BlindedByHatred>(owner));
+            list.Add(combatState.CreateCard<Necrosis>(owner));
         return list;
     }
     

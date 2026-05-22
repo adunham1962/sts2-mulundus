@@ -23,13 +23,15 @@ public class Revivify : HeartWoodRangerCard
         PlayerChoiceContext choiceContext,
         CardPlay play)
     {
-        var prefs = new CardSelectorPrefs(SelectionScreenPrompt, 3);
-        if (PileType.Exhaust.GetPile(Owner).IsEmpty) return;
-        
+        var exhaustPile = CardPile.Get(PileType.Exhaust, Owner);
+        if (exhaustPile is null) return;
+        var maxPossible = exhaustPile.Cards.ToList().Count;
+        if (maxPossible > 3) maxPossible = 3; 
+        var prefs = new CardSelectorPrefs(SelectionScreenPrompt, maxPossible);
         var cards = await CardSelectCmd.FromSimpleGrid(choiceContext, PileType.Exhaust.GetPile(Owner).Cards.ToList(), Owner, prefs);
-        foreach (var cardModel in cards)
+        foreach (var cardModel in cards.ToList())
         {
-            await CardPileCmd.Add(cardModel, PileType.Deck, CardPilePosition.Top);
+            await CardPileCmd.Add(cardModel, PileType.Draw, CardPilePosition.Top);
         }
     }
 

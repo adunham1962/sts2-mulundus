@@ -10,7 +10,7 @@ namespace STS2_Mulundus.STS2_MulundusCode.Cards.Common;
 [Pool(typeof(HeartwoodRangerCardPool))]
 public class ToxicFortitude : HeartWoodRangerCard
 {
-    public override string PortraitPath => "Cilef Base.png".CardImagePath();
+    public override string PortraitPath => "res://STS2_Mulundus/images/card_portraits/toxic_fortitude.png";
     public ToxicFortitude() : base(2, CardType.Skill, CardRarity.Common, TargetType.Self)
     {
         WithBlock(14);
@@ -21,8 +21,8 @@ public class ToxicFortitude : HeartWoodRangerCard
         PlayerChoiceContext choiceContext,
         CardPlay play)
     {
-        await CommonActions.CardBlock(this, this.DynamicVars.Block, play);
-        await CommonActions.ApplySelf<PoisonPower>(this, this.DynamicVars["PoisonPower"].BaseValue);
+        await CommonActions.CardBlock(this, DynamicVars.Block, play);
+        await CommonActions.ApplySelf<PoisonPower>(this, DynamicVars["PoisonPower"].BaseValue);
     }
 
     protected override void OnUpgrade()

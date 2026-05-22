@@ -20,13 +20,13 @@ public class WrathOfNature : HeartWoodRangerCard
         PlayerChoiceContext choiceContext,
         CardPlay play)
     {
-        var exhaustPile = CardPile.GetCards(Owner, [PileType.Exhaust]).ToList();
-        foreach (var cardModel in exhaustPile)
+        var discardPile = CardPile.GetCards(Owner, [PileType.Discard]).ToList();
+        foreach (var cardModel in discardPile)
         {
             await CardCmd.Exhaust(choiceContext, cardModel);
         }
 
-        await CommonActions.CardAttack(this, play, exhaustPile.Count).Execute(choiceContext);
+        await CommonActions.CardAttack(this, play, discardPile.Count).Execute(choiceContext);
     }
 
     protected override void OnUpgrade()

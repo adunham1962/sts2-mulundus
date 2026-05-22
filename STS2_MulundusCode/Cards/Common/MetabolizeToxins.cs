@@ -2,6 +2,7 @@ using BaseLib.Extensions;
 using BaseLib.Utils;
 using MegaCrit.Sts2.Core.Commands;
 using MegaCrit.Sts2.Core.Entities.Cards;
+using MegaCrit.Sts2.Core.Entities.Powers;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 using MegaCrit.Sts2.Core.Localization.DynamicVars;
 using MegaCrit.Sts2.Core.Models.Powers;
@@ -10,14 +11,10 @@ using STS2_Mulundus.STS2_MulundusCode.Extensions;
 
 namespace STS2_Mulundus.STS2_MulundusCode.Cards.Common;
 [Pool(typeof(HeartwoodRangerCardPool))]
-public class MetabolizeToxins : HeartWoodRangerCard
+public class MetabolizeToxins() : HeartWoodRangerCard(0, CardType.Skill, CardRarity.Common, TargetType.Self)
 {
-    public override string PortraitPath => "Cilef Base.png".CardImagePath();
-    public MetabolizeToxins() : base(0, CardType.Skill, CardRarity.Common, TargetType.Self)
-    {
-        WithHeal(1);
-        WithPower<StrengthPower>(1);
-    }
+    public override string PortraitPath => "res://STS2_Mulundus/images/card_portraits/metabolize.png";
+
     protected override bool HasEnergyCostX => true;
 
     protected override async Task OnPlay(
@@ -25,33 +22,18 @@ public class MetabolizeToxins : HeartWoodRangerCard
         CardPlay play)
     {
         var xValue = ResolveEnergyXValue();
-        var currentPoison = Owner.Creature.GetPower<PoisonPower>();
-        if (currentPoison is not { Amount: > 0 })
+        var powers = Owner.Creature.Powers.ToList();
+        var debuffs = powers.FindAll(p => p.Type == PowerType.Debuff).Count;
+        await CreatureCmd.Heal(Owner.Creature, xValue * debuffs);
+        var poison = powers.Find(p => p is PoisonPower);
+        if (poison is not null)
         {
-            return;
+            await CommonActions.ApplySelf<PoisonPower>(this, poison.Amount * -1);
         }
-
-        var delta = 0;
-        if (xValue > currentPoison.Amount)
-        {
-            delta = currentPoison.Amount;
-        } else if (currentPoison.Amount > xValue)
-        {
-            delta = xValue;
-        }
-        else
-        {
-            delta = xValue;
-        }
-        
-        await CreatureCmd.Heal(Owner.Creature, DynamicVars.Heal.BaseValue * delta);
-        await CommonActions.ApplySelf<StrengthPower>(this, DynamicVars["StrengthPower"].BaseValue * delta);
-        await CommonActions.ApplySelf<PoisonPower>(this, delta * -1);
     }
 
     protected override void OnUpgrade()
     {
-        DynamicVars.Heal.UpgradeValueBy(1);
-        DynamicVars["StrengthPower"].UpgradeValueBy(1);
+        AddKeyword(CardKeyword.Retain);
     }
 }

@@ -11,7 +11,7 @@ namespace STS2_Mulundus.STS2_MulundusCode.Cards.Common;
 [Pool(typeof(HeartwoodRangerCardPool))]
 public class ThornWhip : HeartWoodRangerCard
 {
-    public override string PortraitPath => "Cilef Base.png".CardImagePath();
+    public override string PortraitPath => "res://STS2_Mulundus/images/card_portraits/thorn_whip.png";
     public ThornWhip() : base(1, CardType.Attack, CardRarity.Common, TargetType.AnyEnemy)
     {
         WithDamage(7);
@@ -23,12 +23,11 @@ public class ThornWhip : HeartWoodRangerCard
         CardPlay play)
     {
         await CommonActions.CardAttack(this, play).Execute(choiceContext);
-        await CommonActions.ApplySelf<ThornsPower>(this, this.DynamicVars["ThornsPower"].BaseValue);
+        await CommonActions.ApplySelf<ThornsPower>(this, DynamicVars["ThornsPower"].BaseValue);
     }
 
     protected override void OnUpgrade()
     {
-        this.DynamicVars.Damage.UpgradeValueBy(2);
-        this.DynamicVars["ThornsPower"].UpgradeValueBy(1);
+        DynamicVars.Damage.UpgradeValueBy(2);
     }
 }
