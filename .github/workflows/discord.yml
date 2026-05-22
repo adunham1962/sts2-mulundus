@@ -1,0 +1,10 @@
+name: Send Discord Commit Message
+on: [push]
+jobs:
+  discord_notify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: tristanbudd/discord-commit-github-action@master
+        with:
+          webhook-url: ${{ secrets.DISCORD_WEBHOOK }}
