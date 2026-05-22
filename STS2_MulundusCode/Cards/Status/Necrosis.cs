@@ -12,6 +12,7 @@ namespace STS2_Mulundus.STS2_MulundusCode.Cards.Status;
 [Pool(typeof(StatusCardPool))]
 public class Necrosis : ConstructedCardModel
 {
+    public override string PortraitPath => "res://STS2_Mulundus/images/card_portraits/necrosis.png";
     public Necrosis() : base(1, CardType.Status, CardRarity.Status, TargetType.Self)
     {
         WithKeyword(CardKeyword.Exhaust);

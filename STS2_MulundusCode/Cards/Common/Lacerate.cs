@@ -8,6 +8,8 @@ namespace STS2_Mulundus.STS2_MulundusCode.Cards.Common;
 [Pool(typeof(HeartwoodRangerCardPool))]
 public class Lacerate : HeartWoodRangerCard
 {
+    
+    public override string PortraitPath => "res://STS2_Mulundus/images/card_portraits/lacerate.png";
     public Lacerate() : base(2, CardType.Attack, CardRarity.Common, TargetType.AnyEnemy)
     {
         WithDamage(6);
