@@ -138,7 +138,7 @@
   "STS2_MULUNDUS-CUTTING_EDGE.title": "Cutting Edge",
   "STS2_MULUNDUS-HAIL_OF_THORNS.description": "Deal {Damage:diff()} damage for each of your [gold]Thorns[/gold] to a random enemy.",
   "STS2_MULUNDUS-HAIL_OF_THORNS.title": "Hail of Thorns",
-  "STS2_MULUNDUS-SURVIVALISTS_BREW.description": "Procure a random common potion.\nGain {PoisonPower:diff()} [gold]Poison[/gold].",
+  "STS2_MULUNDUS-SURVIVALISTS_BREW.description": "Procure a random potion.\nGain {PoisonPower:diff()} [gold]Poison[/gold].",
   "STS2_MULUNDUS-SURVIVALISTS_BREW.title": "Survivalist's Brew",
   "STS2_MULUNDUS-CARBO_LOAD.description": "Play ALL [gold]Goodberry[/gold] cards in your [gold]Draw Pile[/gold].",
   "STS2_MULUNDUS-CARBO_LOAD.title": "Carbo Load",
