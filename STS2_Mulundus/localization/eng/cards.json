@@ -151,5 +151,7 @@
   "STS2_MULUNDUS-VIOLENT_FRENZY.description": "Deal {Damage:diff()} damage {hits:diff()} times to ALL enemies.\nCosts {Energy:energyIcons()} less to play equal to the amount of [gold]Debuffs[/gold] you've gained this turn.",
   "STS2_MULUNDUS-VIOLENT_FRENZY.title": "Violent Frenzy",
   "STS2_MULUNDUS-CURSORS_LOG.description": "Whenever you [gold]Exhaust[/gold] a card, put a random card from your [gold]Exhaust Pile[/gold] that costs the same as the exhausted card on top of your [gold]Draw Pile[/gold].",
-  "STS2_MULUNDUS-CURSORS_LOG.title": "Cursor's Log"
+  "STS2_MULUNDUS-CURSORS_LOG.title": "Cursor's Log",
+  "STS2_MULUNDUS-DREAD_ARMAMENT.description": "Deal {Damage:diff()} damage.\nGain {Block:diff()} [gold]Block[/gold].\nExhaust {ExhaustAmount:diff()} random {ExhaustAmount:plural:card|cards} from your [gold]Draw Pile[/gold]. Add {ExhaustAmount:plural:that|those} {ExhaustAmount:plural:card's|cards's} damage and [gold]Block[/gold] to this card this combat.",
+  "STS2_MULUNDUS-DREAD_ARMAMENT.title": "Dread Armament"
 }

@@ -27,6 +27,16 @@ public class NecroticWave : HeartWoodRangerCard
         if (ePile is null || CombatState is null) return;
         var damage = ePile.Cards.Count;
         await DamageCmd.Attack(damage).FromCard(this).TargetingAllOpponents(CombatState).WithHitFx("vfx/vfx_attack_slash").Execute(choiceContext);
+        
+        if (CombatState is not null)
+        {
+            var statuses = Necrosis.Create(Owner, 2, CombatState).ToList();
+            List<CardPileAddResult> added = [
+                await CardPileCmd.AddGeneratedCardToCombat(statuses[0], PileType.Discard, true),
+                await CardPileCmd.AddGeneratedCardToCombat(statuses[1], PileType.Discard, true)
+            ];
+            CardCmd.PreviewCardPileAdd(added);
+        }
     }
 
     protected override void OnUpgrade()

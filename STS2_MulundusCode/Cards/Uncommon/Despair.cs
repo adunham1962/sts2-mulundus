@@ -11,7 +11,7 @@ namespace STS2_Mulundus.STS2_MulundusCode.Cards.Uncommon;
 [Pool(typeof(HeartwoodRangerCardPool))]
 public class Despair : HeartWoodRangerCard
 {
-    public Despair() : base(2, CardType.Skill, CardRarity.Uncommon, TargetType.Self)
+    public Despair() : base(3, CardType.Skill, CardRarity.Uncommon, TargetType.Self)
     {
         WithTips(_ => [HoverTipFactory.FromCard<LostInDespair>()]);
         WithKeyword(CardKeyword.Exhaust);
@@ -39,6 +39,6 @@ public class Despair : HeartWoodRangerCard
 
     protected override void OnUpgrade()
     {
-
+        EnergyCost.UpgradeBy(1);
     }
 }

@@ -15,7 +15,6 @@ public class InsectPlague : HeartWoodRangerCard
     public InsectPlague() : base(3, CardType.Attack, CardRarity.Uncommon, TargetType.AllEnemies)
     {
         WithDamage(4);
-        WithKeyword(HeartwoodRangerKeywords.Grim);
     }
     
     protected override async Task OnPlay(
