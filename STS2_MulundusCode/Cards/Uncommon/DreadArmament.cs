@@ -82,7 +82,7 @@ public class DreadArmament : HeartWoodRangerCard
                 Log.Warn($"{Id.Entry} exhausted attack card {cardModel.Id.Entry} that did not have an appropriate block var!");
             
             if (CombatState is null) return;
-            var numBlock = Hook.ModifyBlock(CombatState, null, block1, ValueProp.Move, cardModel, play, out IEnumerable<AbstractModel> _);
+            var numBlock = Hook.ModifyBlock(CombatState, Owner.Creature, block1, ValueProp.Move, cardModel, play, out IEnumerable<AbstractModel> _);
             var block2 = DynamicVars.Block;
             block2.BaseValue += numBlock;
             ExtraBlock += numBlock;

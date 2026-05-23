@@ -10,6 +10,8 @@ namespace STS2_Mulundus.STS2_MulundusCode.Cards.Uncommon;
 [Pool(typeof(HeartwoodRangerCardPool))]
 public class ToxinFueledRage : HeartWoodRangerCard
 {
+    
+    public override string PortraitPath => "res://STS2_Mulundus/images/card_portraits/toxin_fueled_rage.png";
     public ToxinFueledRage() : base(0, CardType.Attack, CardRarity.Uncommon, TargetType.RandomEnemy)
     {
         WithDamage(3);
