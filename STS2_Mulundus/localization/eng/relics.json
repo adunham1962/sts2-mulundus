@@ -5,7 +5,7 @@
   "STS2_MULUNDUS-DARK_CONTRACT.description": "On pickup, lose 10 Max HP.\nCard rewards now may include [gold]Necrobinder[/gold] cards.",
   "STS2_MULUNDUS-DARK_CONTRACT.flavor": "A dark deal was made with the goddess of Death and Revenge. A deal the Heartwood Ranger believes will help her save the world.",
   "STS2_MULUNDUS-DARK_CONTRACT.title": "Dark Contract",
-  "STS2_MULUNDUS-POISONOUS_FLOWER.description": "At the start of each combat, apply 3 [gold]Poison[/gold] to ALL enemies.\nIncrease this amount by 1 in Act 2, and again in Act 3.",
+  "STS2_MULUNDUS-POISONOUS_FLOWER.description": "On pickup, [gold]Enchant[/gold] 2 cards in your Deck with [gold]Sown[/gold].\nAt the start of each combat, gain 3 [gold]Poison[/gold].",
   "STS2_MULUNDUS-POISONOUS_FLOWER.flavor": "A beautiful flower that The Raspberry King greatly enjoys, although he doesn't recommend anyone get close enough to smell it...",
   "STS2_MULUNDUS-POISONOUS_FLOWER.title": "Poisonous Flower",
   "STS2_MULUNDUS-THE_GOLDEN_RASPBERRY.description": "Upon pickup, add [gold]The Golden Raspberry[/gold] to your deck.",

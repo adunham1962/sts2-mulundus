@@ -18,8 +18,8 @@ public class TheRaspberryKing : CustomAncientModel
         AncientOption<SilvanSprig>(weight:50),
         AncientOption<TheGoldenRaspberry>(weight: 10)
     ], [
-        AncientOption<PairOfBears>(50),
-        AncientOption<RaspberryWine>(50),
+        AncientOption<PairOfBears>(weight: 50),
+        AncientOption<RaspberryWine>(weight: 50),
         AncientOption<ReforgedSoul>(weight: 10)
     ]);
 
