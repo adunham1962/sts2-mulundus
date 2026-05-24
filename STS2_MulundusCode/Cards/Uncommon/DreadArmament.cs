@@ -51,7 +51,7 @@ public class DreadArmament : HeartWoodRangerCard
     {
 
         ArgumentNullException.ThrowIfNull(play.Target, "cardPlay.Target");
-        await DamageCmd.Attack(DynamicVars.Damage.BaseValue).WithHitCount(2).FromCard(this).Targeting(play.Target).WithHitFx("vfx/vfx_thrash").Execute(choiceContext);
+        await DamageCmd.Attack(DynamicVars.Damage.BaseValue).WithHitCount(1).FromCard(this).Targeting(play.Target).WithHitFx("vfx/vfx_thrash").Execute(choiceContext);
         await CommonActions.CardBlock(this, play);
 
         for (var i = 0; i < DynamicVars["ExhaustAmount"].BaseValue; i++)
