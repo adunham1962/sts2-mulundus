@@ -10,14 +10,17 @@ namespace STS2_Mulundus.STS2_MulundusCode.Ancients;
 public class TheRaspberryKing : CustomAncientModel
 {
     protected override OptionPools MakeOptionPools => new([
-        AncientOption<PoisonousFlower>(),
-        AncientOption<BindosSpecialMushroom>(),
-        AncientOption<PairOfBears>(),
-        AncientOption<RaspberryWine>()
+        AncientOption<PoisonousFlower>(weight: 50),
+        AncientOption<BindosSpecialMushroom>(weight: 50),
+        AncientOption<SilvanTotem>(weight: 10)
     ], [
-        AncientOption<ReforgedSoul>(weight: 15),
         AncientOption<WhimsicalGift>(weight: 50),
-        AncientOption<TheGoldenRaspberry>(weight: 35)
+        AncientOption<SilvanSprig>(weight:50),
+        AncientOption<TheGoldenRaspberry>(weight: 10)
+    ], [
+        AncientOption<PairOfBears>(50),
+        AncientOption<RaspberryWine>(50),
+        AncientOption<ReforgedSoul>(weight: 10)
     ]);
 
     public override bool ShouldForceSpawn(ActModel act, AncientEventModel? rngChosenAncient)

@@ -28,5 +28,11 @@
   "STS2_MULUNDUS-REFORGED_SOUL.title": "Reforged Soul",
   "STS2_MULUNDUS-CLOAK_OF_BLOOD_WARPING.description": "On pickup, add a [gold]Blood Warp[/gold] into your [gold]Deck[/gold].\nStart each combat with 1 [gold]Dexterity[/gold].",
   "STS2_MULUNDUS-CLOAK_OF_BLOOD_WARPING.flavor": "",
-  "STS2_MULUNDUS-CLOAK_OF_BLOOD_WARPING.title": "Cloak of Blood Warping"
+  "STS2_MULUNDUS-CLOAK_OF_BLOOD_WARPING.title": "Cloak of Blood Warping",
+  "STS2_MULUNDUS-SILVAN_TOTEM.description": "On pickup, [gold]Transform[/gold] your Strikes and lose 15 Max HP.",
+  "STS2_MULUNDUS-SILVAN_TOTEM.flavor": "",
+  "STS2_MULUNDUS-SILVAN_TOTEM.title": "The Silvan Totem",
+  "STS2_MULUNDUS-SILVAN_SPRIG.description": "At the end of combat, you [gold]Heal[/gold] 2 HP for every 10 cards in your [gold]Deck[/gold].",
+  "STS2_MULUNDUS-SILVAN_SPRIG.flavor": "",
+  "STS2_MULUNDUS-SILVAN_SPRIG.title": "Silvan Sprig"
 }
