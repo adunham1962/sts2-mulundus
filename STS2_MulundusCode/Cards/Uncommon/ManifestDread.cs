@@ -21,7 +21,7 @@ public class ManifestDread : HeartWoodRangerCard
         CardPlay play)
     {
         var drawPile = CardPile.Get(PileType.Draw, Owner);
-        if (drawPile is not null)
+        if (drawPile is not null && !drawPile.IsEmpty)
         {
             var topCard = drawPile.Cards[0];
             await CardCmd.Exhaust(choiceContext, topCard);
