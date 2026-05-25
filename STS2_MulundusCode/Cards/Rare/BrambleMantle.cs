@@ -11,7 +11,7 @@ public class BrambleMantle : HeartWoodRangerCard
 {
     public BrambleMantle() : base(1, CardType.Power, CardRarity.Rare, TargetType.Self)
     {
-        WithPower<BrambleMantlePower>(1);
+        WithPower<BrambleMantlePower>(3);
     }
 
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)

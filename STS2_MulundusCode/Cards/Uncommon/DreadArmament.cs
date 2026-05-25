@@ -37,7 +37,7 @@ public class DreadArmament : HeartWoodRangerCard
     
     private decimal ExtraBlock
     {
-        get => _extraDamage;
+        get => _extraBlock;
         set
         {
             AssertMutable();

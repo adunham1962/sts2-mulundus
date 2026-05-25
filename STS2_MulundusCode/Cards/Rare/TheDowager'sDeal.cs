@@ -14,7 +14,7 @@ public class TheDowagersDeal : HeartWoodRangerCard
     public TheDowagersDeal() : base(0, CardType.Skill, CardRarity.Rare, TargetType.Self)
     {
         WithCards(2);
-        WithPower<StrengthPower>(2);
+        WithPower<StrengthPower>(1);
         WithKeyword(HeartwoodRangerKeywords.Grim);
     }
     

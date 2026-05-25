@@ -21,7 +21,7 @@
   "STS2_MULUNDUS-LIFE_ON_THE_EDGE_POWER.smartDescription": "At the start of your turn, draw 2 additional cards if you're [gold]poisoned[/gold].",
   "STS2_MULUNDUS-LIFE_ON_THE_EDGE_POWER.title": "Life on the Edge",
   "STS2_MULUNDUS-BRAMBLE_MANTLE_POWER.description": "Whenever you gain [gold]Thorns[/gold], gain 3 [gold]Block[/gold].",
-  "STS2_MULUNDUS-BRAMBLE_MANTLE_POWER.smartDescription": "Whenever you gain [gold]Thorns[/gold], gain 3 [gold]Block[/gold].",
+  "STS2_MULUNDUS-BRAMBLE_MANTLE_POWER.smartDescription": "Whenever you gain [gold]Thorns[/gold], gain {Amount} [gold]Block[/gold].",
   "STS2_MULUNDUS-BRAMBLE_MANTLE_POWER.title": "Bramble Mantle",
   "STS2_MULUNDUS-CUTTING_EDGE_POWER.description": "Whenever you gain a debuff, deal 3 damage to a random enemy.",
   "STS2_MULUNDUS-CUTTING_EDGE_POWER.smartDescription": "Whenever you gain a debuff, deal {Amount} damage to a random enemy.",
@@ -32,7 +32,13 @@
   "STS2_MULUNDUS-CURSORS_LOG_POWER.description": "Whenever you [gold]Exhaust[/gold] a card, put a random card from your [gold]Exhaust Pile[/gold] that costs the same as the exhausted card on top of your [gold]Draw Pile[/gold].",
   "STS2_MULUNDUS-CURSORS_LOG_POWER.smartDescription": "Whenever you [gold]Exhaust[/gold] a card, put a random card from your [gold]Exhaust Pile[/gold] that costs the same as the exhausted card on top of your [gold]Draw Pile[/gold].",
   "STS2_MULUNDUS-CURSORS_LOG_POWER.title": "Cursor's Log",
-  "STS2_MULUNDUS-MELDED_IN_STONE_POWER.description": "",
+  "STS2_MULUNDUS-MELDED_IN_STONE_POWER.description": "You can't play [gold]Attacks[/gold] for 5 turns.",
   "STS2_MULUNDUS-MELDED_IN_STONE_POWER.smartDescription": "You can't play [gold]Attacks[/gold] for {Amount} turns.",
-  "STS2_MULUNDUS-MELDED_IN_STONE_POWER.title": "Melded in Stone"
+  "STS2_MULUNDUS-MELDED_IN_STONE_POWER.title": "Melded in Stone",
+  "STS2_MULUNDUS-POISON_BARBS_POWER.description": "Whenever you deal unblocked damage, apply [gold]Poison[/gold] equal to your [gold]Thorns[/gold].",
+  "STS2_MULUNDUS-POISON_BARBS_POWER.smartDescription": "Whenever you deal unblocked damage, apply [gold]Poison[/gold] equal to your [gold]Thorns[/gold].",
+  "STS2_MULUNDUS-POISON_BARBS_POWER.title": "Poison Barbs",
+  "STS2_MULUNDUS-HUNTERS_MARK_POWER.description": "Attacks deal 2 additional damage to this creature.",
+  "STS2_MULUNDUS-HUNTERS_MARK_POWER.smartDescription": "Attacks deal 2 additional damage to this creature.",
+  "STS2_MULUNDUS-HUNTERS_MARK_POWER.title": "Hunter's Mark"
 }

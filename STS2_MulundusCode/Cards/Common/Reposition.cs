@@ -17,7 +17,6 @@ public class Reposition : HeartWoodRangerCard
     {
         WithPower<DexterityPower>(2);
         WithPower<VulnerablePower>(1);
-        WithPower<WeakPower>(1);
     }
 
     protected override async Task OnPlay(
@@ -26,13 +25,11 @@ public class Reposition : HeartWoodRangerCard
     {
         await PowerCmd.Apply<RepositionPower>(Owner.Creature, DynamicVars.Dexterity.BaseValue, Owner.Creature, this);
         if (play.Target != null) await CommonActions.Apply<VulnerablePower>(play.Target, this);
-        if (play.Target != null) await CommonActions.Apply<WeakPower>(play.Target, this);
     }
 
     protected override void OnUpgrade()
     {
         DynamicVars["VulnerablePower"].UpgradeValueBy(1);
-        DynamicVars["WeakPower"].UpgradeValueBy(1);
         DynamicVars.Dexterity.UpgradeValueBy(1);
     }
 }
