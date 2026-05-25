@@ -31,5 +31,8 @@
   "STS2_MULUNDUS-SERRATED_BARBS_POWER.title": "Serrated Barbs",
   "STS2_MULUNDUS-CURSORS_LOG_POWER.description": "Whenever you [gold]Exhaust[/gold] a card, put a random card from your [gold]Exhaust Pile[/gold] that costs the same as the exhausted card on top of your [gold]Draw Pile[/gold].",
   "STS2_MULUNDUS-CURSORS_LOG_POWER.smartDescription": "Whenever you [gold]Exhaust[/gold] a card, put a random card from your [gold]Exhaust Pile[/gold] that costs the same as the exhausted card on top of your [gold]Draw Pile[/gold].",
-  "STS2_MULUNDUS-CURSORS_LOG_POWER.title": "Cursor's Log"
+  "STS2_MULUNDUS-CURSORS_LOG_POWER.title": "Cursor's Log",
+  "STS2_MULUNDUS-MELDED_IN_STONE_POWER.description": "",
+  "STS2_MULUNDUS-MELDED_IN_STONE_POWER.smartDescription": "You can't play [gold]Attacks[/gold] for {Amount} turns.",
+  "STS2_MULUNDUS-MELDED_IN_STONE_POWER.title": "Melded in Stone"
 }

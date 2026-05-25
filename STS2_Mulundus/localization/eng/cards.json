@@ -153,5 +153,15 @@
   "STS2_MULUNDUS-CURSORS_LOG.description": "Whenever you [gold]Exhaust[/gold] a card, put a random card from your [gold]Exhaust Pile[/gold] that costs the same as the exhausted card on top of your [gold]Draw Pile[/gold].",
   "STS2_MULUNDUS-CURSORS_LOG.title": "Cursor's Log",
   "STS2_MULUNDUS-DREAD_ARMAMENT.description": "Deal {Damage:diff()} damage.\nGain {Block:diff()} [gold]Block[/gold].\nExhaust {ExhaustAmount:diff()} random {ExhaustAmount:plural:card|cards} from your [gold]Draw Pile[/gold]. Add {ExhaustAmount:plural:that|those} {ExhaustAmount:plural:card's|cards's} damage and [gold]Block[/gold] to this card this combat.",
-  "STS2_MULUNDUS-DREAD_ARMAMENT.title": "Dread Armament"
+  "STS2_MULUNDUS-DREAD_ARMAMENT.title": "Dread Armament",
+  "STS2_MULUNDUS-CHANNEL.description": "Gain {Energy:energyIcons()}.",
+  "STS2_MULUNDUS-CHANNEL.title": "Channel",
+  "STS2_MULUNDUS-WILD_SURGE.description": "Deal {Damage:diff()} damage.\n[gold]Powers[/gold] in your hand cost {Energy:energyIcons()} less this turn.",
+  "STS2_MULUNDUS-WILD_SURGE.title": "Wild Surge",
+  "STS2_MULUNDUS-DIFFUSION.description": "Lose all your [gold]Poison[/gold] and apply that much to ALL enemies.",
+  "STS2_MULUNDUS-DIFFUSION.title": "Diffusion",
+  "STS2_MULUNDUS-BRAMBLED_MENACE.description": "Double your [gold]Thorns[/gold].",
+  "STS2_MULUNDUS-BRAMBLED_MENACE.title": "Brambled Menace",
+  "STS2_MULUNDUS-MELD_INTO_STONE.description": "Gain {PlatingPower:diff()} [gold]Plating[/gold].\nYou can't play [gold]Attacks[/gold] for {MeldedInStonePower:diff()} turns.",
+  "STS2_MULUNDUS-MELD_INTO_STONE.title": "Meld into Stone"
 }
