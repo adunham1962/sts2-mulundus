@@ -15,6 +15,6 @@ public class HuntersMarkPower : CustomPowerModel
     public override decimal ModifyDamageAdditive(Creature? target, decimal amount, ValueProp props, Creature? dealer,
         CardModel? cardSource)
     {
-        return target is not null && target == Owner && cardSource is not null && cardSource.Type == CardType.Attack? amount + 2 : amount;
+        return target is not null && target == Owner && cardSource is not null && cardSource.Type == CardType.Attack ? 2 : 0;
     }
 }

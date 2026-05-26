@@ -12,13 +12,17 @@ public class CuttingEdgePower : CustomPowerModel
 {
     public override PowerType Type => PowerType.Buff;
     public override PowerStackType StackType => PowerStackType.Counter;
-
+    
     public override async Task AfterPowerAmountChanged(PowerModel power, decimal amount, Creature? applier, CardModel? cardSource)
     {
-        if (power.Type == PowerType.Debuff && amount > 0 && Owner.CombatState is not null)
-        {
-            await CreatureCmd.Damage(new ThrowingPlayerChoiceContext(), Owner.CombatState.HittableEnemies, Amount,
-                ValueProp.Unpowered, Owner, null);
-        }
+        if (power.Type != PowerType.Debuff) return;
+        if (Owner.CombatState is null) return;
+        if (amount < 1) return;
+        if (cardSource is null) return;
+        if (cardSource.CurrentTarget != Owner && cardSource.CurrentTarget is not null) return;
+        
+
+        await CreatureCmd.Damage(new ThrowingPlayerChoiceContext(), Owner.CombatState.HittableEnemies, Amount, ValueProp.Unpowered, Owner, null);
+        
     }
 }

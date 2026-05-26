@@ -20,7 +20,8 @@ public class HuntersMark : HeartWoodRangerCard
         PlayerChoiceContext choiceContext,
         CardPlay play)
     {
-        await CommonActions.ApplySelf<HuntersMarkPower>(this);
+        if (play.Target is null) return;
+        await CommonActions.Apply<HuntersMarkPower>(play.Target, this);
     }
 
     public override async Task AfterDeath(PlayerChoiceContext choiceContext, Creature creature, bool wasRemovalPrevented, float deathAnimLength)

@@ -8,11 +8,12 @@ using MegaCrit.Sts2.Core.Entities.Powers;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 using MegaCrit.Sts2.Core.Localization.DynamicVars;
 using MegaCrit.Sts2.Core.Models;
+using MegaCrit.Sts2.Core.Models.CardPools;
 using MegaCrit.Sts2.Core.ValueProps;
 using STS2_Mulundus.STS2_MulundusCode.Character;
 
 namespace STS2_Mulundus.STS2_MulundusCode.Cards.Uncommon;
-[Pool(typeof(HeartwoodRangerCardPool))]
+[Pool(typeof(EventCardPool))]
 public class ExactVengeance : HeartWoodRangerCard
 {
     private Creature[] _validTargets = [];
@@ -42,7 +43,7 @@ public class ExactVengeance : HeartWoodRangerCard
     public override Task AfterDamageReceived(PlayerChoiceContext choiceContext, Creature target, DamageResult result, ValueProp props,
         Creature? dealer, CardModel? cardSource)
     {
-        if (target != Owner.Creature || dealer is null) return Task.CompletedTask;
+        if (cardSource is null || cardSource.Owner != Owner || target != Owner.Creature || dealer is null) return Task.CompletedTask;
         _validTargets.AddItem(dealer);
         return Task.CompletedTask;
     }
