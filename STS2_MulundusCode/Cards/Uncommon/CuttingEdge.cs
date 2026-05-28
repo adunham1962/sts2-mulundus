@@ -10,7 +10,7 @@ public class CuttingEdge : HeartWoodRangerCard
 {
     public CuttingEdge() : base(1, CardType.Power, CardRarity.Uncommon, TargetType.Self)
     {
-        WithPower<CuttingEdgePower>(3);
+        WithPower<CuttingEdgePower>(2);
     }
 
     protected override async Task OnPlay(
@@ -22,6 +22,6 @@ public class CuttingEdge : HeartWoodRangerCard
 
     protected override void OnUpgrade()
     {
-        DynamicVars["CuttingEdgePower"].UpgradeValueBy(2);
+        DynamicVars["CuttingEdgePower"].UpgradeValueBy(1);
     }
 }

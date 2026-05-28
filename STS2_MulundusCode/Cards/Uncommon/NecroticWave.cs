@@ -1,3 +1,4 @@
+using BaseLib.Extensions;
 using BaseLib.Utils;
 using HarmonyLib;
 using MegaCrit.Sts2.Core.Commands;
@@ -8,6 +9,7 @@ using MegaCrit.Sts2.Core.Localization.DynamicVars;
 using MegaCrit.Sts2.Core.Models.CardPools;
 using STS2_Mulundus.STS2_MulundusCode.Cards.Status;
 using STS2_Mulundus.STS2_MulundusCode.Character;
+using static System.Decimal;
 
 namespace STS2_Mulundus.STS2_MulundusCode.Cards.Uncommon;
 
@@ -20,7 +22,6 @@ public class NecroticWave : HeartWoodRangerCard
     {
         WithTips(_ => [HoverTipFactory.FromCard<Necrosis>()]);
         WithDamage(10);
-        //WithVar("Hits", 1);
         WithCalculatedVar("CalculatedHits", 0, (card, _) =>
         { 
             var ePile = CardPile.Get(PileType.Exhaust, card.Owner); 
@@ -28,31 +29,14 @@ public class NecroticWave : HeartWoodRangerCard
             var hits = ePile.Cards.Count / 10; 
             return hits;
         });
-      //  var calc = new CalculatedVar("CalculatedHits").WithMultiplier((card, creature) =>
-       // {
-       //     var ePile = CardPile.Get(PileType.Exhaust, card.Owner);
-       //     if (ePile is null) return 0;
-       //     var hits = ePile.Cards.Count / 10;
-        //    return hits;
-        //});
-        //DynamicVars.AddItem(new KeyValuePair<string, DynamicVar>("CalculatedHits", calc));
-        //CanonicalVars.AddItem(new CalculationBaseVar(0));
-        //CanonicalVars.AddItem(new CalculationExtraVar(1));
-       // CanonicalVars.AddItem(new CalculatedVar("CalculatedHits").WithMultiplier((card, creature) =>
-        //{ 
-       //     var ePile = CardPile.Get(PileType.Exhaust, card.Owner);
-       //     if (ePile is null) return 0;
-       //     var hits = ePile.Cards.Count / 10;
-       //     return hits;
-        //}));
     }
     
     protected override async Task OnPlay(
         PlayerChoiceContext choiceContext,
         CardPlay play)
     {
-        var hits = DynamicVars["CalculatedHits"].IntValue;
-        await CommonActions.CardAttack(this, play, hits).Execute(choiceContext);
+        var hits = (DynamicVars["CalculatedHits"] as CalculatedVar)!.Calculate(null);
+        await CommonActions.CardAttack(this, play, ToInt32(hits)).Execute(choiceContext);
         
         if (CombatState is null) return;
         var statuses = Necrosis.Create(Owner, hits, CombatState).ToList();

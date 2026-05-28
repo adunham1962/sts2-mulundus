@@ -134,7 +134,7 @@
   "STS2_MULUNDUS-LACERATE.title": "Lacerate",
   "STS2_MULUNDUS-MANIFEST_DREAD.description": "[gold]Exhaust[/gold] the top card of your [gold]Draw Pile[/gold].\nApply {VulnerablePower:diff()} [gold]Vulnerable[/gold] and {WeakPower:diff()} [gold]Weak[/gold] to ALL enemies.",
   "STS2_MULUNDUS-MANIFEST_DREAD.title": "Manifest Dread",
-  "STS2_MULUNDUS-CUTTING_EDGE.description": "Whenever you gain a debuff, deal {CuttingEdgePower:diff()} damage to a random enemy.",
+  "STS2_MULUNDUS-CUTTING_EDGE.description": "Whenever you gain a debuff, deal {CuttingEdgePower:diff()} damage to ALL enemies.",
   "STS2_MULUNDUS-CUTTING_EDGE.title": "Cutting Edge",
   "STS2_MULUNDUS-HAIL_OF_THORNS.description": "Deal {Damage:diff()} damage for each of your [gold]Thorns[/gold] to a random enemy.",
   "STS2_MULUNDUS-HAIL_OF_THORNS.title": "Hail of Thorns",

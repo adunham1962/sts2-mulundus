@@ -19,10 +19,8 @@ public class CuttingEdgePower : CustomPowerModel
         if (Owner.CombatState is null) return;
         if (amount < 1) return;
         if (cardSource is null) return;
-        if (cardSource.CurrentTarget != Owner && cardSource.CurrentTarget is not null) return;
-        
+        if (power.Owner != Owner) return;
 
         await CreatureCmd.Damage(new ThrowingPlayerChoiceContext(), Owner.CombatState.HittableEnemies, Amount, ValueProp.Unpowered, Owner, null);
-        
     }
 }
