@@ -10,6 +10,7 @@ namespace STS2_Mulundus.STS2_MulundusCode.Cards.Uncommon;
 [Pool(typeof(HeartwoodRangerCardPool))]
 public class ManifestDread : HeartWoodRangerCard
 {
+    public override string PortraitPath => "res://STS2_Mulundus/images/card_portraits/manifest_dread.png";
     public ManifestDread() : base(2, CardType.Skill, CardRarity.Uncommon, TargetType.AllEnemies)
     {
         WithPower<VulnerablePower>(1);

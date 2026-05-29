@@ -10,6 +10,8 @@ namespace STS2_Mulundus.STS2_MulundusCode.Cards.Uncommon;
 [Pool(typeof(HeartwoodRangerCardPool))]
 public class CarboLoad : HeartWoodRangerCard
 {
+    
+    public override string PortraitPath => "res://STS2_Mulundus/images/card_portraits/carbo_load.png";
     public CarboLoad() : base(1, CardType.Skill, CardRarity.Uncommon, TargetType.Self)
     {
         WithKeyword(CardKeyword.Exhaust);

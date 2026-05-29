@@ -10,6 +10,8 @@ namespace STS2_Mulundus.STS2_MulundusCode.Cards.Rare;
 public class BrambledMenace() : HeartWoodRangerCard(1, CardType.Power, CardRarity.Rare, TargetType.Self)
 {
 
+    public override string PortraitPath => "res://STS2_Mulundus/images/card_portraits/brambled_menace.png";
+    
     protected override async Task OnPlay(
         PlayerChoiceContext choiceContext,
         CardPlay play)

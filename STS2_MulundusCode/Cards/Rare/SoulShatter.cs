@@ -10,6 +10,7 @@ namespace STS2_Mulundus.STS2_MulundusCode.Cards.Rare;
 [Pool(typeof(HeartwoodRangerCardPool))]
 public class SoulShatter : HeartWoodRangerCard
 {
+    public override string PortraitPath => "res://STS2_Mulundus/images/card_portraits/soul_shatter.png";
     public SoulShatter() : base(1, CardType.Attack, CardRarity.Rare, TargetType.AllEnemies)
     {
         WithDamage(10);

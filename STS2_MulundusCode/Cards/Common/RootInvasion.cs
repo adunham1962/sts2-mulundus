@@ -24,7 +24,6 @@ public class RootInvasion : HeartWoodRangerCard
     {
         await CommonActions.CardAttack(this, play).Execute(choiceContext);
         if (play.Target is null) return;
-        //await CommonActions.Apply<RootInvasionPower>(play.Target, this);
         await PowerCmd.Apply<RootInvasionPower>(play.Target, DynamicVars.Strength.BaseValue * -1, Owner.Creature, this);
         CardCmd.PreviewCardPileAdd(await CardPileCmd.AddGeneratedCardToCombat(CreateClone(), PileType.Discard, true), 2.2f);
     }

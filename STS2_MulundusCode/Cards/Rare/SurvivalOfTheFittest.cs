@@ -21,30 +21,21 @@ public class SurvivalOfTheFittest : HeartWoodRangerCard
         PlayerChoiceContext choiceContext,
         CardPlay play)
     {
-        //var amount = DynamicVars["DexterityPower"].BaseValue + DynamicVars.Damage.BaseValue;
-        //if (play.Target is null) return;
-        //if (Owner.Creature.GetPowerAmount<StrengthPower>() > play.Target.GetPowerAmount<StrengthPower>())
-        //{
-        //    amount *= amount;
-        //}
-
-        //await DamageCmd.Attack(amount).Targeting(play.Target).FromCard(this).WithHitFx("vfx/vfx_attack_slash").Execute(choiceContext);
         await CommonActions.CardAttack(this, play).Execute(choiceContext);
     }
 
     public override decimal ModifyDamageAdditive(Creature? target, decimal amount, ValueProp props, Creature? dealer,
         CardModel? cardSource)
     {
-        if (cardSource is not null && cardSource != this) return amount;
-        return amount + DynamicVars["DexterityPower"].BaseValue;
+        if (cardSource is not null && cardSource != this) return 0;
+        return Owner.Creature.GetPowerAmount<DexterityPower>();
     }
 
     public override decimal ModifyDamageMultiplicative(Creature? target, decimal amount, ValueProp props, Creature? dealer,
         CardModel? cardSource)
     {
-        if (cardSource is not null && cardSource != this || target is null) return amount;
-        if (Owner.Creature.GetPowerAmount<StrengthPower>() > target.GetPowerAmount<StrengthPower>()) return amount * 2;
-        return amount;
+        if (cardSource is not null && cardSource != this || target is null) return 1;
+        return Owner.Creature.GetPowerAmount<StrengthPower>() > target.GetPowerAmount<StrengthPower>() ? 2 : 1;
     }
 
     protected override void OnUpgrade()

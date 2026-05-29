@@ -9,6 +9,8 @@ namespace STS2_Mulundus.STS2_MulundusCode.Cards.Uncommon;
 [Pool(typeof(HeartwoodRangerCardPool))]
 public class Channel : HeartWoodRangerCard
 {
+    
+    public override string PortraitPath => "res://STS2_Mulundus/images/card_portraits/channel.png";
     public Channel() : base(1, CardType.Skill, CardRarity.Uncommon, TargetType.Self)
     {
         WithEnergy(2);

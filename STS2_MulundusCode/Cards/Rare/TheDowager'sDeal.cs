@@ -4,13 +4,12 @@ using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 using MegaCrit.Sts2.Core.Models.Powers;
 using STS2_Mulundus.STS2_MulundusCode.Character;
-using STS2_Mulundus.STS2_MulundusCode.Extensions;
 
 namespace STS2_Mulundus.STS2_MulundusCode.Cards.Rare;
 [Pool(typeof(HeartwoodRangerCardPool))]
 public class TheDowagersDeal : HeartWoodRangerCard
 {
-    public override string PortraitPath => "Cilef Base.png".CardImagePath();
+    public override string PortraitPath => "res://STS2_Mulundus/images/card_portraits/the_dowagers_deal.png";
     public TheDowagersDeal() : base(0, CardType.Skill, CardRarity.Rare, TargetType.Self)
     {
         WithCards(2);

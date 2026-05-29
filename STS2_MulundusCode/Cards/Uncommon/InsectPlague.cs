@@ -14,7 +14,8 @@ public class InsectPlague : HeartWoodRangerCard
     public override string PortraitPath => "res://STS2_Mulundus/images/card_portraits/insect_plague.png";
     public InsectPlague() : base(3, CardType.Attack, CardRarity.Uncommon, TargetType.AllEnemies)
     {
-        WithDamage(4);
+        WithDamage(1);
+        WithKeyword(HeartwoodRangerKeywords.Grim);
     }
     
     protected override async Task OnPlay(

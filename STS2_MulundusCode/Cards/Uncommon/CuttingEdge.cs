@@ -8,6 +8,7 @@ namespace STS2_Mulundus.STS2_MulundusCode.Cards.Uncommon;
 [Pool(typeof(HeartwoodRangerCardPool))]
 public class CuttingEdge : HeartWoodRangerCard
 {
+    public override string PortraitPath => "res://STS2_Mulundus/images/card_portraits/cutting_edge.png";
     public CuttingEdge() : base(1, CardType.Power, CardRarity.Uncommon, TargetType.Self)
     {
         WithPower<CuttingEdgePower>(2);
