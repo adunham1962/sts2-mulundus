@@ -13,7 +13,7 @@ namespace STS2_Mulundus.STS2_MulundusCode.Cards.Uncommon;
 [Pool(typeof(HeartwoodRangerCardPool))]
 public class DreadArmament : HeartWoodRangerCard
 {
-    
+    public override string PortraitPath => "res://STS2_Mulundus/images/card_portraits/dread_armament.png";
     private decimal _extraDamage;
     private decimal _extraBlock;
     

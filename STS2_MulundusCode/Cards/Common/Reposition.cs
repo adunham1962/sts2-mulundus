@@ -12,7 +12,7 @@ namespace STS2_Mulundus.STS2_MulundusCode.Cards.Common;
 [Pool(typeof(HeartwoodRangerCardPool))]
 public class Reposition : HeartWoodRangerCard
 {
-    public override string PortraitPath => "Cilef Base.png".CardImagePath();
+    public override string PortraitPath => "res://STS2_Mulundus/images/card_portraits/reposition.png";
     public Reposition() : base(0, CardType.Skill, CardRarity.Common, TargetType.AnyEnemy)
     {
         WithPower<DexterityPower>(2);

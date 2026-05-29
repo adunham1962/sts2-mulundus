@@ -171,5 +171,11 @@
   "STS2_MULUNDUS-EXACT_VENGEANCE.description": "Deal {CalculatedDamage:diff()} damage to an enemy that attacked you last turn.\nDeals double damage if you are [gold]Debuffed[/gold].",
   "STS2_MULUNDUS-EXACT_VENGEANCE.title": "Exact Vengeance",
   "STS2_MULUNDUS-HUNTERS_MARK.description": "Attacks deal {HuntersMarkPower:diff()} additional damage to enemy.\nWhenever an enemy dies, return this card from your [gold]Exhaust Pile[/gold] into your [gold]Hand[/gold].",
-  "STS2_MULUNDUS-HUNTERS_MARK.title": "Hunter's Mark"
+  "STS2_MULUNDUS-HUNTERS_MARK.title": "Hunter's Mark",
+  "STS2_MULUNDUS-BLOOMING_GROVE.description": "ALL allies heal {Heal:diff()} HP.",
+  "STS2_MULUNDUS-BLOOMING_GROVE.title": "Blooming Grove",
+  "STS2_MULUNDUS-BRAMBLED_LEGION.description": "ALL allies gain {ThornsPower:diff()} [gold]Thorns[/gold] and {Block:diff()} [gold]Block[/gold].",
+  "STS2_MULUNDUS-BRAMBLED_LEGION.title": "Brambled Legion",
+  "STS2_MULUNDUS-JUDGE_AS_WORTHY.description": "Lose X{IfUpgraded:show:+1} HP.\nAnother player heals twice that much HP.",
+  "STS2_MULUNDUS-JUDGE_AS_WORTHY.title": "Judge as Worthy"
 }

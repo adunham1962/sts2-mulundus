@@ -11,7 +11,7 @@ namespace STS2_Mulundus.STS2_MulundusCode.Cards.Uncommon;
 [Pool(typeof(HeartwoodRangerCardPool))]
 public class InsectPlague : HeartWoodRangerCard
 {
-    public override string PortraitPath => "Cilef Base.png".CardImagePath();
+    public override string PortraitPath => "res://STS2_Mulundus/images/card_portraits/insect_plague.png";
     public InsectPlague() : base(3, CardType.Attack, CardRarity.Uncommon, TargetType.AllEnemies)
     {
         WithDamage(4);

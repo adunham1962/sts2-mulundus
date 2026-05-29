@@ -11,7 +11,7 @@ namespace STS2_Mulundus.STS2_MulundusCode.Cards.Uncommon;
 [Pool(typeof(HeartwoodRangerCardPool))]
 public class HarvestTheDead : HeartWoodRangerCard
 {
-    public override string PortraitPath => "Cilef Base.png".CardImagePath();
+    public override string PortraitPath => "res://STS2_Mulundus/images/card_portraits/harvest_the_dead.png";
     public HarvestTheDead() : base(1, CardType.Attack, CardRarity.Uncommon, TargetType.AnyEnemy)
     {
         WithDamage(10);

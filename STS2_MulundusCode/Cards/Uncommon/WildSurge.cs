@@ -7,6 +7,7 @@ namespace STS2_Mulundus.STS2_MulundusCode.Cards.Uncommon;
 [Pool(typeof(HeartwoodRangerCardPool))]
 public class WildSurge : HeartWoodRangerCard
 {
+    public override string PortraitPath => "res://STS2_Mulundus/images/card_portraits/wild_surge.png";
     public WildSurge() : base(1, CardType.Attack, CardRarity.Uncommon, TargetType.AnyEnemy)
     {
         WithDamage(8);
