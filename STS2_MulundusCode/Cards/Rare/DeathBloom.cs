@@ -16,8 +16,8 @@ public class DeathBloom : HeartWoodRangerCard
     {
         WithEnergy(1);
         WithPower<ThornsPower>(1);
+        WithPower<StrengthPower>(1);
         WithPower<PoisonPower>(3);
-        WithKeyword(CardKeyword.Exhaust);
     }
 
     protected override async Task OnPlay(
@@ -26,20 +26,13 @@ public class DeathBloom : HeartWoodRangerCard
     {
         await PlayerCmd.GainEnergy(DynamicVars.Energy.BaseValue, Owner);
         await CommonActions.ApplySelf<ThornsPower>(this);
+        await CommonActions.ApplySelf<StrengthPower>(this);
         await CommonActions.ApplySelf<PoisonPower>(this);
-        var prefs = new CardSelectorPrefs(SelectionScreenPrompt, 1);
-        if (PileType.Discard.GetPile(Owner).IsEmpty)
-        {
-            return;
-        }
-        var card = (await CardSelectCmd.FromSimpleGrid(choiceContext, PileType.Discard.GetPile(Owner).Cards.ToList(), Owner, prefs)).FirstOrDefault();
-        if (card == null)
-            return;
-        await CardCmd.Exhaust(choiceContext, card);
     }
 
     protected override void OnUpgrade()
     {
-        RemoveKeyword(CardKeyword.Exhaust);
+        DynamicVars.Energy.UpgradeValueBy(1);
+        DynamicVars["StrengthPower"].UpgradeValueBy(1);
     }
 }

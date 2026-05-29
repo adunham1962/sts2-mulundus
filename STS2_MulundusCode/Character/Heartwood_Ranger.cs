@@ -87,8 +87,7 @@ public class HeartwoodRanger: PlaceholderCharacterModel
         }
     }
 
-    public override string CustomCharacterSelectBg =>
-        "res://STS2_Mulundus/scenes/screens/char_select/cilef_select.tscn";
+    public override string CustomCharacterSelectBg => "res://STS2_Mulundus/scenes/screens/char_select/cilef_select.tscn";
     public override string CustomIconTexturePath => "character_icon_char_name.png".CharacterUiPath();
     public override string CustomCharacterSelectIconPath => "res://STS2_Mulundus/images/charui/Cilef_char_select_button.png";
     public override string CustomCharacterSelectLockedIconPath => "char_select_char_name_locked.png".CharacterUiPath();

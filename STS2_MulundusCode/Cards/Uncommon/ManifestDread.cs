@@ -11,8 +11,9 @@ namespace STS2_Mulundus.STS2_MulundusCode.Cards.Uncommon;
 public class ManifestDread : HeartWoodRangerCard
 {
     public override string PortraitPath => "res://STS2_Mulundus/images/card_portraits/manifest_dread.png";
-    public ManifestDread() : base(2, CardType.Skill, CardRarity.Uncommon, TargetType.AllEnemies)
+    public ManifestDread() : base(2, CardType.Attack, CardRarity.Uncommon, TargetType.AllEnemies)
     {
+        WithKeyword(CardKeyword.Ethereal);
         WithPower<VulnerablePower>(1);
         WithPower<WeakPower>(1);
     }
@@ -21,21 +22,18 @@ public class ManifestDread : HeartWoodRangerCard
         PlayerChoiceContext choiceContext,
         CardPlay play)
     {
-        var drawPile = CardPile.Get(PileType.Draw, Owner);
-        if (drawPile is not null && !drawPile.IsEmpty)
-        {
-            var topCard = drawPile.Cards[0];
-            await CardCmd.Exhaust(choiceContext, topCard);
-        }
+        var pile = CardPile.GetCards(Owner, PileType.Draw).ToList();
+        var damage = pile.GetRange(0, 10).Sum(card => card.EnergyCost.Canonical);
 
         if (CombatState is null) return;
-        await PowerCmd.Apply<VulnerablePower>(CombatState.HittableEnemies, DynamicVars["VulnerablePower"].BaseValue, Owner.Creature, this);
-        await PowerCmd.Apply<WeakPower>(CombatState.HittableEnemies, DynamicVars["WeakPower"].BaseValue, Owner.Creature, this);
+        
+        await DamageCmd.Attack(damage).FromCard(this).TargetingAllOpponents(CombatState).Execute(choiceContext);
+        await CommonActions.Apply<VulnerablePower>(CombatState.HittableEnemies, this);
+        await CommonActions.Apply<WeakPower>(CombatState.HittableEnemies, this);
     }
 
     protected override void OnUpgrade()
     {
-        DynamicVars["VulnerablePower"].UpgradeValueBy(1);
-        DynamicVars["WeakPower"].UpgradeValueBy(1);
+        RemoveKeyword(CardKeyword.Ethereal);
     }
 }
