@@ -176,5 +176,7 @@
   "STS2_MULUNDUS-BRAMBLED_LEGION.description": "ALL allies gain {ThornsPower:diff()} [gold]Thorns[/gold] and {Block:diff()} [gold]Block[/gold].",
   "STS2_MULUNDUS-BRAMBLED_LEGION.title": "Brambled Legion",
   "STS2_MULUNDUS-JUDGE_AS_WORTHY.description": "Lose X{IfUpgraded:show:+1} HP.\nAnother player heals twice that much HP.",
-  "STS2_MULUNDUS-JUDGE_AS_WORTHY.title": "Judge as Worthy"
+  "STS2_MULUNDUS-JUDGE_AS_WORTHY.title": "Judge as Worthy",
+  "STS2_MULUNDUS-MAGMA_SURGE.description": "Deal {Damage:diff()} damage to a random enemy.",
+  "STS2_MULUNDUS-MAGMA_SURGE.title": "Magma Surge"
 }

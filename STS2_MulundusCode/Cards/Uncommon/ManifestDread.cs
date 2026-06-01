@@ -23,7 +23,8 @@ public class ManifestDread : HeartWoodRangerCard
         CardPlay play)
     {
         var pile = CardPile.GetCards(Owner, PileType.Draw).ToList();
-        var damage = pile.GetRange(0, 10).Sum(card => card.EnergyCost.Canonical);
+        var count = pile.Count > 10 ? 10 : pile.Count;
+        var damage = pile.GetRange(0, count).Sum(card => card.EnergyCost.Canonical);
 
         if (CombatState is null) return;
         

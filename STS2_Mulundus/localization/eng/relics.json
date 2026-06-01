@@ -34,5 +34,14 @@
   "STS2_MULUNDUS-SILVAN_TOTEM.title": "The Silvan Totem",
   "STS2_MULUNDUS-SILVAN_SPRIG.description": "At the end of combat, you [gold]Heal[/gold] 2 HP for every 10 cards in your [gold]Deck[/gold].",
   "STS2_MULUNDUS-SILVAN_SPRIG.flavor": "",
-  "STS2_MULUNDUS-SILVAN_SPRIG.title": "Silvan Sprig"
+  "STS2_MULUNDUS-SILVAN_SPRIG.title": "Silvan Sprig",
+  "STS2_MULUNDUS-PRESSURIZED_MAGMA.description": "Whenever you play your 4th card in a turn, add a [gold]Magma Surge[/gold] to your [gold]Discard Pile[/gold].",
+  "STS2_MULUNDUS-PRESSURIZED_MAGMA.flavor": "",
+  "STS2_MULUNDUS-PRESSURIZED_MAGMA.title": "Pressurized Magma",
+  "STS2_MULUNDUS-DRAGON_TITANS_SCALE.description": "At the start of your turn, gain [gold]Block[/gold] and deal damage to ALL enemies equal to the turn number.",
+  "STS2_MULUNDUS-DRAGON_TITANS_SCALE.flavor": "",
+  "STS2_MULUNDUS-DRAGON_TITANS_SCALE.title": "Dragon Titan's Scale",
+  "STS2_MULUNDUS-HOARDKEEPERS_FANG.description": "Whenever you gain gold, heal 3 HP.",
+  "STS2_MULUNDUS-HOARDKEEPERS_FANG.flavor": "",
+  "STS2_MULUNDUS-HOARDKEEPERS_FANG.title": "Hoardkeeper's Fang"
 }

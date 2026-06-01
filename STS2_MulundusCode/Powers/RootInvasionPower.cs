@@ -5,7 +5,7 @@ using STS2_Mulundus.STS2_MulundusCode.Cards.Common;
 
 namespace STS2_Mulundus.STS2_MulundusCode.Powers;
 
-public class RootInvasionPower : TemporaryStrengthPower, ICustomPower
+public class RootInvasionPower : TemporaryStrengthPower, ICustomModel
 {
     public override AbstractModel OriginModel => ModelDb.Card<RootInvasion>();
 }

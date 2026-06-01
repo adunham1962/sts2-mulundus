@@ -23,18 +23,17 @@ public class TheRaspberryKing : CustomAncientModel
         AncientOption<ReforgedSoul>(weight: 10)
     ]);
 
-    public override bool ShouldForceSpawn(ActModel act, AncientEventModel? rngChosenAncient)
-    {
-        return rngChosenAncient is Neow;
-    }
+    public override bool ShouldForceSpawn(ActModel act, AncientEventModel? rngChosenAncient) => rngChosenAncient is Neow;
 
     public override string? CustomScenePath => "res://STS2_Mulundus/scenes/events/background_scenes/sts2_mulundus-the_raspberry_king.tscn";
 
-    public override string? CustomRunHistoryIconPath =>
-        "res://STS2_Mulundus/images/ui/run_history/sts2_mulundus-the_raspberry_king.png";
+    public override string? CustomMapIconPath => "res://STS2_Mulundus/images/ui/run_history/sts2_mulundus-the_raspberry_king.png";
 
-    public override string? CustomRunHistoryIconOutlinePath =>
-        "res://STS2_Mulundus/images/packed/map/ancients/ancient_node_sts2_mulundus-the_raspberry_king_outline.png";
+    public override string? CustomMapIconOutlinePath => "res://STS2_Mulundus/images/packed/map/ancients/ancient_node_sts2_mulundus-the_raspberry_king_outline.png";
+    
+    public override string? CustomRunHistoryIconPath => "res://STS2_Mulundus/images/ui/run_history/sts2_mulundus-the_raspberry_king.png";
 
-    public override bool IsValidForAct(ActModel act) => act.ActNumber() == 1;
+    public override string? CustomRunHistoryIconOutlinePath => "res://STS2_Mulundus/images/packed/map/ancients/ancient_node_sts2_mulundus-the_raspberry_king_outline.png";
+
+    public override bool IsValidForAct(ActModel act) => false;
 }

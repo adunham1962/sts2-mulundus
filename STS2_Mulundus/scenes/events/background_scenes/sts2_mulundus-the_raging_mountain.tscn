@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://dq6mls4xt8b6s"]
+
+[ext_resource type="Texture2D" uid="uid://be1va0ybdvvcy" path="res://STS2_Mulundus/images/ancients/Baldor.png" id="1_boqdp"]
+
+[node name="Sts2MulundusTheRagingMountain" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+texture = ExtResource("1_boqdp")
