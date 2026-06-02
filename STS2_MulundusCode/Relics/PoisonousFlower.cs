@@ -43,7 +43,7 @@ public class PoisonousFlower() : STS2_MulundusRelic()
     {
         if (room is CombatRoom)
         {
-            await PowerCmd.Apply<PoisonPower>(Owner.Creature, 3, null, null);
+            await PowerCmd.Apply<PoisonPower>(Owner.Creature, 2, null, null);
         }
     }
 }

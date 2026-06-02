@@ -10,9 +10,10 @@ namespace STS2_Mulundus.STS2_MulundusCode.Ancients;
 public class TheRagingMountain : CustomAncientModel
 {
     protected override OptionPools MakeOptionPools => new([
-        AncientOption<HoardkeepersFang>(),
+        AncientOption<TheFirstFlame>()
     ], [
         AncientOption<DragonTitansScale>(),
+        AncientOption<HoardkeepersFang>(),
     ],[
         AncientOption<PressurizedMagma>()
     ]);

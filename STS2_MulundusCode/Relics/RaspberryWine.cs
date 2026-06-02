@@ -24,7 +24,6 @@ public class RaspberryWine() : STS2_MulundusRelic
 
     public override async Task AfterObtained()
     {
-        var list = PileType.Deck.GetPile(Owner).Cards.ToList();
         var prefs = new CardSelectorPrefs(CardSelectorPrefs.EnchantSelectionPrompt, 2);
         var randoms = new List<CardPileAddResult>();
         foreach (var original in (await CardSelectCmd.FromDeckForTransformation(Owner, prefs)).ToList())

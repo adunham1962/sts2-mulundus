@@ -14,7 +14,7 @@ public class DreadCleave : HeartWoodRangerCard
     
     public DreadCleave() : base(1, CardType.Attack, CardRarity.Common, TargetType.AllEnemies)
     {
-        WithDamage(6);
+        WithDamage(8);
         WithKeyword(HeartwoodRangerKeywords.Grim);
     }
     

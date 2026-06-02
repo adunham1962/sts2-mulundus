@@ -46,7 +46,7 @@
   "STS2_MULUNDUS-DEATH_BLOOM.description": "Gain {Energy:energyIcons()}.\nGain {ThornsPower:diff()} [gold]Thorns[/gold].\nGain {StrengthPower:diff()} [gold]Strength[/gold].\nGain {PoisonPower:diff()} [gold]Poison[/gold].",
   "STS2_MULUNDUS-DEATH_BLOOM.title": "Death's Bloom",
   "STS2_MULUNDUS-DREAD_CLEAVE.description": "Deal {Damage:diff()} damage to ALL enemies.",
-  "STS2_MULUNDUS-DREAD_CLEAVE.title": "Dread Cleave",
+  "STS2_MULUNDUS-DREAD_CLEAVE.title": "Cull",
   "STS2_MULUNDUS-REPOSITION.description": "Gain {DexterityPower:diff()} [gold]Dexterity[/gold] this turn.\nApply {VulnerablePower:diff()} [gold]Vulnerable[/gold].",
   "STS2_MULUNDUS-REPOSITION.title": "Reposition",
   "STS2_MULUNDUS-METABOLIZE_TOXINS.description": "Heal X for each debuff you have.\nLose ALL your [gold]Poison[/gold].",
