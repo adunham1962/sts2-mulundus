@@ -57,7 +57,7 @@ public class DreadArmament : HeartWoodRangerCard
         for (var i = 0; i < DynamicVars["ExhaustAmount"].BaseValue; i++)
         {
             var pile = PileType.Draw.GetPile(Owner);
-            var cardModel = Owner.RunState.Rng.CombatCardSelection.NextItem(pile.Cards.Where(c => c.Type == CardType.Attack));
+            var cardModel = Owner.RunState.Rng.CombatCardSelection.NextItem(pile.Cards);
             if (cardModel is null) return;
             var damage1 = 0M;
             if (cardModel.DynamicVars.ContainsKey("CalculatedDamage"))

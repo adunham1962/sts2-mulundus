@@ -7,6 +7,7 @@ namespace STS2_Mulundus.STS2_MulundusCode.Cards.Rare;
 [Pool(typeof(HeartwoodRangerCardPool))]
 public class ReapersReckoning : HeartWoodRangerCard
 {
+    public override string PortraitPath => "res://STS2_Mulundus/images/card_portraits/reapers_reckoning.png";
     public ReapersReckoning() : base(6, CardType.Attack, CardRarity.Rare, TargetType.RandomEnemy)
     {
         WithDamage(66);

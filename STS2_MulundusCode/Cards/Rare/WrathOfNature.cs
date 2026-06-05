@@ -9,7 +9,7 @@ namespace STS2_Mulundus.STS2_MulundusCode.Cards.Rare;
 [Pool(typeof(HeartwoodRangerCardPool))]
 public class WrathOfNature : HeartWoodRangerCard
 {
-
+    public override string PortraitPath => "res://STS2_Mulundus/images/card_portraits/wrath_of_nature.png";
     public WrathOfNature() : base(3, CardType.Attack, CardRarity.Rare, TargetType.AllEnemies)
     {
         WithDamage(3);

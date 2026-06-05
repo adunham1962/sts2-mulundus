@@ -8,6 +8,7 @@ namespace STS2_Mulundus.STS2_MulundusCode.Cards.Uncommon;
 [Pool(typeof(HeartwoodRangerCardPool))]
 public class LivingBastion : HeartWoodRangerCard
 {
+    public override string PortraitPath => "res://STS2_Mulundus/images/card_portraits/living_bastion.png";
     public LivingBastion() : base(2, CardType.Power, CardRarity.Uncommon, TargetType.Self)
     {
         WithPower<LivingBastionPower>(1);
