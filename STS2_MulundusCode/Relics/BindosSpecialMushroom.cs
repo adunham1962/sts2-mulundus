@@ -15,6 +15,8 @@ public class BindosSpecialMushroom(): STS2_MulundusRelic()
     public override RelicRarity Rarity =>
         RelicRarity.Ancient;
 
+    public override string PackedIconPath => "res://STS2_Mulundus/images/relics/bindos_special_mushroom.png";
+    
     protected override IEnumerable<IHoverTip> ExtraHoverTips => [
         HoverTipFactory.FromCard<BadMushroomTrip>()
     ];

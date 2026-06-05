@@ -20,7 +20,7 @@ public class SugarRushPower() : CustomPowerModel()
     //Loads from STS2_Mulundus/images/powers/your_power.png
     public override string CustomPackedIconPath => "res://STS2_Mulundus/images/powers/sugar_rush_power.png";
 
-    public override string CustomBigIconPath => "res://STS2_Mulundus/images/powers/big/sugar_rush_power.png";
+    public override string CustomBigIconPath => "res://STS2_Mulundus/images/powers/sugar_rush_power.png";
 
     public override Task AfterPlayerTurnStart(PlayerChoiceContext choiceContext, Player player)
     {

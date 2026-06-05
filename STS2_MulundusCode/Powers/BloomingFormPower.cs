@@ -22,7 +22,7 @@ public class BloomingFormPower() : CustomPowerModel()
     //Loads from STS2_Mulundus/images/powers/your_power.png
     public override string CustomPackedIconPath => "res://STS2_Mulundus/images/powers/blooming_form_power.png";
 
-    public override string CustomBigIconPath => "res://STS2_Mulundus/images/powers/big/blooming_form_power.png";
+    public override string CustomBigIconPath => "res://STS2_Mulundus/images/powers/blooming_form_power.png";
 
     public override async Task AfterCardExhausted(PlayerChoiceContext choiceContext, CardModel card, bool causedByEthereal)
     {

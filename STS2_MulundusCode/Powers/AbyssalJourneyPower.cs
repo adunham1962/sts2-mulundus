@@ -16,7 +16,7 @@ public class AbyssalJourneyPower() : CustomPowerModel()
     //Loads from STS2_Mulundus/images/powers/your_power.png
     public override string CustomPackedIconPath => "res://STS2_Mulundus/images/powers/abyssal_journey_power.png";
 
-    public override string CustomBigIconPath => "res://STS2_Mulundus/images/powers/big/abyssal_journey_power.png";
+    public override string CustomBigIconPath => "res://STS2_Mulundus/images/powers/abyssal_journey_power.png";
 
     public override async Task AfterPlayerTurnStart(PlayerChoiceContext choiceContext, Player player)
     {

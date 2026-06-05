@@ -20,6 +20,7 @@ namespace STS2_Mulundus.STS2_MulundusCode.Relics;
 [Pool(typeof(EventRelicPool))]
 public class RaspberryWine() : STS2_MulundusRelic
 {
+    public override string PackedIconPath => "res://STS2_Mulundus/images/relics/raspberry_wine.png";
     public override RelicRarity Rarity => RelicRarity.Ancient;
 
     public override async Task AfterObtained()

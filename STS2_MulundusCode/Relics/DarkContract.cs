@@ -13,7 +13,7 @@ namespace STS2_Mulundus.STS2_MulundusCode.Relics;
 [Pool(typeof(HeartwoodRangerRelicPool))]
 public class DarkContract() : STS2_MulundusRelic()
 {
-    
+    public override string PackedIconPath => "res://STS2_Mulundus/images/relics/dark_contract.png";
     public override RelicRarity Rarity => RelicRarity.Rare;
 
     public override async Task AfterObtained()

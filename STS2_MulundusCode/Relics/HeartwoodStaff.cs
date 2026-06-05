@@ -14,6 +14,8 @@ public class HeartwoodStaff() : STS2_MulundusRelic()
     
     public override RelicRarity Rarity => RelicRarity.Starter;
     
+    public override string PackedIconPath => "res://STS2_Mulundus/images/relics/heartwood_staff.png";
+    
    // public override bool ShowCounter => true;
 
   //  public override int DisplayAmount => _attacksPlayed % 4;

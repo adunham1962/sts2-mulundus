@@ -11,6 +11,7 @@ namespace STS2_Mulundus.STS2_MulundusCode.Relics;
 [Pool(typeof(EventRelicPool))]
 public class SilvanSprig() : STS2_MulundusRelic
 {
+    public override string PackedIconPath => "res://STS2_Mulundus/images/relics/silvan_sprig.png";
     public override async Task AfterCombatEnd(CombatRoom room)
     {
         Flash();

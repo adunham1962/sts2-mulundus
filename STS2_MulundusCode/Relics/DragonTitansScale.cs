@@ -12,6 +12,7 @@ namespace STS2_Mulundus.STS2_MulundusCode.Relics;
 [Pool(typeof(EventRelicPool))]
 public class DragonTitansScale() : STS2_MulundusRelic
 {
+    public override string PackedIconPath => "res://STS2_Mulundus/images/relics/dragon_titans_scale.png";
     public override RelicRarity Rarity => RelicRarity.Ancient;
 
     private int _amount = 0;

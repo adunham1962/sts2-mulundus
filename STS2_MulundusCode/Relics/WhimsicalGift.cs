@@ -12,6 +12,7 @@ namespace STS2_Mulundus.STS2_MulundusCode.Relics;
 [Pool(typeof(EventRelicPool))]
 public class WhimsicalGift : STS2_MulundusRelic
 {
+    public override string PackedIconPath => "res://STS2_Mulundus/images/relics/whimsical_gift.png";
     public override RelicRarity Rarity =>
         RelicRarity.Ancient;
 
