@@ -64,5 +64,14 @@
   "STS2_MULUNDUS-REFORGED_ARMORY.title": "Reforged Armory",
   "STS2_MULUNDUS-ETERNITYS_RESOLVE.description": "On pickup, add [gold]Eternity's Resolve[/gold] into your [gold]Deck[/gold].",
   "STS2_MULUNDUS-ETERNITYS_RESOLVE.flavor": "",
-  "STS2_MULUNDUS-ETERNITYS_RESOLVE.title": "Eternity's Resolve"
+  "STS2_MULUNDUS-ETERNITYS_RESOLVE.title": "Eternity's Resolve",
+  "STS2_MULUNDUS-HYPNAGOGIC_BLOOM.description": "Whenever your shuffle your [gold]Draw Pile[/gold], apply 1 [gold]Weak[/gold] to ALL enemies.",
+  "STS2_MULUNDUS-HYPNAGOGIC_BLOOM.flavor": "",
+  "STS2_MULUNDUS-HYPNAGOGIC_BLOOM.title": "Hypnagogic Bloom",
+  "STS2_MULUNDUS-SLEEPLESS_HALO.description": "Whenever you play a card with [gold]Retain[/gold], gain 4 [gold]Block[/gold].",
+  "STS2_MULUNDUS-SLEEPLESS_HALO.flavor": "",
+  "STS2_MULUNDUS-SLEEPLESS_HALO.title": "Sleepless Halo",
+  "STS2_MULUNDUS-REFLECTED_DREAM.description": "The first [gold]Power[/gold] you play each combat is played twice.",
+  "STS2_MULUNDUS-REFLECTED_DREAM.flavor": "",
+  "STS2_MULUNDUS-REFLECTED_DREAM.title": "Reflected Dream"
 }

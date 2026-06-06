@@ -20,7 +20,7 @@ public class TheRagingMountain : CustomAncientModel
     
     public override bool IsValidForAct(ActModel act) => false;
     
-    public override bool ShouldForceSpawn(ActModel act, AncientEventModel? rngChosenAncient) => rngChosenAncient is Orobas or Pael;
+    public override bool ShouldForceSpawn(ActModel act, AncientEventModel? rngChosenAncient) => rngChosenAncient is Orobas;
     
     public override string? CustomScenePath => "res://STS2_Mulundus/scenes/events/background_scenes/sts2_mulundus-the_raging_mountain.tscn";
 
