@@ -25,7 +25,7 @@
   "STS2_MULUNDUS-TOXIC_STRIKE.title": "Toxic Strike",
   "STS2_MULUNDUS-FORAGE.description": "Add a [gold]Goodberry[/gold] into your [gold]Draw Pile[/gold], [gold]Hand[/gold], and [gold]Discard Pile[/gold].",
   "STS2_MULUNDUS-FORAGE.title": "Forage",
-  "STS2_MULUNDUS-INSECT_PLAGUE.description": "Deal {Damage:diff()} damage to ALL enemies. Repeat this for each card in your [gold]Exhaust Pile[/gold].",
+  "STS2_MULUNDUS-INSECT_PLAGUE.description": "Deal {Damage:diff()} damage {Hits} times to ALL enemies.\nShuffle 2 copies of this card into your [gold]Draw Pile[/gold].",
   "STS2_MULUNDUS-INSECT_PLAGUE.title": "Insect Plague",
   "STS2_MULUNDUS-HEARTWOOD_RANGER_STRIKE.description": "Deal {Damage:diff()} damage.",
   "STS2_MULUNDUS-HEARTWOOD_RANGER_STRIKE.title": "Strike",
@@ -178,5 +178,7 @@
   "STS2_MULUNDUS-JUDGE_AS_WORTHY.description": "Lose X{IfUpgraded:show:+1} HP.\nAnother player heals twice that much HP.",
   "STS2_MULUNDUS-JUDGE_AS_WORTHY.title": "Judge as Worthy",
   "STS2_MULUNDUS-MAGMA_SURGE.description": "Deal {Damage:diff()} damage to a random enemy.",
-  "STS2_MULUNDUS-MAGMA_SURGE.title": "Magma Surge"
+  "STS2_MULUNDUS-MAGMA_SURGE.title": "Magma Surge",
+  "STS2_MULUNDUS-ETERNITYS_RESOLVE.description": "Gain {PlatingPower:diff()} [gold]Plating[/gold].\nLose 1 max HP.",
+  "STS2_MULUNDUS-ETERNITYS_RESOLVE.title": "Eternity's Resolve"
 }

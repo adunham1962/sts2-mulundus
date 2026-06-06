@@ -12,5 +12,9 @@
   "STS2_MULUNDUS-THE_RAGING_MOUNTAIN.epithet": "",
   "STS2_MULUNDUS-THE_RAGING_MOUNTAIN.talk.ANY.0-0r.ancient": "Hmmm.. it has been some time since I last saw you. Perhaps something in my hoard can aid you in your quest.",
   "STS2_MULUNDUS-THE_RAGING_MOUNTAIN.talk.firstVisitEver.0-0.ancient": "What brings YOU to MY mountain? I would not guess it be the balmy temperature.",
-  "STS2_MULUNDUS-THE_RAGING_MOUNTAIN.title": "The Raging Mountain"
+  "STS2_MULUNDUS-THE_RAGING_MOUNTAIN.title": "The Raging Mountain",
+  "STS2_MULUNDUS-THE_ETERNAL_FORGE.epithet": "",
+  "STS2_MULUNDUS-THE_ETERNAL_FORGE.talk.ANY.0-0r.ancient": "Stoicism is not absence of grief or fear or thirst. It is shouldering your burdens without collapse. If you wish to make it out of here alive, steel yourself.",
+  "STS2_MULUNDUS-THE_ETERNAL_FORGE.talk.firstVisitEver.0-0.ancient": "The battlefield does not care if your cause is righteous. You will require the aid of my forge.",
+  "STS2_MULUNDUS-THE_ETERNAL_FORGE.title": "The Eternal Forge"
 }

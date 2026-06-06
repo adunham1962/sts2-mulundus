@@ -15,6 +15,8 @@ public class BerryPreserves : STS2_MulundusPotion
     public override PotionUsage Usage => PotionUsage.CombatOnly;
     public override TargetType TargetType => TargetType.AnyPlayer;
 
+    public override string CustomPackedImagePath => "res://STS2_Mulundus/images/potions/berry_preserves.png";
+    
     protected override async Task OnUse(PlayerChoiceContext choiceContext, Creature? target)
     {
         if (target?.Player is null || target.CombatState is null) return;

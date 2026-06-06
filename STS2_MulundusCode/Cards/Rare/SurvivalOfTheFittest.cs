@@ -27,14 +27,13 @@ public class SurvivalOfTheFittest : HeartWoodRangerCard
     public override decimal ModifyDamageAdditive(Creature? target, decimal amount, ValueProp props, Creature? dealer,
         CardModel? cardSource)
     {
-        if (cardSource is not null && cardSource != this) return 0;
-        return Owner.Creature.GetPowerAmount<DexterityPower>();
+        return cardSource != this ? 0 : Owner.Creature.GetPowerAmount<DexterityPower>();
     }
 
     public override decimal ModifyDamageMultiplicative(Creature? target, decimal amount, ValueProp props, Creature? dealer,
         CardModel? cardSource)
     {
-        if (cardSource is not null && cardSource != this || target is null) return 1;
+        if (cardSource != this || target is null) return 1;
         return Owner.Creature.GetPowerAmount<StrengthPower>() > target.GetPowerAmount<StrengthPower>() ? 2 : 1;
     }
 

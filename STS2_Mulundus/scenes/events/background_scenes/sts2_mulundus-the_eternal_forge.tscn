@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://d0x4jccie58d3"]
+
+[ext_resource type="Texture2D" uid="uid://c06cnwnu73rij" path="res://STS2_Mulundus/images/ancients/Alistar.png" id="1_du06i"]
+
+[node name="Sts2MulundusTheRagingMountain" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+texture = ExtResource("1_du06i")
