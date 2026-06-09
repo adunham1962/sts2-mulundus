@@ -12,8 +12,8 @@ public class TheRagingMountain : CustomAncientModel
     protected override OptionPools MakeOptionPools => new([
         AncientOption<TheFirstFlame>()
     ], [
-        AncientOption<DragonTitansScale>(),
-        AncientOption<HoardkeepersFang>(),
+        AncientOption<DragonTitansScale>(weight: 50),
+        AncientOption<HoardkeepersFang>(weight: 50),
     ],[
         AncientOption<PressurizedMagma>()
     ]);

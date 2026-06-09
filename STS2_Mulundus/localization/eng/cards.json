@@ -15,7 +15,7 @@
   "STS2_MULUNDUS-ROOT_INVASION.title": "Root Invasion",
   "STS2_MULUNDUS-VERDANT_SIGHT.description": "Draw {Cards:diff()} cards.",
   "STS2_MULUNDUS-VERDANT_SIGHT.title": "Verdant Sight",
-  "STS2_MULUNDUS-INVOKE_YOUR_OATH.description": "Attacks you play this turn are played an additional time.",
+  "STS2_MULUNDUS-INVOKE_YOUR_OATH.description": "Your next attack this turn is played an additional time. Whenever you deal damage this turn, [gold]Heal[/gold] 1 HP.",
   "STS2_MULUNDUS-INVOKE_YOUR_OATH.title": "Invoke Your Oath",
   "STS2_MULUNDUS-TOXIC_FORTITUDE.description": "Gain {Block:diff()} [gold]Block[/gold].\nGain 2 [gold]Poison[/gold].",
   "STS2_MULUNDUS-TOXIC_FORTITUDE.title": "Toxic Fortitude",

@@ -21,9 +21,9 @@ public class ReflectedDream() : STS2_MulundusRelic
     
     public override int ModifyCardPlayCount(CardModel card, Creature? target, int playCount)
     {
-        if (card.Type != CardType.Power || card.Owner != Owner || _powerCount > 0) return 1;
+        if (card.Type != CardType.Power || card.Owner != Owner || _powerCount > 0) return playCount;
         _powerCount++;
-        return 2;
+        return playCount + 1;
     }
 
     public override Task AfterCombatEnd(CombatRoom room)

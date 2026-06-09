@@ -23,11 +23,6 @@ public class InvokeYourOath : HeartWoodRangerCard
     {
         await PowerCmd.Apply<InvokeYourOathPower>(Owner.Creature, 1, Owner.Creature, this);
     }
-
-    public override async Task AfterTurnEnd(PlayerChoiceContext choiceContext, CombatSide side)
-    {
-        await PowerCmd.Remove<InvokeYourOathPower>(Owner.Creature);
-    }
     
     protected override void OnUpgrade()
     {
