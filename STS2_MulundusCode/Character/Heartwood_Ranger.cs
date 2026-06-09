@@ -7,10 +7,7 @@ using MegaCrit.Sts2.Core.Entities.Characters;
 using MegaCrit.Sts2.Core.Helpers;
 using MegaCrit.Sts2.Core.Models;
 using MegaCrit.Sts2.Core.Nodes.Vfx;
-using STS2_Mulundus.STS2_MulundusCode.Cards.Basic;
-using STS2_Mulundus.STS2_MulundusCode.Cards.Common;
-using STS2_Mulundus.STS2_MulundusCode.Cards.Rare;
-using STS2_Mulundus.STS2_MulundusCode.Cards.Uncommon;
+using STS2_Mulundus.STS2_MulundusCode.Cards.HeartwoodRanger.Basic;
 using STS2_Mulundus.STS2_MulundusCode.Relics;
 
 namespace STS2_Mulundus.STS2_MulundusCode.Character;

@@ -1,3 +1,4 @@
+using BaseLib.Abstracts;
 using BaseLib.Utils;
 using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
@@ -5,7 +6,7 @@ using MegaCrit.Sts2.Core.Models.CardPools;
 
 namespace STS2_Mulundus.STS2_MulundusCode.Cards.Ancient;
 [Pool(typeof(EventCardPool))]
-public class ReforgedSoul : HeartWoodRangerCard
+public class ReforgedSoul : ConstructedCardModel
 {
     public override string PortraitPath => "res://STS2_Mulundus/images/card_portraits/reforged_soul.png";
     
