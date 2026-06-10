@@ -12,5 +12,19 @@
   "STS2_MULUNDUS-HEARTWOOD_RANGER.pronounPossessive": "hers",
   "STS2_MULUNDUS-HEARTWOOD_RANGER.pronounSubject": "she",
   "STS2_MULUNDUS-HEARTWOOD_RANGER.title": "The Heartwood Ranger",
-  "STS2_MULUNDUS-HEARTWOOD_RANGER.titleObject": "The Heartwood Ranger"
+  "STS2_MULUNDUS-HEARTWOOD_RANGER.titleObject": "The Heartwood Ranger",
+  "STS2_MULUNDUS-EMERALD_MONK.aromaPrinciple": "Lore",
+  "STS2_MULUNDUS-EMERALD_MONK.banter.alive.endTurnPing": "If I wanted to watch something this slow I'd watch the tides come in and out.",
+  "STS2_MULUNDUS-EMERALD_MONK.banter.dead.endTurnPing": "...",
+  "STS2_MULUNDUS-EMERALD_MONK.cardsModifierDescription": "Emerald Monk cards will now appear in rewards and shops.",
+  "STS2_MULUNDUS-EMERALD_MONK.cardsModifierTitle": "Emerald Monk Cards",
+  "STS2_MULUNDUS-EMERALD_MONK.description": "A monk trained in the ways of the Emerald Serpent Order.\nHe preserves balance like the ebb and flow of tides.",
+  "STS2_MULUNDUS-EMERALD_MONK.eventDeathPrevention": "Phew! That was a close one",
+  "STS2_MULUNDUS-EMERALD_MONK.goldMonologue": "Sheesh! I'd be lucky if my tavern made this much in a month!",
+  "STS2_MULUNDUS-EMERALD_MONK.possessiveAdjective": "his",
+  "STS2_MULUNDUS-EMERALD_MONK.pronounObject": "him",
+  "STS2_MULUNDUS-EMERALD_MONK.pronounPossessive": "his",
+  "STS2_MULUNDUS-EMERALD_MONK.pronounSubject": "he",
+  "STS2_MULUNDUS-EMERALD_MONK.title": "The Emerald Monk",
+  "STS2_MULUNDUS-EMERALD_MONK.titleObject": "The Emerald Monk"
 }

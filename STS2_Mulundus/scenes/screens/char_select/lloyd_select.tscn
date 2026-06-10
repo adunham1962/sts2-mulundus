@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=3 uid="uid://umcctyc4hbv5"]
+
+[ext_resource type="Texture2D" uid="uid://fa3ly1ynxgwb" path="res://STS2_Mulundus/images/character/Lloyd_Select_Screen.png" id="1_7rno8"]
+
+[node name="CilefSelect" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 363.0
+offset_right = 2370.111
+offset_bottom = 1129.0
+texture = ExtResource("1_7rno8")
+flip_h = true

@@ -68,7 +68,7 @@ public class HeartwoodRanger: PlaceholderCharacterModel
 
     public override CardPoolModel CardPool => ModelDb.CardPool<HeartwoodRangerCardPool>();
     public override RelicPoolModel RelicPool => ModelDb.RelicPool<HeartwoodRangerRelicPool>();
-    public override PotionPoolModel PotionPool => ModelDb.PotionPool<Heartwood_Ranger_PotionPool>();
+    public override PotionPoolModel PotionPool => ModelDb.PotionPool<HeartwoodRangerPotionPool>();
 
     /*  PlaceholderCharacterModel will utilize placeholder basegame assets for most of your character assets until you
         override all the other methods that define those assets.

@@ -1,5 +1,4 @@
 ﻿using BaseLib.Abstracts;
-using STS2_Mulundus.STS2_MulundusCode.Extensions;
 using Godot;
 
 namespace STS2_Mulundus.STS2_MulundusCode.Character;

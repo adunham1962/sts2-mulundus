@@ -60,6 +60,8 @@
     </ItemGroup>
 
     <ItemGroup>
+      <Folder Include="STS2_MulundusCode\Cards\EmeraldMonk\Rare\" />
+      <Folder Include="STS2_MulundusCode\Cards\EmeraldMonk\Uncommon\" />
       <Folder Include="STS2_Mulundus\images\enchantments\" />
       <Folder Include="STS2_Mulundus\images\potions\" />
     </ItemGroup>

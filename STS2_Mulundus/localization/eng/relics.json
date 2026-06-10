@@ -73,5 +73,8 @@
   "STS2_MULUNDUS-SLEEPLESS_HALO.title": "Sleepless Halo",
   "STS2_MULUNDUS-REFLECTED_DREAM.description": "The first [gold]Power[/gold] you play each combat is played twice.",
   "STS2_MULUNDUS-REFLECTED_DREAM.flavor": "",
-  "STS2_MULUNDUS-REFLECTED_DREAM.title": "Reflected Dream"
+  "STS2_MULUNDUS-REFLECTED_DREAM.title": "Reflected Dream",
+  "STS2_MULUNDUS-EMERALD_SERPENT_SASH.description": "The first time you play a type of card each combat, draw a card.",
+  "STS2_MULUNDUS-EMERALD_SERPENT_SASH.flavor": "",
+  "STS2_MULUNDUS-EMERALD_SERPENT_SASH.title": "Emerald Serpent Sash"
 }

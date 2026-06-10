@@ -9,7 +9,7 @@ using STS2_Mulundus.STS2_MulundusCode.Character;
 
 namespace STS2_Mulundus.STS2_MulundusCode.Potions.HeartwoodRanger;
 
-[Pool(typeof(Heartwood_Ranger_PotionPool))]
+[Pool(typeof(HeartwoodRangerPotionPool))]
 public class VerdantDraught : STS2_MulundusPotion
 {
     public override PotionRarity Rarity => PotionRarity.Common;
