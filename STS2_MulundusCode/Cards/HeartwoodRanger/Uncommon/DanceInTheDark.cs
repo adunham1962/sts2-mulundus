@@ -13,7 +13,7 @@ public class DanceInTheDark : HeartWoodRangerCard
     public DanceInTheDark() : base(3, CardType.Skill, CardRarity.Uncommon, TargetType.Self)
     {
         WithCards(2);
-        WithBlock(12);
+        WithBlock(16);
         WithKeyword(HeartwoodRangerKeywords.Grim);
     }
 
@@ -35,6 +35,6 @@ public class DanceInTheDark : HeartWoodRangerCard
 
     protected override void OnUpgrade()
     {
-        DynamicVars.Block.UpgradeValueBy(4);
+        EnergyCost.UpgradeBy(-1);
     }
 }

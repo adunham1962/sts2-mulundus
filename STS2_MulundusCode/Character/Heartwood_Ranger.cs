@@ -8,6 +8,7 @@ using MegaCrit.Sts2.Core.Helpers;
 using MegaCrit.Sts2.Core.Models;
 using MegaCrit.Sts2.Core.Nodes.Vfx;
 using STS2_Mulundus.STS2_MulundusCode.Cards.HeartwoodRanger.Basic;
+using STS2_Mulundus.STS2_MulundusCode.Cards.HeartwoodRanger.Uncommon;
 using STS2_Mulundus.STS2_MulundusCode.Relics;
 
 namespace STS2_Mulundus.STS2_MulundusCode.Character;
@@ -39,7 +40,8 @@ public class HeartwoodRanger: PlaceholderCharacterModel
         ModelDb.Card<HeartwoodRangerDefend>(),
         ModelDb.Card<HeartwoodRangerDefend>(),
         ModelDb.Card<DreadSlash>(),
-        ModelDb.Card<InvokeYourOath>()
+        ModelDb.Card<InvokeYourOath>(),
+        ModelDb.Card<ExactVengeance>()
     ];
 
     public override IReadOnlyList<RelicModel> StartingRelics =>

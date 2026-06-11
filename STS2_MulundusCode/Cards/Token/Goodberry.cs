@@ -16,7 +16,7 @@ namespace STS2_Mulundus.STS2_MulundusCode.Cards.Token;
 [Pool(typeof(TokenCardPool))]
 public class Goodberry : ConstructedCardModel
 {
-    public override string PortraitPath => "Cilef Base.png".CardImagePath();
+    public override string PortraitPath => "res://STS2_Mulundus/images/card_portraits/goodberry.png";
     public Goodberry() : base(0, CardType.Skill, CardRarity.Token, TargetType.Self)
     {
         WithHeal(1);
