@@ -40,5 +40,8 @@
   "STS2_MULUNDUS-POISON_BARBS_POWER.title": "Poison Barbs",
   "STS2_MULUNDUS-HUNTERS_MARK_POWER.description": "Attacks deal 2 additional damage to this creature.",
   "STS2_MULUNDUS-HUNTERS_MARK_POWER.smartDescription": "Attacks deal 2 additional damage to this creature.",
-  "STS2_MULUNDUS-HUNTERS_MARK_POWER.title": "Hunter's Mark"
+  "STS2_MULUNDUS-HUNTERS_MARK_POWER.title": "Hunter's Mark",
+  "STS2_MULUNDUS-FEINT_POWER.description": "The next attack you play this turn deals double damage.",
+  "STS2_MULUNDUS-FEINT_POWER.smartDescription": "The next attack you play this turn deals double damage.",
+  "STS2_MULUNDUS-FEINT_POWER.title": "Feint Power"
 }

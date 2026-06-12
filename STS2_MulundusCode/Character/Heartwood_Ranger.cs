@@ -40,8 +40,7 @@ public class HeartwoodRanger: PlaceholderCharacterModel
         ModelDb.Card<HeartwoodRangerDefend>(),
         ModelDb.Card<HeartwoodRangerDefend>(),
         ModelDb.Card<DreadSlash>(),
-        ModelDb.Card<InvokeYourOath>(),
-        ModelDb.Card<ExactVengeance>()
+        ModelDb.Card<InvokeYourOath>()
     ];
 
     public override IReadOnlyList<RelicModel> StartingRelics =>

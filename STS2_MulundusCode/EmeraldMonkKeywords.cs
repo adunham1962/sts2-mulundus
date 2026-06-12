@@ -11,7 +11,17 @@ public static class EmeraldMonkKeywords
     
     [CustomEnum, KeywordProperties(AutoKeywordPosition.Before)]
     public static CardKeyword Stance;
+    
+    [CustomEnum, KeywordProperties(AutoKeywordPosition.After)]
+    public static CardKeyword Ebb;
 
+    [CustomEnum, KeywordProperties(AutoKeywordPosition.After)]
+    public static CardKeyword Flow;
+    
+    public static bool HasEbb (this CardModel card) => card.Keywords.Contains(Ebb);
+    
+    public static bool HasFlow (this CardModel card) => card.Keywords.Contains(Flow);
+    
     public static bool HasEnterStance(this CardModel card)
     {
         return card.Keywords.Contains(EnterStance);

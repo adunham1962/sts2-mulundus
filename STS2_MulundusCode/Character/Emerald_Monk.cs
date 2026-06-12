@@ -7,6 +7,8 @@ using MegaCrit.Sts2.Core.Helpers;
 using MegaCrit.Sts2.Core.Models;
 using MegaCrit.Sts2.Core.Nodes.Vfx;
 using STS2_Mulundus.STS2_MulundusCode.Cards.EmeraldMonk.Basic;
+using STS2_Mulundus.STS2_MulundusCode.Cards.EmeraldMonk.Common;
+using STS2_Mulundus.STS2_MulundusCode.Cards.EmeraldMonk.Uncommon;
 using STS2_Mulundus.STS2_MulundusCode.Extensions;
 using STS2_Mulundus.STS2_MulundusCode.Relics;
 
@@ -39,7 +41,10 @@ public class EmeraldMonk : PlaceholderCharacterModel
         ModelDb.Card<EmeraldMonkDefend>(),
         ModelDb.Card<EmeraldMonkDefend>(),
         ModelDb.Card<WaterWhip>(),
-        ModelDb.Card<EmeraldSerpentStance>()
+        ModelDb.Card<EmeraldSerpentStance>(),
+        ModelDb.Card<Feint>(),
+        ModelDb.Card<DropKick>(),
+        
     ];
 
     public override IReadOnlyList<RelicModel> StartingRelics =>

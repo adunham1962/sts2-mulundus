@@ -37,7 +37,31 @@ public abstract class EmeraldMonkCard(int cost, CardType type, CardRarity rarity
                 CardPileCmd.RemoveFromCombat(cardModel);
             }
         }
+
+        if (this.HasEbb() && card != this)
+        {
+            if (card.Type == CardType.Attack)
+            {
+                EnergyCost.SetUntilPlayed(EnergyCost.Canonical - 1);
+            }
+            else
+            {
+                EnergyCost.SetUntilPlayed(EnergyCost.Canonical);
+            }
+        }
         
+        if (this.HasFlow() && card != this)
+        {
+            if (card.Type == CardType.Skill)
+            {
+                EnergyCost.SetUntilPlayed(EnergyCost.Canonical - 1);
+            }
+            else
+            {
+                EnergyCost.SetUntilPlayed(EnergyCost.Canonical);
+            }
+        }
+
         return Task.CompletedTask;
     }
 

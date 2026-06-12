@@ -17,11 +17,9 @@ public class EmeraldSerpentStance : EmeraldMonkCard
         WithKeyword(EmeraldMonkKeywords.EnterStance);
     }
 
-    protected override async Task OnPlay(
-        PlayerChoiceContext choiceContext,
-        CardPlay play)
+    public override async Task AfterCardPlayedLate(PlayerChoiceContext choiceContext, CardPlay cardPlay)
     {
-        if (CombatState is null) return;
+        if (CombatState is null || cardPlay.Card != this) return;
         var card = SerpentStrike.Create(Owner, 1, CombatState).ToList()[0];
         if (IsUpgraded)
         {

@@ -192,5 +192,13 @@
   "STS2_MULUNDUS-EMERALD_SERPENT_STANCE.description": "Create a [gold]Serpent Strike[/gold] in your Hand.",
   "STS2_MULUNDUS-EMERALD_SERPENT_STANCE.title": "Emerald Serpent Stance",
   "STS2_MULUNDUS-DROP_KICK.description": "Deal {CalculatedDamage:diff()} damage. Deals 3 additional damage for each other card you've played this turn.",
-  "STS2_MULUNDUS-DROP_KICK.title": "Drop Kick"
+  "STS2_MULUNDUS-DROP_KICK.title": "Drop Kick",
+  "STS2_MULUNDUS-FEINT.description": "Gain {Block:diff()}.\nThe next attack you play this turn deals double damage.",
+  "STS2_MULUNDUS-FEINT.title": "Feint",
+  "STS2_MULUNDUS-CONTROL_WATER.description": "Gain [gold]Strength[/gold] this turn equal to attacks in your [gold]Hand[/gold].\nGain [gold]Dexterity[/gold] this turn equal to skills in your [gold]Hand[/gold].\nDraw card for each power in your [gold]Hand[/gold].",
+  "STS2_MULUNDUS-CONTROL_WATER.title": "Control Water",
+  "STS2_MULUNDUS-DRAGONS_TORRENT.description": "Deal {Damage:diff()} and apply {WeakPower:diff()} [gold]Weak[/gold] to ALL enemies.",
+  "STS2_MULUNDUS-DRAGONS_TORRENT.title": "Dragon's Torrent",
+  "STS2_MULUNDUS-DRAGON_STANCE.description": "Create a [gold]Dragon's Torrent[/gold] in your Hand.",
+  "STS2_MULUNDUS-DRAGON_STANCE.title": "Dragon Stance"
 }

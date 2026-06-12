@@ -13,7 +13,9 @@ public class DropKick : EmeraldMonkCard
     
     public DropKick() : base(2, CardType.Attack, CardRarity.Common, TargetType.AnyEnemy)
     {
-       WithCalculatedVar("CalculatedHits", 8, 3, (card, _) =>  CombatManager.Instance.History.Entries.OfType<CardPlayFinishedEntry>().Count((e) => e.HappenedThisTurn(card.CombatState) && e.Actor == card.Owner.Creature));
+        WithCalculatedDamage(8, 3,
+            (card, _) => CombatManager.Instance.History.Entries.OfType<CardPlayFinishedEntry>().Count((e) =>
+                e.HappenedThisTurn(card.CombatState) && e.Actor == card.Owner.Creature));
     }
     
     protected override async Task OnPlay(
@@ -27,6 +29,7 @@ public class DropKick : EmeraldMonkCard
 
     protected override void OnUpgrade()
     {
-        
+        DynamicVars.CalculationBase.UpgradeValueBy(2);
+        DynamicVars.ExtraDamage.UpgradeValueBy(1);
     }
 }

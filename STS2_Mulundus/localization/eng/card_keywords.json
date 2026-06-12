@@ -4,5 +4,9 @@
   "STS2_MULUNDUS-ENTERSTANCE.description": "Remove all cards with [gold]Stance[/gold] from your hand.",
   "STS2_MULUNDUS-ENTERSTANCE.title": "Enter Stance",
   "STS2_MULUNDUS-STANCE.description": "When you enter another stance, remove this card from your hand.",
-  "STS2_MULUNDUS-STANCE.title": "Stance"
+  "STS2_MULUNDUS-STANCE.title": "Stance",
+  "STS2_MULUNDUS-EBB.description": "This card costs less if the last card you played was an attack.",
+  "STS2_MULUNDUS-EBB.title": "Ebb",
+  "STS2_MULUNDUS-FLOW.description": "The card costs less if the last card you played was a skill.",
+  "STS2_MULUNDUS-FLOW.title": "Flow"
 }
