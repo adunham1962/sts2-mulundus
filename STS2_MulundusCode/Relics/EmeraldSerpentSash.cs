@@ -3,6 +3,7 @@ using MegaCrit.Sts2.Core.Commands;
 using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.Entities.Relics;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
+using MegaCrit.Sts2.Core.Rooms;
 using STS2_Mulundus.STS2_MulundusCode.Character;
 using STS2_Mulundus.STS2_MulundusCode.Relics;
 
@@ -21,6 +22,17 @@ public class EmeraldSerpentSash() : STS2_MulundusRelic
     private bool _cursePlayed = false;
     private bool _statusPlayed = false;
     private bool _questPlayed = false;
+
+    public override Task AfterCombatEnd(CombatRoom room)
+    {
+        _powerPlayed = false;
+        _attackPlayed = false;
+        _skillPlayed = false;
+        _cursePlayed = false;
+        _statusPlayed = false;
+        _questPlayed = false;
+        return Task.CompletedTask;
+    }
 
     public override Task AfterCardPlayed(PlayerChoiceContext context, CardPlay cardPlay)
     {
