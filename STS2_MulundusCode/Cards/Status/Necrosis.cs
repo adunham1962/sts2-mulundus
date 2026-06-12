@@ -23,7 +23,7 @@ public class Necrosis : ConstructedCardModel
     {
         if (card == this)
         {
-            await CommonActions.ApplySelf<FrailPower>(this);
+            await CommonActions.ApplySelf<FrailPower>(choiceContext, this);
         }
     }
     

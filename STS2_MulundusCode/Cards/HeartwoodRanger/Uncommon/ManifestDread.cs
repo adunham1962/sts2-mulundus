@@ -29,8 +29,8 @@ public class ManifestDread : HeartWoodRangerCard
         if (CombatState is null) return;
         
         await DamageCmd.Attack(damage).FromCard(this).TargetingAllOpponents(CombatState).Execute(choiceContext);
-        await CommonActions.Apply<VulnerablePower>(CombatState.HittableEnemies, this);
-        await CommonActions.Apply<WeakPower>(CombatState.HittableEnemies, this);
+        await CommonActions.Apply<VulnerablePower>(choiceContext, CombatState.HittableEnemies, this);
+        await CommonActions.Apply<WeakPower>(choiceContext, CombatState.HittableEnemies, this);
     }
 
     protected override void OnUpgrade()

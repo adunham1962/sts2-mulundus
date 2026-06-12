@@ -21,8 +21,8 @@ public class RecklessAssault : HeartWoodRangerCard
         CardPlay play) 
     {
         await CommonActions.CardAttack(this, play).Execute(choiceContext);
-        await CommonActions.ApplySelf<VulnerablePower>(this);
-        await CommonActions.ApplySelf<FrailPower>(this);
+        await CommonActions.ApplySelf<VulnerablePower>(choiceContext, this);
+        await CommonActions.ApplySelf<FrailPower>(choiceContext, this);
     }
 
     protected override void OnUpgrade()

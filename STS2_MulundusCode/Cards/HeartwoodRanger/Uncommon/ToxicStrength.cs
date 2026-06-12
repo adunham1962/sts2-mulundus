@@ -25,7 +25,7 @@ public class ToxicStrength : HeartWoodRangerCard
             strengthToGain = poison.Amount;
         }
 
-        await CommonActions.ApplySelf<StrengthPower>(this, strengthToGain);
+        await CommonActions.ApplySelf<StrengthPower>(choiceContext, this, strengthToGain);
     }
 
     protected override void OnUpgrade()

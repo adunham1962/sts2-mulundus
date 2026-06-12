@@ -22,7 +22,7 @@ public class Reposition : HeartWoodRangerCard
         CardPlay play)
     {
         await PowerCmd.Apply<RepositionPower>(Owner.Creature, DynamicVars.Dexterity.BaseValue, Owner.Creature, this);
-        if (play.Target != null) await CommonActions.Apply<VulnerablePower>(play.Target, this);
+        if (play.Target != null) await CommonActions.Apply<VulnerablePower>(choiceContext, play.Target, this);
     }
 
     protected override void OnUpgrade()

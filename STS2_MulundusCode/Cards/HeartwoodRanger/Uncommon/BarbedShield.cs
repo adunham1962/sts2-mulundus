@@ -27,7 +27,7 @@ public class BarbedShield : HeartWoodRangerCard
             await CreatureCmd.GainBlock(Owner.Creature, thorns.Amount, ValueProp.Move, play);
         }
 
-        await CommonActions.ApplySelf<ThornsPower>(this);
+        await CommonActions.ApplySelf<ThornsPower>(choiceContext, this);
     }
 
     protected override void OnUpgrade()

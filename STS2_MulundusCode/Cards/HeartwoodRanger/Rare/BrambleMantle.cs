@@ -16,6 +16,6 @@ public class BrambleMantle : HeartWoodRangerCard
 
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)
     {
-        await CommonActions.ApplySelf<BrambleMantlePower>(this);
+        await CommonActions.ApplySelf<BrambleMantlePower>(choiceContext, this);
     }
 }

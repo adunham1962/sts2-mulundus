@@ -24,9 +24,9 @@ public class DeathBloom : HeartWoodRangerCard
         CardPlay play)
     {
         await PlayerCmd.GainEnergy(DynamicVars.Energy.BaseValue, Owner);
-        await CommonActions.ApplySelf<ThornsPower>(this);
-        await CommonActions.ApplySelf<StrengthPower>(this);
-        await CommonActions.ApplySelf<PoisonPower>(this);
+        await CommonActions.ApplySelf<ThornsPower>(choiceContext, this);
+        await CommonActions.ApplySelf<StrengthPower>(choiceContext, this);
+        await CommonActions.ApplySelf<PoisonPower>(choiceContext, this);
     }
 
     protected override void OnUpgrade()

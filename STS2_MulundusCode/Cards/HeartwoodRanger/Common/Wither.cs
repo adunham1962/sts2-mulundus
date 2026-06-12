@@ -22,7 +22,7 @@ public class Wither : HeartWoodRangerCard
         CardPlay play)
     {
         if (play.Target is null) return;
-        await CommonActions.Apply<WeakPower>(play.Target, this);
+        await CommonActions.Apply<WeakPower>(choiceContext, play.Target, this);
     }
 
     protected override void OnUpgrade()

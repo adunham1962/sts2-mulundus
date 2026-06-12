@@ -18,7 +18,7 @@ public class CuttingEdge : HeartWoodRangerCard
         PlayerChoiceContext choiceContext,
         CardPlay play)
     {
-        await CommonActions.ApplySelf<CuttingEdgePower>(this);
+        await CommonActions.ApplySelf<CuttingEdgePower>(choiceContext, this);
     }
 
     protected override void OnUpgrade()

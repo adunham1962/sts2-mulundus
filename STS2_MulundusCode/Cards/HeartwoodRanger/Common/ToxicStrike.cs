@@ -21,7 +21,7 @@ public class ToxicStrike : HeartWoodRangerCard
         CardPlay play)
     {
         await CommonActions.CardAttack(this, play).Execute(choiceContext);
-        await CommonActions.ApplySelf<PoisonPower>(this);
+        await CommonActions.ApplySelf<PoisonPower>(choiceContext, this);
     }
 
     protected override void OnUpgrade()

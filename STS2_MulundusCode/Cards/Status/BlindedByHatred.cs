@@ -23,7 +23,7 @@ public class BlindedByHatred : ConstructedCardModel
     {
         if (card == this)
         {
-            await CommonActions.ApplySelf<VulnerablePower>(this);
+            await CommonActions.ApplySelf<VulnerablePower>(choiceContext, this);
         }
     }
 

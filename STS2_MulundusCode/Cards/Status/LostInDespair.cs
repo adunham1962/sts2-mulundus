@@ -22,7 +22,7 @@ public class LostInDespair : ConstructedCardModel
     {
         if (card == this)
         {
-            await CommonActions.ApplySelf<WeakPower>(this);
+            await CommonActions.ApplySelf<WeakPower>(choiceContext, this);
         }
     }
     

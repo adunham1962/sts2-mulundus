@@ -31,8 +31,8 @@ public class DreadSlash : HeartWoodRangerCard
 
         if (play.Card.Owner.PlayerCombatState is { ExhaustPile.IsEmpty: false } && play.Target != null)
         {
-            await CommonActions.Apply<VulnerablePower>(play.Target, this, 1);
-            await CommonActions.Apply<WeakPower>(play.Target, this, 1);
+            await CommonActions.Apply<VulnerablePower>(choiceContext, play.Target, this, 1);
+            await CommonActions.Apply<WeakPower>(choiceContext, play.Target, this, 1);
         }
     }
 

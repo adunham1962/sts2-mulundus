@@ -17,7 +17,7 @@ public class PoisonedBarbs : HeartWoodRangerCard
         PlayerChoiceContext choiceContext,
         CardPlay play)
     {
-        await CommonActions.ApplySelf<PoisonBarbsPower>(this);
+        await CommonActions.ApplySelf<PoisonBarbsPower>(choiceContext, this);
     }
 
     protected override void OnUpgrade()

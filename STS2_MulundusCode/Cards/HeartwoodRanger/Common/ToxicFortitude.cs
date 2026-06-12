@@ -20,7 +20,7 @@ public class ToxicFortitude : HeartWoodRangerCard
         CardPlay play)
     {
         await CommonActions.CardBlock(this, DynamicVars.Block, play);
-        await CommonActions.ApplySelf<PoisonPower>(this, DynamicVars["PoisonPower"].BaseValue);
+        await CommonActions.ApplySelf<PoisonPower>(choiceContext, this, DynamicVars["PoisonPower"].BaseValue);
     }
 
     protected override void OnUpgrade()

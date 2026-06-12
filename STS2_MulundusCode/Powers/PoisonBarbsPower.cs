@@ -20,6 +20,6 @@ public class PoisonBarbsPower() : CustomPowerModel()
         Creature target, CardModel? cardSource)
     {
         if (dealer is null || dealer != Owner || cardSource is null || cardSource.Type != CardType.Attack) return;
-        await CommonActions.Apply<PoisonPower>(target, cardSource, dealer.GetPowerAmount<ThornsPower>());
+        await CommonActions.Apply<PoisonPower>(choiceContext, target, cardSource, dealer.GetPowerAmount<ThornsPower>());
     }
 }

@@ -19,7 +19,7 @@ public class WallOfThorns : HeartWoodRangerCard
         CardPlay play)
     {
         await CommonActions.CardBlock(this, play);
-        await CommonActions.ApplySelf<ThornsPower>(this, DynamicVars["ThornsPower"].BaseValue);
+        await CommonActions.ApplySelf<ThornsPower>(choiceContext, this, DynamicVars["ThornsPower"].BaseValue);
     }
 
     protected override void OnUpgrade()

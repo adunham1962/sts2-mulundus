@@ -25,8 +25,8 @@ public class ControlWater : EmeraldMonkCard
         var dexterity = (DynamicVars["CalculatedDexterity"] as CalculatedVar)!.Calculate(play.Target); 
         var draw = (DynamicVars["CalculatedDraw"] as CalculatedVar)!.Calculate(play.Target);
 
-        await CommonActions.ApplySelf<ControlWaterStrengthPower>(this, strength);
-        await CommonActions.ApplySelf<ControlWaterDexterityPower>(this, dexterity);
+        await CommonActions.ApplySelf<ControlWaterStrengthPower>(choiceContext, this, strength);
+        await CommonActions.ApplySelf<ControlWaterDexterityPower>(choiceContext, this, dexterity);
         await CardPileCmd.Draw(choiceContext, draw, Owner);
     }
 

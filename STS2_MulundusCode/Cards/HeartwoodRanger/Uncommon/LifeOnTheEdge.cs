@@ -18,7 +18,7 @@ public class LifeOnTheEdge : HeartWoodRangerCard
         PlayerChoiceContext choiceContext,
         CardPlay play)
     {
-        await CommonActions.ApplySelf<LifeOnTheEdgePower>(this);
+        await CommonActions.ApplySelf<LifeOnTheEdgePower>(choiceContext, this);
     }
 
     protected override void OnUpgrade()

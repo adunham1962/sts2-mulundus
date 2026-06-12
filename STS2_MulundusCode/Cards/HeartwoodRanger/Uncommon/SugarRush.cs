@@ -13,7 +13,7 @@ public class SugarRush() : HeartWoodRangerCard(1, CardType.Power, CardRarity.Unc
         PlayerChoiceContext choiceContext,
         CardPlay play)
     {
-        await CommonActions.ApplySelf<SugarRushPower>(this, 1);
+        await CommonActions.ApplySelf<SugarRushPower>(choiceContext, this, 1);
     }
 
     protected override void OnUpgrade()

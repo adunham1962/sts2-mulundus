@@ -20,8 +20,8 @@ public class MeldIntoStone : HeartWoodRangerCard
         PlayerChoiceContext choiceContext,
         CardPlay play)
     {
-        await CommonActions.ApplySelf<PlatingPower>(this);
-        await CommonActions.ApplySelf<MeldedInStonePower>(this);
+        await CommonActions.ApplySelf<PlatingPower>(choiceContext, this);
+        await CommonActions.ApplySelf<MeldedInStonePower>(choiceContext, this);
     }
 
     protected override void OnUpgrade()

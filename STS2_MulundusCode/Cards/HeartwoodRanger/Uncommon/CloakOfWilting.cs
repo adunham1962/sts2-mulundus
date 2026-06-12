@@ -22,7 +22,7 @@ public class CloakOfWilting : HeartWoodRangerCard
         PlayerChoiceContext choiceContext,
         CardPlay play)
     {
-        await CommonActions.ApplySelf<CloakOfWiltingPower>(this);
+        await CommonActions.ApplySelf<CloakOfWiltingPower>(choiceContext, this);
         await PowerCmd.Apply<StrengthPower>(Owner.Creature, DynamicVars["StrengthPower"].BaseValue * -1, Owner.Creature, this);
         if (CombatState is not null)
         {

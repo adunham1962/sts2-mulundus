@@ -20,7 +20,7 @@ public class ThornWhip : HeartWoodRangerCard
         CardPlay play)
     {
         await CommonActions.CardAttack(this, play).Execute(choiceContext);
-        await CommonActions.ApplySelf<ThornsPower>(this, DynamicVars["ThornsPower"].BaseValue);
+        await CommonActions.ApplySelf<ThornsPower>(choiceContext, this, DynamicVars["ThornsPower"].BaseValue);
     }
 
     protected override void OnUpgrade()

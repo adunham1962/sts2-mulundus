@@ -22,7 +22,7 @@ public class HuntersMark : HeartWoodRangerCard
         CardPlay play)
     {
         if (play.Target is null) return;
-        await CommonActions.Apply<HuntersMarkPower>(play.Target, this);
+        await CommonActions.Apply<HuntersMarkPower>(choiceContext, play.Target, this);
     }
 
     public override async Task AfterDeath(PlayerChoiceContext choiceContext, Creature creature, bool wasRemovalPrevented, float deathAnimLength)

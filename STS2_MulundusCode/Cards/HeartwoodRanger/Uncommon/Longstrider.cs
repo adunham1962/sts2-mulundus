@@ -20,7 +20,7 @@ public class Longstrider : HeartWoodRangerCard
         PlayerChoiceContext choiceContext,
         CardPlay play)
     {
-        await CommonActions.ApplySelf<DexterityPower>(this);
+        await CommonActions.ApplySelf<DexterityPower>(choiceContext, this);
         await CommonActions.CardBlock(this, play);
     }
 

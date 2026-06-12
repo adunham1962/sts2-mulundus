@@ -22,7 +22,7 @@ public class SurvivalistsBrew : HeartWoodRangerCard
         await CreatureCmd.TriggerAnim(Owner.Creature, "Cast", Owner.Character.CastAnimDelay);
         await PotionCmd.TryToProcure(PotionFactory.CreateRandomPotionInCombat(Owner, Owner.RunState.Rng.CombatPotionGeneration).ToMutable(), Owner);
 
-        await CommonActions.ApplySelf<PoisonPower>(this);
+        await CommonActions.ApplySelf<PoisonPower>(choiceContext, this);
     }
 
     protected override void OnUpgrade()

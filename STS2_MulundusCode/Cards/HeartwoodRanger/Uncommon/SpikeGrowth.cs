@@ -19,7 +19,7 @@ public class SpikeGrowth : HeartWoodRangerCard
         PlayerChoiceContext choiceContext,
         CardPlay play)
     {
-        await CommonActions.ApplySelf<ThornsPower>(this);
+        await CommonActions.ApplySelf<ThornsPower>(choiceContext, this);
     }
 
     protected override void OnUpgrade()

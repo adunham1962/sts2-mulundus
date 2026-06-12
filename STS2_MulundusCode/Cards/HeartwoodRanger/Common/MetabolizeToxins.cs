@@ -25,7 +25,7 @@ public class MetabolizeToxins() : HeartWoodRangerCard(0, CardType.Skill, CardRar
         var poison = powers.Find(p => p is PoisonPower);
         if (poison is not null)
         {
-            await CommonActions.ApplySelf<PoisonPower>(this, poison.Amount * -1);
+            await CommonActions.ApplySelf<PoisonPower>(choiceContext, this, poison.Amount * -1);
         }
     }
 

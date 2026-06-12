@@ -22,7 +22,7 @@ public class Barkskin : HeartWoodRangerCard
         CardPlay play)
     {
         await CommonActions.CardBlock(this, play);
-        await CommonActions.ApplySelf<PlatingPower>(this, 4);
+        await CommonActions.ApplySelf<PlatingPower>(choiceContext, this, 4);
     }
 
     protected override void OnUpgrade()

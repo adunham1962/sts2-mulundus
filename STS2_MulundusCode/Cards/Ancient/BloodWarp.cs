@@ -26,7 +26,7 @@ public class BloodWarp : ConstructedCardModel
         CardPlay play)
     {
         await CreatureCmd.LoseMaxHp(choiceContext, Owner.Creature, DynamicVars["LoseHp"].BaseValue, true);
-        await CommonActions.ApplySelf<IntangiblePower>(this);
+        await CommonActions.ApplySelf<IntangiblePower>(choiceContext, this);
     }
 
     protected override void OnUpgrade()

@@ -19,7 +19,7 @@ public class LivingBastion : HeartWoodRangerCard
         PlayerChoiceContext choiceContext,
         CardPlay play)
     {
-        await CommonActions.ApplySelf<LivingBastionPower>(this);
+        await CommonActions.ApplySelf<LivingBastionPower>(choiceContext, this);
     }
 
     protected override void OnUpgrade()

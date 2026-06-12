@@ -23,7 +23,7 @@ public class TheDowagersDeal : HeartWoodRangerCard
     {
         await CreatureCmd.LoseMaxHp(choiceContext, Owner.Creature, 1, true);
         await CommonActions.Draw(this, choiceContext);
-        await CommonActions.ApplySelf<StrengthPower>(this);
+        await CommonActions.ApplySelf<StrengthPower>(choiceContext, this);
     }
 
     protected override void OnUpgrade()

@@ -17,7 +17,7 @@ public class CursorsLog : HeartWoodRangerCard
         PlayerChoiceContext choiceContext,
         CardPlay play)
     {
-        await CommonActions.ApplySelf<CursorsLogPower>(this);
+        await CommonActions.ApplySelf<CursorsLogPower>(choiceContext, this);
     }
 
     protected override void OnUpgrade()
