@@ -220,5 +220,13 @@
   "STS2_MULUNDUS-SLIP_INTO_SHADOW.description": "Gain {IntangiblePower:diff()} [gold]Intangible[/gold].",
   "STS2_MULUNDUS-SLIP_INTO_SHADOW.title": "Slip into Shadow",
   "STS2_MULUNDUS-SHADOWED_WEB_STANCE.description": "Create a [gold]Slip into Shadow[/gold] in your Hand.",
-  "STS2_MULUNDUS-SHADOWED_WEB_STANCE.title": "Shadowed Web Stance"
+  "STS2_MULUNDUS-SHADOWED_WEB_STANCE.title": "Shadowed Web Stance",
+  "STS2_MULUNDUS-EVASION.description": "Gain {Energy:energyIcons()}.\nGain {SlipperyPower:diff()} [gold]Slippery[/gold].",
+  "STS2_MULUNDUS-EVASION.title": "Evasion",
+  "STS2_MULUNDUS-FROGS_LEAP.description": "Gain {Block:diff()} [gold]Block[/gold].",
+  "STS2_MULUNDUS-FROGS_LEAP.title": "Frog's Leap",
+  "STS2_MULUNDUS-FROG_STANCE.description": "Create a [gold]Frog's Leap[/gold] in your hand.",
+  "STS2_MULUNDUS-FROG_STANCE.title": "Frog Stance",
+  "STS2_MULUNDUS-PALM_STRIKE.description": "Deal {Damage:diff()} damage.\nApply {VulnerablePower:diff()} [gold]Vulnerable[/gold] if the last card you played was a skill.",
+  "STS2_MULUNDUS-PALM_STRIKE.title": "Palm Strike"
 }

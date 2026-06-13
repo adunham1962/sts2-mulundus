@@ -2,6 +2,7 @@ using BaseLib.Utils;
 using MegaCrit.Sts2.Core.Commands;
 using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
+using MegaCrit.Sts2.Core.HoverTips;
 using STS2_Mulundus.STS2_MulundusCode.Cards.EmeraldMonk.Special;
 using STS2_Mulundus.STS2_MulundusCode.Character;
 
@@ -15,6 +16,7 @@ public class EmeraldSerpentStance : EmeraldMonkCard
     public EmeraldSerpentStance() : base(1, CardType.Skill, CardRarity.Basic, TargetType.Self)
     {
         WithKeyword(EmeraldMonkKeywords.EnterStance);
+        WithTips(_ => [HoverTipFactory.FromCard<SerpentStrike>()]);
     }
 
     public override async Task AfterCardPlayedLate(PlayerChoiceContext choiceContext, CardPlay cardPlay)

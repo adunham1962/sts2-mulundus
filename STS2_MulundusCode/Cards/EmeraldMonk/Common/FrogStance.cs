@@ -6,30 +6,26 @@ using MegaCrit.Sts2.Core.HoverTips;
 using STS2_Mulundus.STS2_MulundusCode.Cards.EmeraldMonk.Special;
 using STS2_Mulundus.STS2_MulundusCode.Character;
 
-namespace STS2_Mulundus.STS2_MulundusCode.Cards.EmeraldMonk.Rare;
+namespace STS2_Mulundus.STS2_MulundusCode.Cards.EmeraldMonk.Common;
 [Pool(typeof(EmeraldMonkCardPool))]
-public class ShadowedWebStance : EmeraldMonkCard
+public class FrogStance : EmeraldMonkCard
 {
-    public ShadowedWebStance() : base(1, CardType.Skill, CardRarity.Rare, TargetType.Self)
+
+    public FrogStance() : base(1, CardType.Skill, CardRarity.Common, TargetType.Self)
     {
         WithKeyword(EmeraldMonkKeywords.EnterStance);
-        WithTips(_ => [HoverTipFactory.FromCard<SlipIntoShadow>()]);
+        WithTips(_ => [HoverTipFactory.FromCard<FrogsLeap>()]);
     }
 
     public override async Task AfterCardPlayedLate(PlayerChoiceContext choiceContext, CardPlay cardPlay)
     {
         if (CombatState is null || cardPlay.Card != this) return;
-        var card = SlipIntoShadow.Create(Owner, 1, CombatState).ToList()[0];
+        var card = FrogsLeap.Create(Owner, 1, CombatState).ToList()[0];
         if (IsUpgraded)
         {
             CardCmd.Upgrade(card);
         }
 
         await CardPileCmd.AddGeneratedCardToCombat(card, PileType.Hand, true);
-    }
-    
-    protected override void OnUpgrade()
-    {
-        EnergyCost.UpgradeBy(-1);
     }
 }

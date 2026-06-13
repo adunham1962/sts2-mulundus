@@ -4,37 +4,35 @@ using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.Entities.Players;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 using MegaCrit.Sts2.Core.Models.CardPools;
-using MegaCrit.Sts2.Core.Models.Powers;
 
 namespace STS2_Mulundus.STS2_MulundusCode.Cards.EmeraldMonk.Special;
-
 [Pool(typeof(TokenCardPool))]
-public class SlipIntoShadow : EmeraldMonkCard
+public class FrogsLeap : EmeraldMonkCard
 {
-    public SlipIntoShadow() : base(3, CardType.Skill, CardRarity.Token, TargetType.Self)
+    public FrogsLeap() : base(2, CardType.Skill, CardRarity.Token, TargetType.Self)
     {
-        WithPower<IntangiblePower>(1);
-        WithKeyword(CardKeyword.Retain);
         WithKeyword(EmeraldMonkKeywords.Stance);
+        WithKeyword(CardKeyword.Retain);
+        WithBlock(12);
     }
 
     protected override async Task OnPlay(
         PlayerChoiceContext choiceContext,
         CardPlay play)
     {
-        await CommonActions.ApplySelf<IntangiblePower>(choiceContext, this);
+        await CommonActions.CardBlock(this, play);
     }
 
     protected override void OnUpgrade()
     {
-        AddKeyword(EmeraldMonkKeywords.Ebb);
+        DynamicVars.Block.UpgradeValueBy(4);
     }
-
-    public static IEnumerable<SlipIntoShadow> Create(Player owner, decimal amount, CombatState combatState)
+    
+    public static IEnumerable<FrogsLeap> Create(Player owner, decimal amount, CombatState combatState)
     {
-        var slips = new List<SlipIntoShadow>();
+        var frogsLeaps = new List<FrogsLeap>();
         for (var index = 0; index < amount; ++index)
-            slips.Add(combatState.CreateCard<SlipIntoShadow>(owner));
-        return slips;
+            frogsLeaps.Add(combatState.CreateCard<FrogsLeap>(owner));
+        return frogsLeaps;
     }
 }

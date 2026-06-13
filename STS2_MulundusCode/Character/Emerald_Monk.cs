@@ -41,10 +41,7 @@ public class EmeraldMonk : PlaceholderCharacterModel
         ModelDb.Card<EmeraldMonkDefend>(),
         ModelDb.Card<EmeraldMonkDefend>(),
         ModelDb.Card<WaterWhip>(),
-        ModelDb.Card<EmeraldSerpentStance>(),
-        ModelDb.Card<Feint>(),
-        ModelDb.Card<DropKick>(),
-        
+        ModelDb.Card<EmeraldSerpentStance>()
     ];
 
     public override IReadOnlyList<RelicModel> StartingRelics =>
