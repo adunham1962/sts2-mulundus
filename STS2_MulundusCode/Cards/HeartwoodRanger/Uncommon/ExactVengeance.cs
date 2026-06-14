@@ -25,6 +25,6 @@ public class ExactVengeance : HeartWoodRangerCard
 
     protected override void OnUpgrade()
     {
-        DynamicVars.Damage.UpgradeValueBy(3);
+        DynamicVars.ExtraDamage.UpgradeValueBy(1);
     }
 }
