@@ -1,29 +1,30 @@
 using BaseLib.Utils;
+using MegaCrit.Sts2.Core.Commands;
 using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 using STS2_Mulundus.STS2_MulundusCode.Character;
-using STS2_Mulundus.STS2_MulundusCode.Powers;
 
 namespace STS2_Mulundus.STS2_MulundusCode.Cards.EmeraldMonk.Uncommon;
 
 [Pool(typeof(EmeraldMonkCardPool))]
-public class DivineProtection : EmeraldMonkCard
+public class DivineSpark : EmeraldMonkCard
 {
-
-    public DivineProtection() : base(1, CardType.Power, CardRarity.Uncommon, TargetType.Self)
+    public DivineSpark() : base(1, CardType.Attack, CardRarity.Uncommon, TargetType.AnyEnemy)
     {
-        WithPower<DivineProtectionPower>(4);
+        WithDamage(8);
+        WithHeal(2);
     }
 
     protected override async Task OnPlay(
         PlayerChoiceContext choiceContext,
         CardPlay play)
     {
-        await CommonActions.ApplySelf<DivineProtectionPower>(choiceContext, this);
+        await CommonActions.CardAttack(this, play).Execute(choiceContext);
+        await CreatureCmd.Heal(Owner.Creature, DynamicVars.Heal.BaseValue);
     }
 
     protected override void OnUpgrade()
     {
-        AddKeyword(CardKeyword.Innate);
+        DynamicVars.Damage.UpgradeValueBy(3);
     }
 }

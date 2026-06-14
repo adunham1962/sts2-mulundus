@@ -52,5 +52,8 @@
   "STS2_MULUNDUS-DEXTEROUS_ATTACKS_POWER.title": "Dexterous Attacks",
   "STS2_MULUNDUS-DIVINE_PROTECTION_POWER.description": "Increase the first time you gain [gold]Block[/gold] each turn by 6.",
   "STS2_MULUNDUS-DIVINE_PROTECTION_POWER.smartDescription": "Increase the first time you gain [gold]Block[/gold] each turn by {Amount}.",
-  "STS2_MULUNDUS-DIVINE_PROTECTION_POWER.title": "Divine Protection"
+  "STS2_MULUNDUS-DIVINE_PROTECTION_POWER.title": "Divine Protection",
+  "STS2_MULUNDUS-FLUID_FORM_POWER.description": "Whenever you play a card that costs less than its original cost, draw a card.",
+  "STS2_MULUNDUS-FLUID_FORM_POWER.smartDescription": "Whenever you play a card that costs less than its original cost, draw {Amount:plural:a|{}} {Amount:plural:card|cards}.",
+  "STS2_MULUNDUS-FLUID_FORM_POWER.title": "Fluid Form"
 }

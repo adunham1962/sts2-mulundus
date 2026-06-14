@@ -5,28 +5,23 @@ using MegaCrit.Sts2.Core.Models.Powers;
 using STS2_Mulundus.STS2_MulundusCode.Character;
 
 namespace STS2_Mulundus.STS2_MulundusCode.Cards.EmeraldMonk.Rare;
-
 [Pool(typeof(EmeraldMonkCardPool))]
-public class WaveDash : EmeraldMonkCard
+public class OrdersDemand : EmeraldMonkCard
 {
-
-    public WaveDash() : base(1, CardType.Skill, CardRarity.Rare, TargetType.Self)
+    public OrdersDemand() : base(0, CardType.Skill, CardRarity.Rare, TargetType.AllEnemies)
     {
-        WithKeyword(CardKeyword.Exhaust);
-        WithBlock(3);
-        WithPower<SlipperyPower>(1);
+        WithPower<WeakPower>(1);
     }
 
     protected override async Task OnPlay(
         PlayerChoiceContext choiceContext,
         CardPlay play)
     {
-        await CommonActions.CardBlock(this, play);
-        await CommonActions.ApplySelf<SlipperyPower>(choiceContext, this);
+        if (CombatState != null) await CommonActions.Apply<WeakPower>(choiceContext, CombatState.HittableEnemies, this);
     }
 
     protected override void OnUpgrade()
     {
-        RemoveKeyword(CardKeyword.Exhaust);
+        DynamicVars["WeakPower"].UpgradeValueBy(1);
     }
 }
