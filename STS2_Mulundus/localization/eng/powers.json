@@ -43,5 +43,14 @@
   "STS2_MULUNDUS-HUNTERS_MARK_POWER.title": "Hunter's Mark",
   "STS2_MULUNDUS-FEINT_POWER.description": "The next attack you play this turn deals double damage.",
   "STS2_MULUNDUS-FEINT_POWER.smartDescription": "The next attack you play this turn deals double damage.",
-  "STS2_MULUNDUS-FEINT_POWER.title": "Feint Power"
+  "STS2_MULUNDUS-FEINT_POWER.title": "Feint",
+  "STS2_MULUNDUS-DEFLECT_ATTACKS_POWER.description": "Reflect attack damage to your attacker equal to your [gold]Dexterity[/gold].",
+  "STS2_MULUNDUS-DEFLECT_ATTACKS_POWER.smartDescription": "Reflect up to {Amount} attack damage to your attacker.",
+  "STS2_MULUNDUS-DEFLECT_ATTACKS_POWER.title": "Deflect Attacks",
+  "STS2_MULUNDUS-DEXTEROUS_ATTACKS_POWER.description": "Your attacks benefit from [gold]Dexterity[/gold] rather than [gold]Strength[/gold].",
+  "STS2_MULUNDUS-DEXTEROUS_ATTACKS_POWER.smartDescription": "Your attacks benefit from [gold]Dexterity[/gold] rather than [gold]Strength[/gold].",
+  "STS2_MULUNDUS-DEXTEROUS_ATTACKS_POWER.title": "Dexterous Attacks",
+  "STS2_MULUNDUS-DIVINE_PROTECTION_POWER.description": "Increase the first time you gain [gold]Block[/gold] each turn by 6.",
+  "STS2_MULUNDUS-DIVINE_PROTECTION_POWER.smartDescription": "Increase the first time you gain [gold]Block[/gold] each turn by {Amount}.",
+  "STS2_MULUNDUS-DIVINE_PROTECTION_POWER.title": "Divine Protection"
 }

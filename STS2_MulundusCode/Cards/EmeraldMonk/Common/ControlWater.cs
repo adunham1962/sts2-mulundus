@@ -14,7 +14,6 @@ public class ControlWater : EmeraldMonkCard
     {
         WithCalculatedVar("CalculatedStrength", 0, 1, (card, _) => PileType.Hand.GetPile(card.Owner).Cards.Count(c => c.Type == CardType.Attack));
         WithCalculatedVar("CalculatedDexterity", 0, 1, (card, _) => PileType.Hand.GetPile(card.Owner).Cards.Count(c => c.Type == CardType.Skill));
-        WithCalculatedVar("CalculatedDraw", 0, 1, (card, _) => PileType.Hand.GetPile(card.Owner).Cards.Count(c => c.Type == CardType.Power));
     }
 
     protected override async Task OnPlay(
@@ -23,11 +22,9 @@ public class ControlWater : EmeraldMonkCard
     {
         var strength = (DynamicVars["CalculatedStrength"] as CalculatedVar)!.Calculate(play.Target);
         var dexterity = (DynamicVars["CalculatedDexterity"] as CalculatedVar)!.Calculate(play.Target); 
-        var draw = (DynamicVars["CalculatedDraw"] as CalculatedVar)!.Calculate(play.Target);
 
         await CommonActions.ApplySelf<ControlWaterStrengthPower>(choiceContext, this, strength);
         await CommonActions.ApplySelf<ControlWaterDexterityPower>(choiceContext, this, dexterity);
-        await CardPileCmd.Draw(choiceContext, draw, Owner);
     }
 
     protected override void OnUpgrade()

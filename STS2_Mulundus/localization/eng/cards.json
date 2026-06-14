@@ -195,7 +195,7 @@
   "STS2_MULUNDUS-DROP_KICK.title": "Drop Kick",
   "STS2_MULUNDUS-FEINT.description": "Gain {Block:diff()} [gold]Block[/gold].\nThe next attack you play this turn deals double damage.",
   "STS2_MULUNDUS-FEINT.title": "Feint",
-  "STS2_MULUNDUS-CONTROL_WATER.description": "Gain [gold]Strength[/gold] this turn equal to attacks in your [gold]Hand[/gold].\nGain [gold]Dexterity[/gold] this turn equal to skills in your [gold]Hand[/gold].\nDraw card for each power in your [gold]Hand[/gold].",
+  "STS2_MULUNDUS-CONTROL_WATER.description": "Gain [gold]Strength[/gold] this turn for each Attack in your [gold]Hand[/gold].\nGain [gold]Dexterity[/gold] this turn for each Skill in your [gold]Hand[/gold].",
   "STS2_MULUNDUS-CONTROL_WATER.title": "Control Water",
   "STS2_MULUNDUS-DRAGONS_TORRENT.description": "Deal {Damage:diff()} and apply {WeakPower:diff()} [gold]Weak[/gold] to ALL enemies.",
   "STS2_MULUNDUS-DRAGONS_TORRENT.title": "Dragon's Torrent",
@@ -228,5 +228,15 @@
   "STS2_MULUNDUS-FROG_STANCE.description": "Create a [gold]Frog's Leap[/gold] in your hand.",
   "STS2_MULUNDUS-FROG_STANCE.title": "Frog Stance",
   "STS2_MULUNDUS-PALM_STRIKE.description": "Deal {Damage:diff()} damage.\nApply {VulnerablePower:diff()} [gold]Vulnerable[/gold] if the last card you played was a skill.",
-  "STS2_MULUNDUS-PALM_STRIKE.title": "Palm Strike"
+  "STS2_MULUNDUS-PALM_STRIKE.title": "Palm Strike",
+  "STS2_MULUNDUS-BLOODBEND.description": "Deal {Damage:diff()} damage. Deals {Damage:diff()} additional damage if the enemy is [gold]Debuffed[/gold].\nLose 1 HP.",
+  "STS2_MULUNDUS-BLOODBEND.title": "Bloodbend",
+  "STS2_MULUNDUS-COMMAND.description": "Apply {VulnerablePower:diff()} [gold]Vulnerable[/gold].\nApply {WeakPower:diff()} [gold]Weak[/gold].",
+  "STS2_MULUNDUS-COMMAND.title": "Command",
+  "STS2_MULUNDUS-DEFLECT_ATTACKS.description": "Gain {Block:diff()} [gold]Block[/gold].\nUp to {CalculatedReflect:diff()} damage is reduced and reflected to your attacker this turn, increased by your [gold]Dexterity[/gold].",
+  "STS2_MULUNDUS-DEFLECT_ATTACKS.title": "Deflect Attacks",
+  "STS2_MULUNDUS-DEXTEROUS_ATTACKS.description": "Your Attacks benefit from [gold]Dexterity[/gold] rather than [gold]Strength[/gold].",
+  "STS2_MULUNDUS-DEXTEROUS_ATTACKS.title": "Dexterous Attacks",
+  "STS2_MULUNDUS-DIVINE_PROTECTION.description": "Increase the first time you gain [gold]Block[/gold] each turn by {DivineProtectionPower:diff()}.",
+  "STS2_MULUNDUS-DIVINE_PROTECTION.title": "Divine Protection"
 }
