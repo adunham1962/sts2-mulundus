@@ -27,6 +27,8 @@ public abstract class EmeraldMonkCard(int cost, CardType type, CardRarity rarity
     public override Task AfterCardPlayed(PlayerChoiceContext context, CardPlay cardPlay)
     {
         var card = cardPlay.Card;
+        if (card.Owner != Owner) return Task.CompletedTask;
+        
         if (card.IsStance() && card == this)
         {
             CardPileCmd.RemoveFromCombat(card);

@@ -17,7 +17,7 @@ public class SteelheartForge() : STS2_MulundusRelic
     
     public override async Task AfterCardPlayed(PlayerChoiceContext context, CardPlay cardPlay)
     {
-        if (cardPlay.Card.Type == CardType.Power)
+        if (cardPlay.Card.Type == CardType.Power && cardPlay.Card.Owner == Owner)
         {
             await PowerCmd.Apply<PlatingPower>(context, Owner.Creature, 3, Owner.Creature, null);
         }

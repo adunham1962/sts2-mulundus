@@ -26,7 +26,7 @@ public class BloomingFormPower() : CustomPowerModel()
 
     public override async Task AfterCardExhausted(PlayerChoiceContext choiceContext, CardModel card, bool causedByEthereal)
     {
-        if (CombatState.CurrentSide != Owner.Side)
+        if (CombatState.CurrentSide != Owner.Side || card.Owner != Owner.Player)
             return;
         Flash();
         await Cmd.CustomScaledWait(0.2f, 0.4f);

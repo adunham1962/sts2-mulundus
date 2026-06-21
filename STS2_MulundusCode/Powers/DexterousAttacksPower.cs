@@ -1,4 +1,5 @@
 using BaseLib.Abstracts;
+using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.Entities.Creatures;
 using MegaCrit.Sts2.Core.Entities.Powers;
 using MegaCrit.Sts2.Core.Models;
@@ -12,7 +13,7 @@ public class DexterousAttacksPower : CustomPowerModel
     public override decimal ModifyDamageAdditive(Creature? target, decimal amount, ValueProp props, Creature? dealer,
         CardModel? cardSource)
     {
-        if (dealer == Owner)
+        if (dealer == Owner && cardSource is not { Type: CardType.Status } && cardSource is not { Type: CardType.Curse })
         {
             return (Owner.GetPowerAmount<StrengthPower>() * -1) + Owner.GetPowerAmount<DexterityPower>();
         }

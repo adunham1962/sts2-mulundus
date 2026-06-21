@@ -18,4 +18,9 @@ public class BrambleMantle : HeartWoodRangerCard
     {
         await CommonActions.ApplySelf<BrambleMantlePower>(choiceContext, this);
     }
+
+    protected override void OnUpgrade()
+    {
+        DynamicVars["BrambleMantlePower"].UpgradeValueBy(2);
+    }
 }

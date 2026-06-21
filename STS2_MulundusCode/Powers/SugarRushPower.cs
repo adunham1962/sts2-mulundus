@@ -24,6 +24,8 @@ public class SugarRushPower() : CustomPowerModel()
 
     public override Task AfterPlayerTurnStart(PlayerChoiceContext choiceContext, Player player)
     {
+        if (player != Owner.Player) return Task.CompletedTask;
+        
         try
         {
             var cardsInHand = CardPile.GetCards(player, PileType.Hand);
