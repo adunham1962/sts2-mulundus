@@ -2,6 +2,7 @@ using BaseLib.Abstracts;
 using BaseLib.Extensions;
 using MegaCrit.Sts2.Core.Commands;
 using MegaCrit.Sts2.Core.Entities.Cards;
+using MegaCrit.Sts2.Core.Entities.Players;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 using MegaCrit.Sts2.Core.Models;
 using STS2_Mulundus.STS2_MulundusCode.Extensions;
@@ -11,13 +12,15 @@ namespace STS2_Mulundus.STS2_MulundusCode.Cards.EmeraldMonk;
 public abstract class EmeraldMonkCard(int cost, CardType type, CardRarity rarity, TargetType target) :
     ConstructedCardModel(cost, type, rarity, target)
 {
-    public override Task AfterCardRetained(CardModel card)
-    {
-        if (card.IsStance() && card == this)
-        {
-            card.EnergyCost.AddUntilPlayed(-1);
-        }
 
+    public override Task AfterFlush(PlayerChoiceContext choiceContext, Player player, IReadOnlyCollection<CardModel> flushedCards,
+        IReadOnlyCollection<CardModel> retainedCards)
+    {
+        if (retainedCards.Any(card => card.IsStance() && card == this))
+        {
+            EnergyCost.SetUntilPlayed(EnergyCost.GetResolved() - 1);
+        }
+        
         return Task.CompletedTask;
     }
 

@@ -15,7 +15,7 @@ public class Jake() : ConstructedCardModel(1, CardType.Power, CardRarity.Ancient
         PlayerChoiceContext choiceContext,
         CardPlay play)
     {
-        await PowerCmd.Apply<StrengthPower>(Owner.Creature, 1, Owner.Creature, this);
+        await PowerCmd.Apply<StrengthPower>(choiceContext, Owner.Creature, 1, Owner.Creature, this);
     }
 
     protected override void OnUpgrade()

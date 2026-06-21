@@ -15,7 +15,7 @@ public class Aljmor() : ConstructedCardModel(1, CardType.Power, CardRarity.Ancie
         PlayerChoiceContext choiceContext,
         CardPlay play)
     {
-        await PowerCmd.Apply<DexterityPower>(Owner.Creature, 1, Owner.Creature, this);
+        await PowerCmd.Apply<DexterityPower>(choiceContext, Owner.Creature, 1, Owner.Creature, this);
     }
 
     protected override void OnUpgrade()

@@ -41,7 +41,7 @@ public class NecroticWave : HeartWoodRangerCard
         List<CardPileAddResult> added = [];
         foreach (var status in statuses)
         {
-            var addResult = await CardPileCmd.AddGeneratedCardToCombat(status, PileType.Discard, true);
+            var addResult = await CardPileCmd.AddGeneratedCardToCombat(status, PileType.Discard, Owner);
             added.Add(addResult);
         }
         

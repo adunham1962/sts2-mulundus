@@ -28,6 +28,6 @@ public class EmeraldSerpentStance : EmeraldMonkCard
             CardCmd.Upgrade(card);
         }
 
-        await CardPileCmd.AddGeneratedCardToCombat(card, PileType.Hand, true);
+        await CardPileCmd.AddGeneratedCardToCombat(card, PileType.Hand, Owner);
     }
 }

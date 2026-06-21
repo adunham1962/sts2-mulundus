@@ -27,7 +27,7 @@ public class GoodberryCache : HeartWoodRangerCard
             berries.ForEach(b => CardCmd.Upgrade(b));
         }
         var card = this;
-        var pendingResults = berries.Select(b => CardPileCmd.AddGeneratedCardToCombat(b, PileType.Discard, true)).ToList();
+        var pendingResults = berries.Select(b => CardPileCmd.AddGeneratedCardToCombat(b, PileType.Discard, Owner)).ToList();
         var results = await Task.WhenAll(pendingResults);
         CardCmd.PreviewCardPileAdd(results);
     }

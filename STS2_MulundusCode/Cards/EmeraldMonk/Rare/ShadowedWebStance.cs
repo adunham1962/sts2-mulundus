@@ -25,7 +25,7 @@ public class ShadowedWebStance : EmeraldMonkCard
             CardCmd.Upgrade(card);
         }
 
-        await CardPileCmd.AddGeneratedCardToCombat(card, PileType.Hand, true);
+        await CardPileCmd.AddGeneratedCardToCombat(card, PileType.Hand, Owner);
     }
     
     protected override void OnUpgrade()

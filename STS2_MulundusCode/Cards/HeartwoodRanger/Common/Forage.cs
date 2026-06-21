@@ -22,9 +22,9 @@ public class Forage : HeartWoodRangerCard
         CardPlay play)
     {
         var berries = Goodberry.Create(Owner, 3, CombatState!).ToList();
-        var drawResult = await CardPileCmd.AddGeneratedCardToCombat(berries[0], PileType.Draw, true, CardPilePosition.Random);
-        var discardResult = await CardPileCmd.AddGeneratedCardToCombat(berries[1], PileType.Discard, true);
-        await CardPileCmd.AddGeneratedCardToCombat(berries[2], PileType.Hand, true);
+        var drawResult = await CardPileCmd.AddGeneratedCardToCombat(berries[0], PileType.Draw, Owner, CardPilePosition.Random);
+        var discardResult = await CardPileCmd.AddGeneratedCardToCombat(berries[1], PileType.Discard, Owner);
+        await CardPileCmd.AddGeneratedCardToCombat(berries[2], PileType.Hand, Owner);
         
         CardCmd.PreviewCardPileAdd([drawResult, discardResult]);
     }

@@ -2,6 +2,7 @@ using BaseLib.Utils;
 using MegaCrit.Sts2.Core.Combat;
 using MegaCrit.Sts2.Core.Commands;
 using MegaCrit.Sts2.Core.Entities.Cards;
+using MegaCrit.Sts2.Core.Entities.Creatures;
 using MegaCrit.Sts2.Core.Entities.Relics;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 using MegaCrit.Sts2.Core.Helpers;
@@ -92,11 +93,11 @@ public class PressurizedMagma : STS2_MulundusRelic
         CardsPlayedThisTurn++;
         if (CardsPlayedThisTurn != 4) return;
         var magmaSurge = ModelDb.Card<MagmaSurge>();
-        var cardPileAddResult = await CardPileCmd.AddGeneratedCardToCombat(Owner.Creature.CombatState?.CreateCard(magmaSurge, Owner)!, PileType.Discard, true);
+        var cardPileAddResult = await CardPileCmd.AddGeneratedCardToCombat(Owner.Creature.CombatState?.CreateCard(magmaSurge, Owner)!, PileType.Discard, Owner);
         CardCmd.PreviewCardPileAdd([cardPileAddResult], 2f);
     }
 
-    public override Task AfterTurnEnd(PlayerChoiceContext choiceContext, CombatSide side)
+    public override Task AfterSideTurnEnd(PlayerChoiceContext choiceContext, CombatSide side, IEnumerable<Creature> participants)
     {
         if (side != Owner.Creature.Side) return Task.CompletedTask;
         CardsPlayedThisTurn = 0;

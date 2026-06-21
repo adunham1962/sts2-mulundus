@@ -27,7 +27,7 @@ public class Necrosis : ConstructedCardModel
         }
     }
     
-    public static IEnumerable<Necrosis> Create(Player owner, decimal amount, CombatState combatState)
+    public static IEnumerable<Necrosis> Create(Player owner, decimal amount, ICombatState combatState)
     {
         var list = new List<Necrosis>();
         for (var index = 0; index < amount; ++index)

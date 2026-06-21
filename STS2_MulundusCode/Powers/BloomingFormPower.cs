@@ -36,7 +36,7 @@ public class BloomingFormPower() : CustomPowerModel()
             if (creatureNode != null)
                 NCombatRoom.Instance?.CombatVfxContainer.AddChildSafely(NGaseousImpactVfx.Create(creatureNode.VfxSpawnPosition, new Color("83eb85")));
         }
-        await PowerCmd.Apply<PoisonPower>(CombatState.HittableEnemies, Amount, Owner, null);
+        await PowerCmd.Apply<PoisonPower>(choiceContext, CombatState.HittableEnemies, Amount, Owner, null);
     }
 
     public override PowerType Type => PowerType.Buff;

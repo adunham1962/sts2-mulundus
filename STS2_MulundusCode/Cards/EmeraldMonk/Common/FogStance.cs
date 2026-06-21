@@ -20,12 +20,12 @@ public class FogStance : EmeraldMonkCard
     public override async Task AfterCardPlayedLate(PlayerChoiceContext choiceContext, CardPlay cardPlay)
     {
         if (CombatState is null || cardPlay.Card != this) return;
-        var card = ConjureFog.Create(Owner, 1, CombatState).ToList()[0];
+        var card = ConjureFog.Create(Owner, 1, this.CombatState).ToList()[0];
         if (IsUpgraded)
         {
             CardCmd.Upgrade(card);
         }
 
-        await CardPileCmd.AddGeneratedCardToCombat(card, PileType.Hand, true);
+        await CardPileCmd.AddGeneratedCardToCombat(card, PileType.Hand, Owner);
     }
 }

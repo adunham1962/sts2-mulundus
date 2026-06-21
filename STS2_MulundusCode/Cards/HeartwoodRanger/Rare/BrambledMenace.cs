@@ -17,7 +17,8 @@ public class BrambledMenace() : HeartWoodRangerCard(1, CardType.Power, CardRarit
         CardPlay play)
     {
         var thorns = Owner.Creature.GetPowerAmount<ThornsPower>();
-        await PowerCmd.SetAmount<ThornsPower>(Owner.Creature, thorns * 2, Owner.Creature, this);
+        var power = Owner.Creature.GetPower<ThornsPower>();
+        if (power != null) await PowerCmd.ModifyAmount(choiceContext, power, thorns, Owner.Creature, this);
     }
 
     protected override void OnUpgrade()

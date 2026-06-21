@@ -34,7 +34,7 @@ public class DragonsTorrent :EmeraldMonkCard
         DynamicVars["WeakPower"].UpgradeValueBy(1);
     }
     
-    public static IEnumerable<DragonsTorrent> Create(Player owner, decimal amount, CombatState combatState)
+    public static IEnumerable<DragonsTorrent> Create(Player owner, decimal amount, ICombatState combatState)
     {
         var dragonsTorrentList = new List<DragonsTorrent>();
         for (var index = 0; index < amount; ++index)

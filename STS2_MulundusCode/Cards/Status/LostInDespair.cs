@@ -26,7 +26,7 @@ public class LostInDespair : ConstructedCardModel
         }
     }
     
-    public static IEnumerable<LostInDespair> Create(Player owner, decimal amount, CombatState combatState)
+    public static IEnumerable<LostInDespair> Create(Player owner, decimal amount, ICombatState combatState)
     {
         var list = new List<LostInDespair>();
         for (var index = 0; index < amount; ++index)

@@ -26,7 +26,7 @@ public class DivineProtectionPower : CustomPowerModel
         return Task.CompletedTask;
     }
 
-    public override Task AfterTurnEnd(PlayerChoiceContext choiceContext, CombatSide side)
+    public override Task AfterSideTurnEnd(PlayerChoiceContext choiceContext, CombatSide side, IEnumerable<Creature> participants)
     {
         if (side == CombatSide.Player) _usedThisTurn = false;
         return Task.CompletedTask;

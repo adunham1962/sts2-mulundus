@@ -2,6 +2,7 @@ using BaseLib.Utils;
 using MegaCrit.Sts2.Core.Commands;
 using MegaCrit.Sts2.Core.Entities.Players;
 using MegaCrit.Sts2.Core.Entities.Relics;
+using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 using MegaCrit.Sts2.Core.Models.Powers;
 using MegaCrit.Sts2.Core.Models.RelicPools;
 using MegaCrit.Sts2.Core.Rooms;
@@ -45,7 +46,7 @@ public class RaspberryPie() : STS2_MulundusRelic
         Status = ActiveAct == Owner.RunState.CurrentActIndex ? RelicStatus.Normal : RelicStatus.Disabled;
         if (Status == RelicStatus.Normal)
         {
-            await PowerCmd.Apply<DexterityPower>(Owner.Creature, -1, null, null);
+            await PowerCmd.Apply<DexterityPower>(new ThrowingPlayerChoiceContext(), Owner.Creature, -1, null, null);
         }
     }
 }

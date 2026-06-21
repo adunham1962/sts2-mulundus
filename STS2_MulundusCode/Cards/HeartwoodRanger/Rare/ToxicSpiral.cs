@@ -2,6 +2,7 @@ using BaseLib.Utils;
 using MegaCrit.Sts2.Core.Combat;
 using MegaCrit.Sts2.Core.Commands;
 using MegaCrit.Sts2.Core.Entities.Cards;
+using MegaCrit.Sts2.Core.Entities.Creatures;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 using MegaCrit.Sts2.Core.Models;
 using MegaCrit.Sts2.Core.Models.Powers;
@@ -29,20 +30,20 @@ public class ToxicSpiral : HeartWoodRangerCard
         return Task.CompletedTask;
     }
 
-    public override Task AfterSideTurnStart(CombatSide side, CombatState combatState)
+    public override Task AfterSideTurnStart(CombatSide side, IReadOnlyList<Creature> participants, ICombatState combatState)
     {
         _exhaustedThisTurn = 0;
         return Task.CompletedTask;
     }
-    
+
     protected override async Task OnPlay(
         PlayerChoiceContext choiceContext,
         CardPlay play)
     {
         if (CombatState != null)
         {
-            await PowerCmd.Apply<StrengthPower>(Owner.Creature, DynamicVars["StrengthPower"].BaseValue * _exhaustedThisTurn, Owner.Creature, this);
-            await PowerCmd.Apply<PoisonPower>(Owner.Creature, DynamicVars["PoisonPower"].BaseValue * _exhaustedThisTurn, Owner.Creature, this);
+            await PowerCmd.Apply<StrengthPower>(choiceContext, Owner.Creature, DynamicVars["StrengthPower"].BaseValue * _exhaustedThisTurn, Owner.Creature, this);
+            await PowerCmd.Apply<PoisonPower>(choiceContext, Owner.Creature, DynamicVars["PoisonPower"].BaseValue * _exhaustedThisTurn, Owner.Creature, this);
         }
     }
 

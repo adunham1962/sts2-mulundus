@@ -2,6 +2,7 @@ using BaseLib.Utils;
 using MegaCrit.Sts2.Core.Commands;
 using MegaCrit.Sts2.Core.Entities.Players;
 using MegaCrit.Sts2.Core.Entities.Relics;
+using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 using MegaCrit.Sts2.Core.Models.Powers;
 using MegaCrit.Sts2.Core.Models.RelicPools;
 using MegaCrit.Sts2.Core.Rewards;
@@ -21,7 +22,7 @@ public class RaspberryKnightsHelm() : STS2_MulundusRelic
     {
         if (room.RoomType == RoomType.Elite)
         {
-            await PowerCmd.Apply<StrengthPower>(Owner.Creature, 1, null, null);
+            await PowerCmd.Apply<StrengthPower>(new ThrowingPlayerChoiceContext(), Owner.Creature, 1, null, null);
         }
     }
     

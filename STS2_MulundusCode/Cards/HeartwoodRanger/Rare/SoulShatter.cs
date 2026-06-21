@@ -26,9 +26,9 @@ public class SoulShatter : HeartWoodRangerCard
         if (CombatState is not null)
         {
             var souls = Soul.Create(Owner, 3, CombatState).ToList();
-            var discardResult1 = await CardPileCmd.AddGeneratedCardToCombat(souls[0], PileType.Discard, true);
-            var discardResult2 = await CardPileCmd.AddGeneratedCardToCombat(souls[1], PileType.Discard, true);
-            var discardResult3 = await CardPileCmd.AddGeneratedCardToCombat(souls[2], PileType.Discard, true);
+            var discardResult1 = await CardPileCmd.AddGeneratedCardToCombat(souls[0], PileType.Discard, Owner);
+            var discardResult2 = await CardPileCmd.AddGeneratedCardToCombat(souls[1], PileType.Discard, Owner);
+            var discardResult3 = await CardPileCmd.AddGeneratedCardToCombat(souls[2], PileType.Discard, Owner);
             CardCmd.PreviewCardPileAdd([discardResult1, discardResult2, discardResult3]);
         }
     }

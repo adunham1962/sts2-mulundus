@@ -21,7 +21,7 @@ public class BloomingForm : HeartWoodRangerCard
         PlayerChoiceContext choiceContext,
         CardPlay play)
     {
-        await PowerCmd.Apply<BloomingFormPower>(Owner.Creature, DynamicVars["PoisonPower"].BaseValue, Owner.Creature,
+        await PowerCmd.Apply<BloomingFormPower>(choiceContext, Owner.Creature, DynamicVars["PoisonPower"].BaseValue, Owner.Creature,
             this);
     }
 

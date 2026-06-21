@@ -27,6 +27,6 @@ public class BerryPreserves : STS2_MulundusPotion
            CardCmd.Upgrade(goodberry);
         }
 
-        await CardPileCmd.AddGeneratedCardsToCombat(cardModels, PileType.Hand, true);
+        await CardPileCmd.AddGeneratedCardsToCombat(cardModels, PileType.Hand, Owner);
     }
 }

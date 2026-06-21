@@ -23,13 +23,10 @@ public class CloakOfWilting : HeartWoodRangerCard
         CardPlay play)
     {
         await CommonActions.ApplySelf<CloakOfWiltingPower>(choiceContext, this);
-        await PowerCmd.Apply<StrengthPower>(Owner.Creature, DynamicVars["StrengthPower"].BaseValue * -1, Owner.Creature, this);
+        await PowerCmd.Apply<StrengthPower>(choiceContext, Owner.Creature, DynamicVars["StrengthPower"].BaseValue * -1, Owner.Creature, this);
         if (CombatState is not null)
         {
-            foreach (var combatStateEnemy in CombatState.Enemies)
-            {
-                await PowerCmd.Apply<StrengthPower>(combatStateEnemy, DynamicVars["StrengthPower"].BaseValue * -1, Owner.Creature, this);
-            }
+            await PowerCmd.Apply<StrengthPower>(choiceContext, CombatState.HittableEnemies, DynamicVars["StrengthPower"].BaseValue * -1, Owner.Creature, this);
         }
     }
 

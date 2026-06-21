@@ -19,7 +19,7 @@ public class SteelheartForge() : STS2_MulundusRelic
     {
         if (cardPlay.Card.Type == CardType.Power)
         {
-            await PowerCmd.Apply<PlatingPower>(Owner.Creature, 3, Owner.Creature, null);
+            await PowerCmd.Apply<PlatingPower>(context, Owner.Creature, 3, Owner.Creature, null);
         }
         
     }

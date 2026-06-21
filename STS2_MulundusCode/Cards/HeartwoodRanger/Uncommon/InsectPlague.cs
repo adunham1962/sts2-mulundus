@@ -23,10 +23,10 @@ public class InsectPlague : HeartWoodRangerCard
         await CommonActions.CardAttack(this, play, DynamicVars["Hits"].IntValue).Execute(choiceContext);
         var clone1 = CreateClone();
         clone1.EnergyCost.SetThisCombat(0);
-        var cloneAdd1 = await CardPileCmd.AddGeneratedCardToCombat(clone1, PileType.Draw, true);
+        var cloneAdd1 = await CardPileCmd.AddGeneratedCardToCombat(clone1, PileType.Draw, Owner);
         var clone2 = CreateClone();
         clone2.EnergyCost.SetThisCombat(0);
-        var cloneAdd2 = await CardPileCmd.AddGeneratedCardToCombat(clone2, PileType.Draw, true);
+        var cloneAdd2 = await CardPileCmd.AddGeneratedCardToCombat(clone2, PileType.Draw, Owner);
         var added = new List<CardPileAddResult>(
         [
             cloneAdd1,

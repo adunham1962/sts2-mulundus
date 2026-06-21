@@ -19,8 +19,8 @@ public class VerdantDraught : STS2_MulundusPotion
     protected override async Task OnUse(PlayerChoiceContext choiceContext, Creature? target)
     {
         if (target is null) return;
-        await PowerCmd.Apply<PoisonPower>(target, 3, Owner.Creature, null);
-        await PowerCmd.Apply<StrengthPower>(target, 1, Owner.Creature, null);
+        await PowerCmd.Apply<PoisonPower>(choiceContext, target, 3, Owner.Creature, null);
+        await PowerCmd.Apply<StrengthPower>(choiceContext, target, 1, Owner.Creature, null);
         if (target.Player is null) return;
         await CardPileCmd.Draw(choiceContext, 3, target.Player);
     }

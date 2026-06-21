@@ -23,7 +23,7 @@ public class DivineThaumaturge : EmeraldMonkCard
         if (card == null)
             return;
         card.SetToFreeThisTurn();
-        await CardPileCmd.AddGeneratedCardToCombat(card, PileType.Hand, true);
+        await CardPileCmd.AddGeneratedCardToCombat(card, PileType.Hand, Owner);
     }
 
     protected override void OnUpgrade()

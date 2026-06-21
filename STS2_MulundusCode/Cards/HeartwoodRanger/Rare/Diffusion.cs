@@ -19,7 +19,7 @@ public class Diffusion() : HeartWoodRangerCard(1, CardType.Skill, CardRarity.Rar
         if (CombatState is null) return;
         foreach (var enemy in CombatState.HittableEnemies)
         {
-            await PowerCmd.Apply<PoisonPower>(enemy, poison, Owner.Creature, this);
+            await PowerCmd.Apply<PoisonPower>(choiceContext, enemy, poison, Owner.Creature, this);
         }
     }
 

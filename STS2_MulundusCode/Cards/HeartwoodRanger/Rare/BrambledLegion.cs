@@ -26,7 +26,7 @@ public class BrambledLegion : HeartWoodRangerCard
         if (CombatState is null) return;
         foreach (var creature in CombatState.GetTeammatesOf(Owner.Creature).Where(c => c is { IsAlive: true, IsPlayer: true }))
         {
-            await PowerCmd.Apply<ThornsPower>(creature, DynamicVars["ThornsPower"].BaseValue, Owner.Creature, this);
+            await PowerCmd.Apply<ThornsPower>(choiceContext, creature, DynamicVars["ThornsPower"].BaseValue, Owner.Creature, this);
             await CreatureCmd.GainBlock(creature, DynamicVars.Block, play);
         }
     }

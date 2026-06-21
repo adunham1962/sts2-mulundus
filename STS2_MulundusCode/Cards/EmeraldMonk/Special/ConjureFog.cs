@@ -29,7 +29,7 @@ public class ConjureFog : EmeraldMonkCard
         DynamicVars["SlipperyPower"].UpgradeValueBy(1);
     }
     
-    public static IEnumerable<ConjureFog> Create(Player owner, decimal amount, CombatState combatState)
+    public static IEnumerable<ConjureFog> Create(Player owner, decimal amount, ICombatState combatState)
     {
         var conjureFogs = new List<ConjureFog>();
         for (var index = 0; index < amount; ++index)

@@ -2,6 +2,7 @@ using BaseLib.Utils;
 using MegaCrit.Sts2.Core.Commands;
 using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.Entities.Relics;
+using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 using MegaCrit.Sts2.Core.Models.Powers;
 using MegaCrit.Sts2.Core.Rooms;
 using STS2_Mulundus.STS2_MulundusCode.Character;
@@ -98,7 +99,7 @@ public class HeartwoodStaff() : STS2_MulundusRelic()
             return;
         Flash();
         var amount = CardPile.GetCards(Owner, PileType.Deck).Count() / 10;
-        await PowerCmd.Apply<StrengthPower>(Owner.Creature, amount, Owner.Creature, null);
+        await PowerCmd.Apply<StrengthPower>(new ThrowingPlayerChoiceContext(), Owner.Creature, amount, Owner.Creature, null);
     }
 
    // private bool DoesCardCountForRelic(CardModel card)

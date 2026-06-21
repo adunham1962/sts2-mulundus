@@ -30,12 +30,15 @@ public class ViolentFrenzy : HeartWoodRangerCard
         DynamicVars.Damage.UpgradeValueBy(1);
         DynamicVars["hits"].UpgradeValueBy(1);
     }
+    
 
-    public override async Task AfterPowerAmountChanged(PowerModel power, decimal amount, Creature? applier, CardModel? cardSource)
+    public override Task AfterPowerAmountChanged(PlayerChoiceContext choiceContext, PowerModel power, decimal amount, Creature? applier,
+        CardModel? cardSource)
     {
         if (power.Type == PowerType.Debuff && amount > 0)
         {
             EnergyCost.AddThisTurn(-1 * Convert.ToInt32(amount));
         }
+        return Task.CompletedTask;
     }
 }

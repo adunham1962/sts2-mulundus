@@ -24,7 +24,7 @@ public class Feint : EmeraldMonkCard
     {
         await CommonActions.CardBlock(this, play);
         await CommonActions.ApplySelf<FeintPower>(choiceContext, this);
-        await PowerCmd.Apply<DoubleDamagePower>(Owner.Creature, 1, Owner.Creature, null);
+        await PowerCmd.Apply<DoubleDamagePower>(choiceContext, Owner.Creature, 1, Owner.Creature, null);
     }
 
     protected override void OnUpgrade()

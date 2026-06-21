@@ -5,12 +5,7 @@ using MegaCrit.Sts2.Core.Commands;
 using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.Entities.Players;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
-using MegaCrit.Sts2.Core.Localization.DynamicVars;
 using MegaCrit.Sts2.Core.Models.CardPools;
-using MegaCrit.Sts2.Core.Models.Cards;
-using STS2_Mulundus.STS2_MulundusCode.Cards.HeartwoodRanger;
-using STS2_Mulundus.STS2_MulundusCode.Character;
-using STS2_Mulundus.STS2_MulundusCode.Extensions;
 
 namespace STS2_Mulundus.STS2_MulundusCode.Cards.Token;
 [Pool(typeof(TokenCardPool))]
@@ -30,7 +25,7 @@ public class Goodberry : ConstructedCardModel
         await CreatureCmd.Heal(Owner.Creature, DynamicVars.Heal.BaseValue);
     }
 
-    public static IEnumerable<Goodberry> Create(Player owner, decimal amount, CombatState combatState)
+    public static IEnumerable<Goodberry> Create(Player owner, decimal amount, ICombatState combatState)
     {
         var goodBerryList = new List<Goodberry>();
         for (var index = 0; index < amount; ++index)

@@ -34,7 +34,7 @@ public class SerpentStrike : EmeraldMonkCard
         DynamicVars.Damage.UpgradeValueBy(3);
     }
     
-    public static IEnumerable<SerpentStrike> Create(Player owner, decimal amount, CombatState combatState)
+    public static IEnumerable<SerpentStrike> Create(Player owner, decimal amount, ICombatState combatState)
     {
         var serpentStrikeList = new List<SerpentStrike>();
         for (var index = 0; index < amount; ++index)

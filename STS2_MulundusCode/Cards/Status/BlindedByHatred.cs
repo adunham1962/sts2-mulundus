@@ -27,7 +27,7 @@ public class BlindedByHatred : ConstructedCardModel
         }
     }
 
-    public static IEnumerable<BlindedByHatred> Create(Player owner, decimal amount, CombatState combatState)
+    public static IEnumerable<BlindedByHatred> Create(Player owner, decimal amount, ICombatState combatState)
     {
         var list = new List<BlindedByHatred>();
         for (var index = 0; index < amount; ++index)

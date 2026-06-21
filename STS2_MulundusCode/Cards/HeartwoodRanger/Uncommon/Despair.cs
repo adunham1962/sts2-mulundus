@@ -31,8 +31,8 @@ public class Despair : HeartWoodRangerCard
         var statuses = LostInDespair.Create(Owner, 2, CombatState).ToList();
         List<CardPileAddResult> added =
         [
-            await CardPileCmd.AddGeneratedCardToCombat(statuses[0], PileType.Discard, true),
-            await CardPileCmd.AddGeneratedCardToCombat(statuses[1], PileType.Discard, true)
+            await CardPileCmd.AddGeneratedCardToCombat(statuses[0], PileType.Discard, Owner),
+            await CardPileCmd.AddGeneratedCardToCombat(statuses[1], PileType.Discard, Owner)
         ];
         CardCmd.PreviewCardPileAdd(added);
     }

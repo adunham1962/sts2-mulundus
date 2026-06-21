@@ -21,7 +21,7 @@ public class Reposition : HeartWoodRangerCard
         PlayerChoiceContext choiceContext,
         CardPlay play)
     {
-        await PowerCmd.Apply<RepositionPower>(Owner.Creature, DynamicVars.Dexterity.BaseValue, Owner.Creature, this);
+        await PowerCmd.Apply<RepositionPower>(choiceContext, Owner.Creature, DynamicVars.Dexterity.BaseValue, Owner.Creature, this);
         if (play.Target != null) await CommonActions.Apply<VulnerablePower>(choiceContext, play.Target, this);
     }
 

@@ -38,7 +38,7 @@ public class Decompose : HeartWoodRangerCard
             var berries = Goodberry.Create(Owner, DynamicVars["BerryAdd"].BaseValue, CombatState).ToList();
             foreach (var goodberry in berries)
             {
-                await CardPileCmd.AddGeneratedCardToCombat(goodberry, PileType.Hand, true);
+                await CardPileCmd.AddGeneratedCardToCombat(goodberry, PileType.Hand, Owner);
             }
         }
     }

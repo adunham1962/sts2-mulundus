@@ -19,6 +19,6 @@ public class HypnagogicBloom() : STS2_MulundusRelic
     public override async Task AfterShuffle(PlayerChoiceContext choiceContext, Player shuffler)
     {
         if (shuffler != Owner || shuffler.Creature.CombatState is null) return;
-        await PowerCmd.Apply<WeakPower>(shuffler.Creature.CombatState.HittableEnemies, 1, shuffler.Creature, null);
+        await PowerCmd.Apply<WeakPower>(choiceContext, shuffler.Creature.CombatState.HittableEnemies, 1, shuffler.Creature, null);
     }
 }

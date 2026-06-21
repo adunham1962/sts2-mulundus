@@ -28,7 +28,7 @@ public class FrogsLeap : EmeraldMonkCard
         DynamicVars.Block.UpgradeValueBy(4);
     }
     
-    public static IEnumerable<FrogsLeap> Create(Player owner, decimal amount, CombatState combatState)
+    public static IEnumerable<FrogsLeap> Create(Player owner, decimal amount, ICombatState combatState)
     {
         var frogsLeaps = new List<FrogsLeap>();
         for (var index = 0; index < amount; ++index)

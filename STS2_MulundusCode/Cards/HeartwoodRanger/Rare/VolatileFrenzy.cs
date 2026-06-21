@@ -16,14 +16,11 @@ public class VolatileFrenzy : HeartWoodRangerCard
         WithDamage(3);
         WithEnergy(1);
     }
-    
-    public override Task AfterPowerAmountChanged(
-        PowerModel power,
-        decimal amount,
-        Creature? applier,
+
+    public override Task AfterPowerAmountChanged(PlayerChoiceContext choiceContext, PowerModel power, decimal amount, Creature? applier,
         CardModel? cardSource)
     {
-        if (power is PoisonPower)
+        if (power is PoisonPower && applier == Owner.Creature)
         {
             EnergyCost.AddThisCombat(-1);
         }

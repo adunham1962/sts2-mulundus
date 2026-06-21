@@ -28,7 +28,7 @@ public class AbyssalJourney : HeartWoodRangerCard
         foreach (CardModel card in hand)
             await CardCmd.Exhaust(choiceContext, card);
         await CommonActions.Draw(this, choiceContext);
-        await PowerCmd.Apply<AbyssalJourneyPower>(aj.Owner.Creature, aj.DynamicVars["AbyssalJourneyPower"].IntValue,
+        await PowerCmd.Apply<AbyssalJourneyPower>(choiceContext, aj.Owner.Creature, aj.DynamicVars["AbyssalJourneyPower"].IntValue,
             aj.Owner.Creature, aj);
     }
 

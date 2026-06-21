@@ -20,7 +20,7 @@ public class InvokeYourOath : HeartWoodRangerCard
         PlayerChoiceContext choiceContext,
         CardPlay play)
     {
-        await PowerCmd.Apply<InvokeYourOathPower>(Owner.Creature, 1, Owner.Creature, this);
+        await PowerCmd.Apply<InvokeYourOathPower>(choiceContext, Owner.Creature, 1, Owner.Creature, this);
     }
     
     protected override void OnUpgrade()
