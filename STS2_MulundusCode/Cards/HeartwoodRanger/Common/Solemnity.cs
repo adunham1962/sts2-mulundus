@@ -25,13 +25,9 @@ public class Solemnity : HeartWoodRangerCard
         await PowerCmd.Apply<EnergyNextTurnPower>(choiceContext, Owner.Creature, DynamicVars.Energy.BaseValue, Owner.Creature, this);
         await PowerCmd.Apply<SolemnityPower>(choiceContext, Owner.Creature, DynamicVars.Strength.BaseValue * -1, Owner.Creature, this);
 
-        if (play.Card.CombatState != null)
+        if (CombatState != null)
         {
-            var enemies = play.Card.CombatState.Enemies.ToArray();
-            foreach (var enemy in enemies)
-            {
-                await PowerCmd.Apply<SolemnityPower>(choiceContext, enemy, DynamicVars.Strength.BaseValue * -1, Owner.Creature, this);
-            }
+            await PowerCmd.Apply<SolemnityPower>(choiceContext, CombatState.HittableEnemies, DynamicVars["StrengthPower"].BaseValue * -1, Owner.Creature, this);
         }
     }
 

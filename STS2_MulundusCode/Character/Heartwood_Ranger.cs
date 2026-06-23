@@ -8,7 +8,6 @@ using MegaCrit.Sts2.Core.Helpers;
 using MegaCrit.Sts2.Core.Models;
 using MegaCrit.Sts2.Core.Nodes.Vfx;
 using STS2_Mulundus.STS2_MulundusCode.Cards.HeartwoodRanger.Basic;
-using STS2_Mulundus.STS2_MulundusCode.Cards.HeartwoodRanger.Uncommon;
 using STS2_Mulundus.STS2_MulundusCode.Relics;
 
 namespace STS2_Mulundus.STS2_MulundusCode.Character;
@@ -102,4 +101,6 @@ public class HeartwoodRanger: PlaceholderCharacterModel
     public override Color RemoteTargetingLineColor => new("E15847FF");
 
     public override Color RemoteTargetingLineOutline => new("801212FF");
+
+    public override string CustomVisualPath => "res://STS2_Mulundus/images/character/Cilef_Combat_Model.tscn";
 }

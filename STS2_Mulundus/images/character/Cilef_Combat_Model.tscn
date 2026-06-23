@@ -1,0 +1,33 @@
+[gd_scene load_steps=3 format=3 uid="uid://wavkfewaq7jm"]
+
+[ext_resource type="Texture2D" uid="uid://bh5d87dhr110d" path="res://STS2_Mulundus/images/character/cilef model.png" id="1_he5nc"]
+
+[sub_resource type="ImageTexture" id="ImageTexture_al4q1"]
+
+[node name="CilefCombatModel" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+
+[node name="Visuals" type="Sprite2D" parent="."]
+position = Vector2(-170, -310)
+scale = Vector2(0.35, 0.35)
+texture = SubResource("ImageTexture_al4q1")
+centered = false
+
+[node name="TextureRect" type="TextureRect" parent="Visuals"]
+offset_right = 1232.0
+offset_bottom = 928.0
+texture = ExtResource("1_he5nc")
+
+[node name="Bounds" type="Control" parent="."]
+anchors_preset = 0
+offset_left = -84.0
+offset_top = -301.0
+offset_right = 164.0
+offset_bottom = -1.0
+
+[node name="IntentPosition" type="Marker2D" parent="."]
+position = Vector2(41, -308)
+
+[node name="CenterPos" type="Marker2D" parent="."]
+position = Vector2(40, -150)

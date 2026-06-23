@@ -5,6 +5,7 @@ using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 using MegaCrit.Sts2.Core.Models.Powers;
 using STS2_Mulundus.STS2_MulundusCode.Character;
 using STS2_Mulundus.STS2_MulundusCode.Powers;
+using ConstrictPower = STS2_Mulundus.STS2_MulundusCode.Powers.ConstrictPower;
 
 namespace STS2_Mulundus.STS2_MulundusCode.Cards.HeartwoodRanger.Common;
 
@@ -15,7 +16,7 @@ public class RootInvasion : HeartWoodRangerCard
     public RootInvasion() : base(0, CardType.Attack, CardRarity.Common, TargetType.AnyEnemy)
     {
         WithDamage(4);
-        WithPower<StrengthPower>(2);
+        WithPower<ConstrictPower>(2);
     }
 
     protected override async Task OnPlay(
@@ -23,13 +24,11 @@ public class RootInvasion : HeartWoodRangerCard
         CardPlay play)
     {
         await CommonActions.CardAttack(this, play).Execute(choiceContext);
-        if (play.Target is null) return;
-        await PowerCmd.Apply<RootInvasionPower>(choiceContext, play.Target, DynamicVars.Strength.BaseValue * -1, Owner.Creature, this);
-        CardCmd.PreviewCardPileAdd(await CardPileCmd.AddGeneratedCardToCombat(CreateClone(), PileType.Discard, Owner), 2.2f);
+        if (play.Target != null) await CommonActions.Apply<ConstrictPower>(choiceContext, play.Target, this);
     }
 
     protected override void OnUpgrade()
     {
-        DynamicVars.Damage.UpgradeValueBy(2);
+        DynamicVars["ConstrictPower"].UpgradeValueBy(2);
     }
 }

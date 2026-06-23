@@ -2,11 +2,9 @@ using BaseLib.Utils;
 using MegaCrit.Sts2.Core.Commands;
 using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
-using MegaCrit.Sts2.Core.HoverTips;
 using MegaCrit.Sts2.Core.Localization.DynamicVars;
-using STS2_Mulundus.STS2_MulundusCode.Cards.Status;
 using STS2_Mulundus.STS2_MulundusCode.Character;
-using static System.Decimal;
+using STS2_Mulundus.STS2_MulundusCode.Powers;
 
 namespace STS2_Mulundus.STS2_MulundusCode.Cards.HeartwoodRanger.Uncommon;
 
@@ -15,41 +13,25 @@ public class NecroticWave : HeartWoodRangerCard
 {
     
     public override string PortraitPath => "res://STS2_Mulundus/images/card_portraits/necrotic_wave.png";
-    public NecroticWave() : base(1, CardType.Attack, CardRarity.Uncommon, TargetType.AllEnemies)
+    public NecroticWave() : base(1, CardType.Skill, CardRarity.Uncommon, TargetType.AllEnemies)
     {
-        WithTips(_ => [HoverTipFactory.FromCard<Necrosis>()]);
-        WithDamage(10);
-        WithCalculatedVar("CalculatedHits", 0, (card, _) =>
-        { 
-            var ePile = CardPile.Get(PileType.Exhaust, card.Owner); 
-            if (ePile is null) return 0; 
-            var hits = ePile.Cards.Count / 10; 
-            return hits;
-        });
+        WithKeyword(CardKeyword.Exhaust);
+        WithCalculatedVar("CalculatedWilting", 1, (card, _) => PileType.Exhaust.GetPile(card.Owner).Cards.Count);
     }
     
     protected override async Task OnPlay(
         PlayerChoiceContext choiceContext,
         CardPlay play)
     {
-        var hits = (DynamicVars["CalculatedHits"] as CalculatedVar)!.Calculate(null);
-        await CommonActions.CardAttack(this, play, ToInt32(hits)).Execute(choiceContext);
-        
-        if (CombatState is null) return;
-        var statuses = Necrosis.Create(Owner, hits, CombatState).ToList();
-
-        List<CardPileAddResult> added = [];
-        foreach (var status in statuses)
+        if (CombatState != null)
         {
-            var addResult = await CardPileCmd.AddGeneratedCardToCombat(status, PileType.Discard, Owner);
-            added.Add(addResult);
+            await PowerCmd.Apply<NecroticWavePower>(choiceContext, CombatState.HittableEnemies,
+             (DynamicVars["CalculatedWilting"] as CalculatedVar)!.Calculate(null), Owner.Creature, this);
         }
-        
-        CardCmd.PreviewCardPileAdd(added);
     }
 
     protected override void OnUpgrade()
     {
-        EnergyCost.UpgradeBy(-1);
+        RemoveKeyword(CardKeyword.Exhaust);
     }
 }

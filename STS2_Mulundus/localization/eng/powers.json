@@ -55,5 +55,11 @@
   "STS2_MULUNDUS-DIVINE_PROTECTION_POWER.title": "Divine Protection",
   "STS2_MULUNDUS-FLUID_FORM_POWER.description": "Whenever you play a card that costs less than its original cost, draw a card.",
   "STS2_MULUNDUS-FLUID_FORM_POWER.smartDescription": "Whenever you play a card that costs less than its original cost, draw {Amount:plural:a|{}} {Amount:plural:card|cards}.",
-  "STS2_MULUNDUS-FLUID_FORM_POWER.title": "Fluid Form"
+  "STS2_MULUNDUS-FLUID_FORM_POWER.title": "Fluid Form",
+  "STS2_MULUNDUS-CONSTRICT_POWER.description": "Constricted creatures take damage at the end of their turn.",
+  "STS2_MULUNDUS-CONSTRICT_POWER.smartDescription": "At the end of {OnPlayer:your turn, take|its turn, it takes} [blue]{Amount}[/blue] damage.",
+  "STS2_MULUNDUS-CONSTRICT_POWER.title": "Constrict",
+  "STS2_MULUNDUS-GUIDANCE_POWER.description": "You next attack deals [blue]4[/blue] additional damage.",
+  "STS2_MULUNDUS-GUIDANCE_POWER.smartDescription": "Your next attack deals [blue]{Amount}[/blue] additional damage.",
+  "STS2_MULUNDUS-GUIDANCE_POWER.title": "Guidance"
 }
