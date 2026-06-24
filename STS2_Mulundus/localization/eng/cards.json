@@ -272,5 +272,13 @@
   "STS2_MULUNDUS-GUIDANCE.description": "Your next attack deals {GuidancePower:diff()} additional damage.",
   "STS2_MULUNDUS-GUIDANCE.title": "Guidance",
   "STS2_MULUNDUS-TIDAL_UPPERCUT.description": "Deal {Damage:diff()} damage.\nApply {WeakPower:diff()} [gold]Weak[/gold] if the last card you played was a skill.",
-  "STS2_MULUNDUS-TIDAL_UPPERCUT.title": "Tidal Uppercut"
+  "STS2_MULUNDUS-TIDAL_UPPERCUT.title": "Tidal Uppercut",
+  "STS2_MULUNDUS-GRASPING_VINES.description": "Deal {Damage:diff()} and apply {ConstrictPower:diff()} [gold]Constrict[/gold] to ALL enemies.",
+  "STS2_MULUNDUS-GRASPING_VINES.title": "Grasping Vines",
+  "STS2_MULUNDUS-GREATER_RESTORATION.description": "Lose all debuffs, and draw that many cards. ({CalculatedDraw:diff()} cards.)\nHeal {Heal:diff()} HP.",
+  "STS2_MULUNDUS-GREATER_RESTORATION.title": "Greater Restoration",
+  "STS2_MULUNDUS-LESSER_RESTORATION.description": "Lose all debuffs.\nDraw {Cards:plural:a card|{} cards}.",
+  "STS2_MULUNDUS-LESSER_RESTORATION.title": "Lesser Restoration",
+  "STS2_MULUNDUS-SERRATED_BARBS.description": "Your [gold]Thorns[/gold] deal damage twice.\nEvery time you are attacked, lose 1 [gold]Thorns[/gold].",
+  "STS2_MULUNDUS-SERRATED_BARBS.title": "Serrated Barbs"
 }

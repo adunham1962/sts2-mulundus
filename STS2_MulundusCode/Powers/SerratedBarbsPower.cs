@@ -17,10 +17,10 @@ public class SerratedBarbsPower : CustomPowerModel
     {
         var thorns = Owner.Powers.ToList().Find(p => p is ThornsPower);
         if (thorns is null || target != Owner || dealer is null) return;
-        await CreatureCmd.Damage(choiceContext, dealer, new DamageVar(thorns.Amount * Amount, ValueProp.Move), target, null);
+        await CreatureCmd.Damage(choiceContext, dealer, new DamageVar(thorns.Amount * 2, ValueProp.Move), dealer, null);
         await PowerCmd.Apply<ThornsPower>(choiceContext, Owner, -1, Owner, null);
     }
 
     public override PowerType Type => PowerType.Buff;
-    public override PowerStackType StackType => PowerStackType.Counter;
+    public override PowerStackType StackType => PowerStackType.Single;
 }
