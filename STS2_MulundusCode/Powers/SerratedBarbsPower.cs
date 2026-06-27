@@ -15,12 +15,12 @@ public class SerratedBarbsPower : CustomPowerModel
     public override async Task AfterDamageReceived(PlayerChoiceContext choiceContext, Creature target, DamageResult result, ValueProp props,
         Creature? dealer, CardModel? cardSource)
     {
-        var thorns = Owner.Powers.ToList().Find(p => p is ThornsPower);
-        if (thorns is null || target != Owner || dealer is null) return;
-        await CreatureCmd.Damage(choiceContext, dealer, new DamageVar(thorns.Amount * 2, ValueProp.Move), dealer, null);
-        await PowerCmd.Apply<ThornsPower>(choiceContext, Owner, -1, Owner, null);
+        var thorns = Owner.GetPower<ThornsPower>();
+        if (thorns is null || target != Owner || dealer is null || cardSource is not null) return;
+        await PowerCmd.Apply<ThornsPower>(choiceContext, Owner, Amount * -1, Owner, null);
     }
 
-    public override PowerType Type => PowerType.Buff;
-    public override PowerStackType StackType => PowerStackType.Single;
+
+    public override PowerType Type => PowerType.Debuff;
+    public override PowerStackType StackType => PowerStackType.Counter;
 }

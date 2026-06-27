@@ -1,6 +1,7 @@
 using BaseLib.Utils;
 using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
+using MegaCrit.Sts2.Core.Models.Powers;
 using STS2_Mulundus.STS2_MulundusCode.Character;
 using STS2_Mulundus.STS2_MulundusCode.Powers;
 
@@ -14,16 +15,17 @@ public class SerratedBarbs : HeartWoodRangerCard
         WithPower<SerratedBarbsPower>(1);
         WithKeyword(HeartwoodRangerKeywords.Grim);
     }
-    
+
     protected override async Task OnPlay(
         PlayerChoiceContext choiceContext,
         CardPlay play)
     {
+        await CommonActions.ApplySelf<ThornsPower>(choiceContext, this, Owner.Creature.GetPowerAmount<ThornsPower>() * 2);
         await CommonActions.ApplySelf<SerratedBarbsPower>(choiceContext, this);
     }
 
     protected override void OnUpgrade()
     {
-        AddKeyword(CardKeyword.Innate);
+        EnergyCost.UpgradeBy(-1);
     }
 }

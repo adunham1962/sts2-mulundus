@@ -279,7 +279,7 @@
   "STS2_MULUNDUS-GREATER_RESTORATION.title": "Greater Restoration",
   "STS2_MULUNDUS-LESSER_RESTORATION.description": "Lose all debuffs.\nDraw {Cards:plural:a card|{} cards}.",
   "STS2_MULUNDUS-LESSER_RESTORATION.title": "Lesser Restoration",
-  "STS2_MULUNDUS-SERRATED_BARBS.description": "Your [gold]Thorns[/gold] deal damage twice.\nEvery time you are attacked, lose 1 [gold]Thorns[/gold].",
+  "STS2_MULUNDUS-SERRATED_BARBS.description": "Triple your [gold]Thorns[/gold].\nEvery time you are attacked, lose 1 [gold]Thorns[/gold].",
   "STS2_MULUNDUS-SERRATED_BARBS.title": "Serrated Barbs",
   "STS2_MULUNDUS-THRILL_OF_THE_HUNT.description": "Gain 1 [gold]Dexterity[/gold] for each [gold]Debuff[/gold] you have.\n({CalculatedDexterity:diff()} debuffs)",
   "STS2_MULUNDUS-THRILL_OF_THE_HUNT.title": "Thrill of the Hunt",

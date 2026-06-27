@@ -21,7 +21,7 @@ public class BarbedShield : HeartWoodRangerCard
         PlayerChoiceContext choiceContext,
         CardPlay play)
     {
-        var thorns = Owner.Creature.Powers.ToList().Find((match) => match is ThornsPower);
+        var thorns = Owner.Creature.GetPower<ThornsPower>();
         if (thorns is not null)
         {
             await CreatureCmd.GainBlock(Owner.Creature, thorns.Amount, ValueProp.Move, play);

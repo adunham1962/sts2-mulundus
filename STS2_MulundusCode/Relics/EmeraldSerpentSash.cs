@@ -37,6 +37,9 @@ public class EmeraldSerpentSash() : STS2_MulundusRelic
     public override Task AfterCardPlayed(PlayerChoiceContext context, CardPlay cardPlay)
     {
         var card = cardPlay.Card;
+        
+        if (card.Owner != Owner) return Task.CompletedTask;
+        
         var shouldDraw = false;
         switch (card.Type)
         {
