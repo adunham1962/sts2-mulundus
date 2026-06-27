@@ -20,8 +20,8 @@
   "STS2_MULUNDUS-LIFE_ON_THE_EDGE_POWER.description": "At the start of your turn, draw 2 additional cards if you're [gold]poisoned[/gold].",
   "STS2_MULUNDUS-LIFE_ON_THE_EDGE_POWER.smartDescription": "At the start of your turn, draw 2 additional cards if you're [gold]poisoned[/gold].",
   "STS2_MULUNDUS-LIFE_ON_THE_EDGE_POWER.title": "Life on the Edge",
-  "STS2_MULUNDUS-BRAMBLE_MANTLE_POWER.description": "Whenever you gain [gold]Thorns[/gold], gain 3 [gold]Block[/gold].",
-  "STS2_MULUNDUS-BRAMBLE_MANTLE_POWER.smartDescription": "Whenever you gain [gold]Thorns[/gold], gain {Amount} [gold]Block[/gold].",
+  "STS2_MULUNDUS-BRAMBLE_MANTLE_POWER.description": "Whenever you gain [gold]Block[/gold], gain 1 [gold]Thorns[/gold].",
+  "STS2_MULUNDUS-BRAMBLE_MANTLE_POWER.smartDescription": "Whenever you gain [gold]Block[/gold], gain {Amount} [gold]Thorns[/gold].",
   "STS2_MULUNDUS-BRAMBLE_MANTLE_POWER.title": "Bramble Mantle",
   "STS2_MULUNDUS-CUTTING_EDGE_POWER.description": "Whenever you gain a debuff, deal 2 damage to ALL enemies.",
   "STS2_MULUNDUS-CUTTING_EDGE_POWER.smartDescription": "Whenever you gain a debuff, deal {Amount} damage to ALL enemies.",
@@ -61,5 +61,8 @@
   "STS2_MULUNDUS-CONSTRICT_POWER.title": "Constrict",
   "STS2_MULUNDUS-GUIDANCE_POWER.description": "You next attack deals [blue]4[/blue] additional damage.",
   "STS2_MULUNDUS-GUIDANCE_POWER.smartDescription": "Your next attack deals [blue]{Amount}[/blue] additional damage.",
-  "STS2_MULUNDUS-GUIDANCE_POWER.title": "Guidance"
+  "STS2_MULUNDUS-GUIDANCE_POWER.title": "Guidance",
+  "STS2_MULUNDUS-UNYIELDING_POWER.description": "Whenever you gain a [gold]Debuff[/gold], gain 1 [gold]Plating[/gold].",
+  "STS2_MULUNDUS-UNYIELDING_POWER.smartDescription": "Whenever you gain a [gold]Debuff[/gold], gain {Amount} [gold]Plating[/gold].",
+  "STS2_MULUNDUS-UNYIELDING_POWER.title": "Unyielding"
 }

@@ -11,7 +11,7 @@ public class BrambleMantle : HeartWoodRangerCard
 {
     public BrambleMantle() : base(1, CardType.Power, CardRarity.Rare, TargetType.Self)
     {
-        WithPower<BrambleMantlePower>(3);
+        WithPower<BrambleMantlePower>(1);
     }
 
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)
@@ -21,6 +21,6 @@ public class BrambleMantle : HeartWoodRangerCard
 
     protected override void OnUpgrade()
     {
-        DynamicVars["BrambleMantlePower"].UpgradeValueBy(2);
+        DynamicVars["BrambleMantlePower"].UpgradeValueBy(1);
     }
 }

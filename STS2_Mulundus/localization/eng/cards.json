@@ -99,7 +99,7 @@
   "STS2_MULUNDUS-LIFE_ON_THE_EDGE.title": "Live Fast",
   "STS2_MULUNDUS-TOXIN_FUELED_RAGE.description": "Deal {Damage:diff()} damage to a random enemy for each [gold]Poison[/gold] you have.",
   "STS2_MULUNDUS-TOXIN_FUELED_RAGE.title": "Toxin-Fueled Rage",
-  "STS2_MULUNDUS-BRAMBLE_MANTLE.description": "Whenever you gain [gold]Thorns[/gold], gain 3 [gold]Block[/gold].",
+  "STS2_MULUNDUS-BRAMBLE_MANTLE.description": "Whenever you gain [gold]Block[/gold], gain 1 [gold]Thorns[/gold].",
   "STS2_MULUNDUS-BRAMBLE_MANTLE.title": "Bramble Mantle",
   "STS2_MULUNDUS-GRIMDARK_GAMBIT.description": "Play {CardsToPlay:diff()} random cards from your [gold]Exhaust Pile[/gold].",
   "STS2_MULUNDUS-GRIMDARK_GAMBIT.title": "Grimdark Gambit",
@@ -280,5 +280,11 @@
   "STS2_MULUNDUS-LESSER_RESTORATION.description": "Lose all debuffs.\nDraw {Cards:plural:a card|{} cards}.",
   "STS2_MULUNDUS-LESSER_RESTORATION.title": "Lesser Restoration",
   "STS2_MULUNDUS-SERRATED_BARBS.description": "Your [gold]Thorns[/gold] deal damage twice.\nEvery time you are attacked, lose 1 [gold]Thorns[/gold].",
-  "STS2_MULUNDUS-SERRATED_BARBS.title": "Serrated Barbs"
+  "STS2_MULUNDUS-SERRATED_BARBS.title": "Serrated Barbs",
+  "STS2_MULUNDUS-THRILL_OF_THE_HUNT.description": "Gain 1 [gold]Dexterity[/gold] for each [gold]Debuff[/gold] you have.\n({CalculatedDexterity:diff()} debuffs)",
+  "STS2_MULUNDUS-THRILL_OF_THE_HUNT.title": "Thrill of the Hunt",
+  "STS2_MULUNDUS-UNYIELDING.description": "Whenever you gain a [gold]Debuff[/gold], gain {UnyieldingPower:diff()} [gold]Plating[/gold].",
+  "STS2_MULUNDUS-UNYIELDING.title": "Unyielding",
+  "STS2_MULUNDUS-SUDDEN_RECOLLECTION.description": "Put 5 random cards in your [gold]Exhaust Pile[/gold] into your [gold]Discard Pile[/gold] and gain [gold]Block[/gold] equal to their total energy.",
+  "STS2_MULUNDUS-SUDDEN_RECOLLECTION.title": "Sudden Recollection"
 }
