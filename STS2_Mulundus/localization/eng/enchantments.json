@@ -2,5 +2,7 @@
   "STS2_MULUNDUS-TIPSY.description": "When you draw this card, randomize its cost from [blue]0[/blue] to [blue]4[/blue].",
   "STS2_MULUNDUS-TIPSY.title": "Tipsy",
   "STS2_MULUNDUS-STICKY.description": "When you play this card, put it back into your [gold]Hand[/gold].",
-  "STS2_MULUNDUS-STICKY.title": "Sticky"
+  "STS2_MULUNDUS-STICKY.title": "Sticky",
+  "STS2_MULUNDUS-WATERBENDING.description": "This card costs {Amount:energyIcons()} less if the last card you played was a different type.",
+  "STS2_MULUNDUS-WATERBENDING.title": "Waterbending"
 }

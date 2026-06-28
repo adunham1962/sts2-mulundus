@@ -76,5 +76,14 @@
   "STS2_MULUNDUS-REFLECTED_DREAM.title": "Reflected Dream",
   "STS2_MULUNDUS-EMERALD_SERPENT_SASH.description": "The first time you play a type of card each combat, draw a card.",
   "STS2_MULUNDUS-EMERALD_SERPENT_SASH.flavor": "",
-  "STS2_MULUNDUS-EMERALD_SERPENT_SASH.title": "Emerald Serpent Sash"
+  "STS2_MULUNDUS-EMERALD_SERPENT_SASH.title": "Emerald Serpent Sash",
+  "STS2_MULUNDUS-TIDEGLASS_PENDANT.description": "On odd turns, draw 2 additional cards.\nOn even turns, draw 1 fewer cards.",
+  "STS2_MULUNDUS-TIDEGLASS_PENDANT.flavor": "",
+  "STS2_MULUNDUS-TIDEGLASS_PENDANT.title": "Tideglass Pendant",
+  "STS2_MULUNDUS-SIGIL_OF_BRINE.description": "Whenever you gain or apply a [gold]Debuff[/gold], deal 1 damage to ALL enemies.",
+  "STS2_MULUNDUS-SIGIL_OF_BRINE.flavor": "",
+  "STS2_MULUNDUS-SIGIL_OF_BRINE.title": "Sigil of Brine",
+  "STS2_MULUNDUS-EMERALD_SCALE.description": "Enchant two cards with [gold]Waterbending[/gold].",
+  "STS2_MULUNDUS-EMERALD_SCALE.flavor": "",
+  "STS2_MULUNDUS-EMERALD_SCALE.title": "Emerald Scale"
 }

@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://cghh6gsr212bg"]
+
+[ext_resource type="Texture2D" uid="uid://debog4pjkwikg" path="res://STS2_Mulundus/images/ancients/Sithiliss.png" id="1_hx15n"]
+
+[node name="TheEmeraldSerpent" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+texture = ExtResource("1_hx15n")

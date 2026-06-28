@@ -24,5 +24,9 @@
   "STS2_MULUNDUS-THE_DREAM_JELLY.epithet": "",
   "STS2_MULUNDUS-THE_DREAM_JELLY.talk.ANY.0-0r.ancient": "Dreams are simply thoughts that no longer obey gravity. Free your thoughts of their limitations so that you might finally escape this place.",
   "STS2_MULUNDUS-THE_DREAM_JELLY.talk.firstVisitEver.0-0.ancient": "You believe yourself awake because your memories arrive in order, but I can only be seen in dreams.",
-  "STS2_MULUNDUS-THE_DREAM_JELLY.title": "The Dream Jelly"
+  "STS2_MULUNDUS-THE_DREAM_JELLY.title": "The Dream Jelly",
+  "STS2_MULUNDUS-THE_EMERALD_SERPENT.epithet": "",
+  "STS2_MULUNDUS-THE_EMERALD_SERPENT.talk.ANY.0-0r.ancient": "Reusable generic greeting.",
+  "STS2_MULUNDUS-THE_EMERALD_SERPENT.talk.firstVisitEver.0-0.ancient": "First time greeting.",
+  "STS2_MULUNDUS-THE_EMERALD_SERPENT.title": "The Emerald Serpent"
 }
