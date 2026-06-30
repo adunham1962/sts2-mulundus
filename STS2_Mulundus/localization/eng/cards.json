@@ -286,5 +286,9 @@
   "STS2_MULUNDUS-UNYIELDING.description": "Whenever you gain a [gold]Debuff[/gold], gain {UnyieldingPower:diff()} [gold]Plating[/gold].",
   "STS2_MULUNDUS-UNYIELDING.title": "Unyielding",
   "STS2_MULUNDUS-SUDDEN_RECOLLECTION.description": "Put 5 random cards in your [gold]Exhaust Pile[/gold] into your [gold]Discard Pile[/gold] and gain [gold]Block[/gold] equal to their total energy.",
-  "STS2_MULUNDUS-SUDDEN_RECOLLECTION.title": "Sudden Recollection"
+  "STS2_MULUNDUS-SUDDEN_RECOLLECTION.title": "Sudden Recollection",
+  "STS2_MULUNDUS-ATONEMENT.description": "Next turn, gain {EnergyNextTurnPower:energyIcons()}.\nIf you are [gold]Balanced[/gold], gain {Energy:energyIcons()}.",
+  "STS2_MULUNDUS-ATONEMENT.title": "Atonement",
+  "STS2_MULUNDUS-LIGHT.description": "Powers cost {energyPrefix:energyIcons(1)} less.",
+  "STS2_MULUNDUS-LIGHT.title": "Light"
 }

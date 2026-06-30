@@ -8,5 +8,7 @@
   "STS2_MULUNDUS-EBB.description": "This card costs less if the last card you played was an attack.",
   "STS2_MULUNDUS-EBB.title": "Ebb",
   "STS2_MULUNDUS-FLOW.description": "The card costs less if the last card you played was a skill.",
-  "STS2_MULUNDUS-FLOW.title": "Flow"
+  "STS2_MULUNDUS-FLOW.title": "Flow",
+  "STS2_MULUNDUS-BALANCED.description": "If you have an equal number of attacks and skills in your hand, you are balanced.",
+  "STS2_MULUNDUS-BALANCED.title": "Balanced"
 }

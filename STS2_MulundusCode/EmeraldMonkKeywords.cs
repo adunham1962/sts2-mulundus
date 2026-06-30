@@ -17,6 +17,9 @@ public static class EmeraldMonkKeywords
 
     [CustomEnum, KeywordProperties(AutoKeywordPosition.After)]
     public static CardKeyword Flow;
+
+    [CustomEnum, KeywordProperties(AutoKeywordPosition.None)]
+    public static CardKeyword Balanced;
     
     public static bool HasEbb (this CardModel card) => card.Keywords.Contains(Ebb);
     

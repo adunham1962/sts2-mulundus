@@ -64,5 +64,8 @@
   "STS2_MULUNDUS-GUIDANCE_POWER.title": "Guidance",
   "STS2_MULUNDUS-UNYIELDING_POWER.description": "Whenever you gain a [gold]Debuff[/gold], gain 1 [gold]Plating[/gold].",
   "STS2_MULUNDUS-UNYIELDING_POWER.smartDescription": "Whenever you gain a [gold]Debuff[/gold], gain {Amount} [gold]Plating[/gold].",
-  "STS2_MULUNDUS-UNYIELDING_POWER.title": "Unyielding"
+  "STS2_MULUNDUS-UNYIELDING_POWER.title": "Unyielding",
+  "STS2_MULUNDUS-LIGHT_POWER.description": "Powers cost [blue]1[/blue] {energyPrefix:energyIcons(1)} less.",
+  "STS2_MULUNDUS-LIGHT_POWER.smartDescription": "Powers cost [blue]{Amount}[/blue] {energyPrefix:energyIcons(1)} less.",
+  "STS2_MULUNDUS-LIGHT_POWER.title": "Light"
 }

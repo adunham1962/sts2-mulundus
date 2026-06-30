@@ -13,6 +13,16 @@ public abstract class EmeraldMonkCard(int cost, CardType type, CardRarity rarity
     ConstructedCardModel(cost, type, rarity, target)
 {
 
+    private bool _isEbbReduced = false;
+    private bool _isFlowReduced = false;
+
+    protected bool ShouldGlowGoldFromBalance => HasBalanceEffect &&
+                                                PileType.Hand.GetPile(Owner).Cards
+                                                    .Count(c => c.Type == CardType.Attack) == PileType.Hand
+                                                    .GetPile(Owner).Cards.Count(c => c.Type == CardType.Skill);
+
+    protected virtual bool HasBalanceEffect => false;
+    
     public override Task AfterFlush(PlayerChoiceContext choiceContext, Player player, IReadOnlyCollection<CardModel> flushedCards,
         IReadOnlyCollection<CardModel> retainedCards)
     {
@@ -45,25 +55,31 @@ public abstract class EmeraldMonkCard(int cost, CardType type, CardRarity rarity
 
         if (this.HasEbb() && card != this)
         {
-            if (card.Type == CardType.Attack)
+            switch (_isEbbReduced)
             {
-                EnergyCost.SetUntilPlayed(EnergyCost.Canonical - 1);
-            }
-            else
-            {
-                EnergyCost.SetUntilPlayed(EnergyCost.Canonical);
+                case false when card.Type == CardType.Attack:
+                    EnergyCost.AddUntilPlayed(-1);
+                    _isEbbReduced = true;
+                    break;
+                case true when card.Type != CardType.Attack:
+                    EnergyCost.AfterCardPlayedCleanup();
+                    _isEbbReduced = false;
+                    break;
             }
         }
         
         if (this.HasFlow() && card != this)
         {
-            if (card.Type == CardType.Skill)
+            switch (_isFlowReduced)
             {
-                EnergyCost.SetUntilPlayed(EnergyCost.Canonical - 1);
-            }
-            else
-            {
-                EnergyCost.SetUntilPlayed(EnergyCost.Canonical);
+                case false when card.Type == CardType.Skill:
+                    EnergyCost.AddUntilPlayed(-1);
+                    _isFlowReduced = true;
+                    break;
+                case true when card.Type != CardType.Skill:
+                    EnergyCost.AfterCardPlayedCleanup();
+                    _isFlowReduced = false;
+                    break;
             }
         }
 
