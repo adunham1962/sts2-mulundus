@@ -67,5 +67,14 @@
   "STS2_MULUNDUS-UNYIELDING_POWER.title": "Unyielding",
   "STS2_MULUNDUS-LIGHT_POWER.description": "Powers cost [blue]1[/blue] {energyPrefix:energyIcons(1)} less.",
   "STS2_MULUNDUS-LIGHT_POWER.smartDescription": "Powers cost [blue]{Amount}[/blue] {energyPrefix:energyIcons(1)} less.",
-  "STS2_MULUNDUS-LIGHT_POWER.title": "Light"
+  "STS2_MULUNDUS-LIGHT_POWER.title": "Light",
+  "STS2_MULUNDUS-MULTICULTURALISM_POWER.description": "Card you create cost [blue]1[/blue] {energyPrefix:energyIcons(1)} less",
+  "STS2_MULUNDUS-MULTICULTURALISM_POWER.smartDescription": "Cards you create cost {Amount:energyIcons()} less.",
+  "STS2_MULUNDUS-MULTICULTURALISM_POWER.title": "Multiculturalism",
+  "STS2_MULUNDUS-REACTIVE_COMBATANT_POWER.description": "Whenever you [gold]Retain[/gold] a card, gain [blue]3[/blue] [gold]Block[/gold].",
+  "STS2_MULUNDUS-REACTIVE_COMBATANT_POWER.smartDescription": "Whenever you [gold]Retain[/gold] a card, gain {Amount} [gold]Block[/gold].",
+  "STS2_MULUNDUS-REACTIVE_COMBATANT_POWER.title": "Reactive Combatant",
+  "STS2_MULUNDUS-PERFECTLY_BALANCED_POWER.description": "Whenever you become [gold]Balanced[/gold], gain [blue]1[/gold] {energyPrefix:energyIcons(1)}.",
+  "STS2_MULUNDUS-PERFECTLY_BALANCED_POWER.smartDescription": "Whenever you become [gold]Balanced[/gold], gain {Amount:energyIcons()}.",
+  "STS2_MULUNDUS-PERFECTLY_BALANCED_POWER.title": "Perfectly Balanced"
 }

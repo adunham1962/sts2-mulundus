@@ -1,9 +1,9 @@
 {
   "STS2_MULUNDUS-GRIM.description": "When exhausted, this card is played.",
   "STS2_MULUNDUS-GRIM.title": "Grim",
-  "STS2_MULUNDUS-ENTERSTANCE.description": "Remove all cards with [gold]Stance[/gold] from your hand.",
+  "STS2_MULUNDUS-ENTERSTANCE.description": "Remove all cards with [gold]Stance[/gold] from your hand.\nCreate the designated card(s) with [gold]Stance[/gold].",
   "STS2_MULUNDUS-ENTERSTANCE.title": "Enter Stance",
-  "STS2_MULUNDUS-STANCE.description": "When you enter another stance, remove this card from your hand.",
+  "STS2_MULUNDUS-STANCE.description": "This card costs {energyPrefix:energyIcons(1)} less each turn you [gold]Retain[/gold] it.\nRemove it from combat when played.",
   "STS2_MULUNDUS-STANCE.title": "Stance",
   "STS2_MULUNDUS-EBB.description": "This card costs less if the last card you played was an attack.",
   "STS2_MULUNDUS-EBB.title": "Ebb",

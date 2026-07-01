@@ -9,7 +9,7 @@ namespace STS2_Mulundus.STS2_MulundusCode.Cards.EmeraldMonk.Special;
 [Pool(typeof(TokenCardPool))]
 public class FrogsLeap : EmeraldMonkCard
 {
-    public FrogsLeap() : base(2, CardType.Skill, CardRarity.Token, TargetType.Self)
+    public FrogsLeap() : base(1, CardType.Skill, CardRarity.Token, TargetType.Self)
     {
         WithKeyword(EmeraldMonkKeywords.Stance);
         WithKeyword(CardKeyword.Retain);
