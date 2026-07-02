@@ -19,13 +19,11 @@ public class Sunbeam : EmeraldMonkCard
         WithKeyword(EmeraldMonkKeywords.Stance);
     }
     
-    protected override async Task OnPlay(
-        PlayerChoiceContext choiceContext,
-        CardPlay play)
+    protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay play)
     {
         await CommonActions.CardAttack(this, play).Execute(choiceContext);
-        if (CombatState != null)
-            await CommonActions.Apply<VulnerablePower>(choiceContext, CombatState.HittableEnemies, this);
+        if (play.Target is not null)
+            await CommonActions.Apply<VulnerablePower>(choiceContext, play.Target, this);
     }
 
     protected override void OnUpgrade()

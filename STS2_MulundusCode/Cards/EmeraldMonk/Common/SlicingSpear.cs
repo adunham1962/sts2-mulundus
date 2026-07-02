@@ -11,7 +11,7 @@ public class SlicingSpear : EmeraldMonkCard
 {
     public SlicingSpear() : base(1, CardType.Attack, CardRarity.Common, TargetType.AllEnemies)
     {
-        WithCalculatedDamage(7, (_, creature) => creature?.GetPowerAmount<DexterityPower>() ?? 0);
+        WithCalculatedDamage(7, (card, _) => card.Owner.Creature.GetPowerAmount<DexterityPower>());
     }
 
     protected override async Task OnPlay(

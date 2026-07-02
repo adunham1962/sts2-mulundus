@@ -10,7 +10,7 @@ namespace STS2_Mulundus.STS2_MulundusCode.Cards.EmeraldMonk.Common;
 [Pool(typeof(EmeraldMonkCardPool))]
 public class ControlWater : EmeraldMonkCard
 {
-    public ControlWater() : base(1, CardType.Attack, CardRarity.Common, TargetType.Self)
+    public ControlWater() : base(1, CardType.Attack, CardRarity.Common, TargetType.AnyEnemy)
     {
         WithDamage(6);
     }
@@ -19,7 +19,7 @@ public class ControlWater : EmeraldMonkCard
         PlayerChoiceContext choiceContext,
         CardPlay play)
     {
-        if (play.Target is not null)
+        if (play.Target is not null && play.Target.HasPower<SlipperyPower>())
         {
             await PowerCmd.Remove<SlipperyPower>(play.Target);
         }

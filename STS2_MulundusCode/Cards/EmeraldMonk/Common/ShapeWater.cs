@@ -29,6 +29,6 @@ public class ShapeWater : EmeraldMonkCard
 
     protected override void OnUpgrade()
     {
-
+        DynamicVars.Block.UpgradeValueBy(2);
     }
 }
