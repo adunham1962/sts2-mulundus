@@ -11,7 +11,7 @@ namespace STS2_Mulundus.STS2_MulundusCode.Cards.EmeraldMonk.Special;
 public class DragonsTorrent :EmeraldMonkCard
 {
 
-    public DragonsTorrent() : base(3, CardType.Attack, CardRarity.Token, TargetType.AllEnemies)
+    public DragonsTorrent() : base(2, CardType.Attack, CardRarity.Token, TargetType.AllEnemies)
     {
         WithKeyword(CardKeyword.Retain);
         WithKeyword(EmeraldMonkKeywords.Stance);

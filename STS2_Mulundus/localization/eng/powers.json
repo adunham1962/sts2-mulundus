@@ -76,5 +76,14 @@
   "STS2_MULUNDUS-REACTIVE_COMBATANT_POWER.title": "Reactive Combatant",
   "STS2_MULUNDUS-PERFECTLY_BALANCED_POWER.description": "Whenever you become [gold]Balanced[/gold], gain [blue]1[/gold] {energyPrefix:energyIcons(1)}.",
   "STS2_MULUNDUS-PERFECTLY_BALANCED_POWER.smartDescription": "Whenever you become [gold]Balanced[/gold], gain {Amount:energyIcons()}.",
-  "STS2_MULUNDUS-PERFECTLY_BALANCED_POWER.title": "Perfectly Balanced"
+  "STS2_MULUNDUS-PERFECTLY_BALANCED_POWER.title": "Perfectly Balanced",
+  "STS2_MULUNDUS-UNARMORED_MOVEMENT_POWER.description": "Whenever you end your turn with no [gold]Block[/gold], gain [blue]1[/blue] [gold]Dexterity[/gold].",
+  "STS2_MULUNDUS-UNARMORED_MOVEMENT_POWER.smartDescription": "Whenever you end your turn with no [gold]Block[/gold], gain {Amount} [gold]Dexterity[/gold].",
+  "STS2_MULUNDUS-UNARMORED_MOVEMENT_POWER.title": "Unarmored Movement",
+  "STS2_MULUNDUS-MARTIAL_DANCE_POWER.description": "Whenever you play a [gold]Stance[/gold], gain {energyPrefix:energyIcons(1)}.",
+  "STS2_MULUNDUS-MARTIAL_DANCE_POWER.smartDescription": "Whenever you play a [gold]Stance[/gold], gain {Amount:energyIcons()}.",
+  "STS2_MULUNDUS-MARTIAL_DANCE_POWER.title": "Martial Dance",
+  "STS2_MULUNDUS-DOWNPOUR_POWER.description": "Attacks with [gold]Ebb[/gold] or [gold]Flow[/gold] deal [blue]1[/blue] additional damage to this creature.\nAt the end of its turn, it loses 1 [gold]Downpour[/gold].",
+  "STS2_MULUNDUS-DOWNPOUR_POWER.smartDescription": "Attacks with [gold]Ebb[/gold] or [gold]Flow[/gold] deal {Amount} additional damage to this creature.\nAt the end of its turn, it loses 1 [gold]Downpour[/gold].",
+  "STS2_MULUNDUS-DOWNPOUR_POWER.title": "Downpour"
 }

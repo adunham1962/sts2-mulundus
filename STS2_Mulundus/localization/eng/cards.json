@@ -302,5 +302,17 @@
   "STS2_MULUNDUS-PERFECTLY_BALANCED.title": "Perfectly Balanced",
   "STS2_MULUNDUS-SHAPE_WATER.description": "Gain {Block:diff()} [gold]Block[/gold].\nAdd [gold]Flow[/gold] to a card in your [gold]Hand[/gold].",
   "STS2_MULUNDUS-SHAPE_WATER.title": "Shape Water",
-  "STS2_MULUNDUS-SHAPE_WATER.selectionScreenPrompt": "Add [gold]Flow[/gold] to a card."
+  "STS2_MULUNDUS-SHAPE_WATER.selectionScreenPrompt": "Add [gold]Flow[/gold] to a card.",
+  "STS2_MULUNDUS-UNARMED_STRIKE.description": "Deal {CalculatedDamage:diff()} damage. Deals 4 additional damage if it's the first attack you play this turn.",
+  "STS2_MULUNDUS-UNARMED_STRIKE.title": "Unarmed Strike",
+  "STS2_MULUNDUS-UNARMORED_MOVEMENT.description": "Whenever you end your turn with no [gold]Block[/gold], gain {UnarmoredMovementPower:diff()} [gold]Dexterity[/gold].",
+  "STS2_MULUNDUS-UNARMORED_MOVEMENT.title": "Unarmored Movement",
+  "STS2_MULUNDUS-PATIENT_DEFENSE.description": "Gain {CalculatedBlock:diff()} [gold]Block[/gold]. Gain 2 additional [gold]Block[/gold] for each time you've [gold]Retained[/gold] this card this combat.",
+  "STS2_MULUNDUS-PATIENT_DEFENSE.title": "Patient Defense",
+  "STS2_MULUNDUS-DRUNKEN_FIST.description": "Deal {CalculatedDamage:diff()}",
+  "STS2_MULUNDUS-DRUNKEN_FIST.title": "Drunken Fist",
+  "STS2_MULUNDUS-MARTIAL_DANCE.description": "Whenever you play a [gold]Stance[/gold], gain {MartialDancePower:energyIcons()}.",
+  "STS2_MULUNDUS-MARTIAL_DANCE.title": "Martial Dance",
+  "STS2_MULUNDUS-MAELSTROM.description": "Deal {Damage:diff()} damage 3 times and apply {DownpourPower:diff()} [gold]Downpour[/gold] to ALL enemies.",
+  "STS2_MULUNDUS-MAELSTROM.title": "Maelstrom"
 }
