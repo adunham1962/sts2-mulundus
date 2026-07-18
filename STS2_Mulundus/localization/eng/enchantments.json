@@ -4,5 +4,7 @@
   "STS2_MULUNDUS-STICKY.description": "When you play this card, put it back into your [gold]Hand[/gold].",
   "STS2_MULUNDUS-STICKY.title": "Sticky",
   "STS2_MULUNDUS-WATERBENDING.description": "This card costs {Amount:energyIcons()} less if the last card you played was a different type.",
-  "STS2_MULUNDUS-WATERBENDING.title": "Waterbending"
+  "STS2_MULUNDUS-WATERBENDING.title": "Waterbending",
+  "STS2_MULUNDUS-ASTRAL_REINFORCEMENT.description": "This card gains [gold]Ethereal[/gold] and its [gold]Block[/gold] is doubled. When you play this card, lose 1 [gold]Dexterity[/gold].",
+  "STS2_MULUNDUS-ASTRAL_REINFORCEMENT.title": "Astral Reinforcement"
 }

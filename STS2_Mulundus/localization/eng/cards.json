@@ -314,5 +314,7 @@
   "STS2_MULUNDUS-MARTIAL_DANCE.description": "Whenever you play a [gold]Stance[/gold], gain {MartialDancePower:energyIcons()}.",
   "STS2_MULUNDUS-MARTIAL_DANCE.title": "Martial Dance",
   "STS2_MULUNDUS-MAELSTROM.description": "Deal {Damage:diff()} damage 3 times and apply {DownpourPower:diff()} [gold]Downpour[/gold] to ALL enemies.",
-  "STS2_MULUNDUS-MAELSTROM.title": "Maelstrom"
+  "STS2_MULUNDUS-MAELSTROM.title": "Maelstrom",
+  "STS2_MULUNDUS-HIRED_HELP.description": "Deal {Damage:diff()} damage.\nGain {Block:diff()} [gold]Block[/gold].\nLose 10 gold. If you have less than 10 gold, lose 1 max HP.",
+  "STS2_MULUNDUS-HIRED_HELP.title": "Hired Help"
 }

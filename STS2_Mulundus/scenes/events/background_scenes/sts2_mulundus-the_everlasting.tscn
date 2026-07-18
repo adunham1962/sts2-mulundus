@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://bdqknq7mnkr0k"]
+
+[ext_resource type="Texture2D" uid="uid://nysyuptt0wte" path="res://STS2_Mulundus/images/ancients/Arden.png" id="1_37v5l"]
+
+[node name="TheEverlasting" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+texture = ExtResource("1_37v5l")

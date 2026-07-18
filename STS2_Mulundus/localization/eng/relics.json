@@ -83,7 +83,16 @@
   "STS2_MULUNDUS-SIGIL_OF_BRINE.description": "Whenever you gain or apply a [gold]Debuff[/gold], deal 1 damage to ALL enemies.",
   "STS2_MULUNDUS-SIGIL_OF_BRINE.flavor": "",
   "STS2_MULUNDUS-SIGIL_OF_BRINE.title": "Sigil of Brine",
-  "STS2_MULUNDUS-EMERALD_SCALE.description": "Enchant two cards with [gold]Waterbending[/gold].",
+  "STS2_MULUNDUS-EMERALD_SCALE.description": "Enchant two cards with [purple]Waterbending[/purple].",
   "STS2_MULUNDUS-EMERALD_SCALE.flavor": "",
-  "STS2_MULUNDUS-EMERALD_SCALE.title": "Emerald Scale"
+  "STS2_MULUNDUS-EMERALD_SCALE.title": "Emerald Scale",
+  "STS2_MULUNDUS-DREADNOUGHT_HIDE.description": "On pickup, [gold]Enchant[/gold] ALL cards in your deck with [gold]Block[/gold] with [purple]Astral Reinforcement[/purple].",
+  "STS2_MULUNDUS-DREADNOUGHT_HIDE.flavor": "",
+  "STS2_MULUNDUS-DREADNOUGHT_HIDE.title": "Dreadnought Hide",
+  "STS2_MULUNDUS-HUNTING_CONTRACT.description": "You may deliver card rewards to Arden. Whenever you do, you gain 50 gold.",
+  "STS2_MULUNDUS-HUNTING_CONTRACT.flavor": "",
+  "STS2_MULUNDUS-HUNTING_CONTRACT.title": "Hunting Contract",
+  "STS2_MULUNDUS-ARDENS_SIMULACRUM.description": "On pickup, add a card to your deck.",
+  "STS2_MULUNDUS-ARDENS_SIMULACRUM.flavor": "",
+  "STS2_MULUNDUS-ARDENS_SIMULACRUM.title": "Arden's Simulacrum"
 }
