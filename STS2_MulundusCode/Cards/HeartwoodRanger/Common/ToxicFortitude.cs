@@ -25,6 +25,6 @@ public class ToxicFortitude : HeartWoodRangerCard
 
     protected override void OnUpgrade()
     {
-        this.DynamicVars.Block.UpgradeValueBy(3);
+        EnergyCost.UpgradeBy(-1);
     }
 }

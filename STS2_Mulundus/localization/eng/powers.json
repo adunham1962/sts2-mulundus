@@ -17,8 +17,8 @@
   "STS2_MULUNDUS-LIVING_BASTION_POWER.description": "At the start of your turn, gain 2 [gold]Plating[/gold] and [gold]Heal[/gold] 1 HP.",
   "STS2_MULUNDUS-LIVING_BASTION_POWER.smartDescription": "At the start of your turn, [gold]Heal[/gold] 2 HP.",
   "STS2_MULUNDUS-LIVING_BASTION_POWER.title": "Living Bastion",
-  "STS2_MULUNDUS-LIFE_ON_THE_EDGE_POWER.description": "At the start of your turn, draw 2 additional cards if you're [gold]poisoned[/gold].",
-  "STS2_MULUNDUS-LIFE_ON_THE_EDGE_POWER.smartDescription": "At the start of your turn, draw 2 additional cards if you're [gold]poisoned[/gold].",
+  "STS2_MULUNDUS-LIFE_ON_THE_EDGE_POWER.description": "At the start of your turn, draw [blue]2[/blue] additional cards and gain [blue]2[/blue] [gold]Poison[/gold].",
+  "STS2_MULUNDUS-LIFE_ON_THE_EDGE_POWER.smartDescription": "At the start of your turn, draw {Amount} additional cards and gain {Amount} [gold]Poison[/gold].",
   "STS2_MULUNDUS-LIFE_ON_THE_EDGE_POWER.title": "Life on the Edge",
   "STS2_MULUNDUS-BRAMBLE_MANTLE_POWER.description": "Whenever you gain [gold]Block[/gold], gain 1 [gold]Thorns[/gold].",
   "STS2_MULUNDUS-BRAMBLE_MANTLE_POWER.smartDescription": "Whenever you gain [gold]Block[/gold], gain {Amount} [gold]Thorns[/gold].",
@@ -85,5 +85,11 @@
   "STS2_MULUNDUS-MARTIAL_DANCE_POWER.title": "Martial Dance",
   "STS2_MULUNDUS-DOWNPOUR_POWER.description": "Attacks with [gold]Ebb[/gold] or [gold]Flow[/gold] deal [blue]1[/blue] additional damage to this creature.\nAt the end of its turn, it loses 1 [gold]Downpour[/gold].",
   "STS2_MULUNDUS-DOWNPOUR_POWER.smartDescription": "Attacks with [gold]Ebb[/gold] or [gold]Flow[/gold] deal {Amount} additional damage to this creature.\nAt the end of its turn, it loses 1 [gold]Downpour[/gold].",
-  "STS2_MULUNDUS-DOWNPOUR_POWER.title": "Downpour"
+  "STS2_MULUNDUS-DOWNPOUR_POWER.title": "Downpour",
+  "STS2_MULUNDUS-CONSTITUTION_POWER.description": "Damage you receive is reduced by [blue]1[/blue]. Whenever you are attacked while you have no [gold]Block[/gold], lose 1 [gold]Constitution[/gold].",
+  "STS2_MULUNDUS-CONSTITUTION_POWER.smartDescription": "Damage you receive is reduced by {Amount}. Whenever you are attacked while you have no [gold]Block[/gold], lose 1 [gold]Constitution[/gold].",
+  "STS2_MULUNDUS-CONSTITUTION_POWER.title": "Constitution",
+  "STS2_MULUNDUS-INTELLIGENCE_POWER.description": "Whenever you would draw one or more cards, draw [blue]1[/blue] additional card.",
+  "STS2_MULUNDUS-INTELLIGENCE_POWER.smartDescription": "Whenever you would draw one or more cards, draw {Amount} additional card(s).",
+  "STS2_MULUNDUS-INTELLIGENCE_POWER.title": "Intelligence"
 }

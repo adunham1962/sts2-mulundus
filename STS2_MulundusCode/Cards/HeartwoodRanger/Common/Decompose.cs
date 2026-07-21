@@ -15,7 +15,7 @@ public class Decompose : HeartWoodRangerCard
 
     public Decompose() : base(1, CardType.Skill, CardRarity.Common, TargetType.Self)
     {
-        WithVar("BerryAdd", 1);
+        WithVar("BerryAdd", 2);
         WithKeyword(CardKeyword.Exhaust);
         WithTips(_ => [HoverTipFactory.FromCard<Goodberry>()]);
     }
@@ -45,6 +45,6 @@ public class Decompose : HeartWoodRangerCard
 
     protected override void OnUpgrade()
     {
-        DynamicVars["BerryAdd"].UpgradeValueBy(1);
+        RemoveKeyword(CardKeyword.Exhaust);
     }
 }

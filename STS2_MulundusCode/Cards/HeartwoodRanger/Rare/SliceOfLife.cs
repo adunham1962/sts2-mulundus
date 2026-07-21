@@ -14,16 +14,11 @@ namespace STS2_Mulundus.STS2_MulundusCode.Cards.HeartwoodRanger.Rare;
 public class SliceOfLife : HeartWoodRangerCard
 {
     public override string PortraitPath => "res://STS2_Mulundus/images/card_portraits/slice_of_life.png";
-    //private int _exhaustCount;
     
     public SliceOfLife() : base(2, CardType.Attack, CardRarity.Rare, TargetType.AllEnemies)
     {
         WithCalculatedDamage(8, 8, (card, _) => CardsExhaustedThisTurn(card));
-        //WithDamage(8);
-        //WithHeal(1);
         WithCalculatedVar("CalculatedHeal", 1, 1, (card, _) => CardsExhaustedThisTurn(card));
-        WithKeyword(CardKeyword.Exhaust);
-        //_exhaustCount = 0;
     }
 
     private static decimal CardsExhaustedThisTurn(CardModel card)
@@ -40,21 +35,8 @@ public class SliceOfLife : HeartWoodRangerCard
         await CreatureCmd.Heal(Owner.Creature, (DynamicVars["CalculatedHeal"] as CalculatedVar)!.Calculate(null));
     }
 
-   // public override Task AfterCardExhausted(PlayerChoiceContext choiceContext, CardModel card, bool causedByEthereal)
-   // {
-     //   _exhaustCount++;
-      //  return Task.CompletedTask;
-    //}
-
-    //public override Task AfterTurnEnd(PlayerChoiceContext choiceContext, CombatSide side)
-    //{
-    //    _exhaustCount = 0;
-    //    return Task.CompletedTask;
-    //}
-
     protected override void OnUpgrade()
     {
-        //DynamicVars.Damage.UpgradeValueBy(2);
         DynamicVars.CalculationBase.UpgradeValueBy(2);
         DynamicVars.ExtraDamage.UpgradeValueBy(2);
     }

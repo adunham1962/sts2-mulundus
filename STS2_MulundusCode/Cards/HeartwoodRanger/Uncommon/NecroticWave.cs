@@ -26,7 +26,7 @@ public class NecroticWave : HeartWoodRangerCard
         if (CombatState != null)
         {
             await PowerCmd.Apply<NecroticWavePower>(choiceContext, CombatState.HittableEnemies,
-             (DynamicVars["CalculatedWilting"] as CalculatedVar)!.Calculate(null), Owner.Creature, this);
+             (DynamicVars["CalculatedWilting"] as CalculatedVar)!.Calculate(null) * -1, Owner.Creature, this);
         }
     }
 

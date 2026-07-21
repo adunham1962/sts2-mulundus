@@ -5,7 +5,7 @@ namespace STS2_Mulundus.STS2_MulundusCode;
 
 public static class HeartwoodRangerKeywords
 {
-    [CustomEnum, KeywordProperties(AutoKeywordPosition.After)]
+    [CustomEnum, KeywordProperties(AutoKeywordPosition.Before)]
     public static CardKeyword Grim;
 
     public static bool IsGrim(this CardModel card)
