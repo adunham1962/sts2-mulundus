@@ -10,6 +10,12 @@ namespace STS2_Mulundus.STS2_MulundusCode.Cards.EmeraldMonk.Rare;
 [Pool(typeof(EmeraldMonkCardPool))]
 public class StunningStrike : EmeraldMonkCard
 {
+    protected override bool ShouldGlowGoldInternal => ShouldStun;
+
+    private bool ShouldStun => CombatManager.Instance.History.CardPlaysFinished.Count(e =>
+        e.HappenedThisTurn(CombatState) && e.Actor == Owner.Creature &&
+        e.CardPlay.Card.Type == CardType.Attack) == 4;
+    
     public StunningStrike() : base(1, CardType.Attack, CardRarity.Rare, TargetType.AnyEnemy)
     {
         WithDamage(10);
@@ -23,9 +29,7 @@ public class StunningStrike : EmeraldMonkCard
 
         await CommonActions.CardAttack(this, play).Execute(choiceContext);
         
-        if (CombatManager.Instance.History.CardPlaysFinished.Count(e =>
-                e.HappenedThisTurn(CombatState) && e.Actor == Owner.Creature &&
-                e.CardPlay.Card.Type == CardType.Attack) == 5)
+        if (ShouldStun)
         {
             if (play.Target != null) await CreatureCmd.Stun(play.Target);
         };
