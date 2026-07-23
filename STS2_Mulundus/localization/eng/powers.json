@@ -91,5 +91,8 @@
   "STS2_MULUNDUS-CONSTITUTION_POWER.title": "Constitution",
   "STS2_MULUNDUS-INTELLIGENCE_POWER.description": "Whenever you would draw one or more cards, draw [blue]1[/blue] additional card.",
   "STS2_MULUNDUS-INTELLIGENCE_POWER.smartDescription": "Whenever you would draw one or more cards, draw {Amount} additional card(s).",
-  "STS2_MULUNDUS-INTELLIGENCE_POWER.title": "Intelligence"
+  "STS2_MULUNDUS-INTELLIGENCE_POWER.title": "Intelligence",
+  "STS2_MULUNDUS-TOXIC_RAGE_POWER.description": "Whenever you gain [gold]Poison[/gold], deal that much damage to ALL enemies, and heal that much HP.",
+  "STS2_MULUNDUS-TOXIC_RAGE_POWER.smartDescription": "Whenever you gain [gold]Poison[/gold], deal {Amount} times that much damage to ALL enemies, and heal {Amount} times that much HP.",
+  "STS2_MULUNDUS-TOXIC_RAGE_POWER.title": "Toxic Rage"
 }

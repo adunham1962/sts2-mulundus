@@ -12,6 +12,7 @@ public class PerfectlyBalanced : EmeraldMonkCard
     {
         WithPower<PerfectlyBalancedPower>(1);
         WithCards(2);
+        WithEnergy(1);
     }
 
     protected override async Task OnPlay(

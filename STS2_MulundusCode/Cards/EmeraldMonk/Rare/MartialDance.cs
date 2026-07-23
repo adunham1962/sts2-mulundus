@@ -13,6 +13,7 @@ public class MartialDance : EmeraldMonkCard
     public MartialDance() : base(1, CardType.Power, CardRarity.Rare, TargetType.Self)
     {
         WithPower<MartialDancePower>(1);
+        WithEnergy(1);
     }
     
     protected override async Task OnPlay(
@@ -25,5 +26,6 @@ public class MartialDance : EmeraldMonkCard
     protected override void OnUpgrade()
     {
         DynamicVars["MartialDancePower"].UpgradeValueBy(1);
+        DynamicVars["Energy"].UpgradeValueBy(1);
     }
 }

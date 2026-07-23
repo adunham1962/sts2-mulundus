@@ -18,7 +18,7 @@ public class Atonement : EmeraldMonkCard
     public Atonement() : base(1, CardType.Skill, CardRarity.Uncommon, TargetType.Self)
     {
         WithEnergy(2); // Next turn energy
-        WithVar("Energy2", 2); // This turn energy if balanced
+        WithVar("EnergyTwo", 2); // This turn energy if balanced
     }
     
     protected override async Task OnPlay(
@@ -28,7 +28,7 @@ public class Atonement : EmeraldMonkCard
         await PowerCmd.Apply<EnergyNextTurnPower>(choiceContext, Owner.Creature, DynamicVars.Energy.BaseValue, Owner.Creature, this);
         if (ShouldGlowGoldFromBalance)
         {
-            await PlayerCmd.GainEnergy(DynamicVars["Energy2"].BaseValue, Owner);
+            await PlayerCmd.GainEnergy(DynamicVars["EnergyTwo"].BaseValue, Owner);
         }
     }
 
