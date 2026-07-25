@@ -1,6 +1,5 @@
 using BaseLib.Abstracts;
 using BaseLib.Utils;
-using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.Entities.Creatures;
 using MegaCrit.Sts2.Core.Entities.Powers;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
@@ -19,7 +18,9 @@ public class PoisonBarbsPower() : CustomPowerModel()
     public override async Task AfterDamageGiven(PlayerChoiceContext choiceContext, Creature? dealer, DamageResult result, ValueProp props,
         Creature target, CardModel? cardSource)
     {
-        if (dealer is null || dealer != Owner || cardSource is null || cardSource.Type != CardType.Attack) return;
-        await CommonActions.Apply<PoisonPower>(choiceContext, target, cardSource, dealer.GetPowerAmount<ThornsPower>());
+        if (target == Owner && dealer is not null && dealer.IsMonster && (result.WasFullyBlocked || result.WasBlockBroken) && Owner.GetPowerAmount<ThornsPower>() > 0) 
+        {
+            await CommonActions.Apply<PoisonPower>(choiceContext, target, cardSource, 1);
+        }
     }
 }

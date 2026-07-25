@@ -1,4 +1,6 @@
 using BaseLib.Abstracts;
+using BaseLib.Utils;
+using MegaCrit.Sts2.Core.CardSelection;
 using MegaCrit.Sts2.Core.Commands;
 using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.Entities.Powers;
@@ -7,7 +9,7 @@ using MegaCrit.Sts2.Core.Models;
 
 namespace STS2_Mulundus.STS2_MulundusCode.Powers;
 
-public class CursorsLogPower : CustomPowerModel
+public class PourOverThePagesPower : CustomPowerModel
 {
     public override PowerType Type => PowerType.Buff;
     public override PowerStackType StackType => PowerStackType.Single;
@@ -17,9 +19,7 @@ public class CursorsLogPower : CustomPowerModel
         var player = Owner.Player;
         if (player is null || card.Owner != Owner.Player ) return;
 
-        var exhaustCard = PileType.Exhaust.GetPile(Owner.Player).Cards.ToList().FindAll(c => c.EnergyCost == card.EnergyCost).FirstOrDefault();
-        if (exhaustCard is null || exhaustCard == card) return;
-
-        await CardPileCmd.Add(exhaustCard, PileType.Draw, CardPilePosition.Top, this);
+        await CardPileCmd.Draw(choiceContext, Amount, Owner.Player);
+        await CardCmd.Discard(choiceContext, await CardSelectCmd.FromHandForDiscard(choiceContext, Owner.Player, new CardSelectorPrefs(CardSelectorPrefs.DiscardSelectionPrompt, 1), null, this));
     }
 }
