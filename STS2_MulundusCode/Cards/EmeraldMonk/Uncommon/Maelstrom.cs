@@ -19,7 +19,7 @@ public class Maelstrom : EmeraldMonkCard
         PlayerChoiceContext choiceContext,
         CardPlay play)
     {
-        await CommonActions.CardAttack(this, play).Execute(choiceContext);
+        await CommonActions.CardAttack(this, play, 3).Execute(choiceContext);
         if (CombatState != null)
             await CommonActions.Apply<DownpourPower>(choiceContext, CombatState.HittableEnemies, this);
     }
