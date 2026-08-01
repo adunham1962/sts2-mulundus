@@ -11,6 +11,7 @@ public class BloomingGrove : HeartWoodRangerCard
 {
     
     public override CardMultiplayerConstraint MultiplayerConstraint => CardMultiplayerConstraint.MultiplayerOnly;
+    public override string PortraitPath => "res://STS2_Mulundus/images/card_portraits/blooming_grove.png";
     
     public BloomingGrove() : base(1, CardType.Skill, CardRarity.Rare, TargetType.AllAllies)
     {

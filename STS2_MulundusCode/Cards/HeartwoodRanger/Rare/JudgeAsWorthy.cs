@@ -10,7 +10,7 @@ namespace STS2_Mulundus.STS2_MulundusCode.Cards.HeartwoodRanger.Rare;
 [Pool(typeof(HeartwoodRangerCardPool))]
 public class JudgeAsWorthy : HeartWoodRangerCard
 {
-    
+    public override string PortraitPath => "res://STS2_Mulundus/images/card_portraits/judge_as_worthy.png";
     public override CardMultiplayerConstraint MultiplayerConstraint => CardMultiplayerConstraint.MultiplayerOnly;
     protected override bool HasEnergyCostX => true;
 

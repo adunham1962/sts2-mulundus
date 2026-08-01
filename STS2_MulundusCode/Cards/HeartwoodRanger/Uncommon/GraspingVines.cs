@@ -9,7 +9,7 @@ namespace STS2_Mulundus.STS2_MulundusCode.Cards.HeartwoodRanger.Uncommon;
 [Pool(typeof(HeartwoodRangerCardPool))]
 public class GraspingVines : HeartWoodRangerCard
 {
-
+    public override string PortraitPath => "res://STS2_Mulundus/images/card_portraits/grasping_vines.png";
     public GraspingVines() : base(1, CardType.Attack, CardRarity.Uncommon, TargetType.AllEnemies)
     {
         WithDamage(6);

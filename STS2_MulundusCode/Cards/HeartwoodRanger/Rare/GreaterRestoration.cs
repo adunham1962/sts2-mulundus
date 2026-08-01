@@ -10,7 +10,7 @@ namespace STS2_Mulundus.STS2_MulundusCode.Cards.HeartwoodRanger.Rare;
 [Pool(typeof(HeartwoodRangerCardPool))]
 public class GreaterRestoration : HeartWoodRangerCard 
 {
-
+    public override string PortraitPath => "res://STS2_Mulundus/images/card_portraits/greater_restoration.png";
     public GreaterRestoration() : base(1, CardType.Skill, CardRarity.Rare, TargetType.Self)
     {
         WithHeal(3);

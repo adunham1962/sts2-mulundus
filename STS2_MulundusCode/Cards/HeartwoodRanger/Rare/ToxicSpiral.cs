@@ -5,7 +5,6 @@ using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 using MegaCrit.Sts2.Core.Localization.DynamicVars;
 using MegaCrit.Sts2.Core.Models.Powers;
 using STS2_Mulundus.STS2_MulundusCode.Character;
-using STS2_Mulundus.STS2_MulundusCode.Extensions;
 using static MegaCrit.Sts2.Core.Entities.Cards.PileType;
 
 namespace STS2_Mulundus.STS2_MulundusCode.Cards.HeartwoodRanger.Rare;
@@ -13,7 +12,7 @@ namespace STS2_Mulundus.STS2_MulundusCode.Cards.HeartwoodRanger.Rare;
 [Pool(typeof(HeartwoodRangerCardPool))]
 public class ToxicSpiral : HeartWoodRangerCard
 {
-    public override string PortraitPath => "Cilef Base.png".CardImagePath();
+    public override string PortraitPath => "res://STS2_Mulundus/images/card_portraits/toxic_spiral.png";
     
     public ToxicSpiral() : base(0, CardType.Skill, CardRarity.Rare, TargetType.Self)
     {

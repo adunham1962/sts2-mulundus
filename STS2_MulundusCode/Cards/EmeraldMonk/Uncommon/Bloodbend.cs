@@ -26,7 +26,7 @@ public class Bloodbend : EmeraldMonkCard
         CardPlay play)
     {
         await CommonActions.CardAttack(this, play).Execute(choiceContext);
-        await CreatureCmd.Damage(choiceContext, Owner.Creature, new DamageVar(1, ValueProp.Move), this);
+        await CreatureCmd.Damage(choiceContext, Owner.Creature, new DamageVar(1, ValueProp.Unblockable | ValueProp.Unpowered | ValueProp.Move), this);
     }
 
     public override decimal ModifyDamageAdditive(Creature? target, decimal amount, ValueProp props, Creature? dealer,

@@ -12,6 +12,7 @@ namespace STS2_Mulundus.STS2_MulundusCode.Cards.HeartwoodRanger.Rare;
 [Pool(typeof(HeartwoodRangerCardPool))]
 public class Hatred : HeartWoodRangerCard
 {
+    public override string PortraitPath => "res://STS2_Mulundus/images/card_portraits/hatred.png";
     public Hatred() : base(1, CardType.Skill, CardRarity.Rare, TargetType.Self)
     {
         WithTips(_ => [HoverTipFactory.FromCard<BlindedByHatred>()]);

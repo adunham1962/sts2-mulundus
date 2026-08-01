@@ -68,7 +68,7 @@
   "STS2_MULUNDUS-REVIVIFY.description": "Choose {Cards:diff()} cards in your [gold]Exhaust Pile[/gold].\nPut them on top of your [gold]Draw Pile[/gold].",
   "STS2_MULUNDUS-REVIVIFY.selectionScreenPrompt": "Choose 3 Cards.",
   "STS2_MULUNDUS-REVIVIFY.title": "Revivify",
-  "STS2_MULUNDUS-TOXIC_SPIRAL.description": "Gain {PoisonPower:diff()} [gold]Poison[/gold] and [gold]Exhaust[/gold] the top card of your [gold]Draw Pile[/gold].\nHeal {CalculatedHeal:diff()} HP. Increases for each [gold]Poison[/gold] you have.",
+  "STS2_MULUNDUS-TOXIC_SPIRAL.description": "Gain {PoisonPower:diff()} [gold]Poison[/gold]\n.[gold]Exhaust[/gold] the top card of your [gold]Draw Pile[/gold].\nHeal {CalculatedHeal:diff()} HP. Heals additional HP equal to your [gold]Poison[/gold].",
   "STS2_MULUNDUS-TOXIC_SPIRAL.title": "Toxic Spiral",
   "STS2_MULUNDUS-HARVEST_THE_DEAD.description": "Deal {Damage:diff()} damage.\nWhen an enemy dies, if this card is in your [gold]Exhaust Pile[/gold], gain {GainHp:diff()} max HP.",
   "STS2_MULUNDUS-HARVEST_THE_DEAD.title": "Harvest",
@@ -161,7 +161,7 @@
   "STS2_MULUNDUS-MELD_INTO_STONE.title": "Meld into Stone",
   "STS2_MULUNDUS-SURVIVAL_OF_THE_FITTEST.description": "Gain {Block:diff()} [gold]Block[/gold].\nGain {ConstitutionPower:diff()} [gold]Constitution[/gold].",
   "STS2_MULUNDUS-SURVIVAL_OF_THE_FITTEST.title": "Survival of the Fittest",
-  "STS2_MULUNDUS-POISONED_BARBS.description": "Whenever you [gold]Block[/damage] damage while you have [gold]Thorns[/gold], apply {PoisonBarbsPower:diff()} [gold]Poison[/gold] to the enemy.",
+  "STS2_MULUNDUS-POISONED_BARBS.description": "Whenever you [gold]Block[/gold] damage while you have [gold]Thorns[/gold], apply {PoisonBarbsPower:diff()} [gold]Poison[/gold] to the enemy.",
   "STS2_MULUNDUS-POISONED_BARBS.title": "Poisoned Barbs",
   "STS2_MULUNDUS-EXACT_VENGEANCE.description": "Deal {CalculatedDamage:diff()} damage.\nDeals {ExtraDamage:diff()} additional damage for each time an enemy attacked you last turn.",
   "STS2_MULUNDUS-EXACT_VENGEANCE.title": "Exact Vengeance",
@@ -316,9 +316,11 @@
   "STS2_MULUNDUS-HIRED_HELP.description": "Deal {Damage:diff()} damage.\nGain {Block:diff()} [gold]Block[/gold].\nLose 10 gold. If you have less than 10 gold, lose 1 max HP.",
   "STS2_MULUNDUS-HIRED_HELP.title": "Hired Help",
   "STS2_MULUNDUS-POUR_OVER_THE_PAGES.description": "Whenever you [gold]Exhaust[/gold] a card, draw {PourOverThePagesPower:plural:a|{}} {PourOverThePagesPower:plural:card|cards} and discard a card.",
-  "STS2_MULUNDUS-POUR_OVER_THE_PAGES.title": "PourOverThePages",
+  "STS2_MULUNDUS-POUR_OVER_THE_PAGES.title": "Pour Over the Pages",
   "STS2_MULUNDUS-SYMBIOTIC_PENANCE.description": "Gain {WisdomPower:diff()} [gold]Wisdom[/gold].\nGain {VulnerablePower:diff()} [gold]Vulnerable[/gold].",
   "STS2_MULUNDUS-SYMBIOTIC_PENANCE.title": "Symbiotic Penance",
   "STS2_MULUNDUS-DRUNKEN_MASTERY.description": "Gain X{IfUpgraded:show:+1} [gold]Strength[/gold].\nWhenever you play a card with [gold]Ebb[/gold] or [gold]Flow[/gold], if its cost was reduced, randomize the cost of ALL cards in your hand.",
-  "STS2_MULUNDUS-DRUNKEN_MASTERY.title": "Drunken Master"
+  "STS2_MULUNDUS-DRUNKEN_MASTERY.title": "Drunken Master",
+  "STS2_MULUNDUS-WHIRLPOOL.description": "Deal {Damage:diff()} to ALL enemies. Deal {ExtraDamage:diff()} additional damage for each time this card has been played this combat.",
+  "STS2_MULUNDUS-WHIRLPOOL.title": "Whirlpool"
 }

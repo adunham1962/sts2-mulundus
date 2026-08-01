@@ -11,7 +11,7 @@ namespace STS2_Mulundus.STS2_MulundusCode.Cards.HeartwoodRanger.Rare;
 public class Diffusion() : HeartWoodRangerCard(1, CardType.Skill, CardRarity.Rare, TargetType.Self)
 {
     
-
+    public override string PortraitPath => "res://STS2_Mulundus/images/card_portraits/diffusion.png";
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay play)
     {
         var poison = Owner.Creature.GetPowerAmount<PoisonPower>();

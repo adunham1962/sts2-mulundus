@@ -12,6 +12,7 @@ namespace STS2_Mulundus.STS2_MulundusCode.Cards.HeartwoodRanger.Uncommon;
 [Pool(typeof(HeartwoodRangerCardPool))]
 public class ThrillOfTheHunt : HeartWoodRangerCard
 {
+    public override string PortraitPath => "res://STS2_Mulundus/images/card_portraits/thrill_of_the_hunt.png";
     public ThrillOfTheHunt() : base(1, CardType.Power, CardRarity.Uncommon, TargetType.Self)
     {
         WithCalculatedVar("CalculatedDexterity", 0,

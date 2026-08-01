@@ -8,7 +8,7 @@ namespace STS2_Mulundus.STS2_MulundusCode.Cards.HeartwoodRanger.Rare;
 [Pool(typeof(HeartwoodRangerCardPool))]
 public class SurvivalOfTheFittest : HeartWoodRangerCard
 {
-
+    public override string PortraitPath => "res://STS2_Mulundus/images/card_portraits/survival_of_the_fittest.png";
     public SurvivalOfTheFittest() : base(1, CardType.Skill, CardRarity.Rare, TargetType.Self)
     {
         WithPower<ConstitutionPower>(5);

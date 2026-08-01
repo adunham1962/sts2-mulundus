@@ -9,7 +9,7 @@ namespace STS2_Mulundus.STS2_MulundusCode.Cards.HeartwoodRanger.Uncommon;
 [Pool(typeof(HeartwoodRangerCardPool))]
 public class SerratedBarbs : HeartWoodRangerCard
 {
-
+    public override string PortraitPath => "res://STS2_Mulundus/images/card_portraits/serrated_barbs.png";
     public SerratedBarbs() : base(1, CardType.Power, CardRarity.Uncommon, TargetType.Self)
     {
         WithPower<SerratedBarbsPower>(1);
