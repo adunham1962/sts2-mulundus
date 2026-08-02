@@ -8,6 +8,7 @@ namespace STS2_Mulundus.STS2_MulundusCode.Cards.EmeraldMonk.Uncommon;
 [Pool(typeof(EmeraldMonkCardPool))]
 public class SacredFlame : EmeraldMonkCard
 {
+    public override string PortraitPath => "res://STS2_Mulundus/images/card_portraits/sacred_flame.png";
 
     public SacredFlame() : base(0, CardType.Attack, CardRarity.Uncommon, TargetType.AnyEnemy)
     {

@@ -19,6 +19,7 @@ public class Atonement : EmeraldMonkCard
     {
         WithEnergy(2); // Next turn energy
         WithVar("EnergyTwo", 2); // This turn energy if balanced
+        WithTip(EmeraldMonkKeywords.Balanced);
     }
     
     protected override async Task OnPlay(

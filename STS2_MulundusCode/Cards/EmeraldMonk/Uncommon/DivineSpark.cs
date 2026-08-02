@@ -9,10 +9,15 @@ namespace STS2_Mulundus.STS2_MulundusCode.Cards.EmeraldMonk.Uncommon;
 [Pool(typeof(EmeraldMonkCardPool))]
 public class DivineSpark : EmeraldMonkCard
 {
+    public override string PortraitPath => "res://STS2_Mulundus/images/card_portraits/divine_spark.png";
+
+    protected override bool ShouldGlowGoldInternal => ShouldGlowGoldFromBalance;
+
     public DivineSpark() : base(1, CardType.Attack, CardRarity.Uncommon, TargetType.AnyEnemy)
     {
         WithDamage(8);
-        WithHeal(2);
+        WithHeal(4);
+        WithTip(EmeraldMonkKeywords.Balanced);
     }
 
     protected override async Task OnPlay(
@@ -20,11 +25,16 @@ public class DivineSpark : EmeraldMonkCard
         CardPlay play)
     {
         await CommonActions.CardAttack(this, play).Execute(choiceContext);
-        await CreatureCmd.Heal(Owner.Creature, DynamicVars.Heal.BaseValue);
+        if (ShouldGlowGoldFromBalance)
+        {
+            await CreatureCmd.Heal(Owner.Creature, DynamicVars.Heal.BaseValue);
+        }
     }
 
     protected override void OnUpgrade()
     {
         DynamicVars.Damage.UpgradeValueBy(3);
+        DynamicVars.Heal.UpgradeValueBy(2);
+        
     }
 }
