@@ -10,7 +10,7 @@ namespace STS2_Mulundus.STS2_MulundusCode.Cards.HeartwoodRanger.Rare;
 [Pool(typeof(HeartwoodRangerCardPool))]
 public class AbyssalJourney : HeartWoodRangerCard
 {
-    public override string PortraitPath => "Cilef Base.png".CardImagePath();
+    public override string PortraitPath => "res://STS2_Mulundus/images/card_portraits/abyssal_journey.png";
     public AbyssalJourney() : base(1, CardType.Power, CardRarity.Rare, TargetType.Self)
     {
         WithPower<WisdomPower>(2);

@@ -8,6 +8,7 @@ namespace STS2_Mulundus.STS2_MulundusCode.Cards.HeartwoodRanger.Rare;
 [Pool(typeof(HeartwoodRangerCardPool))]
 public class PoisonedBarbs : HeartWoodRangerCard
 {
+    public override string PortraitPath => "res://STS2_Mulundus/images/card_portraits/poisoned_barbs.png";
     public PoisonedBarbs() : base(1, CardType.Power, CardRarity.Rare, TargetType.Self)
     {
         WithPower<PoisonBarbsPower>(1);

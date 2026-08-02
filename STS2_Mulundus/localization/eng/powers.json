@@ -98,9 +98,9 @@
   "STS2_MULUNDUS-WISDOM_POWER.description": "At end of turn, gain [blue]1[/blue] [gold]Block[/gold] for each card type left in your hand.",
   "STS2_MULUNDUS-WISDOM_POWER.smartDescription": "At end of turn, gain {Amount} [gold]Block[/gold] for each card type left in your hand.",
   "STS2_MULUNDUS-WISDOM_POWER.title": "Wisdom",
-  "STS2_MULUNDUS-POUR_OVER_THE_PAGES_POWER.description": "Whenever you [gold]Exhaust[/gold] a card, draw a card and discard a card.",
-  "STS2_MULUNDUS-POUR_OVER_THE_PAGES_POWER.smartDescription": "Whenever you [gold]Exhaust[/gold] a card, draw {Amount:plural:a|{}} {Amount:plural:card|cards} and discard a card.",
-  "STS2_MULUNDUS-POUR_OVER_THE_PAGES_POWER.title": "Pour over the Pages",
+  "STS2_MULUNDUS-PORE_OVER_THE_PAGES_POWER.description": "Whenever you [gold]Exhaust[/gold] a card, draw a card and discard a card.",
+  "STS2_MULUNDUS-PORE_OVER_THE_PAGES_POWER.smartDescription": "Whenever you [gold]Exhaust[/gold] a card, draw {Amount:plural:a|{}} {Amount:plural:card|cards} and discard a card.",
+  "STS2_MULUNDUS-PORE_OVER_THE_PAGES_POWER.title": "Pore over the Pages",
   "STS2_MULUNDUS-DRUNKEN_MASTERY_POWER.description": "Whenever you play a card with [gold]Ebb[/gold] or [gold]Flow[/gold], if its cost was reduced, randomize the cost of ALL cards in your hand.",
   "STS2_MULUNDUS-DRUNKEN_MASTERY_POWER.smartDescription": "Whenever you play a card with [gold]Ebb[/gold] or [gold]Flow[/gold], if its cost was reduced, randomize the cost of ALL cards in your hand.",
   "STS2_MULUNDUS-DRUNKEN_MASTERY_POWER.title": "Drunken Mastery"

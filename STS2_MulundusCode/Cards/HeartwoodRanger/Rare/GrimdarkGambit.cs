@@ -8,6 +8,7 @@ namespace STS2_Mulundus.STS2_MulundusCode.Cards.HeartwoodRanger.Rare;
 [Pool(typeof(HeartwoodRangerCardPool))]
 public class GrimdarkGambit : HeartWoodRangerCard
 {
+    public override string PortraitPath => "res://STS2_Mulundus/images/card_portraits/grimdark_gambit.png";
     public GrimdarkGambit() : base(2, CardType.Skill, CardRarity.Rare, TargetType.Self)
     {
         WithVar(new DynamicVar("CardsToPlay", 3));

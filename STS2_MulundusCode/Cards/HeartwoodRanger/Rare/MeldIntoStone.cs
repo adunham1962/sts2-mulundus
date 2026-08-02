@@ -9,7 +9,7 @@ namespace STS2_Mulundus.STS2_MulundusCode.Cards.HeartwoodRanger.Rare;
 [Pool(typeof(HeartwoodRangerCardPool))]
 public class MeldIntoStone : HeartWoodRangerCard
 {
-    
+    public override string PortraitPath => "res://STS2_Mulundus/images/card_portraits/meld_into_stone.png";
     public MeldIntoStone() : base(3, CardType.Power, CardRarity.Rare, TargetType.Self)
     {
         WithPower<PlatingPower>(20);

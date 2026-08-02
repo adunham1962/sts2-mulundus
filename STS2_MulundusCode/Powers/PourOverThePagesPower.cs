@@ -9,7 +9,7 @@ using MegaCrit.Sts2.Core.Models;
 
 namespace STS2_Mulundus.STS2_MulundusCode.Powers;
 
-public class PourOverThePagesPower : CustomPowerModel
+public class PoreOverThePagesPower : CustomPowerModel
 {
     public override PowerType Type => PowerType.Buff;
     public override PowerStackType StackType => PowerStackType.Single;

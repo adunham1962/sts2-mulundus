@@ -11,7 +11,7 @@ namespace STS2_Mulundus.STS2_MulundusCode.Cards.HeartwoodRanger.Rare;
 [Pool(typeof(HeartwoodRangerCardPool))]
 public class BloomingForm : HeartWoodRangerCard
 {
-    public override string PortraitPath => "Cilef Base.png".CardImagePath();
+    public override string PortraitPath => "res://STS2_Mulundus/images/card_portraits/blooming_form.png";
     public BloomingForm() : base(3, CardType.Power, CardRarity.Rare, TargetType.Self)
     {
         WithPower<PoisonPower>(2);

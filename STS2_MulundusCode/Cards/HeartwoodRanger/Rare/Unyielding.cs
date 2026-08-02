@@ -8,7 +8,7 @@ namespace STS2_Mulundus.STS2_MulundusCode.Cards.HeartwoodRanger.Rare;
 [Pool(typeof(HeartwoodRangerCardPool))]
 public class Unyielding : HeartWoodRangerCard
 {
-
+    public override string PortraitPath => "res://STS2_Mulundus/images/card_portraits/unyielding.png";
     public Unyielding() : base(1, CardType.Power, CardRarity.Rare, TargetType.Self)
     {
         WithPower<UnyieldingPower>(1);

@@ -9,6 +9,7 @@ namespace STS2_Mulundus.STS2_MulundusCode.Cards.HeartwoodRanger.Rare;
 [Pool(typeof(HeartwoodRangerCardPool))]
 public class BrambleMantle : HeartWoodRangerCard
 {
+    public override string PortraitPath => "res://STS2_Mulundus/images/card_portraits/bramble_mantle.png";
     public BrambleMantle() : base(1, CardType.Power, CardRarity.Rare, TargetType.Self)
     {
         WithPower<BrambleMantlePower>(1);
