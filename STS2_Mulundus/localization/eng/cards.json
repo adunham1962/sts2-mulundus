@@ -322,5 +322,7 @@
   "STS2_MULUNDUS-DRUNKEN_MASTERY.description": "Gain X{IfUpgraded:show:+1} [gold]Strength[/gold].\nWhenever you play a card with [gold]Ebb[/gold] or [gold]Flow[/gold], if its cost was reduced, randomize the cost of ALL cards in your hand.",
   "STS2_MULUNDUS-DRUNKEN_MASTERY.title": "Drunken Master",
   "STS2_MULUNDUS-WHIRLPOOL.description": "Deal {CalculatedDamage:diff()} to ALL enemies. Deal {ExtraDamage:diff()} additional damage for each time this card has been played this combat.",
-  "STS2_MULUNDUS-WHIRLPOOL.title": "Whirlpool"
+  "STS2_MULUNDUS-WHIRLPOOL.title": "Whirlpool",
+  "STS2_MULUNDUS-FLOWING_FLURRY.description": "Deal {Damage:diff()} damage.\nWhenever you play another card with [gold]Flow[/gold], return this card to your [gold]Hand[/gold] from your [gold]Discard Pile[/gold].",
+  "STS2_MULUNDUS-FLOWING_FLURRY.title": "Flowing Flurry"
 }
