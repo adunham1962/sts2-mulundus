@@ -6,12 +6,13 @@ using STS2_Mulundus.STS2_MulundusCode.Character;
 namespace STS2_Mulundus.STS2_MulundusCode.Cards.EmeraldMonk.Common;
 
 [Pool(typeof(EmeraldMonkCardPool))]
-public class FlyingElbow : EmeraldMonkCard
+public class SurfingStrike : EmeraldMonkCard
 {
-    public FlyingElbow() : base(1, CardType.Attack, CardRarity.Common, TargetType.AnyEnemy)
+    public SurfingStrike() : base(1, CardType.Attack, CardRarity.Common, TargetType.AnyEnemy)
     {
         WithDamage(7);
         WithKeyword(EmeraldMonkKeywords.Flow);
+        WithTags(CardTag.Strike);
     }
 
     protected override async Task OnPlay(

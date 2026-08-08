@@ -13,7 +13,7 @@ public class FrogStance : EmeraldMonkCard
 
     public FrogStance() : base(1, CardType.Skill, CardRarity.Common, TargetType.Self)
     {
-        WithKeyword(EmeraldMonkKeywords.EnterStance);
+        WithKeyword(EmeraldMonkKeywords.Sink);
         WithTips(_ => [HoverTipFactory.FromCard<FrogsLeap>()]);
     }
 

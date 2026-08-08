@@ -15,7 +15,6 @@ public class Sunbeam : EmeraldMonkCard
     {
         WithDamage(16);
         WithPower<VulnerablePower>(3);
-        WithKeyword(CardKeyword.Retain);
         WithKeyword(EmeraldMonkKeywords.Stance);
     }
     

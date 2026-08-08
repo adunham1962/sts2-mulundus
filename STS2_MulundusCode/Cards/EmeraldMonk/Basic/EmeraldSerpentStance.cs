@@ -15,7 +15,7 @@ public class EmeraldSerpentStance : EmeraldMonkCard
     
     public EmeraldSerpentStance() : base(1, CardType.Skill, CardRarity.Basic, TargetType.Self)
     {
-        WithKeyword(EmeraldMonkKeywords.EnterStance);
+        WithKeyword(EmeraldMonkKeywords.Sink);
         WithTips(_ => [HoverTipFactory.FromCard<SerpentStrike>()]);
     }
 

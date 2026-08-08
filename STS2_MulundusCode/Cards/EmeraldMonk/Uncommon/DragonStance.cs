@@ -13,7 +13,7 @@ public class DragonStance : EmeraldMonkCard
 
     public DragonStance() : base(1, CardType.Skill, CardRarity.Uncommon, TargetType.Self)
     {
-        WithKeyword(EmeraldMonkKeywords.EnterStance);
+        WithKeyword(EmeraldMonkKeywords.Sink);
         WithTips(_ => [HoverTipFactory.FromCard<DragonsTorrent>()]);
     }
 

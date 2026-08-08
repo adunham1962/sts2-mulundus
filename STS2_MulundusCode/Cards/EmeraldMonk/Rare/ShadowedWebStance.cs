@@ -12,7 +12,7 @@ public class ShadowedWebStance : EmeraldMonkCard
 {
     public ShadowedWebStance() : base(1, CardType.Skill, CardRarity.Rare, TargetType.Self)
     {
-        WithKeyword(EmeraldMonkKeywords.EnterStance);
+        WithKeyword(EmeraldMonkKeywords.Sink);
         WithTips(_ => [HoverTipFactory.FromCard<SlipIntoShadow>()]);
     }
 

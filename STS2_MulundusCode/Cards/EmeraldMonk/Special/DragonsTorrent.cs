@@ -13,7 +13,6 @@ public class DragonsTorrent :EmeraldMonkCard
 
     public DragonsTorrent() : base(2, CardType.Attack, CardRarity.Token, TargetType.AllEnemies)
     {
-        WithKeyword(CardKeyword.Retain);
         WithKeyword(EmeraldMonkKeywords.Stance);
         WithDamage(16);
         WithPower<WeakPower>(1);

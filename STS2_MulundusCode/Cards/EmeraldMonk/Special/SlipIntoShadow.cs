@@ -14,7 +14,6 @@ public class SlipIntoShadow : EmeraldMonkCard
     public SlipIntoShadow() : base(3, CardType.Skill, CardRarity.Token, TargetType.Self)
     {
         WithPower<IntangiblePower>(1);
-        WithKeyword(CardKeyword.Retain);
         WithKeyword(EmeraldMonkKeywords.Stance);
     }
 

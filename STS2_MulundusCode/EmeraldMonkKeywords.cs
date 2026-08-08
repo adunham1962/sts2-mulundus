@@ -6,8 +6,8 @@ namespace STS2_Mulundus.STS2_MulundusCode;
 
 public static class EmeraldMonkKeywords
 {
-    [CustomEnum, KeywordProperties(AutoKeywordPosition.Before)]
-    public static CardKeyword EnterStance;
+    [CustomEnum, KeywordProperties(AutoKeywordPosition.None)]
+    public static CardKeyword Sink;
     
     [CustomEnum, KeywordProperties(AutoKeywordPosition.Before)]
     public static CardKeyword Stance;
@@ -25,11 +25,11 @@ public static class EmeraldMonkKeywords
     
     public static bool HasFlow (this CardModel card) => card.Keywords.Contains(Flow);
     
-    public static bool HasEnterStance(this CardModel card)
+    public static bool HasSink(this CardModel card)
     {
-        return card.Keywords.Contains(EnterStance);
+        return card.Keywords.Contains(Sink);
     }
-    
+
     public static bool IsStance(this CardModel card)
     {
         return card.Keywords.Contains(Stance);

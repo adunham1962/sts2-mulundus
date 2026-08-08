@@ -18,6 +18,6 @@ public class DrunkenMastery() : EmeraldMonkCard(-1, CardType.Power, CardRarity.R
     {
         var x = ResolveEnergyXValue();
         await CommonActions.ApplySelf<StrengthPower>(choiceContext, this, IsUpgraded ? x + 1 : x);
-        await CommonActions.ApplySelf<DrunkenMasteryPower>(choiceContext, this);
+        await CommonActions.ApplySelf<DrunkenMasteryPower>(choiceContext, this, 1);
     }
 }

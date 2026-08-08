@@ -14,7 +14,7 @@ public class ConjureFog : EmeraldMonkCard
     {
         WithPower<SlipperyPower>(1);
         WithKeyword(EmeraldMonkKeywords.Stance);
-        WithKeyword(CardKeyword.Retain);
+        WithTags(MulundusTags.Stance);
     }
 
     protected override async Task OnPlay(

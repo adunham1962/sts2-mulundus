@@ -13,6 +13,8 @@ public class DivineSpark : EmeraldMonkCard
 
     protected override bool ShouldGlowGoldInternal => ShouldGlowGoldFromBalance;
 
+    protected override bool HasBalanceEffect => true;
+
     public DivineSpark() : base(1, CardType.Attack, CardRarity.Uncommon, TargetType.AnyEnemy)
     {
         WithDamage(8);
@@ -25,7 +27,7 @@ public class DivineSpark : EmeraldMonkCard
         CardPlay play)
     {
         await CommonActions.CardAttack(this, play).Execute(choiceContext);
-        if (ShouldGlowGoldFromBalance)
+        if (TreatAsBalancedWhilePlaying)
         {
             await CreatureCmd.Heal(Owner.Creature, DynamicVars.Heal.BaseValue);
         }

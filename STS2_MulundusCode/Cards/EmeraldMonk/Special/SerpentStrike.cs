@@ -16,7 +16,6 @@ public class SerpentStrike : EmeraldMonkCard
     {
         WithDamage(6);
         WithPower<PoisonPower>(5);
-        WithKeyword(CardKeyword.Retain);
         WithKeyword(EmeraldMonkKeywords.Stance);
         WithTags(CardTag.Strike);
     }

@@ -11,7 +11,7 @@ using static MegaCrit.Sts2.Core.Entities.Cards.TargetType;
 namespace STS2_Mulundus.STS2_MulundusCode.Cards.HeartwoodRanger;
 
 public abstract class HeartWoodRangerCard(int cost, CardType type, CardRarity rarity, TargetType target) :
-    ConstructedCardModel(cost, type, rarity, target)
+    MulundusCard(cost, type, rarity, target)
 {
     
     public override async Task AfterCardExhausted(PlayerChoiceContext choiceContext, CardModel card, bool causedByEthereal)

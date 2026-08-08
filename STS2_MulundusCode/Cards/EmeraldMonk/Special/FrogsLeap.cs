@@ -12,7 +12,6 @@ public class FrogsLeap : EmeraldMonkCard
     public FrogsLeap() : base(1, CardType.Skill, CardRarity.Token, TargetType.Self)
     {
         WithKeyword(EmeraldMonkKeywords.Stance);
-        WithKeyword(CardKeyword.Retain);
         WithBlock(12);
     }
 

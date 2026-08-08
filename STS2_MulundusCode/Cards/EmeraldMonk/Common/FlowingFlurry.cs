@@ -32,6 +32,6 @@ public class FlowingFlurry : EmeraldMonkCard
 
     protected override void OnUpgrade()
     {
-
+        DynamicVars.Damage.UpgradeValueBy(2);
     }
 }

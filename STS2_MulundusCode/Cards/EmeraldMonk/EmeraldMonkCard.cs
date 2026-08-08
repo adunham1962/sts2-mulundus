@@ -1,4 +1,3 @@
-using BaseLib.Abstracts;
 using BaseLib.Extensions;
 using MegaCrit.Sts2.Core.Commands;
 using MegaCrit.Sts2.Core.Entities.Cards;
@@ -10,7 +9,7 @@ using STS2_Mulundus.STS2_MulundusCode.Extensions;
 namespace STS2_Mulundus.STS2_MulundusCode.Cards.EmeraldMonk;
 
 public abstract class EmeraldMonkCard(int cost, CardType type, CardRarity rarity, TargetType target) :
-    ConstructedCardModel(cost, type, rarity, target)
+    MulundusCard(cost, type, rarity, target)
 {
 
     private bool _isEbbReduced = false;
@@ -22,7 +21,30 @@ public abstract class EmeraldMonkCard(int cost, CardType type, CardRarity rarity
                                                     .GetPile(Owner).Cards.Count(c => c.Type == CardType.Skill);
 
     protected virtual bool HasBalanceEffect => false;
-    
+
+    protected bool TreatAsBalancedWhilePlaying
+    {
+        get
+        {
+            var otherType = Type == CardType.Skill ? CardType.Attack : CardType.Skill;
+            
+            return HasBalanceEffect &&
+                   PileType.Hand.GetPile(Owner).Cards
+                       .Count(c => c.Type == Type) + 1 == PileType.Hand
+                       .GetPile(Owner).Cards.Count(c => c.Type == otherType);
+        }
+    }
+
+    public override Task BeforeFlush(PlayerChoiceContext choiceContext, Player player)
+    {
+        if (this.IsStance())
+        {
+            GiveSingleTurnRetain();
+        }
+
+        return Task.CompletedTask;
+    }
+
     public override Task AfterFlush(PlayerChoiceContext choiceContext, Player player, IReadOnlyCollection<CardModel> flushedCards,
         IReadOnlyCollection<CardModel> retainedCards)
     {
@@ -44,7 +66,7 @@ public abstract class EmeraldMonkCard(int cost, CardType type, CardRarity rarity
             CardPileCmd.RemoveFromCombat(card);
         }
 
-        if (card.HasEnterStance() && card == this)
+        if (card.HasSink() && card == this)
         {
             var cards = PileType.Hand.GetPile(Owner).Cards.ToList().Where(c => c.IsStance());
             foreach (var cardModel in cards)
