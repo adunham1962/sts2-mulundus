@@ -9,7 +9,7 @@ namespace STS2_Mulundus.STS2_MulundusCode.Cards.EmeraldMonk.Common;
 [Pool(typeof(EmeraldMonkCardPool))]
 public class FlowingFlurry : EmeraldMonkCard
 {
-    public FlowingFlurry() : base(0, CardType.Attack, CardRarity.Common, TargetType.AnyEnemy)
+    public FlowingFlurry() : base(0, CardType.Attack, CardRarity.Uncommon, TargetType.AnyEnemy)
     {
         WithDamage(4);
     }

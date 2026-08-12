@@ -31,6 +31,6 @@ public class PalmStrike : EmeraldMonkCard
 
     protected override void OnUpgrade()
     {
-        AddKeyword(EmeraldMonkKeywords.Flow);
+        DynamicVars.Damage.UpgradeValueBy(3);
     }
 }

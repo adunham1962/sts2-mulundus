@@ -11,7 +11,7 @@ public class SlicingSpear : EmeraldMonkCard
 {
     public SlicingSpear() : base(1, CardType.Attack, CardRarity.Common, TargetType.AllEnemies)
     {
-        WithCalculatedDamage(7, (card, _) => card.Owner.Creature.GetPowerAmount<DexterityPower>());
+        WithCalculatedDamage(4, (card, _) => card.Owner.Creature.GetPowerAmount<DexterityPower>());
     }
 
     protected override async Task OnPlay(
@@ -23,6 +23,6 @@ public class SlicingSpear : EmeraldMonkCard
 
     protected override void OnUpgrade()
     {
-        DynamicVars.CalculationBase.UpgradeValueBy(3);
+        DynamicVars.CalculationBase.UpgradeValueBy(2);
     }
 }

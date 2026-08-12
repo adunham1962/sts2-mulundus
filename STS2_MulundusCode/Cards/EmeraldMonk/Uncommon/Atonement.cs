@@ -27,7 +27,7 @@ public class Atonement : EmeraldMonkCard
         CardPlay play)
     {
         await PowerCmd.Apply<EnergyNextTurnPower>(choiceContext, Owner.Creature, DynamicVars.Energy.BaseValue, Owner.Creature, this);
-        if (ShouldGlowGoldFromBalance)
+        if (TreatAsBalancedWhilePlaying)
         {
             await PlayerCmd.GainEnergy(DynamicVars["EnergyTwo"].BaseValue, Owner);
         }

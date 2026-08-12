@@ -1,4 +1,5 @@
 using BaseLib.Utils;
+using MegaCrit.Sts2.Core.Combat;
 using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 using STS2_Mulundus.STS2_MulundusCode.Character;
@@ -7,11 +8,12 @@ namespace STS2_Mulundus.STS2_MulundusCode.Cards.EmeraldMonk.Common;
 [Pool(typeof(EmeraldMonkCardPool))]
 public class QuickJab : EmeraldMonkCard
 {
+    protected override bool ShouldGlowGoldInternal =>
+        CombatManager.Instance.History.CardPlaysFinished.Last().CardPlay.Card.Type == CardType.Skill;
 
-    public QuickJab() : base(1, CardType.Attack, CardRarity.Common, TargetType.AnyEnemy)
+    public QuickJab() : base(0, CardType.Attack, CardRarity.Common, TargetType.AnyEnemy)
     {
         WithDamage(4);
-        WithKeyword(EmeraldMonkKeywords.Flow);
         WithCards(1);
     }
 
@@ -20,11 +22,14 @@ public class QuickJab : EmeraldMonkCard
         CardPlay play)
     {
         await CommonActions.CardAttack(this, play).Execute(choiceContext);
-        await CommonActions.Draw(this, choiceContext);
+        if (ShouldGlowGoldInternal)
+        {
+            await CommonActions.Draw(this, choiceContext);
+        }
     }
 
     protected override void OnUpgrade()
     {
-        DynamicVars.Damage.UpgradeValueBy(2);
+        DynamicVars.Cards.UpgradeValueBy(1);
     }
 }

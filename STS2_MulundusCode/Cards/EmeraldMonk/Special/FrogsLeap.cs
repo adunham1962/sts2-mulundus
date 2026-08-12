@@ -4,6 +4,7 @@ using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.Entities.Players;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 using MegaCrit.Sts2.Core.Models.CardPools;
+using STS2_Mulundus.STS2_MulundusCode.Powers;
 
 namespace STS2_Mulundus.STS2_MulundusCode.Cards.EmeraldMonk.Special;
 [Pool(typeof(TokenCardPool))]
@@ -12,19 +13,21 @@ public class FrogsLeap : EmeraldMonkCard
     public FrogsLeap() : base(1, CardType.Skill, CardRarity.Token, TargetType.Self)
     {
         WithKeyword(EmeraldMonkKeywords.Stance);
-        WithBlock(12);
+        WithPower<FrogsLeapPower>(4);
+        WithCards(1);
     }
 
     protected override async Task OnPlay(
         PlayerChoiceContext choiceContext,
         CardPlay play)
     {
-        await CommonActions.CardBlock(this, play);
+        await CommonActions.ApplySelf<FrogsLeapPower>(choiceContext, this);
+        await CommonActions.Draw(this, choiceContext);
     }
 
     protected override void OnUpgrade()
     {
-        DynamicVars.Block.UpgradeValueBy(4);
+        DynamicVars["FrogsLeapPower"].UpgradeValueBy(2);
     }
     
     public static IEnumerable<FrogsLeap> Create(Player owner, decimal amount, ICombatState combatState)
