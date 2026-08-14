@@ -1,7 +1,7 @@
 {
   "STS2_MULUNDUS-GRIM.description": "When exhausted, this card is played.",
   "STS2_MULUNDUS-GRIM.title": "Grim",
-  "STS2_MULUNDUS-SINK.description": "Remove all [gold]Stances[/gold] from your hand.\nCreate the [gold]Stance[/gold] designated card(s).",
+  "STS2_MULUNDUS-SINK.description": "Remove all cards with [gold]Deepen[/gold] from your hand.\nCreate the cards designated for [gold]Sinking[/gold] into this stance.",
   "STS2_MULUNDUS-SINK.title": "Sink",
   "STS2_MULUNDUS-STANCE.description": "[gold]Retain[/gold] this card each turn. It costs {energyPrefix:energyIcons(1)} less each turn you [gold]Retain[/gold] it.\nRemove it from combat when played.",
   "STS2_MULUNDUS-STANCE.title": "Deepen",
@@ -12,5 +12,7 @@
   "STS2_MULUNDUS-BALANCED.description": "If you have an equal number of attacks and skills in your hand, you are balanced.",
   "STS2_MULUNDUS-BALANCED.title": "Balanced",
   "STS2_MULUNDUS-ABSORB.description": "Remove a power from one or more enemies, and gain that much of that power.",
-  "STS2_MULUNDUS-ABSORB.title": "Absorb"
+  "STS2_MULUNDUS-ABSORB.title": "Absorb",
+  "STS2_MULUNDUS-CONSUME.description": "Remove and use the amount of target power, ability, etc.",
+  "STS2_MULUNDUS-CONSUME.title": "Consume"
 }

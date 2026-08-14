@@ -7,5 +7,7 @@ public static class MulundusKeywords
 {
     [CustomEnum, KeywordProperties(AutoKeywordPosition.None)]
     public static CardKeyword Absorb;
+    [CustomEnum, KeywordProperties(AutoKeywordPosition.None)]
+    public static CardKeyword Consume;
     
 }

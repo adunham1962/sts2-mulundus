@@ -30,4 +30,22 @@ public abstract class MulundusCard(int cost, CardType type, CardRarity rarity, T
         await CommonActions.ApplySelf<TPower>(context, this, amount);
     }
 
+    protected async Task<int> Consume<TPower>(PlayerChoiceContext context, IReadOnlyList<Creature> targets) where TPower : PowerModel
+    {
+        var amount = targets.Sum(creature => creature.GetPowerAmount<TPower>());
+        foreach (var creature in targets)
+        {
+            await PowerCmd.Remove<TPower>(creature);
+        }
+
+        return amount;
+    }
+    
+    protected async Task<int> Consume<TPower>(PlayerChoiceContext context, Creature target) where TPower : PowerModel
+    {
+        var amount = target.GetPowerAmount<TPower>();
+        await PowerCmd.Remove<TPower>(target);
+        return amount;
+    }
+
 }

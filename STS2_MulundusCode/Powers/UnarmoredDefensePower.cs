@@ -9,7 +9,7 @@ using MegaCrit.Sts2.Core.ValueProps;
 
 namespace STS2_Mulundus.STS2_MulundusCode.Powers;
 
-public class DivineProtectionPower : CustomPowerModel
+public class UnarmoredDefensePower : CustomPowerModel
 {
     public override PowerType Type => PowerType.Buff;
     public override PowerStackType StackType => PowerStackType.Counter;

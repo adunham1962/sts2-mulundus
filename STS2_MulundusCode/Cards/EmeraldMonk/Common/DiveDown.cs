@@ -6,10 +6,10 @@ using STS2_Mulundus.STS2_MulundusCode.Character;
 namespace STS2_Mulundus.STS2_MulundusCode.Cards.EmeraldMonk.Common;
 
 [Pool(typeof(EmeraldMonkCardPool))]
-public class SpinningDodge : EmeraldMonkCard
+public class DiveDown : EmeraldMonkCard
 {
 
-    public SpinningDodge() : base(1, CardType.Skill, CardRarity.Common, TargetType.Self)
+    public DiveDown() : base(1, CardType.Skill, CardRarity.Common, TargetType.Self)
     {
         WithBlock(6);
         WithKeyword(EmeraldMonkKeywords.Ebb);

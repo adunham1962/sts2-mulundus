@@ -7,19 +7,18 @@ using STS2_Mulundus.STS2_MulundusCode.Powers;
 namespace STS2_Mulundus.STS2_MulundusCode.Cards.EmeraldMonk.Uncommon;
 
 [Pool(typeof(EmeraldMonkCardPool))]
-public class DivineProtection : EmeraldMonkCard
+public class UnarmoredDefense : EmeraldMonkCard
 {
-
-    public DivineProtection() : base(1, CardType.Power, CardRarity.Uncommon, TargetType.Self)
+    public UnarmoredDefense() : base(1, CardType.Power, CardRarity.Uncommon, TargetType.Self)
     {
-        WithPower<DivineProtectionPower>(4);
+        WithPower<UnarmoredDefensePower>(4);
     }
 
     protected override async Task OnPlay(
         PlayerChoiceContext choiceContext,
         CardPlay play)
     {
-        await CommonActions.ApplySelf<DivineProtectionPower>(choiceContext, this);
+        await CommonActions.ApplySelf<UnarmoredDefensePower>(choiceContext, this);
     }
 
     protected override void OnUpgrade()
