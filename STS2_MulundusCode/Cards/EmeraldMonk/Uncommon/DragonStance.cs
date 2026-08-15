@@ -26,6 +26,7 @@ public class DragonStance : EmeraldMonkCard
             CardCmd.Upgrade(card);
         }
 
+        LatestCardsCreated = [card];
         await CardPileCmd.AddGeneratedCardToCombat(card, PileType.Hand, Owner);
     }
     

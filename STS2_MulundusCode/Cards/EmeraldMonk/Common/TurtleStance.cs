@@ -27,6 +27,7 @@ public class TurtleStance : EmeraldMonkCard
             if (IsUpgraded) CardCmd.Upgrade(card);
         });
 
+        LatestCardsCreated = cards;
         await CardPileCmd.AddGeneratedCardsToCombat(cards, PileType.Hand, Owner);
     }
 

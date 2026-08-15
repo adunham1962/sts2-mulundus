@@ -26,6 +26,6 @@ public class DownpourPower : CustomPowerModel
     public override decimal ModifyDamageAdditive(Creature? target, decimal amount, ValueProp props, Creature? dealer,
         CardModel? cardSource)
     {
-        return target == Owner && cardSource is EmeraldMonkCard && (cardSource.HasEbb() || cardSource.HasFlow()) ? Amount : 0;
+        return target == Owner && cardSource is EmeraldMonkCard && (cardSource.HasEbb() || cardSource.HasFlow() || cardSource.IsStance()) ? Amount : 0;
     }
 }

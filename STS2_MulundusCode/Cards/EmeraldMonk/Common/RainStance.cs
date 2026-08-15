@@ -25,13 +25,15 @@ public class RainStance : EmeraldMonkCard
         CardPlay play)
     {
         if (CombatState is null || play.Card != this) return;
-        var amount = await Consume<SlipperyPower>(choiceContext, CombatState.HittableEnemies);
-        amount += await Consume<DownpourPower>(choiceContext, CombatState.HittableEnemies);
+        var amount = await Consume<SlipperyPower>(CombatState.HittableEnemies);
+        amount += await Consume<DownpourPower>(CombatState.HittableEnemies);
         var cards = RainBarrage.Create(Owner, amount, CombatState).ToList();
         cards.ForEach(card =>
         {
             if (IsUpgraded) CardCmd.Upgrade(card);
         });
+
+        LatestCardsCreated = cards;
 
         await CardPileCmd.AddGeneratedCardsToCombat(cards, PileType.Hand, Owner);
     }

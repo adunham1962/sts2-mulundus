@@ -4,6 +4,7 @@ using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.Entities.Players;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 using MegaCrit.Sts2.Core.Models.CardPools;
+using STS2_Mulundus.STS2_MulundusCode.Powers;
 
 namespace STS2_Mulundus.STS2_MulundusCode.Cards.EmeraldMonk.Special;
 [Pool(typeof(TokenCardPool))]
@@ -14,6 +15,7 @@ public class RainBarrage : EmeraldMonkCard
         WithDamage(1);
         WithKeyword(EmeraldMonkKeywords.Stance);
         WithVar("Hits", 2);
+        WithPower<DownpourPower>(1);
     }
 
     protected override async Task OnPlay(
@@ -22,6 +24,8 @@ public class RainBarrage : EmeraldMonkCard
     {
         var hits = DynamicVars["Hits"].IntValue;
         await CommonActions.CardAttack(this, play, hits).Execute(choiceContext);
+        if (CombatState != null)
+            await CommonActions.Apply<DownpourPower>(choiceContext, CombatState.HittableEnemies, this);
     }
 
     protected override void OnUpgrade()

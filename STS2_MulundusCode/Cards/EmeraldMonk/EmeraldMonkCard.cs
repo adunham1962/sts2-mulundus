@@ -22,6 +22,8 @@ public abstract class EmeraldMonkCard(int cost, CardType type, CardRarity rarity
 
     protected virtual bool HasBalanceEffect => false;
 
+    protected IEnumerable<CardModel> LatestCardsCreated = [];
+
     protected bool TreatAsBalancedWhilePlaying
     {
         get
@@ -71,7 +73,8 @@ public abstract class EmeraldMonkCard(int cost, CardType type, CardRarity rarity
             var cards = PileType.Hand.GetPile(Owner).Cards.ToList().Where(c => c.IsStance());
             foreach (var cardModel in cards)
             {
-                CardPileCmd.RemoveFromCombat(cardModel);
+                if (!LatestCardsCreated.Contains(cardModel))
+                    CardPileCmd.RemoveFromCombat(cardModel);
             }
         }
 
