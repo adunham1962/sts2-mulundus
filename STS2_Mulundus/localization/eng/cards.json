@@ -286,7 +286,7 @@
   "STS2_MULUNDUS-ATONEMENT.title": "Atonement",
   "STS2_MULUNDUS-LIGHT.description": "Powers cost {energyPrefix:energyIcons(1)} less.",
   "STS2_MULUNDUS-LIGHT.title": "Light",
-  "STS2_MULUNDUS-MULTICULTURALISM.description": "Cards you create cost {energyPrefix:energyTips(1)} less.",
+  "STS2_MULUNDUS-MULTICULTURALISM.description": "Cards you create cost {energyPrefix:energyIcons(1)} less.",
   "STS2_MULUNDUS-MULTICULTURALISM.title": "Multiculturalism",
   "STS2_MULUNDUS-REACTIVE_COMBATANT.description": "Whenever you [gold]Deepen[/gold] your stance, gain {ReactiveCombatantPower:diff()} [gold]Block[/gold].",
   "STS2_MULUNDUS-REACTIVE_COMBATANT.title": "Reactive Combatant",

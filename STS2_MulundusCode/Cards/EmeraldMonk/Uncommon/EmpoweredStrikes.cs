@@ -23,6 +23,6 @@ public class EmpoweredStrikes : EmeraldMonkCard
 
     protected override void OnUpgrade()
     {
-        DynamicVars["DynamicVarsPower"].UpgradeValueBy(2);
+        DynamicVars["EmpoweredStrikesPower"].UpgradeValueBy(2);
     }
 }
