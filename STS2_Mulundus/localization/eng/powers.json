@@ -44,8 +44,8 @@
   "STS2_MULUNDUS-FEINT_POWER.description": "The next attack you play this turn deals double damage.",
   "STS2_MULUNDUS-FEINT_POWER.smartDescription": "The next attack you play this turn deals double damage.",
   "STS2_MULUNDUS-FEINT_POWER.title": "Feint",
-  "STS2_MULUNDUS-DEFLECT_ATTACKS_POWER.description": "Reflect attack damage to your attacker equal to your [gold]Dexterity[/gold].",
-  "STS2_MULUNDUS-DEFLECT_ATTACKS_POWER.smartDescription": "Reflect up to {Amount} attack damage to your attacker.",
+  "STS2_MULUNDUS-DEFLECT_ATTACKS_POWER.description": "Reflect damage to your attacker equal to the amount you blocked.",
+  "STS2_MULUNDUS-DEFLECT_ATTACKS_POWER.smartDescription": "Reflect damage to your attacker equal to the amount you blocked.",
   "STS2_MULUNDUS-DEFLECT_ATTACKS_POWER.title": "Deflect Attacks",
   "STS2_MULUNDUS-DEXTEROUS_ATTACKS_POWER.description": "Your attacks benefit from [gold]Dexterity[/gold] rather than [gold]Strength[/gold].",
   "STS2_MULUNDUS-DEXTEROUS_ATTACKS_POWER.smartDescription": "Your attacks benefit from [gold]Dexterity[/gold] rather than [gold]Strength[/gold].",
@@ -103,5 +103,8 @@
   "STS2_MULUNDUS-PORE_OVER_THE_PAGES_POWER.title": "Pore over the Pages",
   "STS2_MULUNDUS-DRUNKEN_MASTERY_POWER.description": "Whenever you play a card with [gold]Ebb[/gold] or [gold]Flow[/gold], if its cost was reduced, randomize the cost of ALL cards in your hand.",
   "STS2_MULUNDUS-DRUNKEN_MASTERY_POWER.smartDescription": "Whenever you play a card with [gold]Ebb[/gold] or [gold]Flow[/gold], if its cost was reduced, randomize the cost of ALL cards in your hand.",
-  "STS2_MULUNDUS-DRUNKEN_MASTERY_POWER.title": "Drunken Mastery"
+  "STS2_MULUNDUS-DRUNKEN_MASTERY_POWER.title": "Drunken Mastery",
+  "STS2_MULUNDUS-EMPOWERED_STRIKES_POWER.description": "Your cards containing \"Strike\" deal [blue]2[/blue] additional damage and are unaffected by [gold]Weak[/gold].",
+  "STS2_MULUNDUS-EMPOWERED_STRIKES_POWER.smartDescription": "Your cards containing \"Strike\" deal {Amount} additional damage and are unaffected by [gold]Weak[/gold].",
+  "STS2_MULUNDUS-EMPOWERED_STRIKES_POWER.title": "Empowered Strikes"
 }

@@ -226,11 +226,9 @@
   "STS2_MULUNDUS-FROG_STANCE.title": "Frog Stance",
   "STS2_MULUNDUS-PALM_STRIKE.description": "Deal {Damage:diff()} damage.\nApply {VulnerablePower:diff()} [gold]Vulnerable[/gold] if the last card you played was a skill.",
   "STS2_MULUNDUS-PALM_STRIKE.title": "Palm Strike",
-  "STS2_MULUNDUS-BLOODBEND.description": "Deal {Damage:diff()} damage. Deals {Damage:diff()} additional damage if the enemy is [gold]Debuffed[/gold].\nLose 1 HP.",
-  "STS2_MULUNDUS-BLOODBEND.title": "Bloodbend",
   "STS2_MULUNDUS-COMMAND.description": "Apply {VulnerablePower:diff()} [gold]Vulnerable[/gold].\nChange the enemy's [gold]Intent[/gold].",
   "STS2_MULUNDUS-COMMAND.title": "Command",
-  "STS2_MULUNDUS-DEFLECT_ATTACKS.description": "Gain {Block:diff()} [gold]Block[/gold].\nUp to {CalculatedReflect:diff()} damage is reduced and reflected to your attacker this turn, increased by your [gold]Dexterity[/gold].",
+  "STS2_MULUNDUS-DEFLECT_ATTACKS.description": "Gain {Block:diff()} [gold]Block[/gold].\nUntil next turn, reflect all damage you blocked back to the attacker.",
   "STS2_MULUNDUS-DEFLECT_ATTACKS.title": "Deflect Attacks",
   "STS2_MULUNDUS-DEXTEROUS_ATTACKS.description": "Your Attacks benefit from [gold]Dexterity[/gold] rather than [gold]Strength[/gold].",
   "STS2_MULUNDUS-DEXTEROUS_ATTACKS.title": "Dexterous Attacks",
@@ -246,7 +244,7 @@
   "STS2_MULUNDUS-CONJURE_FOG.title": "Conjure Fog",
   "STS2_MULUNDUS-FOG_STANCE.description": "Add a [gold]Conjure Fog[/gold] into your [gold]Hand[/gold].",
   "STS2_MULUNDUS-FOG_STANCE.title": "Fog Stance",
-  "STS2_MULUNDUS-HEROISM.description": "Gain {ArtifactPower:diff()} [gold]Artifact[/gold].\nHeal {Heal:diff()} HP.",
+  "STS2_MULUNDUS-HEROISM.description": "[gold]Exhaust[/gold] ALL your Status cards and heal {Heal:diff()} HP.\nIf you are [gold]Balanced[/gold], gain {WisdomPower:diff()} [gold]Wisdom[/gold].",
   "STS2_MULUNDUS-HEROISM.title": "Heroism",
   "STS2_MULUNDUS-ORDERS_DEMAND.description": "Apply {WeakPower:diff()} [gold]Weak[/gold] to ALL enemies.",
   "STS2_MULUNDUS-ORDERS_DEMAND.title": "Order's Demand",
@@ -334,5 +332,9 @@
   "STS2_MULUNDUS-TURTLE_STANCE.description": "[gold]Sink[/gold] into a stance.\nAdd a [gold]Withdraw[/gold] into your [gold]Hand[/gold].",
   "STS2_MULUNDUS-TURTLE_STANCE.title": "Turtle Stance",
   "STS2_MULUNDUS-DIVINE_PROTECTION.description": "Gain {Block:diff()} [gold]Block[/gold].\nIf you are [gold]Balanced[/gold], heal {Heal:diff()} HP.",
-  "STS2_MULUNDUS-DIVINE_PROTECTION.title": "Divine Protection"
+  "STS2_MULUNDUS-DIVINE_PROTECTION.title": "Divine Protection",
+  "STS2_MULUNDUS-EMPOWERED_STRIKES.description": "Your cards containing \"Strike\" deal {EmpoweredStrikesPower:diff()} additional damage and are unaffected by [gold]Weak[/gold]",
+  "STS2_MULUNDUS-EMPOWERED_STRIKES.title": "Empowered Strikes",
+  "STS2_MULUNDUS-MEDITATE.description": "Gain X{IfUpgraded:show:+1} [gold]Wisdom[/gold].",
+  "STS2_MULUNDUS-MEDITATE.title": "Meditate"
 }

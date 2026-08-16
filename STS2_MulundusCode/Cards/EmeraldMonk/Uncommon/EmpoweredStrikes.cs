@@ -1,32 +1,28 @@
 using BaseLib.Utils;
 using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
-using MegaCrit.Sts2.Core.Localization.DynamicVars;
-using MegaCrit.Sts2.Core.Models.Powers;
 using STS2_Mulundus.STS2_MulundusCode.Character;
 using STS2_Mulundus.STS2_MulundusCode.Powers;
 
 namespace STS2_Mulundus.STS2_MulundusCode.Cards.EmeraldMonk.Uncommon;
 
 [Pool(typeof(EmeraldMonkCardPool))]
-public class DeflectAttacks : EmeraldMonkCard
+public class EmpoweredStrikes : EmeraldMonkCard
 {
-
-    public DeflectAttacks() : base(1, CardType.Skill, CardRarity.Uncommon, TargetType.Self)
+    public EmpoweredStrikes() : base(0, CardType.Power, CardRarity.Uncommon, TargetType.Self)
     {
-        WithBlock(6);
+        WithPower<EmpoweredStrikesPower>(2);
     }
-    
+
     protected override async Task OnPlay(
         PlayerChoiceContext choiceContext,
         CardPlay play)
     {
-        await CommonActions.CardBlock(this, play);
-        await CommonActions.ApplySelf<DeflectAttacksPower>(choiceContext, this, 1);
+        await CommonActions.ApplySelf<EmpoweredStrikesPower>(choiceContext, this);
     }
 
     protected override void OnUpgrade()
     {
-        DynamicVars.Block.UpgradeValueBy(2);
+        DynamicVars["DynamicVarsPower"].UpgradeValueBy(2);
     }
 }
