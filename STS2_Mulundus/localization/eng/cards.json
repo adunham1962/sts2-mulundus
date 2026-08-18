@@ -85,7 +85,7 @@
   "STS2_MULUNDUS-ACORN_BUDDY.title": "Acorn Buddy",
   "STS2_MULUNDUS-COMMUNE_WITH_NATURE.description": "Draw {Cards:diff()} cards.\nIf you haven't played a card this turn, gain {Energy:energyIcons()}.",
   "STS2_MULUNDUS-COMMUNE_WITH_NATURE.title": "Commune with Nature",
-  "STS2_MULUNDUS-BAD_MUSHROOM_TRIP.description": "When you draw this, [gold]Discard[/gold] a random card.",
+  "STS2_MULUNDUS-BAD_MUSHROOM_TRIP.description": "At start of turn, if this is in your [gold]Hand[/gold], [gold]Discard[/gold] your left-most card.",
   "STS2_MULUNDUS-BAD_MUSHROOM_TRIP.title": "Bad Mushroom Trip",
   "STS2_MULUNDUS-REAPERS_RECKONING.description": "Deal {Damage:diff()} damage to a random enemy.",
   "STS2_MULUNDUS-REAPERS_RECKONING.title": "Reaper's Reckoning",

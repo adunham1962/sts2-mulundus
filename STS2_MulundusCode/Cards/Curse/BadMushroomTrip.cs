@@ -2,6 +2,7 @@ using BaseLib.Abstracts;
 using BaseLib.Utils;
 using MegaCrit.Sts2.Core.Commands;
 using MegaCrit.Sts2.Core.Entities.Cards;
+using MegaCrit.Sts2.Core.Entities.Players;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 using MegaCrit.Sts2.Core.Models;
 using MegaCrit.Sts2.Core.Models.CardPools;
@@ -20,15 +21,12 @@ public class BadMushroomTrip : ConstructedCardModel
         WithKeyword(CardKeyword.Eternal);
     }
 
-    public override async Task AfterCardDrawn(PlayerChoiceContext choiceContext, CardModel card, bool fromHandDraw)
+    public override async Task AfterPlayerTurnStart(PlayerChoiceContext choiceContext, Player player)
     {
-        if (card == this)
+        var hand = PileType.Hand.GetPile(Owner).Cards;
+        if (player == Owner && hand.Contains(this))
         {
-            // TODO: Make your hand "confused" a la Snecko Oil when you draw this rather than discarding a card
-            var hand = CardPile.GetCards(Owner, PileType.Hand).ToList();
-            var index = new Random().Next(hand.Count);
-            var discard = hand[index];
-            await CardCmd.Discard(choiceContext, discard);
+            await CardCmd.Discard(choiceContext, hand.ToList()[0]);
         }
     }
 }
