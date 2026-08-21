@@ -8,7 +8,7 @@ namespace STS2_Mulundus.STS2_MulundusCode.Cards.EmeraldMonk.Common;
 [Pool(typeof(EmeraldMonkCardPool))]
 public class Guidance : EmeraldMonkCard
 {
-
+    public override string PortraitPath => "res://STS2_Mulundus/images/card_portraits/guidance.png";
     public Guidance() : base(0, CardType.Skill, CardRarity.Common, TargetType.Self)
     {
         WithPower<GuidancePower>(4);

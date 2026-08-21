@@ -8,7 +8,7 @@ namespace STS2_Mulundus.STS2_MulundusCode.Cards.EmeraldMonk.Common;
 [Pool(typeof(EmeraldMonkCardPool))]
 public class StepOfTheWind : EmeraldMonkCard
 {
-
+    public override string PortraitPath => "res://STS2_Mulundus/images/card_portraits/step_of_the_wind.png";
     public StepOfTheWind() : base(0, CardType.Skill, CardRarity.Common, TargetType.Self)
     {
         WithBlock(3);

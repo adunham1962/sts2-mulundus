@@ -10,6 +10,7 @@ namespace STS2_Mulundus.STS2_MulundusCode.Cards.EmeraldMonk.Common;
 [Pool(typeof(EmeraldMonkCardPool))]
 public class TurtleStance : EmeraldMonkCard
 {
+    public override string PortraitPath => "res://STS2_Mulundus/images/card_portraits/turtle_stance.png";
     public TurtleStance() : base(1, CardType.Skill, CardRarity.Common, TargetType.Self)
     {
         WithKeyword(EmeraldMonkKeywords.Sink);
@@ -21,7 +22,7 @@ public class TurtleStance : EmeraldMonkCard
         CardPlay play)
     {
         if (CombatState is null || play.Card != this) return;
-        var cards = RainBarrage.Create(Owner, 1, CombatState).ToList();
+        var cards = Withdraw.Create(Owner, 1, CombatState).ToList();
         cards.ForEach(card =>
         {
             if (IsUpgraded) CardCmd.Upgrade(card);

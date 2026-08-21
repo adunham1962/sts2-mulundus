@@ -10,6 +10,7 @@ namespace STS2_Mulundus.STS2_MulundusCode.Cards.EmeraldMonk.Special;
 [Pool(typeof(TokenCardPool))]
 public class FrogsLeap : EmeraldMonkCard
 {
+    public override string PortraitPath => "res://STS2_Mulundus/images/card_portraits/frogs_leap.png";
     public FrogsLeap() : base(1, CardType.Skill, CardRarity.Token, TargetType.Self)
     {
         WithKeyword(EmeraldMonkKeywords.Stance);

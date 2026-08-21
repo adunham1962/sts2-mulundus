@@ -10,16 +10,16 @@ using STS2_Mulundus.STS2_MulundusCode.Cards.EmeraldMonk;
 
 namespace STS2_Mulundus.STS2_MulundusCode.Powers;
 
-public class DownpourPower : CustomPowerModel
+public class DrenchedPower : CustomPowerModel
 {
     public override PowerType Type => PowerType.Debuff;
     public override PowerStackType StackType => PowerStackType.Counter;
 
     public override async Task AfterSideTurnEnd(PlayerChoiceContext choiceContext, CombatSide side, IEnumerable<Creature> participants)
     {
-        if (side is CombatSide.Enemy && Owner.HasPower<DownpourPower>())
+        if (side is CombatSide.Enemy && Owner.HasPower<DrenchedPower>())
         {
-            await CommonActions.Apply<DownpourPower>(choiceContext, Owner, null, -1);
+            await CommonActions.Apply<DrenchedPower>(choiceContext, Owner, null, -1);
         }
     }
 

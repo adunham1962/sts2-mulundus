@@ -10,6 +10,7 @@ namespace STS2_Mulundus.STS2_MulundusCode.Cards.EmeraldMonk.Common;
 [Pool(typeof(EmeraldMonkCardPool))]
 public class UnarmedStrike : EmeraldMonkCard
 {
+    public override string PortraitPath => "res://STS2_Mulundus/images/card_portraits/unarmed_strike.png";
     public UnarmedStrike() : base(0, CardType.Attack, CardRarity.Common, TargetType.AnyEnemy)
     {
         WithTags(CardTag.Strike);

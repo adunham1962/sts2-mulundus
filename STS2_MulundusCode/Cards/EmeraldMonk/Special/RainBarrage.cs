@@ -15,7 +15,7 @@ public class RainBarrage : EmeraldMonkCard
         WithDamage(1);
         WithKeyword(EmeraldMonkKeywords.Stance);
         WithVar("Hits", 2);
-        WithPower<DownpourPower>(1);
+        WithPower<DrenchedPower>(1);
     }
 
     protected override async Task OnPlay(
@@ -25,7 +25,7 @@ public class RainBarrage : EmeraldMonkCard
         var hits = DynamicVars["Hits"].IntValue;
         await CommonActions.CardAttack(this, play, hits).Execute(choiceContext);
         if (CombatState != null)
-            await CommonActions.Apply<DownpourPower>(choiceContext, CombatState.HittableEnemies, this);
+            await CommonActions.Apply<DrenchedPower>(choiceContext, CombatState.HittableEnemies, this);
     }
 
     protected override void OnUpgrade()

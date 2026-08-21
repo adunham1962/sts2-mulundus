@@ -12,7 +12,7 @@ public class Maelstrom : EmeraldMonkCard
     {
         WithDamage(3);
         WithKeyword(EmeraldMonkKeywords.Flow);
-        WithPower<DownpourPower>(3);
+        WithPower<DrenchedPower>(3);
     }
 
     protected override async Task OnPlay(
@@ -21,7 +21,7 @@ public class Maelstrom : EmeraldMonkCard
     {
         await CommonActions.CardAttack(this, play, 3).Execute(choiceContext);
         if (CombatState != null)
-            await CommonActions.Apply<DownpourPower>(choiceContext, CombatState.HittableEnemies, this);
+            await CommonActions.Apply<DrenchedPower>(choiceContext, CombatState.HittableEnemies, this);
     }
 
     protected override void OnUpgrade()

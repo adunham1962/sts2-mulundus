@@ -9,7 +9,7 @@ namespace STS2_Mulundus.STS2_MulundusCode.Cards.EmeraldMonk.Rare;
 [Pool(typeof(EmeraldMonkCardPool))]
 public class WaveDash : EmeraldMonkCard
 {
-
+    public override string PortraitPath => "res://STS2_Mulundus/images/card_portraits/wave_dash.png";
     public WaveDash() : base(1, CardType.Skill, CardRarity.Rare, TargetType.Self)
     {
         WithKeyword(CardKeyword.Exhaust);

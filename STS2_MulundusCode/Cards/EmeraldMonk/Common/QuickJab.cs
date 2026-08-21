@@ -8,6 +8,7 @@ namespace STS2_Mulundus.STS2_MulundusCode.Cards.EmeraldMonk.Common;
 [Pool(typeof(EmeraldMonkCardPool))]
 public class QuickJab : EmeraldMonkCard
 {
+    public override string PortraitPath => "res://STS2_Mulundus/images/card_portraits/quick_jab.png";
     protected override bool ShouldGlowGoldInternal =>
         CombatManager.Instance.History.CardPlaysFinished.Last().CardPlay.Card.Type == CardType.Skill;
 

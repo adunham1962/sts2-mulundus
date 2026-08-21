@@ -9,7 +9,9 @@ namespace STS2_Mulundus.STS2_MulundusCode.Cards.EmeraldMonk.Common;
 [Pool(typeof(EmeraldMonkCardPool))]
 public class DivineProtection : EmeraldMonkCard
 {
+    public override string PortraitPath => "res://STS2_Mulundus/images/card_portraits/divine_protection.png";
     protected override bool HasBalanceEffect => true;
+    protected override bool ShouldGlowGoldInternal => ShouldGlowGoldFromBalance;
 
     public DivineProtection() : base(1, CardType.Skill, CardRarity.Common, TargetType.Self)
     {

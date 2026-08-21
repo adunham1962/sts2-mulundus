@@ -9,7 +9,7 @@ namespace STS2_Mulundus.STS2_MulundusCode.Cards.EmeraldMonk.Common;
 [Pool(typeof(EmeraldMonkCardPool))]
 public class ShapeWater : EmeraldMonkCard
 {
-
+    public override string PortraitPath => "res://STS2_Mulundus/images/card_portraits/shape_water.png";
     public ShapeWater() : base(1, CardType.Skill, CardRarity.Common, TargetType.Self)
     {
         WithBlock(7);

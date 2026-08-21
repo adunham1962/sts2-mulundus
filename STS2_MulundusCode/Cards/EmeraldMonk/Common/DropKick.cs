@@ -10,7 +10,7 @@ namespace STS2_Mulundus.STS2_MulundusCode.Cards.EmeraldMonk.Common;
 [Pool(typeof(EmeraldMonkCardPool))]
 public class DropKick : EmeraldMonkCard
 {
-    
+    public override string PortraitPath => "res://STS2_Mulundus/images/card_portraits/drop_kick.png";
     public DropKick() : base(2, CardType.Attack, CardRarity.Common, TargetType.AnyEnemy)
     {
         WithCalculatedDamage(8, 3,

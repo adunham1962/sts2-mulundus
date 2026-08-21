@@ -26,7 +26,7 @@ public class RainStance : EmeraldMonkCard
     {
         if (CombatState is null || play.Card != this) return;
         var amount = await Consume<SlipperyPower>(CombatState.HittableEnemies);
-        amount += await Consume<DownpourPower>(CombatState.HittableEnemies);
+        amount += await Consume<DrenchedPower>(CombatState.HittableEnemies);
         var cards = RainBarrage.Create(Owner, amount, CombatState).ToList();
         cards.ForEach(card =>
         {

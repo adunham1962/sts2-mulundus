@@ -8,7 +8,7 @@ namespace STS2_Mulundus.STS2_MulundusCode.Cards.EmeraldMonk.Common;
 [Pool(typeof(EmeraldMonkCardPool))]
 public class DiveDown : EmeraldMonkCard
 {
-
+    public override string PortraitPath => "res://STS2_Mulundus/images/card_portraits/dive_down.png";
     public DiveDown() : base(1, CardType.Skill, CardRarity.Common, TargetType.Self)
     {
         WithBlock(6);

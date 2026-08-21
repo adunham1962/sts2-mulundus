@@ -21,7 +21,7 @@ public class DeflectAttacksPower : CustomPowerModel
     {
         if (target == Owner && dealer is not null && dealer != Owner)
         {
-            await CreatureCmd.Damage(choiceContext, dealer, new DamageVar(result.BlockedDamage * Amount, ValueProp.Unpowered), Owner);
+            await CreatureCmd.Damage(choiceContext, dealer, new DamageVar(result.BlockedDamage, ValueProp.Unpowered), Owner);
         }
     }
 

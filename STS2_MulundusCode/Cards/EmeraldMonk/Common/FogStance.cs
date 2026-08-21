@@ -10,7 +10,7 @@ namespace STS2_Mulundus.STS2_MulundusCode.Cards.EmeraldMonk.Common;
 [Pool(typeof(EmeraldMonkCardPool))]
 public class FogStance : EmeraldMonkCard
 {
-
+    public override string PortraitPath => "res://STS2_Mulundus/images/card_portraits/fog_stance.png";
     public FogStance() : base(1, CardType.Skill, CardRarity.Common, TargetType.Self)
     {
         WithKeyword(EmeraldMonkKeywords.Sink);

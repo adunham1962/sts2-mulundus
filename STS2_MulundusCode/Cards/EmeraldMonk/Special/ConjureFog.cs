@@ -10,6 +10,8 @@ namespace STS2_Mulundus.STS2_MulundusCode.Cards.EmeraldMonk.Special;
 [Pool(typeof(TokenCardPool))]
 public class ConjureFog : EmeraldMonkCard
 {
+    
+    public override string PortraitPath => "res://STS2_Mulundus/images/card_portraits/conjure_fog.png";
     public ConjureFog() : base(1, CardType.Skill, CardRarity.Token, TargetType.Self)
     {
         WithPower<SlipperyPower>(1);

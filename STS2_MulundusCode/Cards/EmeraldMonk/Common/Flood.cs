@@ -1,20 +1,18 @@
 using BaseLib.Utils;
 using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
-using MegaCrit.Sts2.Core.Models.Powers;
 using STS2_Mulundus.STS2_MulundusCode.Character;
+using STS2_Mulundus.STS2_MulundusCode.Powers;
 
 namespace STS2_Mulundus.STS2_MulundusCode.Cards.EmeraldMonk.Common;
 
 [Pool(typeof(EmeraldMonkCardPool))]
 public class Flood : EmeraldMonkCard
 {
-
+    public override string PortraitPath => "res://STS2_Mulundus/images/card_portraits/flood.png";
     public Flood() : base(1, CardType.Skill, CardRarity.Common, TargetType.AllEnemies)
     {
-        WithPower<VulnerablePower>(1);
-        WithPower<WeakPower>(1);
-        WithKeyword(CardKeyword.Exhaust);
+        WithPower<DrenchedPower>(3);
     }
     
     protected override async Task OnPlay(
@@ -23,8 +21,7 @@ public class Flood : EmeraldMonkCard
     {
         if (CombatState != null)
         {
-            await CommonActions.Apply<VulnerablePower>(choiceContext, CombatState.HittableEnemies, this);
-            await CommonActions.Apply<WeakPower>(choiceContext, CombatState.HittableEnemies, this);
+            await CommonActions.Apply<DrenchedPower>(choiceContext, CombatState.HittableEnemies, this);
         }
     }
 

@@ -9,6 +9,7 @@ namespace STS2_Mulundus.STS2_MulundusCode.Cards.EmeraldMonk.Uncommon;
 [Pool(typeof(EmeraldMonkCardPool))]
 public class Meditate : EmeraldMonkCard
 {
+    public override string PortraitPath => "res://STS2_Mulundus/images/card_portraits/meditate.png";
     protected override bool HasEnergyCostX => true;
 
     public Meditate() : base(-1, CardType.Power, CardRarity.Uncommon, TargetType.Self)
