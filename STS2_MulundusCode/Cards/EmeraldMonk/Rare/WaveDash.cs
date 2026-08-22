@@ -12,21 +12,19 @@ public class WaveDash : EmeraldMonkCard
     public override string PortraitPath => "res://STS2_Mulundus/images/card_portraits/wave_dash.png";
     public WaveDash() : base(1, CardType.Skill, CardRarity.Rare, TargetType.Self)
     {
-        WithKeyword(CardKeyword.Exhaust);
-        WithBlock(3);
         WithPower<SlipperyPower>(1);
+        WithKeyword(EmeraldMonkKeywords.Ebb);
     }
 
     protected override async Task OnPlay(
         PlayerChoiceContext choiceContext,
         CardPlay play)
     {
-        await CommonActions.CardBlock(this, play);
         await CommonActions.ApplySelf<SlipperyPower>(choiceContext, this);
     }
 
     protected override void OnUpgrade()
     {
-        RemoveKeyword(CardKeyword.Exhaust);
+        DynamicVars["SlipperyPower"].UpgradeValueBy(1);
     }
 }

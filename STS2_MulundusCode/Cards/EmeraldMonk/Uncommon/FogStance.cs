@@ -6,12 +6,12 @@ using MegaCrit.Sts2.Core.HoverTips;
 using STS2_Mulundus.STS2_MulundusCode.Cards.EmeraldMonk.Special;
 using STS2_Mulundus.STS2_MulundusCode.Character;
 
-namespace STS2_Mulundus.STS2_MulundusCode.Cards.EmeraldMonk.Common;
+namespace STS2_Mulundus.STS2_MulundusCode.Cards.EmeraldMonk.Uncommon;
 [Pool(typeof(EmeraldMonkCardPool))]
 public class FogStance : EmeraldMonkCard
 {
     public override string PortraitPath => "res://STS2_Mulundus/images/card_portraits/fog_stance.png";
-    public FogStance() : base(1, CardType.Skill, CardRarity.Common, TargetType.Self)
+    public FogStance() : base(1, CardType.Skill, CardRarity.Uncommon, TargetType.Self)
     {
         WithKeyword(EmeraldMonkKeywords.Sink);
         WithTips(_ => [HoverTipFactory.FromCard<ConjureFog>()]);
@@ -20,7 +20,7 @@ public class FogStance : EmeraldMonkCard
     public override async Task AfterCardPlayedLate(PlayerChoiceContext choiceContext, CardPlay cardPlay)
     {
         if (CombatState is null || cardPlay.Card != this) return;
-        var card = ConjureFog.Create(Owner, 1, this.CombatState).ToList()[0];
+        var card = ConjureFog.Create(Owner, 1, CombatState).ToList()[0];
         if (IsUpgraded)
         {
             CardCmd.Upgrade(card);

@@ -15,7 +15,7 @@ public class DexterousAttacksPower : CustomPowerModel
     {
         if (dealer == Owner && cardSource is not { Type: CardType.Status } && cardSource is not { Type: CardType.Curse })
         {
-            return (Owner.GetPowerAmount<StrengthPower>() * -1) + Owner.GetPowerAmount<DexterityPower>();
+            return Owner.GetPowerAmount<DexterityPower>();
         }
 
         return 0;

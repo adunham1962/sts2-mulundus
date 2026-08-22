@@ -6,16 +6,16 @@ using MegaCrit.Sts2.Core.Models.Powers;
 using STS2_Mulundus.STS2_MulundusCode.Character;
 using STS2_Mulundus.STS2_MulundusCode.Powers;
 
-namespace STS2_Mulundus.STS2_MulundusCode.Cards.EmeraldMonk.Uncommon;
+namespace STS2_Mulundus.STS2_MulundusCode.Cards.EmeraldMonk.Common;
 [Pool(typeof(EmeraldMonkCardPool))]
 public class Feint : EmeraldMonkCard
 {
 
-    public Feint() : base(2, CardType.Skill, CardRarity.Uncommon, TargetType.Self)
+    public Feint() : base(1, CardType.Skill, CardRarity.Common, TargetType.Self)
     {
         WithBlock(4);
         WithPower<FeintPower>(1);
-        WithKeyword(EmeraldMonkKeywords.Ebb);
+        WithPower<DoubleDamagePower>(1);
     }
 
     protected override async Task OnPlay(
@@ -24,11 +24,11 @@ public class Feint : EmeraldMonkCard
     {
         await CommonActions.CardBlock(this, play);
         await CommonActions.ApplySelf<FeintPower>(choiceContext, this);
-        await PowerCmd.Apply<DoubleDamagePower>(choiceContext, Owner.Creature, 1, Owner.Creature, null);
+        await CommonActions.ApplySelf<DoubleDamagePower>(choiceContext, this);
     }
 
     protected override void OnUpgrade()
     {
-        EnergyCost.UpgradeBy(-1);
+        DynamicVars.Block.UpgradeValueBy(2);
     }
 }

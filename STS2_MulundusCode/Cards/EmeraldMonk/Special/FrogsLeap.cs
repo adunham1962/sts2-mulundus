@@ -15,7 +15,7 @@ public class FrogsLeap : EmeraldMonkCard
     {
         WithKeyword(EmeraldMonkKeywords.Stance);
         WithPower<FrogsLeapPower>(4);
-        WithCards(1);
+        WithCards(3);
     }
 
     protected override async Task OnPlay(

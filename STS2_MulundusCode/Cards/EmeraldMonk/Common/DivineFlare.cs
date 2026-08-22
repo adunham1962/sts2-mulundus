@@ -4,21 +4,21 @@ using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 using STS2_Mulundus.STS2_MulundusCode.Character;
 
-namespace STS2_Mulundus.STS2_MulundusCode.Cards.EmeraldMonk.Uncommon;
+namespace STS2_Mulundus.STS2_MulundusCode.Cards.EmeraldMonk.Common;
 
 [Pool(typeof(EmeraldMonkCardPool))]
-public class DivineSpark : EmeraldMonkCard
+public class DivineFlare : EmeraldMonkCard
 {
-    public override string PortraitPath => "res://STS2_Mulundus/images/card_portraits/divine_spark.png";
+    public override string PortraitPath => "res://STS2_Mulundus/images/card_portraits/divine_flare.png";
 
     protected override bool ShouldGlowGoldInternal => ShouldGlowGoldFromBalance;
 
     protected override bool HasBalanceEffect => true;
 
-    public DivineSpark() : base(1, CardType.Attack, CardRarity.Uncommon, TargetType.AnyEnemy)
+    public DivineFlare() : base(1, CardType.Attack, CardRarity.Common, TargetType.AllEnemies)
     {
         WithDamage(8);
-        WithHeal(4);
+        WithHeal(3);
         WithTip(EmeraldMonkKeywords.Balanced);
     }
 

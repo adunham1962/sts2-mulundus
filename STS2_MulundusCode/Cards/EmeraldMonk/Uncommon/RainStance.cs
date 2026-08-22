@@ -8,12 +8,12 @@ using STS2_Mulundus.STS2_MulundusCode.Cards.EmeraldMonk.Special;
 using STS2_Mulundus.STS2_MulundusCode.Character;
 using STS2_Mulundus.STS2_MulundusCode.Powers;
 
-namespace STS2_Mulundus.STS2_MulundusCode.Cards.EmeraldMonk.Common;
+namespace STS2_Mulundus.STS2_MulundusCode.Cards.EmeraldMonk.Uncommon;
 
 [Pool(typeof(EmeraldMonkCardPool))]
 public class RainStance : EmeraldMonkCard
 {
-    public RainStance() : base(1, CardType.Skill, CardRarity.Common, TargetType.Self)
+    public RainStance() : base(1, CardType.Skill, CardRarity.Uncommon, TargetType.Self)
     {
         WithKeyword(MulundusKeywords.Consume);
         WithKeyword(EmeraldMonkKeywords.Sink);

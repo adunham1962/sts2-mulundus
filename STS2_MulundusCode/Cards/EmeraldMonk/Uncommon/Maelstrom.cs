@@ -10,9 +10,9 @@ public class Maelstrom : EmeraldMonkCard
 {
     public Maelstrom() : base(3, CardType.Attack, CardRarity.Uncommon, TargetType.AllEnemies)
     {
-        WithDamage(3);
+        WithDamage(5);
         WithKeyword(EmeraldMonkKeywords.Flow);
-        WithPower<DrenchedPower>(3);
+        WithPower<DrenchedPower>(4);
     }
 
     protected override async Task OnPlay(
@@ -27,5 +27,6 @@ public class Maelstrom : EmeraldMonkCard
     protected override void OnUpgrade()
     {
         DynamicVars.Damage.UpgradeValueBy(2);
+        DynamicVars["DrenchedPower"].UpgradeValueBy(1);
     }
 }
