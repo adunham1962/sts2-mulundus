@@ -20,7 +20,6 @@ public class Drench : EmeraldMonkCard
         PlayerChoiceContext choiceContext,
         CardPlay play)
     {
-        await CommonActions.CardAttack(this, play).Execute(choiceContext);
         if (play.Target != null)
         {
             await CommonActions.Apply<DrenchedPower>(choiceContext, play.Target, this);
