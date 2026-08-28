@@ -28,7 +28,7 @@ public class EmeraldMonk : PlaceholderCharacterModel
     protected override CharacterModel? UnlocksAfterRunAs => null;
     
     public override int StartingGold => 99;
-    public override int StartingHp => 55;
+    public override int StartingHp => 60;
     
     public override IEnumerable<CardModel> StartingDeck =>
     [

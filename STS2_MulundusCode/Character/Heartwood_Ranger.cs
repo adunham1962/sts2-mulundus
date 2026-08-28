@@ -26,7 +26,7 @@ public class HeartwoodRanger: PlaceholderCharacterModel
     protected override CharacterModel? UnlocksAfterRunAs => null;
     
     public override int StartingGold => 99;
-    public override int StartingHp => 70;
+    public override int StartingHp => 75;
     
     public override IEnumerable<CardModel> StartingDeck =>
     [
