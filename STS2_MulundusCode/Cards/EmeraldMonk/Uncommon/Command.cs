@@ -10,6 +10,7 @@ namespace STS2_Mulundus.STS2_MulundusCode.Cards.EmeraldMonk.Uncommon;
 [Pool(typeof(EmeraldMonkCardPool))]
 public class Command : EmeraldMonkCard
 {
+    public override string PortraitPath => "res://STS2_Mulundus/images/card_portraits/command.png";
     public Command() : base(1, CardType.Skill, CardRarity.Uncommon, TargetType.AnyEnemy)
     {
         WithPower<VulnerablePower>(1);

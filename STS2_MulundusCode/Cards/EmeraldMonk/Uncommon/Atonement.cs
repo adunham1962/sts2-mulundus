@@ -10,7 +10,7 @@ namespace STS2_Mulundus.STS2_MulundusCode.Cards.EmeraldMonk.Uncommon;
 [Pool(typeof(EmeraldMonkCardPool))]
 public class Atonement : EmeraldMonkCard
 {
-
+    public override string PortraitPath => "res://STS2_Mulundus/images/card_portraits/atonement.png";
     protected override bool HasBalanceEffect => true;
     
     protected override bool ShouldGlowGoldInternal => ShouldGlowGoldFromBalance;

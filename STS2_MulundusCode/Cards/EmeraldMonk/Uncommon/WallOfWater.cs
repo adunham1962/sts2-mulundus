@@ -11,9 +11,10 @@ namespace STS2_Mulundus.STS2_MulundusCode.Cards.EmeraldMonk.Uncommon;
 public class WallOfWater : EmeraldMonkCard
 {
 
-    public WallOfWater() : base(2, CardType.Skill, CardRarity.Uncommon, TargetType.Self)
+    public WallOfWater() : base(1, CardType.Skill, CardRarity.Uncommon, TargetType.Self)
     {
         WithBlock(8);
+        WithKeyword(EmeraldMonkKeywords.Ebb);
     }
     
     protected override async Task OnPlay(
