@@ -29,6 +29,8 @@ public class OctopusStance : EmeraldMonkCard
             cards.ForEach(card => CardCmd.Upgrade(card));
             cards.ForEach(card => CardCmd.Enchant<Inky>(card, 1));
         }
+
+        LatestCardsCreated = cards;
         
         await CardPileCmd.AddGeneratedCardsToCombat(cards, PileType.Hand, Owner);
     }
