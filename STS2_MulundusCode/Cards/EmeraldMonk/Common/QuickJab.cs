@@ -10,7 +10,7 @@ public class QuickJab : EmeraldMonkCard
 {
     public override string PortraitPath => "res://STS2_Mulundus/images/card_portraits/quick_jab.png";
     protected override bool ShouldGlowGoldInternal =>
-        CombatManager.Instance.History.CardPlaysFinished.Last().CardPlay.Card.Type == CardType.Skill;
+        CombatManager.Instance.History.CardPlaysFinished.Last().CardPlay.Card.Type == CardType.Skill && CombatManager.Instance.History.CardPlaysFinished.Last().CardPlay.Card.Owner == Owner;
 
     public QuickJab() : base(0, CardType.Attack, CardRarity.Common, TargetType.AnyEnemy)
     {

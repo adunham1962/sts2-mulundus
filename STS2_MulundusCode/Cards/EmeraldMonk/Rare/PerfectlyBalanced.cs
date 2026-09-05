@@ -8,7 +8,7 @@ namespace STS2_Mulundus.STS2_MulundusCode.Cards.EmeraldMonk.Rare;
 [Pool(typeof(EmeraldMonkCardPool))]
 public class PerfectlyBalanced : EmeraldMonkCard
 {
-    public PerfectlyBalanced() : base(2, CardType.Power, CardRarity.Rare, TargetType.Self)
+    public PerfectlyBalanced() : base(3, CardType.Power, CardRarity.Rare, TargetType.Self)
     {
         WithPower<PerfectlyBalancedPower>(1);
         WithCards(2);

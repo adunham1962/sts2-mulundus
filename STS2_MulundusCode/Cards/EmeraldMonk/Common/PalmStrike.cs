@@ -11,7 +11,8 @@ namespace STS2_Mulundus.STS2_MulundusCode.Cards.EmeraldMonk.Common;
 public class PalmStrike : EmeraldMonkCard
 {
     protected override bool ShouldGlowGoldInternal =>
-        CombatManager.Instance.History.CardPlaysFinished.Last().CardPlay.Card.Type == CardType.Skill;
+        CombatManager.Instance.History.CardPlaysFinished.Last().CardPlay.Card.Type == CardType.Skill && CombatManager.Instance.History.CardPlaysFinished.Last().CardPlay.Card.Owner == Owner;
+
     public PalmStrike() : base(1, CardType.Attack, CardRarity.Common, TargetType.AnyEnemy)
     {
         WithDamage(6);

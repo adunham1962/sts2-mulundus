@@ -74,7 +74,7 @@
   "STS2_MULUNDUS-REACTIVE_COMBATANT_POWER.description": "Whenever you [gold]Deepen[/gold] your stance, gain [blue]3[/blue] [gold]Block[/gold].",
   "STS2_MULUNDUS-REACTIVE_COMBATANT_POWER.smartDescription": "Whenever you [gold]Deepen[/gold] your stance, gain {Amount} [gold]Block[/gold].",
   "STS2_MULUNDUS-REACTIVE_COMBATANT_POWER.title": "Reactive Combatant",
-  "STS2_MULUNDUS-PERFECTLY_BALANCED_POWER.description": "Whenever you become [gold]Balanced[/gold], gain [blue]1[/gold] {energyPrefix:energyIcons(1)}.",
+  "STS2_MULUNDUS-PERFECTLY_BALANCED_POWER.description": "Whenever you become [gold]Balanced[/gold], gain [blue]1[/blue] {energyPrefix:energyIcons(1)}.",
   "STS2_MULUNDUS-PERFECTLY_BALANCED_POWER.smartDescription": "Whenever you become [gold]Balanced[/gold], gain {Amount:energyIcons()}.",
   "STS2_MULUNDUS-PERFECTLY_BALANCED_POWER.title": "Perfectly Balanced",
   "STS2_MULUNDUS-UNARMORED_MOVEMENT_POWER.description": "Whenever you end your turn with no [gold]Block[/gold], gain [blue]1[/blue] [gold]Dexterity[/gold].",
