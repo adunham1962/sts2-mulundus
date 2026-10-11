@@ -4,6 +4,7 @@ using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.Entities.Players;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 using MegaCrit.Sts2.Core.Models;
+using STS2_Mulundus.STS2_MulundusCode.Cards.EmeraldMonk.Rare;
 using STS2_Mulundus.STS2_MulundusCode.Extensions;
 
 namespace STS2_Mulundus.STS2_MulundusCode.Cards.EmeraldMonk;
@@ -16,9 +17,9 @@ public abstract class EmeraldMonkCard(int cost, CardType type, CardRarity rarity
     private bool _isFlowReduced = false;
 
     protected bool ShouldGlowGoldFromBalance => HasBalanceEffect &&
-                                                PileType.Hand.GetPile(Owner).Cards
+                                                (PileType.Hand.GetPile(Owner).Cards
                                                     .Count(c => c.Type == CardType.Attack) == PileType.Hand
-                                                    .GetPile(Owner).Cards.Count(c => c.Type == CardType.Skill);
+                                                    .GetPile(Owner).Cards.Count(c => c.Type == CardType.Skill) || PileType.Hand.GetPile(Owner).Cards.Any(c => c is Balance));
 
     protected virtual bool HasBalanceEffect => false;
 
@@ -31,9 +32,9 @@ public abstract class EmeraldMonkCard(int cost, CardType type, CardRarity rarity
             var otherType = Type == CardType.Skill ? CardType.Attack : CardType.Skill;
             
             return HasBalanceEffect &&
-                   PileType.Hand.GetPile(Owner).Cards
+                   (PileType.Hand.GetPile(Owner).Cards
                        .Count(c => c.Type == Type) + 1 == PileType.Hand
-                       .GetPile(Owner).Cards.Count(c => c.Type == otherType);
+                       .GetPile(Owner).Cards.Count(c => c.Type == otherType) || ShouldGlowGoldFromBalance);
         }
     }
 

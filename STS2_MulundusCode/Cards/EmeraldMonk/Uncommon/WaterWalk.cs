@@ -6,15 +6,16 @@ using MegaCrit.Sts2.Core.Localization.DynamicVars;
 using MegaCrit.Sts2.Core.Models.Powers;
 using STS2_Mulundus.STS2_MulundusCode.Character;
 
-namespace STS2_Mulundus.STS2_MulundusCode.Cards.EmeraldMonk.Common;
+namespace STS2_Mulundus.STS2_MulundusCode.Cards.EmeraldMonk.Uncommon;
 
 [Pool(typeof(EmeraldMonkCardPool))]
 public class WaterWalk : EmeraldMonkCard
 {
     public override string PortraitPath => "res://STS2_Mulundus/images/card_portraits/water_walk.png";
-    public WaterWalk() : base(1, CardType.Skill, CardRarity.Common, TargetType.Self)
+    public WaterWalk() : base(1, CardType.Skill, CardRarity.Uncommon, TargetType.Self)
     {
         WithCalculatedVar("CalculatedDraw", 1, (c, _) => c.Owner.Creature.GetPowerAmount<DexterityPower>());
+        WithKeyword(EmeraldMonkKeywords.Ebb);
     }
 
     protected override async Task OnPlay(
@@ -27,6 +28,6 @@ public class WaterWalk : EmeraldMonkCard
 
     protected override void OnUpgrade()
     {
-        AddKeyword(EmeraldMonkKeywords.Ebb);
+        DynamicVars["CalculatedDrawBase"].UpgradeValueBy(1);
     }
 }

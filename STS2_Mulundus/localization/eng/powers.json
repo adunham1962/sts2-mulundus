@@ -106,5 +106,8 @@
   "STS2_MULUNDUS-DRUNKEN_MASTERY_POWER.title": "Drunken Mastery",
   "STS2_MULUNDUS-EMPOWERED_STRIKES_POWER.description": "Your cards containing \"Strike\" deal [blue]2[/blue] additional damage and are unaffected by [gold]Weak[/gold].",
   "STS2_MULUNDUS-EMPOWERED_STRIKES_POWER.smartDescription": "Your cards containing \"Strike\" deal {Amount} additional damage and are unaffected by [gold]Weak[/gold].",
-  "STS2_MULUNDUS-EMPOWERED_STRIKES_POWER.title": "Empowered Strikes"
+  "STS2_MULUNDUS-EMPOWERED_STRIKES_POWER.title": "Empowered Strikes",
+  "STS2_MULUNDUS-WATER_BREATHING_POWER.description": "Whenever you play a card with [gold]Ebb[/gold] or [gold]Flow[/gold] this turn, heal [blue]1[/blue] HP.",
+  "STS2_MULUNDUS-WATER_BREATHING_POWER.smartDescription": "Whenever you play a card with [gold]Ebb[/gold] or [gold]Flow[/gold] this turn, heal {Amount} HP.",
+  "STS2_MULUNDUS-WATER_BREATHING_POWER.title": "Water Breathing"
 }

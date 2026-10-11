@@ -191,7 +191,7 @@
   "STS2_MULUNDUS-DROP_KICK.title": "Drop Kick",
   "STS2_MULUNDUS-FEINT.description": "Gain {Block:diff()} [gold]Block[/gold].\nThe next attack you play this turn deals double damage.",
   "STS2_MULUNDUS-FEINT.title": "Feint",
-  "STS2_MULUNDUS-CONTROL_WATER.description": "[gold]Absorb[/gold] ALL [gold]Slippery[/gold] from ALL enemies.\nAdd [gold]Ebb[/gold] to a card in your [gold]Hand[/gold].",
+  "STS2_MULUNDUS-CONTROL_WATER.description": "[gold]Consume[/gold] ALL [gold]Drenched[/gold].\nGain that much {energyPrefix:energyIcons(1)}.",
   "STS2_MULUNDUS-CONTROL_WATER.title": "Control Water",
   "STS2_MULUNDUS-CONTROL_WATER.selectionScreenPrompt": "Add [gold]Ebb[/gold] to a card.",
   "STS2_MULUNDUS-DRAGONS_TORRENT.description": "Deal {Damage:diff()} damage and apply {WeakPower:diff()} [gold]Weak[/gold] to ALL enemies.",
@@ -352,5 +352,15 @@
   "STS2_MULUNDUS-OCTOPUS_STANCE.description": "[gold]Sink[/gold] into a stance.\nAdd 3 [purple]Inky[/purple] [gold]Tentacle Lashes{IfUpgraded:show:+}[/gold] into your [gold]Hand[/gold].",
   "STS2_MULUNDUS-OCTOPUS_STANCE.title": "Octopus Stance",
   "STS2_MULUNDUS-RADIANT_ROIL.description": "[gold]Discard[/gold] your [gold]Hand[/gold] and draw {Cards:diff()} cards. Then if you are [gold]Balanced[/gold], heal HP equal to their total {energyPrefix:energyIcons(1)}.",
-  "STS2_MULUNDUS-RADIANT_ROIL.title": "Radiant Roil"
+  "STS2_MULUNDUS-RADIANT_ROIL.title": "Radiant Roil",
+  "STS2_MULUNDUS-ASHEN_STRIKE.description": "Deal {CalculatedDamage:diff()} damage. Deal {ExtraDamage:diff()} additional damage if the enemy is [gold]Vulnerable[/gold].",
+  "STS2_MULUNDUS-ASHEN_STRIKE.title": "Ashen Strike",
+  "STS2_MULUNDUS-BALANCE.description": "You are [gold]Balanced[/gold] while this card is in your [gold]Hand[/gold].",
+  "STS2_MULUNDUS-BALANCE.title": "Balance",
+  "STS2_MULUNDUS-CHAOS_STANCE.description": "Put a random [gold]Stance[/gold] into your [gold]Hand[/gold].",
+  "STS2_MULUNDUS-CHAOS_STANCE.title": "Chaos Stance",
+  "STS2_MULUNDUS-CUBIC_SURPRISE.description": "ALL allies gain {IntangiblePower:diff()} [gold]Intangible[/gold].\nNext turn, ALL allies attack damage is doubled.",
+  "STS2_MULUNDUS-CUBIC_SURPRISE.title": "Cubic Surprise",
+  "STS2_MULUNDUS-WATER_BREATHING.description": "Whenever you play a card with [gold]Ebb[/gold] or [gold]Flow[/gold] this turn, heal {WaterBreathingPower:diff()} HP.",
+  "STS2_MULUNDUS-WATER_BREATHING.title": "Water Breathing"
 }

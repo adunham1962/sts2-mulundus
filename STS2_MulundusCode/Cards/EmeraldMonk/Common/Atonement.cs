@@ -5,7 +5,7 @@ using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 using MegaCrit.Sts2.Core.Models.Powers;
 using STS2_Mulundus.STS2_MulundusCode.Character;
 
-namespace STS2_Mulundus.STS2_MulundusCode.Cards.EmeraldMonk.Uncommon;
+namespace STS2_Mulundus.STS2_MulundusCode.Cards.EmeraldMonk.Common;
 
 [Pool(typeof(EmeraldMonkCardPool))]
 public class Atonement : EmeraldMonkCard
@@ -15,7 +15,7 @@ public class Atonement : EmeraldMonkCard
     
     protected override bool ShouldGlowGoldInternal => ShouldGlowGoldFromBalance;
     
-    public Atonement() : base(1, CardType.Skill, CardRarity.Uncommon, TargetType.Self)
+    public Atonement() : base(1, CardType.Skill, CardRarity.Common, TargetType.Self)
     {
         WithEnergy(2); // Next turn energy
         WithVar("EnergyTwo", 2); // This turn energy if balanced
