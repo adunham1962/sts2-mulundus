@@ -362,5 +362,7 @@
   "STS2_MULUNDUS-CUBIC_SURPRISE.description": "ALL allies gain {IntangiblePower:diff()} [gold]Intangible[/gold].\nNext turn, ALL allies attack damage is doubled.",
   "STS2_MULUNDUS-CUBIC_SURPRISE.title": "Cubic Surprise",
   "STS2_MULUNDUS-WATER_BREATHING.description": "Whenever you play a card with [gold]Ebb[/gold] or [gold]Flow[/gold] this turn, heal {WaterBreathingPower:diff()} HP.",
-  "STS2_MULUNDUS-WATER_BREATHING.title": "Water Breathing"
+  "STS2_MULUNDUS-WATER_BREATHING.title": "Water Breathing",
+  "STS2_MULUNDUS-CRISP_ALE.description": "Gain {CrispAleStrengthPower:diff()} [gold]Strength[/gold] this turn.\nGain {ConstitutionPower:diff()} [gold]Constitution[/gold].\nDraw a card.\nNext turn, lose {HangoverPower:diff()} [gold]Dexterity[/gold].",
+  "STS2_MULUNDUS-CRISP_ALE.title": "Crisp Ale"
 }

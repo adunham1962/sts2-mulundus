@@ -10,7 +10,7 @@ public class HydroPump : EmeraldMonkCard
 {
     public HydroPump() : base(2, CardType.Attack, CardRarity.Uncommon, TargetType.AnyEnemy)
     {
-        WithCalculatedDamage(10, (card, _) => CombatManager.Instance.History.CardPlaysFinished.Last(e => e.Actor == card.Owner.Creature).CardPlay.Card.Type == CardType.Power ? 10 : 0);
+        WithCalculatedDamage(10, 10, (card, _) => CombatManager.Instance.History.CardPlaysFinished.Last(e => e.Actor == card.Owner.Creature).CardPlay.Card.Type == CardType.Power ? 1 : 0);
         WithKeyword(EmeraldMonkKeywords.Flow);
     }
 

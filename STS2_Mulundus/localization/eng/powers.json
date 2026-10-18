@@ -109,5 +109,8 @@
   "STS2_MULUNDUS-EMPOWERED_STRIKES_POWER.title": "Empowered Strikes",
   "STS2_MULUNDUS-WATER_BREATHING_POWER.description": "Whenever you play a card with [gold]Ebb[/gold] or [gold]Flow[/gold] this turn, heal [blue]1[/blue] HP.",
   "STS2_MULUNDUS-WATER_BREATHING_POWER.smartDescription": "Whenever you play a card with [gold]Ebb[/gold] or [gold]Flow[/gold] this turn, heal {Amount} HP.",
-  "STS2_MULUNDUS-WATER_BREATHING_POWER.title": "Water Breathing"
+  "STS2_MULUNDUS-WATER_BREATHING_POWER.title": "Water Breathing",
+  "STS2_MULUNDUS-HANGOVER_POWER.description": "Next turn, lose [blue]1[/blue] [gold]Dexterity[/gold].",
+  "STS2_MULUNDUS-HANGOVER_POWER.smartDescription": "Next turn, lose {Amount} [gold]Dexterity[/gold].",
+  "STS2_MULUNDUS-HANGOVER_POWER.title": "Impending Hangover"
 }
