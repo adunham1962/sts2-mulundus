@@ -1,16 +1,11 @@
-using System.Threading.Tasks;
 using BaseLib.Abstracts;
-using STS2_Mulundus.STS2_MulundusCode.Extensions;
 using Godot;
 using MegaCrit.Sts2.Core.Commands;
-using MegaCrit.Sts2.Core.Entities.Creatures;
-using MegaCrit.Sts2.Core.Entities.Players;
 using MegaCrit.Sts2.Core.Entities.Powers;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 using MegaCrit.Sts2.Core.Helpers;
 using MegaCrit.Sts2.Core.Models;
 using MegaCrit.Sts2.Core.Models.Powers;
-using MegaCrit.Sts2.Core.Nodes.Combat;
 using MegaCrit.Sts2.Core.Nodes.Rooms;
 using MegaCrit.Sts2.Core.Nodes.Vfx;
 
@@ -19,7 +14,6 @@ namespace STS2_Mulundus.STS2_MulundusCode.Powers;
 public class BloomingFormPower() : CustomPowerModel()
 {
     
-    //Loads from STS2_Mulundus/images/powers/your_power.png
     public override string CustomPackedIconPath => "res://STS2_Mulundus/images/powers/blooming_form_power.png";
 
     public override string CustomBigIconPath => "res://STS2_Mulundus/images/powers/blooming_form_power.png";

@@ -364,5 +364,9 @@
   "STS2_MULUNDUS-WATER_BREATHING.description": "Whenever you play a card with [gold]Ebb[/gold] or [gold]Flow[/gold] this turn, heal {WaterBreathingPower:diff()} HP.",
   "STS2_MULUNDUS-WATER_BREATHING.title": "Water Breathing",
   "STS2_MULUNDUS-CRISP_ALE.description": "Gain {CrispAleStrengthPower:diff()} [gold]Strength[/gold] this turn.\nGain {ConstitutionPower:diff()} [gold]Constitution[/gold].\nDraw a card.\nNext turn, lose {HangoverPower:diff()} [gold]Dexterity[/gold].",
-  "STS2_MULUNDUS-CRISP_ALE.title": "Crisp Ale"
+  "STS2_MULUNDUS-CRISP_ALE.title": "Crisp Ale",
+  "STS2_MULUNDUS-CUTTING_WAVE.description": "Deal {Damage:diff()} damage. Deal additional damage equal to your [gold]Dexterity[/gold].",
+  "STS2_MULUNDUS-CUTTING_WAVE.title": "Cutting Wave",
+  "STS2_MULUNDUS-TSUNAMI.description": "[gold]Consume[/gold] ALL [gold]Drenched[/gold].\nDeal {CalculatedDamage:diff()} damage. Deal {ExtraDamage:diff()} additional damage for each [gold]Drenched[/gold] you consume.\nApply {DrenchedPower:diff()} [gold]Drenched[/gold] to EVERYONE.",
+  "STS2_MULUNDUS-TSUNAMI.title": "Tsunami"
 }

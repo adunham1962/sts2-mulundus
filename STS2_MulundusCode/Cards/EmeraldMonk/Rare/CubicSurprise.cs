@@ -10,6 +10,7 @@ namespace STS2_Mulundus.STS2_MulundusCode.Cards.EmeraldMonk.Rare;
 public class CubicSurprise : EmeraldMonkCard
 {
 
+    public override CardMultiplayerConstraint MultiplayerConstraint => CardMultiplayerConstraint.MultiplayerOnly;
     public CubicSurprise() : base(3, CardType.Skill, CardRarity.Rare, TargetType.AllAllies)
     {
         WithPower<IntangiblePower>(1);
