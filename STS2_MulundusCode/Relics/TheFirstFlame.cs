@@ -1,5 +1,6 @@
 using BaseLib.Utils;
 using MegaCrit.Sts2.Core.CardSelection;
+using MegaCrit.Sts2.Core.Combat;
 using MegaCrit.Sts2.Core.Commands;
 using MegaCrit.Sts2.Core.Entities.Relics;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
@@ -40,6 +41,6 @@ public class TheFirstFlame() : STS2_MulundusRelic
 
     public override async Task AfterRoomEntered(AbstractRoom room)
     {
-        await CreatureCmd.Damage(new ThrowingPlayerChoiceContext(), Owner.Creature, new DamageVar(1, ValueProp.Move), null, null);
+        await CreatureCmd.Damage(new ThrowingPlayerChoiceContext(), Owner.Creature, new DamageVar(1, ValueProp.Unpowered), Owner.Creature);
     }
 }

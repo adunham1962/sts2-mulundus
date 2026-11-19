@@ -5,6 +5,7 @@ using MegaCrit.Sts2.Core.Entities.Creatures;
 using MegaCrit.Sts2.Core.Entities.Powers;
 using MegaCrit.Sts2.Core.Entities.Relics;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
+using MegaCrit.Sts2.Core.Localization.DynamicVars;
 using MegaCrit.Sts2.Core.Models;
 using MegaCrit.Sts2.Core.Models.RelicPools;
 using MegaCrit.Sts2.Core.ValueProps;
@@ -23,7 +24,7 @@ public class SigilOfBrine() : STS2_MulundusRelic
     {
         if (power.Owner == Owner.Creature && power.Type == PowerType.Debuff && power.Amount != 0 || applier == Owner.Creature && power.Type == PowerType.Debuff && power.Amount != 0)
         {
-            await CreatureCmd.Damage(choiceContext, power.CombatState.HittableEnemies, 1, ValueProp.Unblockable, Owner.Creature, null);
+            await CreatureCmd.Damage(choiceContext, power.CombatState.HittableEnemies, new DamageVar(1, ValueProp.Unblockable), Owner.Creature);
         }
     }
     

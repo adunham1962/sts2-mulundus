@@ -11,7 +11,7 @@ namespace STS2_Mulundus.STS2_MulundusCode.Powers;
 public class DexterousAttacksPower : CustomPowerModel
 {
     public override decimal ModifyDamageAdditive(Creature? target, decimal amount, ValueProp props, Creature? dealer,
-        CardModel? cardSource)
+        CardModel? cardSource, CardPlay? cardPlay)
     {
         if (dealer == Owner && cardSource is not { Type: CardType.Status } && cardSource is not { Type: CardType.Curse })
         {

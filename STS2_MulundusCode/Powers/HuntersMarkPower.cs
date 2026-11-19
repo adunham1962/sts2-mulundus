@@ -13,7 +13,7 @@ public class HuntersMarkPower : CustomPowerModel
     public override PowerStackType StackType => PowerStackType.Counter;
 
     public override decimal ModifyDamageAdditive(Creature? target, decimal amount, ValueProp props, Creature? dealer,
-        CardModel? cardSource)
+        CardModel? cardSource, CardPlay? cardPlay)
     {
         return target is not null && target == Owner && cardSource is not null && cardSource.Type == CardType.Attack ? 2 : 0;
     }

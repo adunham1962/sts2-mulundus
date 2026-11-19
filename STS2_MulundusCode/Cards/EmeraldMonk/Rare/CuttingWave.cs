@@ -23,9 +23,9 @@ public class CuttingWave : EmeraldMonkCard
     {
         await CommonActions.CardAttack(this, play).Execute(choiceContext);
     }
-
+    
     public override decimal ModifyDamageAdditive(Creature? target, decimal amount, ValueProp props, Creature? dealer,
-        CardModel? cardSource)
+        CardModel? cardSource, CardPlay? cardPlay)
     {
         if (cardSource != this || dealer != Owner.Creature) return 0;
         return Owner.Creature.GetPowerAmount<DexterityPower>();

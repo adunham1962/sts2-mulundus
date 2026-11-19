@@ -23,7 +23,7 @@ public class DropKick : EmeraldMonkCard
         CardPlay play)
     {
         if (play.Target != null)
-            await DamageCmd.Attack(DynamicVars.CalculatedDamage).FromCard(this).Targeting(play.Target)
+            await DamageCmd.Attack(DynamicVars.CalculatedDamage).FromCard(this, play).Targeting(play.Target)
                 .WithHitFx("vfx/vfx_attack_slash").Execute(choiceContext);
     }
 

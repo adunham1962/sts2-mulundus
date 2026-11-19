@@ -26,7 +26,7 @@ public class JudgeAsWorthy : HeartWoodRangerCard
         var loss = count * 2;
         var heal = loss * 2;
 
-        await CreatureCmd.Damage(choiceContext, Owner.Creature, new DamageVar(loss, ValueProp.Move), this);
+        await CreatureCmd.Damage(choiceContext, Owner.Creature, new DamageVar(loss, ValueProp.Move), Owner.Creature);
         if (play.Target is null) return;
         await CreatureCmd.Heal(play.Target, heal);
     }

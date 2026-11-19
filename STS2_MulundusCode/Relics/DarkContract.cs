@@ -36,6 +36,7 @@ public class DarkContract() : STS2_MulundusRelic()
         {
             list1.Add(cardModel);
         }
-        return options.WithCustomPool(list1);
+
+        return options;
     }
 }

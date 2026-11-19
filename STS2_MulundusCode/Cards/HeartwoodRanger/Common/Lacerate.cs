@@ -30,7 +30,7 @@ public class Lacerate : HeartWoodRangerCard
 
         //var damage = DynamicVars.Damage.BaseValue + (extraAmount * DynamicVars["Damage2"].BaseValue);
         if (play.Target is null) return;
-        await DamageCmd.Attack(DynamicVars.CalculatedDamage).FromCard(this).Targeting(play.Target).WithHitFx("vfx/vfx_attack_slash")
+        await DamageCmd.Attack(DynamicVars.CalculatedDamage).FromCard(this, play).Targeting(play.Target).WithHitFx("vfx/vfx_attack_slash")
             .Execute(choiceContext);
     }
 

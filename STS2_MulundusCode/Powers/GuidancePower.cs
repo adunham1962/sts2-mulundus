@@ -15,7 +15,7 @@ public class GuidancePower : CustomPowerModel
     public override PowerStackType StackType => PowerStackType.Counter;
 
     public override decimal ModifyDamageAdditive(Creature? target, decimal amount, ValueProp props, Creature? dealer,
-        CardModel? cardSource)
+        CardModel? cardSource, CardPlay? cardPlay)
     {
         if (dealer == Owner && cardSource?.Owner == Owner.Player && cardSource?.Type == CardType.Attack)
         {

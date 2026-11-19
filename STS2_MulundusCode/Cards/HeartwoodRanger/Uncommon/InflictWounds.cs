@@ -25,7 +25,7 @@ public class InflictWounds : HeartWoodRangerCard
     {
         var damage = DynamicVars.CalculatedDamage.Calculate(null);
         if (play.Target != null)
-            await CreatureCmd.Damage(choiceContext, play.Target, new DamageVar(damage, ValueProp.Move), this);
+            await CreatureCmd.Damage(choiceContext, play.Target, new DamageVar(damage, ValueProp.Move), Owner.Creature);
     }
 
     protected override void OnUpgrade()

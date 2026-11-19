@@ -21,7 +21,7 @@ public class DreadCleave : HeartWoodRangerCard
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay play)
     {
         if (CombatState != null)
-            await DamageCmd.Attack(DynamicVars.Damage.BaseValue).FromCard(this)
+            await DamageCmd.Attack(DynamicVars.Damage.BaseValue).FromCard(this, play)
                 .TargetingAllOpponents(CombatState).Execute(choiceContext);
     }
 

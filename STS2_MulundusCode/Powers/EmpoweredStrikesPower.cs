@@ -14,7 +14,7 @@ public class EmpoweredStrikesPower : CustomPowerModel
     public override PowerStackType StackType => PowerStackType.Counter;
 
     public override decimal ModifyDamageAdditive(Creature? target, decimal amount, ValueProp props, Creature? dealer,
-        CardModel? cardSource)
+        CardModel? cardSource, CardPlay? cardPlay)
     {
         if (dealer == Owner && cardSource is not null && cardSource.Tags.Contains(CardTag.Strike))
         {
@@ -25,7 +25,7 @@ public class EmpoweredStrikesPower : CustomPowerModel
     }
 
     public override decimal ModifyDamageMultiplicative(Creature? target, decimal amount, ValueProp props, Creature? dealer,
-        CardModel? cardSource)
+        CardModel? cardSource, CardPlay? cardPlay)
     {
         if (dealer == Owner && cardSource is not null && cardSource.Tags.Contains(CardTag.Strike) && Owner.HasPower<WeakPower>())
         {

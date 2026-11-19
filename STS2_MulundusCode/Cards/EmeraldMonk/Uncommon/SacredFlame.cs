@@ -19,7 +19,7 @@ public class SacredFlame : EmeraldMonkCard
         PlayerChoiceContext choiceContext,
         CardPlay play)
     {
-        if (play.Target != null) await CreatureCmd.LoseBlock(play.Target, play.Target.Block);
+        if (play.Target != null) await CreatureCmd.LoseBlock(choiceContext, play.Target, play.Target.Block, Owner.Creature);
         await CommonActions.CardAttack(this, play).Execute(choiceContext);
     }
 

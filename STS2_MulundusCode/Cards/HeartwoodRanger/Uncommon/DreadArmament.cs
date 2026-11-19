@@ -51,7 +51,7 @@ public class DreadArmament : HeartWoodRangerCard
     {
 
         ArgumentNullException.ThrowIfNull(play.Target, "cardPlay.Target");
-        await DamageCmd.Attack(DynamicVars.Damage.BaseValue).WithHitCount(1).FromCard(this).Targeting(play.Target).WithHitFx("vfx/vfx_thrash").Execute(choiceContext);
+        await DamageCmd.Attack(DynamicVars.Damage.BaseValue).WithHitCount(1).FromCard(this, play).Targeting(play.Target).WithHitFx("vfx/vfx_thrash").Execute(choiceContext);
         await CommonActions.CardBlock(this, play);
 
         for (var i = 0; i < DynamicVars["ExhaustAmount"].BaseValue; i++)
@@ -68,7 +68,7 @@ public class DreadArmament : HeartWoodRangerCard
                 damage1 = cardModel.DynamicVars.OstyDamage.BaseValue;
             else
                 Log.Warn($"{Id.Entry} exhausted attack card {cardModel.Id.Entry} that did not have an appropriate damage var!");
-            var num = Hook.ModifyDamage(Owner.RunState, Owner.Creature.CombatState, null, Owner.Creature, damage1, ValueProp.Move, cardModel, ModifyDamageHookType.All, CardPreviewMode.None, out IEnumerable<AbstractModel> _);
+            var num = Hook.ModifyDamage(Owner.RunState, Owner.Creature.CombatState, null, Owner.Creature, damage1, ValueProp.Move, cardModel, play, ModifyDamageHookType.All, CardPreviewMode.None, out IEnumerable<AbstractModel> _);
             var damage2 = DynamicVars.Damage;
             damage2.BaseValue += num;
             ExtraDamage += num;
